@@ -1,0 +1,100 @@
+find_library: checking for xmlParseDoc() in -lxml2... -------------------- yes
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I.  -arch i386 -Os -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L. -arch i386     -lruby -lxml2  -lpthread -ldl -lm  "
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘xmlParseDoc’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I.  -arch i386 -Os -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L. -arch i386     -lruby -lxml2  -lpthread -ldl -lm  "
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘xmlParseDoc’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { xmlParseDoc(); return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for xsltParseStylesheetDoc() in -lxslt... -------------------- yes
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I.  -arch i386 -Os -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L. -arch i386    -lxml2  -lruby -lxslt -lxml2  -lpthread -ldl -lm  "
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘xsltParseStylesheetDoc’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))xsltParseStylesheetDoc; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I.  -arch i386 -Os -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L. -arch i386    -lxml2  -lruby -lxslt -lxml2  -lpthread -ldl -lm  "
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘xsltParseStylesheetDoc’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { xsltParseStylesheetDoc(); return 0; }
+/* end */
+
+--------------------
+
+find_header: checking for #include <libxml/xmlversion.h>
+... -------------------- yes
+
+"gcc -E -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I.   -Os -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline  conftest.c -o conftest.i"
+conftest.c:1:31: error: libxml/xmlversion.h: No such file or directory
+checked program was:
+/* begin */
+1: #include <libxml/xmlversion.h>
+/* end */
+
+"gcc -E -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I.   -Os -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/include/libxml2 conftest.c -o conftest.i"
+conftest.c:1:31: error: libxml/xmlversion.h: No such file or directory
+checked program was:
+/* begin */
+1: #include <libxml/xmlversion.h>
+/* end */
+
+"gcc -E -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I.   -Os -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2 conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <libxml/xmlversion.h>
+/* end */
+
+--------------------
+
+find_header: checking for #include <libxslt/xslt.h>
+... -------------------- yes
+
+"gcc -E -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I. -I/usr/include/libxml2   -Os -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <libxslt/xslt.h>
+/* end */
+
+--------------------
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I. -I/usr/include/libxml2  -arch i386 -Os -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L. -arch i386    -lxslt -lxml2  -lruby  -lpthread -ldl -lm  "
+checked program was:
+/* begin */
+1: #include <libxml/xmlversion.h>
+2: 
+3: #include <stdio.h>
+4: /*top*/
+5: int conftest_const = (int)(LIBXML_VERSION);
+6: int main() {printf("%d\n", conftest_const); return 0;}
+/* end */
+
+./conftest |

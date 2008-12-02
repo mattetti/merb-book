@@ -1,0 +1,28 @@
+Mon, 01 Dec 2008 09:12:01 GMT  ~  info  ~  Logfile created
+ ~ Parent pid: 67657
+merb : worker (port 4000) ~ Starting Mongrel at port 4000
+merb : worker (port 4000) ~ Successfully bound to port 4000
+ ~ Reaping Workers
+merb : worker (port 4000) ~ Worker Thread Crashed with Exception:
+ - (RuntimeError)
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/dispatch/worker.rb:17:in `process_queue'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/dispatch/worker.rb:32:in `initialize'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/dispatch/worker.rb:31:in `loop'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/dispatch/worker.rb:31:in `initialize'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/dispatch/worker.rb:30:in `new'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/dispatch/worker.rb:30:in `initialize'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/dispatch/worker.rb:13:in `new'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/dispatch/worker.rb:13:in `start'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/rack/adapter/abstract.rb:157:in `start_at_port'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/rack/adapter/abstract.rb:85:in `start'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/server.rb:174:in `bootup'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/server.rb:159:in `daemonize'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/server.rb:143:in `fork'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/server.rb:143:in `daemonize'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core/server.rb:35:in `start'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/lib/merb-core.rb:170:in `start'
+/Library/Ruby/Gems/1.8/gems/merb-core-1.0.3/bin/merb:11
+/usr/bin/merb:19:in `load'
+/usr/bin/merb:19
+Restarting Worker Thread
+merb : worker (port 4000) ~ Exiting port 4000

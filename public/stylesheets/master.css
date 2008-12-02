@@ -1,0 +1,181 @@
+/* @group Layout */
+
+body {
+ 	background-color: #191919;
+ 	color: #3D3B37;
+ 	font: 62.5%/1.4 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+ 	margin: 0;
+ 	padding: 0;
+}
+
+#warning {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	margin: 0;
+	padding: .5em;
+	font-size: 2em;
+	background: #ff9;
+	text-align: center;
+	-webkit-box-shadow: #333 0px 1px 5px;
+}
+
+#book-title{
+	padding: 4em 2em 1em 9em;
+	font-size: 160%;
+	color: white;
+	font: times,Times New Roman,times-roman,georgia,serif;
+	text-transform: uppercase;
+}
+
+.toc-link a{ 
+	color: #999; 
+	text-decoration: none; 
+	float:right;
+	font-size: 120%;
+	margin-right: -6em;
+}
+
+#book-title a, #book-title a:visited { color: white; text-decoration: none;}
+#book-title a:hover {text-decoration: underline;}
+
+#book {
+ 	width: 60em;
+ 	margin: 0 auto;
+ 	padding: 1em 8em;
+ 	background: #fff;
+}
+
+#footer{
+	width: 40em;
+ 	margin: 0 auto;
+ 	padding: 1em 14em;
+	font-size: 1.3em;
+ 	text-align: center;
+	color: #ccc;
+}
+
+div#footer a, div#footer a:visited{
+	text-decoration: none;
+	color: #666;
+}
+
+.no-border{
+	border:none !important;
+}
+
+/* @end */
+
+/* @group Book styles */
+
+#book-content {
+ 	font-size: 1.3em;
+ 	text-align: left;
+}
+
+
+#book-content h1,
+#book-content h2 {
+ 	margin: 2em 0 0;
+ 	text-align: center;
+ 	font-weight: normal;
+ 	text-transform: uppercase;
+ 	color: #c60;
+ 	border-top: 1px solid #f1f1f1;
+ 	border-bottom: 1px solid #f1f1f1;
+ 	font-size: 2em;
+	font-family: times, Times New Roman, times-roman, georgia, serif;
+}
+
+#book-content h1 {
+	margin: 3em 0 3em 0;
+	font-size: 2.4em;
+}
+
+#book-content h3 {
+ 	
+}
+
+#book-content h4 {
+ 	
+}
+
+#book-content strong {
+ 	
+}
+
+#book-content em {
+ 	
+}
+
+#book-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: .5em 0 .5em .5em;
+ 	padding: 2px;
+ 	background: #fff;
+ 	border: 1px solid #ccc;
+}
+
+#book-content img.left{
+  float: left;
+  margin-right: 2em;
+}
+
+#book-content a {
+ 	color: #3366ff;
+ 	text-decoration: underline;
+}
+
+#book-content a:hover {
+ 	color: #ff6633;
+}
+
+#book-content pre {
+ 	clear: both;
+ 	display: block;
+ 	margin: 0;
+ 	padding: 1em 2em;
+ 	background: #002241;
+ 	overflow: auto;
+} 
+
+#book-content code {
+ 	font: .9em Monaco, "Courier New", Courier, mono;
+ 	color: #933;
+}
+
+#book-content pre code {
+ 	color: #f6f07d;
+}
+
+#book-content blockquote p {
+ 	padding: 2em;
+ 	font-style: italic;
+ 	font-family: times, Times New Roman, times-roman, georgia, serif;
+ 	font-size: 1.1em;
+}
+
+#book-content blockquote.lead-quote p{
+	font-size: 1.3em;
+}
+
+#book-content blockquote p a.quote-author{
+	font-size: 0.9em;
+}
+
+/* @end */
+
+/* @group TOC */
+
+#table-of-contents {
+ 	display: none;
+ 	padding: 1em;
+ 	position: fixed;
+ 	top: 0;
+ 	background: #fff;
+}
+
+/* @end */

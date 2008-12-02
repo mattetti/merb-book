@@ -1,0 +1,12 @@
+have_library: checking for main() in -lc... -------------------- yes
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I.  -arch ppc -arch i386 -Os -pipe -fno-common conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L. -arch ppc -arch i386     -lruby -lc  -lpthread -ldl -lm  "
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
