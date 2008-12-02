@@ -7,6 +7,7 @@ dependency "maruku", ">= 0.5.9"
 dependency "merb-assets", "~> 1.0"
 dependency "merb_babel", ">= 0.1.0"
 
+
 #  use_orm :none
 use_test :rspec
 use_template_engine :erb

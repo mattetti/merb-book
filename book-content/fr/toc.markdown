@@ -6,23 +6,52 @@
 	<p>Si vous apprenez ou que vous utilisez quotidiennement Merb par le biais de cet ouvrage, <strong>veuillez, s'il vous plaît envisager d'aider à améliorer le contenu de ce livre</strong>.</p>
 </div>
 
-<ul id="toc">
-	<li>
-		<a href="/fr/front-matter">Pages Liminaires</a>
-		<ul>
-			<li><a href="/fr/front-matter/foreword">Avant-propos by Yehuda Katz</a></li>
-			<li><a href="/fr/front-matter/preface">Préface par Matt Aimonetti</a></li>
-			<li><a href="/fr/front-matter/contributors">Contributeurs</a></li>
-		</ul>
-	</li>
-	<li>
-		<a href="/fr/introduction">Introduction</a>
-		<ul>
-			<li><a href="/fr/introduction/ruby">Ruby</a></li>
-			<li><a href="/fr/introduction/merb">Le framework Web Merb</a></li>
-			<li><a href="/fr/introduction/datamapper">l'ORM DataMapper</a></li>
-			<li><a href="/fr/introduction/rspec">Le framework de test RSpec</a></li>
-		</ul>
-	</li>
-	
-</ul>
+1. [Pages Liminaires](/fr/front-matter)
+	1. [Avant-propos par Yehuda Katz](/fr/front-matter/foreword)
+	2. [Préface par Matt Aimonetti](/fr/front-matter/preface)
+	3. [Contributeurs](/fr/front-matter/contributors)
+2. [Introduction](/fr/introduction)
+	1. [Le Language Ruby](/fr/introduction/ruby)
+	2. [Le Framework Web Merb](/fr/introduction/merb)
+	3. [L'ORM DataMapper](/fr/introduction/datamapper)
+	4. [Le framework de test RSpec](/fr/introduction/rspec)
+3. [Mise en route](/getting-started)
+  1. [Installation](/getting-started/install-instructions)
+	1. [Créer une application](/getting-started/generate-app)
+	1. [La structure d'un projet](/getting-started/project-structure)
+	1. [MVC](/getting-started/mvc)
+	1. [Modèles](/getting-started/models)
+	1. [Vues](/getting-started/views)
+	1. [Contrôleurs](/getting-started/controllers)
+	1. [Request path](/getting-started/request-path){: .to-translate}
+	1. [Router](/getting-started/router){: .to-translate}
+4. [Communiquer avec la base de données](/orm/datamapper)
+	1. [Etablir la connexion à la base de données](/orm/datamapper/setting-up)
+	1. [Le schéma de la base de données](/orm/datamapper/schema)
+	1. [Les requêtes en base de données](/orm/datamapper/queries)
+	1. [Relations avec le Modèle](/orm/datamapper/relationships)
+	1. [Les migrations de la base de données](/orm/datamapper/migrations)
+	1. [Les Validations de Modèle](/orm/datamapper/validations)
+5. [Testez votre application](/rspec)
+	1. [Pourquoi tester](/rspec/why)
+	1. [Testez vos modèles](/repec/models)
+	1. [Testez vos requêtes](/repec/requests)
+	1. [Testez l'integration avec Rspec Cucumber](/rspec/cucumber)
+6. [Plus de Merb](/merb-more)
+  1. [Authentification](/merb-more/authentication)
+  1. [Mailers](/merb-more/mailer){: .to-translate}
+  1. [Le Cache](/merb-more/caching)
+  1. [Les exceptions](/merb-more/exceptions)
+  1. [Les Slices](/merb-more/exceptions)
+7. [Cookbook](/cookbook)
+  1. [Simple Blog](/cookbook/simple-blog)
+8. [Déploiement](/deployment)
+  1. [Passenger](/deployment/passenger)
+  1. [nginx](/deployment/nginx)
+
+{: #toc}
+
+1. [Appendix Hints/Tips:](/appendix/hints-tips)
+1. [Appendix Available Slices:](/appendix/slices)
+1. [Appendix Useful Gems:](/appendix/gems)
+{: #appendices}
