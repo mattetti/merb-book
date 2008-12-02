@@ -1,0 +1,13 @@
+#################################################
+# en-UK only localization
+#
+# only add localization specific to this locale
+# other comman localizations must go in en.yml
+#################################################
+# required
+mloc_language_code: en
+# required for a locale localization file
+mloc_country_code: UK
+#################################################
+
+greetings: Heya

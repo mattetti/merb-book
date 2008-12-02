@@ -1,3 +1,9 @@
-<div class="error">we couldn't find the page you requested, you might want to check on the index</div>
+<div class="error">The page you requested doesn't seem to exist</div>
 
-<%= link_to "Table of Content", url(:toc) %>
+<% if language != 'en' -%>
+	<p>You required a page with the language code <strong><%= language %></strong>, it might not be available yet, click on the following link to see the requested page in English.</p>
+	
+	<p><%= link_to "Same page but in English", same_url_but_in_english %></p>
+<% end -%>
+
+Otherwise, check the <%= link_to "Table of Contents", url(:toc, :language => language) %>

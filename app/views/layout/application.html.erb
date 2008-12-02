@@ -11,7 +11,7 @@
 
 		<div id="book-title"><a href="/">The Merb Open Source Book</a></div>
 		<div id="book">
-			<div class="toc-link"><a href="/">table of contents</a></div>
+			<div class="toc-link"><a href="<%= url(:toc, :language => language) %>">table of contents</a></div>
 			
 			<div id="table-of-contents">
 				<%= catch_content :toc %>

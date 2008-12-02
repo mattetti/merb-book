@@ -21,6 +21,21 @@ body {
 	-webkit-box-shadow: #333 0px 1px 5px;
 }
 
+.to-translate:before {
+  font-weight: bold;
+  background: #999;
+	color: white;
+	padding: 0.5em;
+  content: "Translation needed";
+}
+
+
+.to-translate{
+	border-left: 1.5em solid #CC6600;
+	padding: 1em;
+	background: #ccc;
+}
+
 #book-title{
 	padding: 4em 2em 1em 9em;
 	font-size: 160%;

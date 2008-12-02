@@ -1,0 +1,14 @@
+#################################################
+# French localization
+#
+# localization specific must go in their own file
+# see en-US.yml for instance
+#################################################
+mloc_language_code: fr
+# mloc_country:
+#################################################
+
+right: la droite
+left: la gauche
+greetings: Salut
+
