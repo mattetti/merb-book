@@ -6,23 +6,13 @@
 	<p>If you are learning through this material, or if already use Merb frequently, <strong>please consider helping improve the content of this book</strong></p>
 </div>
 
-<ul id="toc" class="to-translate">
-	<li>
-		<a href="/front-matter">Front Matter</a>
-		<ul>
-			<li><a href="/front-matter/foreword">Foreword by Yehuda Katz</a></li>
-			<li><a href="/front-matter/preface">Preface by Matt Aimonetti</a></li>
-			<li><a href="/front-matter/contributors">Contributors</a></li>
-		</ul>
-	</li>
-	<li>
-		<a href="/introduction">Introduction</a>
-		<ul>
-			<li><a href="/introduction/ruby">Ruby Language</a></li>
-			<li><a href="/introduction/merb">Merb web framework</a></li>
-			<li><a href="/introduction/datamapper">DataMapper ORM</a></li>
-			<li><a href="/introduction/rspec">RSpec testing framework</a></li>
-		</ul>
-	</li>
-	
-</ul>
+1. [Front Matter](/front-matter)
+	1. [Foreword By Yehuda Katz](/front-matter/foreword)
+	2. [Preface by Matt Aimonetti](/front-matter/preface)
+	3. [Contributors](/front-matter/contributors)
+2. [Introduction](/introduction)
+	1. [Ruby Language](/introduction/ruby)
+	2. [Merb Web Framework](/introduction/merb)
+	3. [DataMapper ORM](/introduction/datamapper)
+	4. [RSpec testing framework](/introduction/rspec)
+{: #toc .to-translate}
