@@ -25,27 +25,4 @@ end
  
 Merb::BootLoader.after_app_loads do
   # This will get executed after your app's classes have been loaded.
-  MaRuKu::In::Markdown.register_block_extension(
-    :regexp => /<(sidebar|note):".*?">/,
-    :handler => proc do |doc, src, context|
-      first_line = src.shift_line
-      first_line =~ /<(sidebar|note):"(.*?)">/
-      kind, subkind = $1, $2
-      lines = ["<p class='#{kind}_head'>#{$2}</p>"]
-
-      while src.cur_line && src.cur_line !~ /<\/(sidebar|note)>/
-        line = src.shift_line
-        lines.push line
-      end
-
-      src.shift_line
-
-      src = MaRuKu::In::Markdown::BlockLevelParser::LineSource.new(lines)
-      children = doc.parse_blocks(src)
-
-      context.push doc.md_el(:div, children, {}, {:class => "#{kind} #{subkind}"})
-
-      true
-    end
-  )
 end
