@@ -8,6 +8,10 @@ To run the book locally, just clone this repo and start bundled Merb:
 		
 And open http://localhost:4000/ in your browser
 
+Note that you might have to "redeploy" the native gems if the merb app server doesn't start:
+
+		$ thor merb:gem:redeploy
+
 A static HTML and a PDF version will soon be available online.
 
 ## How to contribute
