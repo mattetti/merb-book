@@ -17,6 +17,7 @@
 	3. [DataMapper ORM](/introduction/datamapper)
 	4. [RSpec testing framework](/introduction/rspec)
 3. [Getting Started](/getting-started)
+  1. [Install Instruction](/getting-started/install-instructions)
 	1. [Generate an application](/getting-started/generate-app)
 	1. [Project structure](/getting-started/project-structure)
 	1. [MVC](/getting-started/mvc)
@@ -25,7 +26,6 @@
 	1. [Controllers](/getting-started/controllers)
 	1. [Request path](/getting-started/request-path)
 	1. [Router](/getting-started/router)
-	1. [Why testing](/getting-started/testing)
 4. [Interacting with the database](/orm/datamapper)
 	1. [Setting up the database connection](/orm/datamapper/setting-up)
 	1. [Database Schema](/orm/datamapper/schema)
@@ -34,7 +34,24 @@
 	1. [Database Migrations](/orm/datamapper/migrations)
 	1. [Model Validations](/orm/datamapper/validations)
 	1. [Model testing](/orm/datamapper/testing)
+5. [Testing your application](/rspec)
+	1. [Why test](/rspec/why)
+	1. [Integration Testing with Rspec Stories](/rspec/stories)
+	1. [Testing your models](/repec/models)
+	1. [Testing your controllers](/repec/controllers)
+6. [More Merb](/merb-more)
+  1. [Mailers](/merb-merb/mailer)
+  1. [Caching](/merb-merb/caching)
+  1. [Exceptions](/merb-merb/exceptions)
+  1. [Slices](/merb-merb/exceptions)
+
+7. [Deployment](/deployment)
+  1. [Passenger](/deployment/passenger)
+  1. [nginx](/deployment/nginx)
+	
 {: #toc}
 
-1. [Appendix A:](/appendix/a)
+1. [Appendix Hints/Tips:](/appendix/hints-tips)
+1. [Appendix Available Slices:](/appendix/slices)
+1. [Appendix Useful Gems:](/appendix/gems)
 {: #appendices}
