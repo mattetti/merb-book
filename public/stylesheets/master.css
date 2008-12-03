@@ -57,6 +57,16 @@ div.maruku_toc{
 	display: block;
 }
 
+#language-switch{
+	float:left;
+	color: #999999;
+}
+
+#language-switch a, #language-switch a:visited {
+	text-decoration: none;
+	color: #999999;
+}
+
 #book-title a, #book-title a:visited { color: white; text-decoration: none;}
 #book-title a:hover {text-decoration: underline;}
 
