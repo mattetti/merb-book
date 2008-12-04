@@ -1,4 +1,10 @@
 #Passenger
+
+![Phusion Passenger](/images/phusion_banner.png){: .no-border}
+
+**Reference website:** [http://www.modrails.com/documentation/Users%20guide.html](http://www.modrails.com/documentation/Users%20guide.html){: .reference}
+
+
 [Phusion Passenger](http://www.modrails.com/) is an Apache Module for deploying Rack applications. As Merb is built on rack you can easily run it on Passenger and [Ruby Enterprise Edition](http://www.rubyenterpriseedition.com/). Ruby Enterprise Edition is version of Ruby 1.8.6 with improvemnets to Ruby's garbage collection which can typically reduce an applications memory footprint by 33%. The following instructions are for Linux.
 
 ##Installing Ruby Enterprise Edition (REE)
