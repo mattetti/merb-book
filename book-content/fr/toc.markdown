@@ -36,14 +36,14 @@
 	1. [Pourquoi tester](/rspec/why)
 	1. [Testez vos modèles](/repec/models)
 	1. [Testez vos requêtes](/repec/requests)
-	1. [Testez l'integration avec Rspec Cucumber](/rspec/cucumber)
+	1. [Testez l'intégration avec Rspec Cucumber](/rspec/cucumber)
 6. [Plus de Merb](/merb-more)
   1. [Authentification](/merb-more/authentication)
   1. [Mailers](/merb-more/mailer){: .to-translate}
   1. [Le Cache](/merb-more/caching)
   1. [Les Exceptions](/merb-more/exceptions)
   1. [Les Slices](/merb-more/exceptions)
-7. [Cookbook](/cookbook)
+7. [Cookbook](/cookbook){: .to-translate}
   1. [Simple Blog](/cookbook/simple-blog)
 8. [Déploiement](/deployment)
   1. [Passenger](/deployment/passenger)
