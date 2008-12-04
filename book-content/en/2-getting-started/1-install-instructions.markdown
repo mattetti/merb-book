@@ -14,13 +14,12 @@ You will need to install XCode from the OS X CD or download it from the apple de
 ### Prerequisites 
 Ruby and necessary libraries:
 
-    $ sudo apt-get install build-essential libxslt-dev libsqlite3-0 \
-      libsqlite3-dev
+    $ sudo apt-get install build-essential libxslt-dev libsqlite3-0 libsqlite3-dev
         
 ### Ruby & RubyGems
 
-    $ sudo apt-get ruby ruby1.8-dev rdoc irb libyaml-ruby libzlib-ruby ri \
-      libopenssl-ruby libxml-ruby
+    $ sudo apt-get ruby ruby1.8-dev rdoc irb libyaml-ruby libzlib-ruby ri libopenssl-ruby \ 
+      libxml-ruby
     
     $ wget "http://rubyforge.org/frs/download.php/43985/rubygems-1.3.0.tgz"
     $ tar -xvzf rubygems-1.3.0.tgz
