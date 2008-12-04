@@ -16,8 +16,7 @@ You will need to install XCode from the OS X CD or download it from the apple de
 ## Linux
 
 ### Prerequisites 
-Necessary libraries:
-
+xt
     $ sudo apt-get install build-essential libxslt-dev libsqlite3-0 libsqlite3-dev
         
 ### Ruby & RubyGems
@@ -38,5 +37,5 @@ Necessary libraries:
     
 ### Merb
 
-  $ sudo gem install merb
+    $ sudo gem install merb
   
