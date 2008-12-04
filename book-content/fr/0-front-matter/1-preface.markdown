@@ -1,12 +1,12 @@
 # Préface
 
-A l'époque où il n'y avait pas de pile Merb, pas d'API figée, pas de documentation organizée et que le code de base changeait souvent, [Matthew Ford](http://github.com/deimos1986) décida de travailler sur un livre open source avec un objectif simple: aider les courageux Rubyistes qui cherchaient à vivre sur le fil du rasoir et décidaient d'essayer Merb, DataMapper et RSpec.
+A l'époque où il n'y avait pas de pile Merb, pas d'API figée, pas de documentation organisée et que le code de base changeait souvent, [Matthew Ford](http://github.com/deimos1986) décida de travailler sur un livre open source avec un objectif simple: aider les courageux Rubyistes qui cherchaient à vivre sur le fil du rasoir et décidaient d'essayer Merb, DataMapper et RSpec.
 
 Depuis, Merb a beaucoup mûri, getting up et son fonctionnement est devenu plus facile et Merb a décidé d'offrir une version **obstiné** de la pile utilisant Merb, DataMapper et RSpec! 
 
 Etant moi-même un jeune développeur Merb, J'ai vraiment aimé le fait d'avoir accès au livre de Matt et j'ai même contribué à la première version de celui-ci. Depuis, j'ai rejoint l'équipe Merb et comme celle-ci je me suis concentré sur la grosse version 1.0 que nous avons sorti avec succès en deux étapes, la première Release Candidate durant le [MerbCamp 2008](http://merbcamp.com) et enfin la version finale 1.0 durant la [RubyConf 2008](http://rubyconf.org).
 
-Avoir un super framework est génial, mais comme m'a dit Jason Seifer de [RailsEnvy.com](http://railsenvy.com) après la sortir de la version 1.0: 
+Avoir un super framework est génial, mais comme m'a dit Jason Seifer de [RailsEnvy.com](http://railsenvy.com) après la sortie de la version 1.0: 
 
 > Merb a une superbe documentation du code, le code est si facile à lire, mais la documentation utilisateur est toujours manquante.
 
