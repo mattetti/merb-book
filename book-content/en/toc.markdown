@@ -49,6 +49,8 @@
 7. [Deployment](/deployment)
   1. [Passenger](/deployment/passenger)
   1. [nginx](/deployment/nginx)
+  1. [JRuby and Glassfish](/deployment/jruby)
+  1. [Bundling your Merb application](/deployment/bundle)
 	
 {: #toc}
 
