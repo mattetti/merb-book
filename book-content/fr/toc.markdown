@@ -41,7 +41,7 @@
   1. [Authentification](/merb-more/authentication)
   1. [Mailers](/merb-more/mailer){: .to-translate}
   1. [Le Cache](/merb-more/caching)
-  1. [Les exceptions](/merb-more/exceptions)
+  1. [Les Exceptions](/merb-more/exceptions)
   1. [Les Slices](/merb-more/exceptions)
 7. [Cookbook](/cookbook)
   1. [Simple Blog](/cookbook/simple-blog)
