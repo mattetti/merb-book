@@ -46,6 +46,7 @@
   1. [Slices](/merb-more/exceptions)
 6. [Recipes](/recipes)
 	1. [Simple Blog](/recipes/simple-blog)
+	1. [Building a Blog Slice](/recipes/blog-slice)
 7. [Deployment](/deployment)
   1. [Passenger](/deployment/passenger)
   1. [nginx](/deployment/nginx)
