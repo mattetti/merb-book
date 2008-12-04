@@ -18,7 +18,7 @@
 	4. [RSpec testing framework](/introduction/rspec)
 2. [Getting Started](/getting-started)
   1. [Install Instructions](/getting-started/install-instructions)
-	1. [Generate an application](/getting-started/generate-app)
+	1. [Generate an application](/getting-started/generate-an-application)
 	1. [Project structure](/getting-started/project-structure)
 	1. [MVC](/getting-started/mvc)
 	1. [Controllers](/getting-started/controllers)
