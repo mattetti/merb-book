@@ -47,14 +47,17 @@ To learn more about the Ruby language, check the [Official Ruby language website
 		end 
 		# => "Hello world!Hello world!Hello world!Hello world!Hello world!Hello, world! 
 		Hello world!Hello world!Hello world!Hello world!"
+{:lang=ruby html_use_syntax=true}
 		
 **Conditional statement:**
 
 		access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
+{:lang=ruby html_use_syntax=true}
 
 **Ternary operator:**
 
 	age_classification = age > 12 ? "adult" : "child"
+{:lang=ruby html_use_syntax=true}
 
 equivalent to:
 
@@ -63,18 +66,19 @@ equivalent to:
 	else
 		age_classification = "child"
 	end
+{:lang=ruby html_use_syntax=true}
 
 **Array:**
 
 		drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
 		# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
-
 		# Access the Array instance
 		drinks[0] # => "Coke"
 		drinks.first # => "Coke"
 		drinks.last # => "DrPepper"
 		drinks[3] # => "DrPepper"
 		drinks[drinks.length - 1] # => "DrPepper"
+{:lang=ruby html_use_syntax=true}
 
 		
 **Check if an item exists in an Array instance:**
@@ -82,19 +86,21 @@ equivalent to:
 		haystack = ["Mac", "NT", "Irix", "Linux"]
 		needle = "Windows"
 		haystack.include?(needle)	# => false
-		
+{:lang=ruby html_use_syntax=true}
+	
 **Push an item into an Array instance:**
 
 		haystack = ["Mac", "NT", "Irix", "Linux"]
 		needle = "Windows"
 		haystack.push(needle)
+{:lang=ruby html_use_syntax=true}
 		
 **Define a method:**
 
 		def greet_visitor(visitor_name)
 		  "Hi #{visitor_name}!"
 		end
-
+{:lang=ruby html_use_syntax=true}
 
 ## Merb and Ruby ##{: #merb-and-ruby}
 
