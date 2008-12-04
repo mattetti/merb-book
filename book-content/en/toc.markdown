@@ -59,4 +59,4 @@
   1. [Available Slices](/appendix/slices)
   1. [Useful Gems](/appendix/gems)
 
-{: #appendices .available-for-translation}
+{: #appendices}

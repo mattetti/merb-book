@@ -56,5 +56,4 @@ The following file needs to be placed into your Merb applications root directory
 
     run Merb::Rack::Application.new
 
-
 ## Capistrano Task
