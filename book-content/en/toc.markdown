@@ -54,7 +54,9 @@
 
 {: #toc}
 
-1. [Appendix Hints/Tips:](/appendix/hints-tips)
-1. [Appendix Available Slices:](/appendix/slices)
-1. [Appendix Useful Gems:](/appendix/gems)
+* [Appendix](/appendix)
+  1. [Hints/Tips](/appendix/hints-tips)
+  1. [Available Slices](/appendix/slices)
+  1. [Useful Gems](/appendix/gems)
+
 {: #appendices}
