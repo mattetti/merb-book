@@ -1,7 +1,9 @@
-## Ruby
+# Ruby
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
 
 ![Ruby](/images/ruby-header.gif){: .no-border}
-
 
 **Reference website:** [http://ruby-lang.org](http://ruby-lang.org){: .reference}
 
@@ -11,7 +13,7 @@
 
 It would be a crime to start talking about the Merb framework without first discussing the very reason why Merb is so flexible, powerful and fast: **Ruby**.
 
-### Origin ###{: #origin}
+## Origin ##{: #origin}
 ![Yukihiro Matsumoto](/images/Yukihiro_Matsumoto.jpg){: .left}
 Ruby is an open source dynamic, reflective, general purpose object-oriented programming language written in the mid-1990s by Japanese software architect [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
 
@@ -21,10 +23,10 @@ Matz borrowed ideas and idions from some of his favorite programming languages (
 
 The result is an attractive language which feels very natural. In the Ruby community we often refer to the POLS, Principle of Least Surprise. The concept behind this principle is very simple, if you know a minimum of Ruby, you should not be surprised by how the language will react.
 
-### Adoption ###{: #adoption}
+## Adoption ##{: #adoption}
 According to the [TIOBE index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html), Ruby ranks in the top 10 programming languages used worldwide. Much of the growth is attributed to the popularity of software written in Ruby, particularly the [Ruby on Rails web framework](http://rubyonrails.org).
 
-### Key Elements of the language ###{: #key-elements}
+## Key Elements of the language ##{: #key-elements}
 
 > I wanted a scripting language that was more powerful than Perl, and more object-oriented than Python  
 > Matz
@@ -36,7 +38,71 @@ According to the [TIOBE index](http://www.tiobe.com/index.php/content/paperinfo/
 
 To learn more about the Ruby language, check the [Official Ruby language website](http://www.ruby-lang.org/en/about)
 
-### Merb and Ruby ###{: #merb-and-ruby}
+## Code Examples ##{: #code-examples}
+
+**10 times, print the string "Hello world":**
+
+		10.times do 
+		  print "Hello world!"
+		end 
+		# => "Hello world!Hello world!Hello world!Hello world!Hello world!Hello, world! 
+		Hello world!Hello world!Hello world!Hello world!"
+{:lang=ruby html_use_syntax=true}
+		
+**Conditional statement:**
+
+		access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
+{:lang=ruby html_use_syntax=true}
+
+**Ternary operator:**
+
+	age_classification = age > 12 ? "adult" : "child"
+{:lang=ruby html_use_syntax=true}
+
+equivalent to:
+
+	if age > 12
+		age_classification =  "adult"
+	else
+		age_classification = "child"
+	end
+{:lang=ruby html_use_syntax=true}
+
+**Array:**
+
+		drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
+		# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
+		# Access the Array instance
+		drinks[0] # => "Coke"
+		drinks.first # => "Coke"
+		drinks.last # => "DrPepper"
+		drinks[3] # => "DrPepper"
+		drinks[drinks.length - 1] # => "DrPepper"
+{:lang=ruby html_use_syntax=true}
+
+		
+**Check if an item exists in an Array instance:**
+
+		haystack = ["Mac", "NT", "Irix", "Linux"]
+		needle = "Windows"
+		haystack.include?(needle)	# => false
+{:lang=ruby html_use_syntax=true}
+	
+**Push an item into an Array instance:**
+
+		haystack = ["Mac", "NT", "Irix", "Linux"]
+		needle = "Windows"
+		haystack.push(needle)
+{:lang=ruby html_use_syntax=true}
+		
+**Define a method:**
+
+		def greet_visitor(visitor_name)
+		  "Hi #{visitor_name}!"
+		end
+{:lang=ruby html_use_syntax=true}
+
+## Merb and Ruby ##{: #merb-and-ruby}
 
 Merb tries to say as close as possible to the Ruby language itself. That's why it's important to understand what people call the "ruby Way".
 

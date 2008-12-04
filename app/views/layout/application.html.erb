@@ -13,8 +13,8 @@
 		<div id="book">
 			<div class="toc-link"><a href="<%= url(:toc, :language => language) %>">table of contents</a></div>
 			
-			<div id="table-of-contents">
-				<%= catch_content :toc %>
+			<div id="language-switch">
+				<%= language_switch %>
 			</div>
 
 			<div id="book-content">
