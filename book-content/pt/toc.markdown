@@ -52,11 +52,11 @@
   1. [JRuby and Glassfish](/pt/deployment/jruby)
   1. [Bundling your Merb application](/pt/deployment/bundle)
 
-{: #toc}
+{: #toc .available-for-translation}
 
 * [Appendix](/pt/appendix)
   1. [Hints/Tips](/pt/appendix/hints-tips)
   1. [Available Slices](/pt/appendix/slices)
   1. [Useful Gems](/pt/appendix/gems)
 
-{: #appendices}
+{: #appendices .available-for-translation}
