@@ -1,6 +1,6 @@
-# Contributors
+# Colaboradores
 
-Sem a ajuda dos seguintes contributors esse livro não seria possível. Obrigado a todos!
+Sem a ajuda dos seguintes colaboradores esse livro não seria possível. Obrigado a todos!
 
 **Em ordem alfabética:**
 
