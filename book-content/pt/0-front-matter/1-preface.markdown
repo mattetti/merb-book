@@ -1,10 +1,10 @@
 ﻿# Prefácio
 
-Um tempo atrás quando não havia a stack Merb, API fixa ou documentação organização e o código estava mudando frequentemente [Matthew Ford](http://github.com/deimos1986) decidiu trabalhar em um livro open source com um objetivo simples: ajudar Rubyistas corajosos que gostam de viver "on the edge" and decidem tentar usar Merb, DataMapper e RSpec.
+Um tempo atrás quando não havia a stack Merb, API fixa ou documentação organização e o código estava mudando frequentemente [Matthew Ford](http://github.com/deimos1986) decidiu trabalhar em um livro open source com um objetivo simples: ajudar Rubyistas corajosos que queriam viver "on the edge" e decidiram tentar usar Merb, DataMapper e RSpec.
 
-Desde então Merb amadureceu muito, "getting up and running" ficou muito mais fácil e Matt decidiu oferecer uma versão **opionated** da stack usando Merb, DataMapper e RSpec!
+Desde então Merb amadureceu muito, "getting up and running" ficou muito mais fácil e Merb decidiu oferecer uma versão **opionated** da stack usando Merb, DataMapper e RSpec!
 
-Sendo eu mesmo um desenvolvedor Merb eu realmente gostei de ter acesso ao livro do Matt e até contribuí para a primeira versão do livro. Desde então eu entrei no time do Merb and com o resto do ???? eu foquei no lançamento da versão 1.0 que terminamos com sucesso em dois passos. O primeiro Release Candidate durante o [MerbCamp 2008](http://merbcamp.com) e o lançamento da versão final 1.0 durante a [RubyConf 2008](http://rubyconf.org). 
+Sendo eu mesmo um desenvolvedor iniciante Merb eu realmente gostei de ter acesso ao livro do Matt e até contribuí para a primeira versão do livro. Desde então eu entrei no time do Merb e com o resto deste eu foquei no lançamento da versão 1.0 que terminamos com sucesso em dois passos. O primeiro Release Candidate durante o [MerbCamp 2008](http://merbcamp.com) e o lançamento da versão final 1.0 durante a [RubyConf 2008](http://rubyconf.org). 
 
 Ter um ótimo framework é ótimo, mas então Jason Seifer do [RailsEnvy.com](http://railsenvy.com) disse o seguinte para mim depois do lançamento da versão 1.0: 
 
