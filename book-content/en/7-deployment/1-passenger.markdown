@@ -19,7 +19,7 @@ Ruby Enterprise Edition can be installed along side a version of Ruby you curren
 
     $ tar xzvf ruby-enterprise-1.8.6-20080810.tar.gz
     $ cd ruby-enterprise-1.8.6-20080810
-    $ ./insaller
+    $ ./installer
 
 
 ##Installing Passenger
