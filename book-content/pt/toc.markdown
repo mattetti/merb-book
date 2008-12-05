@@ -7,8 +7,8 @@
 </div>
 
 0. [Front Matter](/pt/front-matter)
-	1. [Foreword By Yehuda Katz](/pt/front-matter/foreword)
-	2. [Prefácio by Matt Aimonetti](/pt/front-matter/preface)
+	1. [Foreword por Yehuda Katz](/pt/front-matter/foreword)
+	2. [Prefácio por Matt Aimonetti](/pt/front-matter/preface)
 	3. [Colaboradores](/pt/front-matter/contributors)
 1. [Introdução](/pt/introduction)
 	1. [Linguagem Ruby](/pt/introduction/ruby)
