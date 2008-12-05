@@ -1,6 +1,6 @@
 # Ruby
 
-* Isto irá se tornar um índice de conteúdos (este texto será apagado).
+* Isto irá se tornar um índice (este texto será apagado).
 {:toc}
 
 ![Ruby](/images/ruby-header.gif){: .no-border}

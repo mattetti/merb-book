@@ -1,4 +1,4 @@
-#Índice de Conteúdos
+#Índice
 
 <div id="intro" class="available-for-translation">
 	<p>Bem vindo ao Merb Open Source Book. O propósito desse livro é simples: guiar os usuários iniciantes e avançados através do framework Merb.</p>
