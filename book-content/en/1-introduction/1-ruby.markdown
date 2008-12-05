@@ -17,7 +17,7 @@ It would be a crime to start talking about the Merb framework without first disc
 ![Yukihiro Matsumoto](/images/Yukihiro_Matsumoto.jpg){: .left}
 Ruby is an open source, dynamic, reflective, general purpose object-oriented programming language written in the mid-1990s by Japanese software architect [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
 
-Ruby has focuses on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+Ruby focuses on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 
 Matz borrowed ideas and idioms from some of his favorite programming languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming.
 
@@ -52,6 +52,13 @@ To learn more about the Ruby language, check the [Official Ruby language website
 **Conditional statement:**
 
 		access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
+{:lang=ruby html_use_syntax=true}
+
+equivalent to:
+
+		if DateTime.now > DateTime.parse("2008-12-01")
+		  access_allowed = true 
+		end
 {:lang=ruby html_use_syntax=true}
 
 **Ternary operator:**
