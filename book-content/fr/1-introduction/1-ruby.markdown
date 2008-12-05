@@ -104,7 +104,7 @@ Pour en apprendre plus sur le langage Ruby, rendez-vous sur le [site officiel du
 
 ## Merb et Ruby ##{: #merb-and-ruby}
 
-Merb tente à être aussi proche que possible du langage Ruby lui-même. 'est pourquoi il est important de comprendre ce que les gens appellent le "Style Ruby".
+Merb tente à être aussi proche que possible du langage Ruby lui-même. C'est pourquoi il est important de comprendre ce que les gens appellent le "Style Ruby".
 
 Durant la RubyConf 2008, Matz a fait une remarque sur Merb:
 
