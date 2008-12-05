@@ -42,16 +42,16 @@ To learn more about the Ruby language, check the [Official Ruby language website
 
 **Print the string "Hello world" 10 times:**
 
-		10.times do
-		  print "Hello world!"
-		end
-		# => "Hello world!Hello world!Hello world!Hello world!Hello world!Hello, world!
-		Hello world!Hello world!Hello world!Hello world!"
+	10.times do
+	  print "Hello world!"
+	end
+	# => "Hello world!Hello world!Hello world!Hello world!Hello world!Hello, world!
+	Hello world!Hello world!Hello world!Hello world!"
 {:lang=ruby html_use_syntax=true}
 
 **Conditional statement:**
 
-		access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
+	access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
 {:lang=ruby html_use_syntax=true}
 
 **Ternary operator:**
@@ -70,38 +70,38 @@ equivalent to:
 
 **Array:**
 
-		drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
-		# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
-		# Access the Array instance
-		drinks[0] # => "Coke"
-		drinks.first # => "Coke"
-		drinks.last # => "DrPepper"
-		drinks[3] # => "DrPepper"
-		drinks[drinks.length - 1] # => "DrPepper"
+	drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
+	# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
+	# Access the Array instance
+	drinks[0] # => "Coke"
+	drinks.first # => "Coke"
+	drinks.last # => "DrPepper"
+	drinks[3] # => "DrPepper"
+	drinks[drinks.length - 1] # => "DrPepper"
 {:lang=ruby html_use_syntax=true}
 
 
 **Check if an item exists in an Array instance:**
 
-		haystack = ["Mac", "NT", "Irix", "Linux"]
-		needle = "Windows"
-		haystack.include?(needle)	# => false
+	haystack = ["Mac", "NT", "Irix", "Linux"]
+	needle = "Windows"
+	haystack.include?(needle)	# => false
 {:lang=ruby html_use_syntax=true}
 
 **Push an item into an Array instance:**
 
-		haystack = ["Mac", "NT", "Irix", "Linux"]
-		needle = "Windows"
-		haystack.push(needle)
-		# Or do it like this:
-		haystack << needle
+	haystack = ["Mac", "NT", "Irix", "Linux"]
+	needle = "Windows"
+	haystack.push(needle)
+	# Or do it like this:
+	haystack << needle
 {:lang=ruby html_use_syntax=true}
 
 **Define a method:**
 
-		def greet_visitor(visitor_name)
-		  "Hi #{visitor_name}!"
-		end
+	def greet_visitor(visitor_name)
+	  "Hi #{visitor_name}!"
+	end
 {:lang=ruby html_use_syntax=true}
 
 ## Merb and Ruby ##{: #merb-and-ruby}
