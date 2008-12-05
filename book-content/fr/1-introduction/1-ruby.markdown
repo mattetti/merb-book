@@ -7,15 +7,15 @@
 
 **Site source:** [http://ruby-lang.org](http://ruby-lang.org){: .reference}
 
-> Coder en Ruby me rend heureux car c'est l'un des plus courts chemins entre mon cerveau et un ordinateur. Je peux penser à quelque chose et je peux l'exprimer vraiment succinctement et typiquement assez élégamment en Ruby sans toutes sortes d'étranges fouillis que vous avez besoin dans la plupart des autres langages.   
-> [Dave Thomas, auteur de "Programming Ruby"](http://pragdave.pragprog.com/){: .quote-author}
+> Coder en Ruby me rend heureux car c'est l'un des plus courts chemins entre mon cerveau et un ordinateur. Je peux penser à quelque chose et je peux l'exprimer vraiment succinctement et typiquement assez élégamment en Ruby sans toutes sortes d'étranges fouillis que vous avez besoin dans la plupart des autres langages.
+> - [Dave Thomas, auteur de "Programming Ruby"](http://pragdave.pragprog.com/){: .quote-author}
 {: cite=http://www.infoq.com/interviews/ruby-rails-dave-thomas .lead-quote}
 
 Ce serait un crime de commencer à parler du framework Merb sans, tout d'abord, parler de la raison même pour laquelle Merb est si flexible, puissant et rapide: **Ruby**.
 
 ## Origine ##{: #origin}
 ![Yukihiro Matsumoto](/images/Yukihiro_Matsumoto.jpg){: .left}
-Ruby est un language de programmation orienté objet, dynamique, réfléchi écrit dans le milieu des années 1990 par un architecte logiciel Japonais [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
+Ruby est un language de programmation open source orienté objet, dynamique, réfléchi, écrit dans le milieu des années 1990 par un architecte logiciel Japonais [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
 
 Ruby mets l'accent sur la simplicité et la productivité. Il possède une syntaxe élégante qui se lit naturellement et qui est facile à écrire.
 
@@ -36,11 +36,11 @@ Selon [l'index TIOBE](http://www.tiobe.com/index.php/content/paperinfo/tpci/inde
 * Tout peut être étendu/modifié
 * Haute lisibilité du code
 
-Pour en apprendre plus sur le langage Ruby, rendez-vous sur le [site officiel du langage Ruby](http://www.ruby-lang.org/en/about)
+Pour en apprendre plus sur le langage Ruby, rendez-vous sur le [site officiel du langage Ruby](http://www.ruby-lang.org/en/about).
 
 ## Exemples de Code ##{: #code-examples}
 
-**10 fois, afficher la chaîne de caractères "Hello world":**
+**Affiche la chaîne de caractères "Hello world", 10 fois :**
 
     10.times do 
       print "Hello world!"
@@ -104,10 +104,10 @@ Pour en apprendre plus sur le langage Ruby, rendez-vous sur le [site officiel du
 
 ## Merb et Ruby ##{: #merb-and-ruby}
 
-Merb tente à être aussi proche que possible du langage Ruby lui-même. 'est pourquoi il est important de comprendre ce que les gens appellent le "style Ruby".
+Merb tente à être aussi proche que possible du langage Ruby lui-même. 'est pourquoi il est important de comprendre ce que les gens appellent le "Style Ruby".
 
 Durant la RubyConf 2008, Matz a fait une remarque sur Merb:
 
-> Merb a un bel avenir pour les gens qui ne sont pas satisfaits par les styles fixés par Rails. Je pense que Merb donnera aux utilisateurs plus de liberté dans une approche de programmation plus Ruby-iste    
-> [Matz, Auteur du langage de programmation Ruby](http://ruby-lang.org/){: .quote-author}
+> Merb a un bel avenir pour les gens qui ne sont pas satisfaits par les styles fixés par Rails. Je pense que Merb donnera aux utilisateurs plus de liberté dans une approche de programmation plus Ruby-iste
+> - [Matz, Auteur du langage de programmation Ruby](http://ruby-lang.org/){: .quote-author}
 {: cite=http://merbist.com/2008/11/09/merb-1-0-released/}

@@ -10,9 +10,9 @@ Avoir un super framework est génial, mais comme m'a dit Jason Seifer de [RailsE
 
 > Merb a une superbe documentation du code, le code est si facile à lire, mais la documentation utilisateur est toujours manquante.
 
-Jason avait raison, notre documentation utilisateur n'était pas géniale. Bien sur nous avons le [wiki](http://wiki.merbivore.com) et un tas de livres disponibles ici et là mais je dois dire qu'en regardant les autres frameworks tels que [Django](http://www.djangobook.com/) la core team entière savait que nous devions faire quelque chose.
+Jason avait raison, notre documentation utilisateur n'était pas géniale. Bien sûr, nous avons le [wiki](http://wiki.merbivore.com) et un tas de livres disponibles ici et là mais je dois dire qu'en regardant les autres frameworks tels que [Django](http://www.djangobook.com/) la core team entière savait que nous devions faire quelque chose.
 
-Les efforts de Ford ont été rapidement remarqués et on lui a donné l'accord d'écrire un [Livre sur Merb pour Apress](http://www.apress.com/book/view/9781430218234). Comme vous pouvez l'imaginer, il est devenu un petit peu difficile pour Matt d'écrire un livre pour un éditeur, avoir un travail à plein temps, contribuer à de nombreux projets Open Source, suivre Merb et finalement s'assurer que le livre open source qu'il a commencé quelque temps auparavant soit à jour, cela devenait un sacré challenge. De plus, beaucoup de choses ont changé avant la 1.0 et une bonne partie du contenu existant avait besoin d'une réécriture complète.
+Les efforts de Ford ont été rapidement remarqués et on lui a donné l'accord d'écrire un [Livre sur Merb pour Apress](http://www.apress.com/book/view/9781430218234). Comme vous pouvez l'imaginer, il est devenu un petit peu difficile pour Matt d'écrire un livre pour un éditeur, avoir un travail à plein temps, contribuer à de nombreux projets Open Source, suivre Merb et finalement s'assurer que le livre open source qu'il a commencé quelque temps auparavant soit à jour. De plus, beaucoup de choses ont changé avant la 1.0 et une bonne partie du contenu existant avait besoin d'une réécriture complète.
 
 C'est la raison pour laquelle l'équipe de Merb a décidé qu'il était temps d'impliquer et d'axé la communauté sur un livre centralisé, orienté utilisateur.
 
