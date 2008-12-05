@@ -19,7 +19,7 @@ Ruby is an open source dynamic, reflective, general purpose object-oriented prog
 
 Ruby has focuses on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 
-Matz borrowed ideas and idions from some of his favorite programming languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming.
+Matz borrowed ideas and idioms from some of his favorite programming languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming.
 
 The result is an attractive language which feels very natural. In the Ruby community we often refer to the POLS, Principle of Least Surprise. The concept behind this principle is very simple, if you know a minimum of Ruby, you should not be surprised by how the language will react.
 

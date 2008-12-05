@@ -2,7 +2,7 @@
 
 Back when there were no Merb stack, no locked API, no organized documentation and the code base was changing often [Matthew Ford](http://github.com/deimos1986) decided to work on an open source book with a simple goal: help courageous Rubyists who wanted to live on the edge and decided to try Merb, DataMapper and RSpec.
 
-Since then, Merb matured a lot, getting up and running became way easier and Merb decided to offer an **opionated** version of the stack using Merb, DataMapper and RSpec! 
+Since then, Merb matured a lot, getting up and running became way easier and Merb decided to offer an **opinionated** version of the stack using Merb, DataMapper and RSpec! 
 
 As an early Merb developer myself, I really enjoyed having access to Matt's book and I even contributed to the early version of book. Since then, I joined the Merb team and with the rest of the I focused on the big 1.0 release which we did successfully in two steps, the first Release Candidate during [MerbCamp 2008](http://merbcamp.com) and then 1.0 final during [RubyConf 2008](http://rubyconf.org). 
 
