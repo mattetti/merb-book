@@ -1,6 +1,6 @@
 # Ruby
 
-* This will become a table of contents (this text will be scraped).
+* Isto irá se tornar um índice de conteúdos (este texto será apagado).
 {:toc}
 
 ![Ruby](/images/ruby-header.gif){: .no-border}
@@ -19,7 +19,7 @@ Ruby é uma linguagem dinâmica, reflexiva, de propósito geral e orientada a ob
 
 Ruby tem como foco a simplicidade e a produtividade. Ela tem uma sintaxe elegante que é natural de ler e fácil de escrever.
 
-Matz pegou idéias e idiomas de algumas das suas linguagens de programação favoritas (Perl, Smalltalk, Eiffel, Ada, and Lisp) para formar uma nova linguagem que equilibra programação funcional e programação imperativa.
+Matz pegou idéias e idiomas de algumas das suas linguagens de programação favoritas (Perl, Smalltalk, Eiffel, Ada, e Lisp) para formar uma nova linguagem que equilibra programação funcional e programação imperativa.
 
 O resultado é uma linguagem atraente que soa muito natural. Na comunidade Ruby nós frequentemente nos referimos ao POLS, Principle of Least Surprise (Princípio da Menor Surpresa). O conceito por trás desse princípio é muito simples: se você sabe o mínimo de Ruby, você não deverá se surpreender sobre a forma que a linguagem irá reagir.
 
@@ -38,9 +38,9 @@ De acordo com o [índice TIOBE](http://www.tiobe.com/index.php/content/paperinfo
 
 Para aprender mais sobre a linguagem Ruby, verifique o [website oficial da linguagem Ruby](http://www.ruby-lang.org/en/about)
 
-## Code Examples ##{: #code-examples}
+## Exemplos de código ##{: #code-examples}
 
-**Print the string "Hello world" 10 times:**
+**Imprima a *string* "Hello world" 10 vezes:**
 
 		10.times do
 		  print "Hello world!"
@@ -49,17 +49,17 @@ Para aprender mais sobre a linguagem Ruby, verifique o [website oficial da lingu
 		Hello world!Hello world!Hello world!Hello world!"
 {:lang=ruby html_use_syntax=true}
 
-**Conditional statement:**
+**Declaração condicional:**
 
 		access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
 {:lang=ruby html_use_syntax=true}
 
-**Ternary operator:**
+**Operador ternário:**
 
 	age_classification = age > 12 ? "adult" : "child"
 {:lang=ruby html_use_syntax=true}
 
-equivalent to:
+é equivalente a:
 
 	if age > 12
 		age_classification =  "adult"
@@ -72,7 +72,7 @@ equivalent to:
 
 		drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
 		# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
-		# Access the Array instance
+		# Accessando a instância do Array
 		drinks[0] # => "Coke"
 		drinks.first # => "Coke"
 		drinks.last # => "DrPepper"
@@ -81,14 +81,14 @@ equivalent to:
 {:lang=ruby html_use_syntax=true}
 
 
-**Check if an item exists in an Array instance:**
+**Verifica se um item existe em uma instância de um Array:**
 
 		haystack = ["Mac", "NT", "Irix", "Linux"]
 		needle = "Windows"
 		haystack.include?(needle)	# => false
 {:lang=ruby html_use_syntax=true}
 
-**Push an item into an Array instance:**
+**Adiciona um item em uma instância de um Array:**
 
 		haystack = ["Mac", "NT", "Irix", "Linux"]
 		needle = "Windows"
@@ -97,7 +97,7 @@ equivalent to:
 		haystack << needle
 {:lang=ruby html_use_syntax=true}
 
-**Define a method:**
+**Define um método:**
 
 		def greet_visitor(visitor_name)
 		  "Hi #{visitor_name}!"
@@ -106,10 +106,10 @@ equivalent to:
 
 ## Merb e Ruby ##{: #merb-and-ruby}
 
-Merb tenta ficar o mais próximo possível da linguagem Ruby em si. É por isso que é importante entender o que as pessoas chamam de "ruby way" (o jeito Ruby).
+Merb tenta ficar o mais próximo possível da linguagem Ruby em si. É por isso que é importante entender o que as pessoas chamam de "Ruby Way" (o Jeito Ruby).
 
 Durante a RubyConf 2008, Matz fez um comentário sobre Merb:
 
-> Merb tem um futuro brilhante para as pessoas que não estão satisfeitas com o jeito padrão do Rails. Eu acho que o Merb trará mais liberdade ao usuários da forma Ruby de programar
+> Merb tem um futuro brilhante para as pessoas que não estão satisfeitas com o jeito padrão do Rails. Eu acho que o Merb trará mais liberdade ao usuários em uma maneira Ruby de se programar
 > - [Matz, Autor da linguagem de programação Ruby](http://ruby-lang.org/){: .quote-author}
 {: cite=http://merbist.com/2008/11/09/merb-1-0-released/}
