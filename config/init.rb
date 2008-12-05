@@ -25,7 +25,14 @@ Merb::BootLoader.before_app_loads do
   # This will get executed after dependencies have been loaded but before your app's classes have loaded.
    Merb::Plugins.config[:Merb_babel] = { 
      :default_language => 'en',
-     :available_languages => [{:name => "English", :code => 'en'}, {:name => "Français", :code => 'fr'}, {:name => "日本語", :code => 'jp'}, {:name => "Português", :code => 'pt'}]
+     :available_languages => [
+            {:name => "English", :code => 'en'}, 
+            {:name => "Français", :code => 'fr'}, 
+            {:name => "日本語", :code => 'jp'}, 
+            {:name => "Português", :code => 'pt'},
+            {:name => "Deutsch", :code => 'de'},
+            {:name => "中國人", :code => 'zn'}
+          ]
      }
    
 end

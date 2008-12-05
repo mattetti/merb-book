@@ -37,6 +37,9 @@ If you are copying a page or chapter to your language folder and want to mark a 
 French: http://github.com/pointcom  (Mathieu Fosse)
 Portuguese: http://github.com/akitaonrails (Fabio Akita)
 Japanese: http://github.com/kwatch (Makoto Kuwata)
+German: http://github.com/cypher (Markus Prinz)
+Chinese: http://github.com/zhhz (Zhonghai Zuo)
+Spanish: (pending)
 
 ## Legal
 
