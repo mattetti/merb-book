@@ -1,115 +1,115 @@
 # Ruby
 
-* This will become a table of contents (this text will be scraped).
+* Esto sera una tabla de contenidos  (este texto sera pegado).
 {:toc}
 
 ![Ruby](/images/ruby-header.gif){: .no-border}
 
-**Reference website:** [http://ruby-lang.org](http://ruby-lang.org){: .reference}
+**Sitio web de Referencia:** [http://ruby-lang.org](http://ruby-lang.org){: .reference}
 
-> Coding in Ruby makes me happy because it’s one of the shortest paths between my brain and a computer. I can think of something and I can express it very succinctly and typically fairly elegantly in Ruby without all the kind of extraneous fluff that you need in most other languages.
-> - [Dave Thomas, author of "Programming Ruby"](http://pragdave.pragprog.com/){: .quote-author}
+> Programar en Ruby me hace feliz porque es uno de los caminos mas cortos entre mi cerebro y una computadora. Puedo pensar en algo y expresarlo muy suscintamente y normalmente bastante elegante en Ruby sin todo el tipo de pelusa extraña que se necesita en casi todos los otros lenguajes.
+> - [Dave Thomas, autor de "Programming Ruby"](http://pragdave.pragprog.com/){: .quote-author}
 {: cite=http://www.infoq.com/interviews/ruby-rails-dave-thomas .lead-quote}
 
-It would be a crime to start talking about the Merb framework without first discussing the very reason why Merb is so flexible, powerful and fast: **Ruby**.
+Sería un crimen comenzar a hablar de la plataforma Merb sin antes discutir la verdadera razon de porque es Merb tan flexible, potente y rapido: **Ruby**.
 
-## Origin ##{: #origin}
+## Origen ##{: #origin}
 ![Yukihiro Matsumoto](/images/Yukihiro_Matsumoto.jpg){: .left}
-Ruby is an open source, dynamic, reflective, general purpose object-oriented programming language written in the mid-1990s by Japanese software architect [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
+Ruby es un lenguaje de programacion orientado a objetos de uso general, de codigo abierto, dinamico y reflexivo escrito a mitad de los '90 por el arquitecto de software Japones [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
 
-Ruby has focuses on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+Ruby se enfoca en la simplicidad y la productividad. Tiene una sintaxis elegante que se lee naturalmente y es facil de escribir.
 
-Matz borrowed ideas and idioms from some of his favorite programming languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming.
+Matz tomó ideas y construcciones inspiradas en algunos de sus lenguajes favoritos de programacion (Perl, Smalltalk, Eiffel, Ada, y Lisp) para conformar un nuevo lenguaje que logró un balance entre la programacion funcional y la programcion imperativa.
 
-The result is an attractive language which feels very natural. In the Ruby community we often refer to the POLS, Principle of Least Surprise. The concept behind this principle is very simple, if you know a minimum of Ruby, you should not be surprised by how the language will react.
+El resultado es un lenguaje atractivo que se siente muy natural. En la comunidad Ruby nos referimos a menudo a los POLS (Principle of Least Surprise) Principio de la Minima Sorpresa. El concepto detras de este principio es muy simple, si sabes un minimo de Ruby, no deberias sorprenderte por como el lenguaje reaccionará.
 
-## Adoption ##{: #adoption}
-According to the [TIOBE index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html), Ruby ranks in the top 10 programming languages used worldwide. Much of the growth is attributed to the popularity of software written in Ruby, particularly the [Ruby on Rails web framework](http://rubyonrails.org).
+## Adopcion ##{: #adoption}
+De acuerdo con [TIOBE index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html), Ruby esta entre los 10  lenguajes de programacion mas usados en el mundo. Mucho de su crecimiento es atribuido a la popularidad del software escrito en Ruby, particularmente la [plataforma web Ruby on Rails](http://rubyonrails.org).
 
-## Key Elements of the language ##{: #key-elements}
+## Elementos Claves del languaje ##{: #key-elements}
 
-> I wanted a scripting language that was more powerful than Perl, and more object-oriented than Python.
+> Yo quería un lenguaje de script mas poderoso que Perl, y mas orientado a objetos que Python.
 > - Matz
 {: cite=http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html}
 
-* Everything is an object
-* Everything can be extended/modified
-* High code readability
+* Todo es un objeto
+* Todo puede ser extendido/modificado
+* Alta legibilidad del codigo
 
-To learn more about the Ruby language, check the [Official Ruby language website](http://www.ruby-lang.org/en/about).
+Para aprender mas sobre el lenguaje Ruby, refierete al [Sitio Oficial del lenguaje Ruby](http://www.ruby-lang.org/en/about).
 
-## Code Examples ##{: #code-examples}
+## Ejemplos de Codigo ##{: #code-examples}
 
-**Print the string "Hello world" 10 times:**
+**Imprimir la cadena "Hola mundo" 10 veces:**
 
 		10.times do
-		  print "Hello world!"
+		  print "Hola mundo!"
 		end
-		# => "Hello world!Hello world!Hello world!Hello world!Hello world!Hello, world!
-		Hello world!Hello world!Hello world!Hello world!"
+		# => "Hola mundo!Hola mundo!Hola mundo!Hola mundo!Hola mundo!Hola mundo!
+		Hola mundo!Hola mundo!Hola mundo!Hola mundo!"
 {:lang=ruby html_use_syntax=true}
 
-**Conditional statement:**
+**Instrucciones conditionales:**
 
-		access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
+		acceso_permitido = true if DateTime.now > DateTime.parse("2008-12-01")
 {:lang=ruby html_use_syntax=true}
 
-**Ternary operator:**
+**Operador ternario:**
 
-	age_classification = age > 12 ? "adult" : "child"
+	clasificacion_edad = edad > 12 ? "adulto" : "niño"
 {:lang=ruby html_use_syntax=true}
 
-equivalent to:
+es equivalente a:
 
-	if age > 12
-		age_classification =  "adult"
+	if edad > 12
+		clasificacion_edad =  "adulto"
 	else
-		age_classification = "child"
+		clasificacion_edad = "niño"
 	end
 {:lang=ruby html_use_syntax=true}
 
-**Array:**
+**Arreglos:**
 
-		drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
+		bebidas = ["Coke", "Pepsi", "Orangina", "DrPepper"]
 		# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
-		# Access the Array instance
-		drinks[0] # => "Coke"
-		drinks.first # => "Coke"
-		drinks.last # => "DrPepper"
-		drinks[3] # => "DrPepper"
-		drinks[drinks.length - 1] # => "DrPepper"
+		# Acceder la instancia del Arreglo
+		bebidas[0] # => "Coke"
+		bebidas.first # => "Coke"
+		bebidas.last # => "DrPepper"
+		bebidas[3] # => "DrPepper"
+		bebidas[bebidas.length - 1] # => "DrPepper"
 {:lang=ruby html_use_syntax=true}
 
 
-**Check if an item exists in an Array instance:**
+**Chequear si un item existe en una instancia de un Arreglo:**
 
-		haystack = ["Mac", "NT", "Irix", "Linux"]
-		needle = "Windows"
-		haystack.include?(needle)	# => false
+		pajar = ["Mac", "NT", "Irix", "Linux"]
+		aguja = "Windows"
+		pajar.include?(aguja)	# => false
 {:lang=ruby html_use_syntax=true}
 
-**Push an item into an Array instance:**
+**Insetar un item en una instancia de un Arreglo:**
 
-		haystack = ["Mac", "NT", "Irix", "Linux"]
-		needle = "Windows"
-		haystack.push(needle)
+		pajar = ["Mac", "NT", "Irix", "Linux"]
+		aguja = "Windows"
+		pajar.push(aguja)
 		# Or do it like this:
-		haystack << needle
+		pajar << aguja
 {:lang=ruby html_use_syntax=true}
 
-**Define a method:**
+**Definir un metodo:**
 
-		def greet_visitor(visitor_name)
-		  "Hi #{visitor_name}!"
+		def saludar_visitante(nombre_visitante)
+		  "Hola #{nombre_visitante}!"
 		end
 {:lang=ruby html_use_syntax=true}
 
-## Merb and Ruby ##{: #merb-and-ruby}
+## Merb y Ruby ##{: #merb-and-ruby}
 
-Merb tries to say as close as possible to the Ruby language itself. That's why it's important to understand what people call the "Ruby Way".
+Merb intenta decir tan parecido al lenguaje Ruby como sea posible. Por eso es que es importante entender lo que se ha dado en llamar la "Manera Ruby".
 
-During RubyConf 2008, Matz made a comment about Merb:
+Durante RubyConf 2008, Matz hizo un comentario sobre Merb:
 
-> Merb has a bright future for the people who are not satisfied by the fixed ways in Rails.  I think that Merb will give users more freedom in a Ruby-ish way of programming
-> - [Matz, Author of the Ruby programming language](http://ruby-lang.org/){: .quote-author}
+> Merb tiene un futuro brillante para los que no estan satisfechos con las maneras fijas de Rails. Yo pienso que Merb Merb le dará a los usuarios mas libertad haciendolo en una manera de programar más a la manera de Ruby.
+> - [Matz, Auto del lenguaje de progración Ruby](http://ruby-lang.org/){: .quote-author}
 {: cite=http://merbist.com/2008/11/09/merb-1-0-released/}
