@@ -90,14 +90,14 @@ je isto što i:
 
 **Nizovi:**
 
-		drinks = ["Coca Cola", "Pepsi", "Orangina", "Cockta"]
-		# => ["Coca Cola,", "Pepsi,", "Orangina,", "Cockta"]
-		# Pristup elementima niza
-		drinks[0] # => "Coca Cola"
-		drinks.first # => "Coca Cola"
-		drinks.last # => "Cockta"
-		drinks[3] # => "Cockta"
-		drinks[drinks.length - 1] # => "Cockta"
+	drinks = ["Coca Cola", "Pepsi", "Orangina", "Cockta"]
+	# => ["Coca Cola", "Pepsi", "Orangina", "Cockta"]
+	# Pristup elementima niza
+	drinks[0] # => "Coca Cola"
+	drinks.first # => "Coca Cola"
+	drinks.last # => "Cockta"
+	drinks[3] # => "Cockta"
+	drinks[drinks.length - 1] # => "Cockta"
 {:lang=ruby html_use_syntax=true}
 
 
