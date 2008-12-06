@@ -13,6 +13,7 @@ module Merb
       end.compact.join(" | ")
     end
 
+    # Returns links to the previous and next pages.
     def page_nav_links(format = 'markdown')
       return unless params[:action] == 'show' # Don't need navigation for the TOC (index).
       links = []
@@ -26,6 +27,9 @@ module Merb
 
       chapter_name, page_name = extract_previous_page(chapter_number, page_number)
       links << previous_page(chapter_name, page_name)
+
+      # Stick a link to the TOC in the middle of the array.
+      links << link_to('Home', url(:toc, :language => language))
 
       chapter_name, page_name = extract_next_page(chapter_number, page_number)
       links << next_page(chapter_name, page_name)
