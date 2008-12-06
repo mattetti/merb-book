@@ -6,6 +6,7 @@ Without the following contributors this book would not have possible. Thank you 
 
 * [Matt Aimonetti](http://merbist.com)
 * [Fabio Akita](http://akitaonrails.com)
+* [Dale Campbell](http://corrupt.save-state.net/)
 * [Matthew Ford](http://github.com/deimos1986)
 * [Mathieu Fosse](http://blog.kawooa.org)
 * [Markus Prinz](http://blog.nuclearsquid.com/)
