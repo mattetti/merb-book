@@ -19,7 +19,7 @@ Ruby Enterprise Edition can be installed along side a version of Ruby you curren
 
     $ tar xzvf ruby-enterprise-1.8.6-20080810.tar.gz
     $ cd ruby-enterprise-1.8.6-20080810
-    $ ./insaller
+    $ ./installer
 
 
 ##Installing Passenger
@@ -55,6 +55,5 @@ The following file needs to be placed into your Merb applications root directory
     # end
 
     run Merb::Rack::Application.new
-
 
 ## Capistrano Task
