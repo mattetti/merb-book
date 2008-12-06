@@ -7,9 +7,9 @@
 </div>
 
 0. [Tapa](/es/front-matter)
-	1. [Algunas palabras por Yehuda Katz](/es/front-matter/foreword)
+	1. [Prólogo](/es/front-matter/foreword)
 	2. [Prefacio por Matt Aimonetti](/es/front-matter/preface)
-	3. [Contribuyentes](/es/front-matter/contributors)
+	3. [Colaboradores](/es/front-matter/contributors)
 1. [Introducción](/es/introduction)
 	1. [El Lenguaje Ruby](/es/introduction/ruby)
 	2. [La plataforma de Web Merb](/es/introduction/merb)
@@ -37,7 +37,7 @@
 	1. [Probando sus Modelos](/es/testing-your-application/models)
 	1. [Probando sus Consultas](/es/testing-your-application/requests)
 	1. [Pruebas de Integración con RSpec Cucumber](/es/testing-your-application/cucumber)
-5. [Mas Merb](/es/merb-more)
+5. [Más Merb](/es/merb-more)
   1. [Autenticación](/es/merb-more/authentication)
   1. [Mailer](/es/merb-more/mailer)
   1. [Cacheo](/es/merb-more/caching)
