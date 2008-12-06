@@ -31,7 +31,7 @@ Merb::BootLoader.before_app_loads do
             {:name => "日本語", :code => 'jp'}, 
             {:name => "Português", :code => 'pt'},
             {:name => "Deutsch", :code => 'de'},
-            {:name => "中國人", :code => 'zn'}
+            {:name => "中文", :code => 'zh'}
           ]
      }
    
