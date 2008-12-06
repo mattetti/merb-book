@@ -10,12 +10,12 @@ The opinionated Merb stack.  This generates a full application directory structu
 
     $ merb-gen app my-application
 
-This app has everything needed to start building a first-class web application, and it the most simular to the default structure of Rails.  Much of this book will work with the assumption that you have started like this.
+This app has everything needed to start building a first-class web application, and it is most similar to the default structure of Rails.  Much of this book will work with the assumption that you have started like this.
 
-Run this application by running <tt>merb</tt> in the root directory.  This will start Merb and bind it to the default port 4000. To see your application in action, visit [http://localhost:4000/](http://localhost:4000/).
+Run this application by running <tt>merb</tt> in the root directory.  This will start Merb and bind it to the default port of 4000. To see your application in action, visit [http://localhost:4000/](http://localhost:4000/).
 
 ### Core
-Core will generate the full application directory structure with a full set of configuration files.  Unlike the <tt>app</tt> -- the opinionated full stack, no dependancies will be added.
+Core will generate the full application directory structure with a full set of configuration files.  Unlike the <tt>app</tt> -- the opinionated full stack -- no dependancies will be added.
 
     $ merb-gen core my-application
 
