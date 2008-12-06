@@ -59,4 +59,7 @@
   1. [Slices disponibles](/es/appendix/slices)
   1. [Gems útiles](/es/appendix/gems)
 
+1. [Apéndice ayudas y consejos:](/es/appendix/hints-tips)
+1. [Apéndice Slices disponibles:](/es/appendix/slices)
+1. [Apéndice Gems útiles:](/es/appendix/gems)
 {: #appendices}
