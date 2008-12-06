@@ -1,21 +1,21 @@
-# Preface
+# Prefacio
 
-Back when there was no Merb stack, no locked API, no organized documentation and the code base was changing often [Matthew Ford](http://github.com/deimos1986) decided to work on an open source book with a simple goal: help courageous Rubyists who wanted to live on the edge and decided to try Merb, DataMapper and RSpec.
+Tiempo atrás cuando no existía el stack Merb, ni las Interfaces de Programación de Aplicaciones protegidas, ni una documentación organizada y el código fuente estaba en constante cambio [Matthew Ford](http://github.com/deimos1986) decidió trabajar en un libro con un simple objetivo: ayudar a aquellos rubistas corajudos quienes querían vivir en el limite y decidieron intentar Merb junto con DataMapper y RSpec.
 
-Since then, Merb matured a lot, getting up and running became way easier and Merb decided to offer an **opinionated** version of the stack using Merb, DataMapper and RSpec! 
+Desde aquel entonces Merb ha madurado mucho. El comenzar a ejecutar una aplicación se ha simplificado y Merb decidió ofrecer una versión **opinada** del stack usando Merb, DataMapper y RSpec.
 
-As an early Merb developer myself, I really enjoyed having access to Matt's book and I even contributed to the early version of the book. Since then, I joined the Merb team and with the rest of them, I focused on the big 1.0 release which we did successfully in two steps, the first Release Candidate during [MerbCamp 2008](http://merbcamp.com) and then 1.0 final during [RubyConf 2008](http://rubyconf.org).
+Como uno de los primeros desarrolladores de Merb, he disfrutado tener acceso al libro de Matt e incluso he contribuido para una primera versión del mismo. Desde aquel momento, he integrado el equipo de Merb y junto al resto del equipo, me he enfocado en el gran lanzamiento de la versión 1.0 la cual hemos realizado con éxito en dos pasos, el primer Release Candidate durante [MerbCamp 2008](http://merbcamp.com) y luego la versión 1.0 definitiva durante [RubyConf 2008](http://rubyconf.org).
 
-Having a wonderful framework is great, but as Jason Seifer from [RailsEnvy.com](http://railsenvy.com) said to me after 1.0 was released:
+Tener una plataforma maravillosa es grandioso, pero como Jason Seifer de [RailsEnvy.com](http://railsenvy.com) me ha dicho después de que la versión 1.0 fue lanzada:
 
-> Merb has some awesome code documentation, the code is so easy to read, but the user documentation is still lacking.
+> Merb tiene una excelente documentación en el código fuente, por lo que éste es muy fácil de leer pero todavía no hay una documentación para el usuario.
 
-Jason was right, our user documentation was not that great. Of course, we have the [wiki](http://wiki.merbivore.com) and a bunch of books available out there, but I have to say that looking at other frameworks such as [Django](http://www.djangobook.com/) the entire core team knew we had to do something.
+Jason tenia razón, nuestra documentación para el usuario no es buena. Por supuesto, tenemos un [wiki](http://wiki.merbivore.com) y existen algunos libros disponibles, pero tengo que admitir que he estado observando a otras plataformas como [Django](http://www.djangobook.com/) y todo el equipo completo sabe que tenemos que hacer algo al respecto.
 
-Ford's efforts were noticed early on and he was offered a deal to write a [Merb book for Apress](http://www.apress.com/book/view/9781430218234). As you can imagine, it became a bit hard for Matt to write a book for a publisher, have a full time job, contribute to various Open Source projects, keep up with Merb and finally make sure the open source book he started a while back would stay up to date. On top of that, many things changed pre 1.0 and a good part of the existing content needed a full rewrite.
+Los esfuerzos de Ford fueron tempranamente notados y, debido a ello, ha firmado un acuerdo con la editora Apress para escribir un [libro sobre Merb].(http://www.apress.com/book/view/9781430218234). Como se pueden imaginar, se ha convertido en algo sumamente difícil para Matt escribir un libro para un editor, tener un trabajo de tiempo completo, contribuir con varios proyectos de código abierto, mantenerse actualizado con Merb y finalmente asegurarse de que el proyecto del libro abierto que comenzó hace un tiempo atrás estuviese al día. Encima de todo esto, se han realizado muchos cambios en la plataforma para el lanzamiento de la versión 1.0 y una gran parte del contenido existente necesita ser nuevamente escrito.
 
-That's why the Merb team decided it was time to get involved and to get the community focused on  a centralized, user oriented book.
+Es por esta razón de que el equipo Merb ha decidido que es tiempo de involucrarse y de tener a la comunidad enfocada en un único libro orientado al usuario.
 
-I am really glad that the Merb team decided to take responsibility for this book and that we will make sure it stays well organized, up to date and relevant. However, this book, very much like Merb, won't grow and evolve much without the community help. So, please, send us corrections, new examples, new chapters so this book can help the community has a whole.
+Me siento feliz de que el equipo Merb haya decidido tomar la responsabilidad de este libro y nos aseguraremos de que este siempre este bien organizado, actualizado y relevante. Sin embargo, este libro, al igual que Merb, no crecerá y evolucionará sin la ayuda de la comunidad. Por eso, por favor no dude en enviarnos correcciones, nuevos ejemplos, nuevos capítulos para que este libro pueda ayudar a toda la comunidad.
 
-[Matt Aimonetti](http://merbist.com), Merb Core team member
+[Matt Aimonetti](http://merbist.com), miembro del equipo Core de Merb.

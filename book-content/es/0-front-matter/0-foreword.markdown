@@ -1,3 +1,3 @@
-## Foreword
+## Algunas palabras
 
-By Yehuda Katz, Merb lead developer
+Por Yehuda Katz, desarrollador líder de Merb
