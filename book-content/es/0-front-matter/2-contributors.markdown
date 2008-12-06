@@ -1,6 +1,6 @@
-# Contribuyentes
+# Colaboradores
 
-Sin la ayuda de los siguientes contribuyentes este libro nunca hubiese sido posible. Gracias a todos!
+Sin la ayuda de los siguientes colaboradores este libro nunca hubiese sido posible. Gracias a todos!
 
 **En order alfabético:**
 
