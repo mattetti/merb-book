@@ -1,6 +1,6 @@
 #Table of Contents
 
-<div id="intro" class="available-for-translation">
+<div id="intro" class=".available-for-translation">
 	<p>Welcome to the Merb Open Source Book. The purpose of this book is simple: guide beginner and advanced users through the Merb Framework.</p>
 	<p>In all honesty, this book won't answer all of your questions about Merb, Ruby and unfortunately won't cover all the use cases. However, with the help of the Ruby Community, we will be able to cover most of what you need to use Merb on a daily basis.</p>
 	<p>If you are learning through this material, or if you already use Merb frequently, <strong>please consider helping improve the content of this book</strong>.</p>
@@ -42,7 +42,7 @@
   1. [Mailer](/merb-more/mailer)
   1. [Caching](/merb-more/caching)
   1. [Exceptions](/merb-more/exceptions)
-  1. [Slices](/merb-more/exceptions)
+  1. [Slices](/merb-more/slices)
 6. [Recipes](/recipes)
 	1. [Simple Blog](/recipes/simple-blog)
 	1. [Building a Blog Slice](/recipes/blog-slice)
@@ -59,4 +59,4 @@
   1. [Available Slices](/appendix/slices)
   1. [Useful Gems](/appendix/gems)
 
-{: #appendices .available-for-translation}
+{: #appendices}
