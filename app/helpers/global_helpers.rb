@@ -9,7 +9,10 @@ module Merb
 
     def language_switch
       Merb::Plugins.config[:Merb_babel][:available_languages].map do |lang|
-        "<a href='/#{lang[:code]}'>#{lang[:name]}</a>" unless lang[:code] == language
+        href = "/#{lang[:code]}"
+        href += "/#{params[:chapter]}" if params[:chapter]
+        href += "/#{params[:page_name]}" if params[:page_name]
+        "<a href='#{href}'>#{lang[:name]}</a>" unless lang[:code] == language
       end.compact.join(" | ")
     end
 
