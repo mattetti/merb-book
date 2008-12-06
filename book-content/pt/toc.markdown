@@ -1,6 +1,6 @@
 #Índice
 
-<div id="intro" class="available-for-translation">
+<div id="intro">
 	<p>Bem vindo ao Merb Open Source Book. O propósito desse livro é simples: guiar os usuários iniciantes e avançados através do framework Merb.</p>
 	<p>Honestamente, esse livro não irá tirar todas as suas dúvidas sobre Merb, Ruby e infelizmente não irá cobrir todos os casos de uso. Entretanto, com a ajuda da comunidade Ruby nós seremos capazes de cobrir a maior parte do que é necessário para usar Merb diariamente.</p>
 	<p>Se você está aprendendo através desse material, ou se já usa Merb frequentemente, <strong>por favor considere a possibilidade de ajudar a melhorar o conteúdo desse livro</strong>.</p>
@@ -52,11 +52,11 @@
   1. [JRuby and Glassfish](/pt/deployment/jruby)
   1. [Bundling your Merb application](/pt/deployment/bundle)
 
-{: #toc .available-for-translation}
+{: #toc}
 
 * [Apêndice](/pt/appendix)
   1. [Dicas e Sugestões](/pt/appendix/hints-tips)
   1. [Slices Disponíveis](/pt/appendix/slices)
   1. [Gems Úteis](/pt/appendix/gems)
 
-{: #appendices .available-for-translation}
+{: #appendices}
