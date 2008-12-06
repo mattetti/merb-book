@@ -15,7 +15,7 @@ Seria um crime começar a falar sobre o framework Merb sem antes discutirmos sob
 
 ## Origem ##{: #origin}
 ![Yukihiro Matsumoto](/images/Yukihiro_Matsumoto.jpg){: .left}
-Ruby é uma linguagem dinâmica, reflexiva, de propósito geral e orientada a objetos escrita em meados de 1990 pelo arquiteto de software japonês [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
+Ruby é uma linguagem open source, dinâmica, reflexiva, de propósito geral e orientada a objetos escrita em meados de 1990 pelo arquiteto de software japonês [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
 
 Ruby tem como foco a simplicidade e a produtividade. Ela tem uma sintaxe elegante que é natural de ler e fácil de escrever.
 
@@ -42,16 +42,23 @@ Para aprender mais sobre a linguagem Ruby, verifique o [website oficial da lingu
 
 **Imprima a *string* "Hello world" 10 vezes:**
 
-		10.times do
-		  print "Hello world!"
-		end
-		# => "Hello world!Hello world!Hello world!Hello world!Hello world!Hello, world!
-		Hello world!Hello world!Hello world!Hello world!"
+	10.times do
+	  print "Hello world!"
+	end
+	# => "Hello world!Hello world!Hello world!Hello world!Hello world!Hello, world!
+	Hello world!Hello world!Hello world!Hello world!"
 {:lang=ruby html_use_syntax=true}
 
 **Declaração condicional:**
 
-		access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
+	access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
+{:lang=ruby html_use_syntax=true}
+
+é equivalente a:
+
+		if DateTime.now > DateTime.parse("2008-12-01")
+		  access_allowed = true 
+		end
 {:lang=ruby html_use_syntax=true}
 
 **Operador ternário:**
@@ -70,38 +77,38 @@ Para aprender mais sobre a linguagem Ruby, verifique o [website oficial da lingu
 
 **Array:**
 
-		drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
-		# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
-		# Accessando a instância do Array
-		drinks[0] # => "Coke"
-		drinks.first # => "Coke"
-		drinks.last # => "DrPepper"
-		drinks[3] # => "DrPepper"
-		drinks[drinks.length - 1] # => "DrPepper"
+	drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
+	# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
+	# Accessando a instância do Array
+	drinks[0] # => "Coke"
+	drinks.first # => "Coke"
+	drinks.last # => "DrPepper"
+	drinks[3] # => "DrPepper"
+	drinks[drinks.length - 1] # => "DrPepper"
 {:lang=ruby html_use_syntax=true}
 
 
 **Verifica se um item existe em uma instância de um Array:**
 
-		haystack = ["Mac", "NT", "Irix", "Linux"]
-		needle = "Windows"
-		haystack.include?(needle)	# => false
+	haystack = ["Mac", "NT", "Irix", "Linux"]
+	needle = "Windows"
+	haystack.include?(needle)	# => false
 {:lang=ruby html_use_syntax=true}
 
 **Adiciona um item em uma instância de um Array:**
 
-		haystack = ["Mac", "NT", "Irix", "Linux"]
-		needle = "Windows"
-		haystack.push(needle)
-		# Or do it like this:
-		haystack << needle
+	haystack = ["Mac", "NT", "Irix", "Linux"]
+	needle = "Windows"
+	haystack.push(needle)
+	# Or do it like this:
+	haystack << needle
 {:lang=ruby html_use_syntax=true}
 
 **Define um método:**
 
-		def greet_visitor(visitor_name)
-		  "Hi #{visitor_name}!"
-		end
+	def greet_visitor(visitor_name)
+	  "Hi #{visitor_name}!"
+	end
 {:lang=ruby html_use_syntax=true}
 
 ## Merb e Ruby ##{: #merb-and-ruby}

@@ -42,7 +42,7 @@
   1. [Mailer](/pt/merb-more/mailer)
   1. [Caching](/pt/merb-more/caching)
   1. [Exceptions](/pt/merb-more/exceptions)
-  1. [Slices](/pt/merb-more/exceptions)
+  1. [Slices](/pt/merb-more/slices)
 6. [Recipes](/pt/recipes)
 	1. [Simple Blog](/pt/recipes/simple-blog)
 	1. [Building a Blog Slice](/pt/recipes/blog-slice)
