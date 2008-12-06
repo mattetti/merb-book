@@ -1,9 +1,22 @@
 #Sadržaj
 
 <div id="intro">
-	<p>Dodbrodošli na prvu Merb knjigu otvorenog izvora. Svrha ove knjige je jednostavna: voditi kako početnike, tako i iskusne korisnike kroz Merb razvojni okvir.</p>
-	<p>Iskreno govoreći, ova knjiga neće odgovoriti na sva vaša pitanja o Merbu, Rubyju, te, nažalost, neće pokriti sve moguće slučajeve upotrebe. Tim ni manje, uz pomoć Ruby zajednice ćemo moći pokriti većinu onoga što vam je potrebno kako bi koristili Merb na dnevnoj bazi.</p>
-  <p>Ukoliko učite kroz ovaj materijal ili ako već redovno koristite Merb, <strong>molimo da razmislite o pomoći pri unaprijeđenju ove knjige</strong>.</p>
+  <p>
+    Dodbrodošli na prvu Merb knjigu otvorenog izvora.
+    Svrha ove knjige je jednostavna: voditi kako početnike, tako i iskusne
+    korisnike kroz Merb razvojni okvir.
+  </p>
+  <p>
+    Iskreno govoreći, ova knjiga neće odgovoriti na sva vaša pitanja o Merbu,
+    Rubyju, te, nažalost, neće pokriti sve moguće slučajeve upotrebe.
+    Tim ni manje, uz pomoć Ruby zajednice ćemo moći pokriti većinu onoga što
+    vam je potrebno kako bi koristili Merb na dnevnoj bazi.
+  </p>
+  <p>
+    Ukoliko učite kroz ovaj materijal ili ako već redovno koristite Merb,
+    <strong>molimo da razmislite o pomoći pri unaprijeđenju ove
+    knjige</strong>.
+  </p>
 </div>
 
 0. [Prve stranice](/bs/front-matter)
