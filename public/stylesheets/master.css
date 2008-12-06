@@ -196,6 +196,19 @@ div#footer a, div#footer a:visited{
 	font-size: 0.9em;
 }
 
+#nav-links {
+	text-align: center;
+}
+
+div#nav-links a {
+	color: #3366ff;
+	text-decoration: underline;
+}
+
+div#nav-links a:hover {
+	color: #ff6633;
+}
+
 /* @end */
 
 /* @group TOC */
