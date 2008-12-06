@@ -33,7 +33,8 @@ Merb::BootLoader.before_app_loads do
             {:name => "Deutsch", :code => 'de'},
             {:name => "中文", :code => 'zh'},
             {:name => "Español", :code => "es"},
-            {:name => "Русский", :code => 'ru'}
+            {:name => "Русский", :code => 'ru'},
+            {:name => "Bosanski", :code => "bs"}
           ]
      }
    
