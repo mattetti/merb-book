@@ -197,6 +197,7 @@ div#footer a, div#footer a:visited{
 }
 
 #nav-links {
+	margin-top: 1em;
 	text-align: center;
 }
 
