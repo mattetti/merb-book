@@ -13,37 +13,24 @@ module Merb
       end.compact.join(" | ")
     end
 
-    # def page_nav_links(format = 'markdown')
-    #   return unless params[:action] == 'show' # Don't need navigation for the TOC (index).
-    #   chapter_name = params[:chapter]
-    #   page_name    = params[:page_name]
-    #   dir_match    = "#{Merb.root}/book-content/#{language}/*-#{chapter_name}/*-#{page_name||"*"}.#{format}"
-    #   current_file = Dir[dir_match].entries.first
-    #   chapter_and_page_regexp = /book-content\/\w{2}\/(\d{1,})-[a-z-]+\/(\d{1,})-[a-z-]+[.]\w+/
-    #   current_file.grep(chapter_and_page_regexp)
-    #   chapter_num = $1
-    #   page_num    = $2
-    #   links = next_page(page_num, chapter_num, format)
-    #   links
-    # end
-
     def page_nav_links(format = 'markdown')
       return unless params[:action] == 'show' # Don't need navigation for the TOC (index).
+      links = []
       chapter = params[:chapter]
       page_name = params[:page_name]
       current_file = Dir["#{Merb.root}/book-content/#{language}/*-#{chapter}/*-#{page_name||"*"}.#{format}"].entries.first
-      current_file.grep(/book-content\/\w{2}\/(\d{1,})-[a-z-]+\/(\d{1,})-[a-z-]+[.]\w+/)
-      chapter_number, page_number = $1, $2
-      next_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number}-*/#{page_number.to_i + 1}-*.#{format}"].entries.first
-      if next_file
-        next_file.grep(chapter_and_page_names)
-      else
-        # We're on the last page, get the first page of the next chapter.
-        next_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number.to_i + 1}-*/**"].entries.first
-        next_file.grep(chapter_and_page_names)
+      if current_file
+        current_file.grep(/book-content\/\w{2}\/(\d{1,})-[a-z-]+\/(\d{1,})-[a-z-]+[.]\w+/)
+        chapter_number, page_number = $1, $2
       end
-      chapter_name, page_name = $1, $2
-      next_page(chapter_name, page_name)
+
+      chapter_name, page_name = extract_previous_page(chapter_number, page_number)
+      links << previous_page(chapter_name, page_name)
+
+      chapter_name, page_name = extract_next_page(chapter_number, page_number)
+      links << next_page(chapter_name, page_name)
+
+      links.join(' | ')
     end
 
     private
@@ -52,9 +39,51 @@ module Merb
       link_to('Next', url(:page, :language => language, :chapter => chapter_name, :page_name => page_name))
     end
 
+    def previous_page(chapter_name, page_name)
+      link_to('Previous', url(:page, :language => language, :chapter => chapter_name, :page_name => page_name))
+    end
+
     # This method returns a Regexp which contains match captures for the chapter and page names.
     def chapter_and_page_names
       /book-content\/\w{2}\/\d{1,}-([a-z-]+)\/\d{1,}-([a-z-]+)[.]\w+/
+    end
+
+    # Returns an array of the next chapter and page names.
+    def extract_next_page(chapter_number, page_number, format = 'markdown')
+      next_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number}-*/#{page_number.to_i + 1}-*.#{format}"].entries.first
+      if next_file
+        next_file.grep(chapter_and_page_names)
+      else
+        # We're on the last page, get the first page of the next chapter.
+        next_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number.to_i + 1}-*/**"].entries.first
+        if next_file
+          next_file.grep(chapter_and_page_names)
+        else
+          # We're on the last page of the last chapter, just return the TOC.
+          return 'table-of-contents'
+        end
+      end
+      chapter_name, page_name = $1, $2
+      [chapter_name, page_name]
+    end
+
+    # Returns an array of the previous chapter and page names.
+    def extract_previous_page(chapter_number, page_number, format = 'markdown')
+      next_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number}-*/#{page_number.to_i - 1}-*.#{format}"].entries.first
+      if next_file
+        next_file.grep(chapter_and_page_names)
+      else
+        # We're on the first page, get the last page of the previous chapter.
+        next_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number.to_i - 1}-*/**"].entries.last
+        if next_file
+          next_file.grep(chapter_and_page_names)
+        else
+          # We're on the first page of the first chapter, just return the TOC.
+          return 'table-of-contents'
+        end
+      end
+      chapter_name, page_name = $1, $2
+      [chapter_name, page_name]
     end
 
   end
