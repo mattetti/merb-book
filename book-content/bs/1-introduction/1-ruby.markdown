@@ -62,65 +62,66 @@ Kako biste naučili više o samom Ruby jeziku, provjerite
 
 **Ispisati string "Zdravo, svijete!" deset puta:**
 
-    10.times do
-      print "Zdravo, svijete!"
-    end
-    # => "Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!
-    Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!"
+		10.times do
+		  print "Zdravo, svijete!"
+		end
+		# => "Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!
+		Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!Zdravo, svijete!"
 {:lang=ruby html_use_syntax=true}
 
 **Uslovni iskazi:**
 
-    access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
+		access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
 {:lang=ruby html_use_syntax=true}
 
 **Ternarni operator:**
 
-    age_classification = age > 12 ? "odrasli" : "djeca"
+	age_classification = age > 18 ? "odrasla osoba" : "dijete"
 {:lang=ruby html_use_syntax=true}
 
 je isto što i:
 
-    if age > 12
-      age_classification =  "odrasli"
-    else
-      age_classification = "djeca"
-    end
+	if age > 18
+		age_classification =  "odrasla osoba"
+	else
+		age_classification = "dijete"
+	end
 {:lang=ruby html_use_syntax=true}
 
 **Nizovi:**
 
-    drinks = ["Coca Cola", "Pepsi", "Orangina", "Cockta"]
-    # => ["Coca Cola", "Pepsi", "Orangina", "Cockta"]
-    # Pristup elementima niza
-    drinks[0] # => "Coca Cola"
-    drinks.first # => "Coca Cola"
-    drinks.last # => "Cockta"
-    drinks[3] # => "Cockta"
-    drinks[drinks.length - 1] # => "Cockta"
+		drinks = ["Coca Cola", "Pepsi", "Orangina", "Cockta"]
+		# => ["Coca Cola,", "Pepsi,", "Orangina,", "Cockta"]
+		# Pristup elementima niza
+		drinks[0] # => "Coca Cola"
+		drinks.first # => "Coca Cola"
+		drinks.last # => "Cockta"
+		drinks[3] # => "Cockta"
+		drinks[drinks.length - 1] # => "Cockta"
 {:lang=ruby html_use_syntax=true}
+
 
 **Provjera da li element postoji u nizu:**
 
-    haystack = ["Mac", "NT", "Irix", "Linux"]
-    needle = "Windows"
-    haystack.include?(needle)    # => false
+		haystack = ["Mac", "NT", "Irix", "Linux"]
+		needle = "Windows"
+		haystack.include?(needle)	# => false
 {:lang=ruby html_use_syntax=true}
 
 **Dodavanje elementa na kraj niza:**
 
-    haystack = ["Mac", "NT", "Irix", "Linux"]
-    needle = "Windows"
-    haystack.push(needle)
-    # Ili isto uradite ovako:
-    haystack << needle
+		haystack = ["Mac", "NT", "Irix", "Linux"]
+		needle = "Windows"
+		haystack.push(needle)
+		# Ili isto uradite ovako:
+		haystack << needle
 {:lang=ruby html_use_syntax=true}
 
 **Definisanje metode:**
 
-    def greet_visitor(visitor_name)
-      "Ćao #{visitor_name}!"
-    end
+		def greet_visitor(visitor_name)
+		  "Ćao #{visitor_name}!"
+		end
 {:lang=ruby html_use_syntax=true}
 
 ## Merb i Ruby ##{: #merb-and-ruby}
