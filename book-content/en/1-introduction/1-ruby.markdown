@@ -11,17 +11,17 @@
 > - [Dave Thomas, author of "Programming Ruby"](http://pragdave.pragprog.com/){: .quote-author}
 {: cite=http://www.infoq.com/interviews/ruby-rails-dave-thomas .lead-quote}
 
-It would be a crime to start talking about the Merb framework without first discussing the very reason why Merb is so flexible, powerful and fast: **Ruby**.
+It would be a crime to start talking about the Merb framework without first discussing the very reason why Merb is so flexible, powerful, and fast: **Ruby**.
 
 ## Origin ##{: #origin}
 ![Yukihiro Matsumoto](/images/Yukihiro_Matsumoto.jpg){: .left}
-Ruby is an open source, dynamic, reflective, general purpose object-oriented programming language written in the mid-1990s by Japanese software architect [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
+Ruby is an [Open Source](http://en.wikipedia.org/wiki/Open_Source), [dynamic](http://en.wikipedia.org/wiki/Dynamic), [reflective](http://en.wikipedia.org/wiki/Reflection_%28computer_science%29), general-purpose, [object-oriented](http://en.wikipedia.org/wiki/Object-oriented_programming) [programming language](http://en.wikipedia.org/wiki/Programming_language) written in the mid-1990s by Japanese [software architect](http://en.wikipedia.org/wiki/Software_architect) [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto).
 
 Ruby focuses on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 
-Matz borrowed ideas and idioms from some of his favorite programming languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming.
+Matz borrowed ideas and idioms from some of his favorite programming languages ([Perl](http://en.wikipedia.org/wiki/Perl), [Smalltalk](http://en.wikipedia.org/wiki/Smalltalk), [Eiffel](http://en.wikipedia.org/wiki/Eiffel_%28programming_language%29), [Ada](http://en.wikipedia.org/wiki/Ada_%28programming_language%29), and [Lisp](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29)) to form a new language that balances [functional programming](http://en.wikipedia.org/wiki/Functional_programming) with [imperative programming](http://en.wikipedia.org/wiki/Imperative_programming).
 
-The result is an attractive language which feels very natural. In the Ruby community we often refer to the POLS, Principle of Least Surprise. The concept behind this principle is very simple, if you know a minimum of Ruby, you should not be surprised by how the language will react.
+The result is an attractive language which feels very natural. In the Ruby community, we often refer to the POLS (Principle of Least Surprise). The concept behind this principle is very simple: if you know a minimum of Ruby, you should not be surprised by how the language will react.
 
 ## Adoption ##{: #adoption}
 According to the [TIOBE index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html), Ruby ranks in the top 10 programming languages used worldwide. Much of the growth is attributed to the popularity of software written in Ruby, particularly the [Ruby on Rails web framework](http://rubyonrails.org).
@@ -51,14 +51,7 @@ To learn more about the Ruby language, check the [Official Ruby language website
 
 **Conditional statement:**
 
-    access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
-{:lang=ruby html_use_syntax=true}
-
-equivalent to:
-
-    if DateTime.now > DateTime.parse("2008-12-01")
-      access_allowed = true
-    end
+	access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
 {:lang=ruby html_use_syntax=true}
 
 equivalent to:
@@ -84,31 +77,32 @@ equivalent to:
 
 **Array:**
 
-    drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
-    # => ["Coke", "Pepsi", "Orangina", "DrPepper"]
-    # Access the Array instance.
-    drinks[0] # => "Coke"
-    drinks.first # => "Coke"
-    drinks.last # => "DrPepper"
-    drinks[3] # => "DrPepper"
-    drinks[drinks.length - 1]  # => "DrPepper"
+	drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
+	#     => ["Coke", "Pepsi", "Orangina", "DrPepper"]
+	# Access the Array instance
+	drinks[0]     # => "Coke"
+	drinks.first  # => "Coke"
+	drinks.last   # => "DrPepper"
+	drinks[3]     # => "DrPepper"
+	drinks[-1]    # => "DrPepper"
+	drinks[drinks.length - 1] # => "DrPepper"
 {:lang=ruby html_use_syntax=true}
 
 
 **Check if an item exists in an Array instance:**
 
-    haystack = ["Mac", "NT", "Irix", "Linux"]
-    needle = "Windows"
-    haystack.include?(needle)  # => false
+	haystack = ["Mac", "NT", "Irix", "Linux"]
+	needle   = "Windows"
+	haystack.include?(needle)	# => false
 {:lang=ruby html_use_syntax=true}
 
 **Push an item into an Array instance:**
 
-    haystack = ["Mac", "NT", "Irix", "Linux"]
-    needle = "Windows"
-    haystack.push(needle)
-    # Or do it like this:
-    haystack << needle
+	haystack = ["Mac", "NT", "Irix", "Linux"]
+	needle   = "Windows"
+	haystack.push(needle)
+	# Or do it like this:
+	haystack << needle
 {:lang=ruby html_use_syntax=true}
 
 **Define a method:**

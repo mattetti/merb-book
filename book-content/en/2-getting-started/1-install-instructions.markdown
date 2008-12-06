@@ -4,7 +4,7 @@ We will need to install Merb in order to use the framework. However, before we i
 ## OS X
 
 ### Prerequisites
-You will need to install XCode from the OS X CD or download it from the [Apple developer website](http://developer.apple.com/technology/xcode.html).
+You will need to install XCode (aka Developer Tools) from the Mac OS X DVD or download it from the [Apple developer website](http://developer.apple.com/technology/xcode.html).
 
 ### Ruby & RubyGems
 If you have OS X 10.5 (Leopard), then most likely you already have Ruby installed.
