@@ -78,7 +78,7 @@ equivalent to:
 **Array:**
 
 	drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
-	# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
+	# => ["Coke", "Pepsi", "Orangina", "DrPepper"]
 	# Access the Array instance
 	drinks[0] # => "Coke"
 	drinks.first # => "Coke"
