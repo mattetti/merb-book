@@ -1,5 +1,5 @@
 # Getting started
-We will need to install Merb in order to use the framework. However, before we install Merb you will need to have installed, a C compiler, Ruby and [RubyGems](http://www.rubygems.org/), and database (if you want to persist your models).
+We will need to install Merb in order to use the framework. However, before we install Merb you will need to have installed a C compiler, Ruby and [RubyGems](http://www.rubygems.org/), and a database (if you want to persist your models).
 
 ## OS X
 
