@@ -1,22 +1,22 @@
-#índice de conteúdos
+#Índice
 
-<div id="intro" class="to-translate">
-	<p>Welcome to the Merb Open Source Book. The purpose of this book is simple: guide beginner and advanced users through the Merb Framework.</p>
-	<p>In all honesty, this book won't answer all of your questions about Merb, Ruby and unfortunately won't cover all the use cases. However, with the help of the Ruby Community, we will be able to cover most of what you need to use Merb on a daily basis.</p>
-	<p>If you are learning through this material, or if you already use Merb frequently, <strong>please consider helping improve the content of this book</strong>.</p>
+<div id="intro" class="available-for-translation">
+	<p>Bem vindo ao Merb Open Source Book. O propósito desse livro é simples: guiar os usuários iniciantes e avançados através do framework Merb.</p>
+	<p>Honestamente, esse livro não irá tirar todas as suas dúvidas sobre Merb, Ruby e infelizmente não irá cobrir todos os casos de uso. Entretanto, com a ajuda da comunidade Ruby nós seremos capazes de cobrir a maior parte do que é necessário para usar Merb diariamente.</p>
+	<p>Se você está aprendendo através desse material, ou se já usa Merb frequentemente, <strong>por favor considere a possibilidade de ajudar a melhorar o conteúdo desse livro</strong>.</p>
 </div>
 
 0. [Front Matter](/pt/front-matter)
-	1. [Foreword By Yehuda Katz](/pt/front-matter/foreword)
-	2. [Preface by Matt Aimonetti](/pt/front-matter/preface)
-	3. [Contributors](/pt/front-matter/contributors)
-1. [Introduction](/pt/introduction)
-	1. [Ruby Language](/pt/introduction/ruby)
+	1. [Foreword por Yehuda Katz](/pt/front-matter/foreword)
+	2. [Prefácio por Matt Aimonetti](/pt/front-matter/preface)
+	3. [Colaboradores](/pt/front-matter/contributors)
+1. [Introdução](/pt/introduction)
+	1. [Linguagem Ruby](/pt/introduction/ruby)
 	2. [Merb Web Framework](/pt/introduction/merb)
 	3. [DataMapper ORM](/pt/introduction/datamapper)
 	4. [RSpec testing framework](/pt/introduction/rspec)
-2. [Getting Started](/pt/getting-started)
-  1. [Install Instructions](/pt/getting-started/install-instructions)
+2. [Iniciando](/pt/getting-started)
+  1. [Instalando](/pt/getting-started/install-instructions)
 	1. [Generate an application](/pt/getting-started/generate-an-application)
 	1. [Project structure](/pt/getting-started/project-structure)
 	1. [MVC](/pt/getting-started/mvc)
@@ -52,11 +52,11 @@
   1. [JRuby and Glassfish](/pt/deployment/jruby)
   1. [Bundling your Merb application](/pt/deployment/bundle)
 
-{: #toc}
+{: #toc .available-for-translation}
 
-* [Appendix](/pt/appendix)
-  1. [Hints/Tips](/pt/appendix/hints-tips)
-  1. [Available Slices](/pt/appendix/slices)
-  1. [Useful Gems](/pt/appendix/gems)
+* [Apêndice](/pt/appendix)
+  1. [Dicas e Sugestões](/pt/appendix/hints-tips)
+  1. [Slices Disponíveis](/pt/appendix/slices)
+  1. [Gems Úteis](/pt/appendix/gems)
 
-{: #appendices}
+{: #appendices .available-for-translation}
