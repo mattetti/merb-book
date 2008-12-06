@@ -1,4 +1,4 @@
-# Ruby
+# Ruby Language
 
 * This will become a table of contents (this text will be scraped).
 {:toc}
@@ -113,7 +113,7 @@ equivalent to:
 
 ## Merb and Ruby ##{: #merb-and-ruby}
 
-Merb tries to say as close as possible to the Ruby language itself. That's why it's important to understand what people call the "Ruby Way".
+Merb tries to stay as close as possible to the Ruby language itself. That's why it's important to understand what people call the "Ruby Way".
 
 During RubyConf 2008, Matz made a comment about Merb:
 
