@@ -196,6 +196,15 @@ div#footer a, div#footer a:visited{
 	font-size: 0.9em;
 }
 
+div.error {
+	background-color: #ff9;
+	border: 1px solid #191919;
+	margin: 2em;
+	margin-bottom: 1em;
+	padding: 5px;
+	text-align: center;
+}
+
 #nav-links {
 	margin-top: 1em;
 	text-align: center;
