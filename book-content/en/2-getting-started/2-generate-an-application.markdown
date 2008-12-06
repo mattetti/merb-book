@@ -1,7 +1,10 @@
 # Generate an application
-Merb comes with a generator (<tt>merb-gen</tt>) in order to create Merb applications. The generator can generate different types of Merb applications, to see all the generator options available type
+Merb comes with a code generator (<tt>merb-gen</tt>). The generator can be used to create different types of Merb applications and parts of applications. To see all the generator options available type
 
     $ merb-gen -h
+
+For now, let's just stick with the types of Merb applications that can be generated.
+
 ## Types
 Merb can be used for anything from  very small, quick, single-file applications to large complex web-services.  Different application structures can be generated depending on the developers needs. The different application structures you can generate are <tt>app</tt>, <tt>core</tt>, <tt>flat</tt> and  <tt>very_flat</tt>.
 
