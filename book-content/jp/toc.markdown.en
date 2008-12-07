@@ -1,0 +1,62 @@
+.EN	#Table of Contents
+
+.EN	<div id="intro" class=".available-for-translation">
+.EN		<p>Welcome to the Merb Open Source Book. The purpose of this book is simple: to guide beginners and advanced users through the Merb Framework.</p>
+.EN		<p>In all honesty, this book won't answer all of your questions about Merb or Ruby, let alone cover all of the use cases. However, with the help of the Ruby Community, we will be able to cover most of what you need to use Merb on a daily basis.</p>
+.EN		<p>If you are learning through this material, or if you already use Merb frequently, <strong>please consider helping improve the content of this book</strong>.</p>
+.EN	</div>
+
+.EN	0. [Front Matter](/front-matter)
+.EN		1. [Foreword By Yehuda Katz](/front-matter/foreword)
+.EN		2. [Preface by Matt Aimonetti](/front-matter/preface)
+.EN		3. [Contributors](/front-matter/contributors)
+.EN	1. [Introduction](/introduction)
+.EN		1. [Ruby Language](/introduction/ruby)
+.EN		2. [Merb Web Framework](/introduction/merb)
+.EN		3. [DataMapper ORM](/introduction/datamapper)
+.EN		4. [RSpec testing framework](/introduction/rspec)
+.EN	2. [Getting Started](/getting-started)
+.EN	  1. [Install Instructions](/getting-started/install-instructions)
+.EN		1. [Generate an application](/getting-started/generate-an-application)
+.EN		1. [Project structure](/getting-started/project-structure)
+.EN		1. [MVC](/getting-started/mvc)
+.EN		1. [Controllers](/getting-started/controllers)
+.EN		1. [Views](/getting-started/views)
+.EN		1. [Models](/getting-started/models)
+.EN		1. [Request path](/getting-started/request-path)
+.EN		1. [Router](/getting-started/router)
+.EN	3. [Interacting with the database](/interacting-with-the-database)
+.EN		1. [Setting up the database connection](/interacting-with-the-database/dm-setting-up)
+.EN		1. [Database Schema](/interacting-with-the-database/dm-schema)
+.EN		1. [Database Queries](/interacting-with-the-database/dm-queries)
+.EN		1. [Model Relationships](/interacting-with-the-database/dm-relationships)
+.EN		1. [Database Migrations](/interacting-with-the-database/dm-migrations)
+.EN		1. [Model Validations](/interacting-with-the-database/dm-validations)
+.EN	4. [Testing your application](/testing-your-application)
+.EN		1. [Why test](/testing-your-application/why)
+.EN		1. [Testing your models](/testing-your-application/models)
+.EN		1. [Testing your requests](/testing-your-application/requests)
+.EN		1. [Integration testing with RSpec Cucumber](/testing-your-application/cucumber)
+.EN	5. [Merb More](/merb-more)
+.EN	  1. [Authentication](/merb-more/authentication)
+.EN	  1. [Mailer](/merb-more/mailer)
+.EN	  1. [Caching](/merb-more/caching)
+.EN	  1. [Exceptions](/merb-more/exceptions)
+.EN	  1. [Slices](/merb-more/slices)
+.EN	6. [Recipes](/recipes)
+.EN		1. [Simple Blog](/recipes/simple-blog)
+.EN		1. [Building a Blog Slice](/recipes/blog-slice)
+.EN	7. [Deployment](/deployment)
+.EN	  1. [Passenger](/deployment/passenger)
+.EN	  1. [nginx](/deployment/nginx)
+.EN	  1. [JRuby and Glassfish](/deployment/jruby)
+.EN	  1. [Bundling your Merb application](/deployment/bundle)
+
+.EN	{: #toc .available-for-translation}
+
+.EN	* [Appendix](/appendix)
+.EN	  1. [Hints/Tips](/appendix/hints-tips)
+.EN	  1. [Available Slices](/appendix/slices)
+.EN	  1. [Useful Gems](/appendix/gems)
+
+.EN	{: #appendices}

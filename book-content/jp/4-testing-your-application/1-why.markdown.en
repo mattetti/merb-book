@@ -1,0 +1,10 @@
+.EN	#Why test
+.EN	There are many parts of the application which you can test to ensure that you minimize the chances of [regression](http://en.wikipedia.org/wiki/Software_regression).
+
+.EN	## Types of Tests
+
+.EN	### Models
+
+.EN	### Requests
+
+.EN	### Integration Tests

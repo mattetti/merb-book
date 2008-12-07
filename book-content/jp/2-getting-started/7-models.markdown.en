@@ -1,0 +1,25 @@
+.EN	#Models
+
+.EN	Broadly stated,  models are the programmatic representation of the concepts and data that an application uses.  In a blogging application, these would be things like post, comments, and users.
+.EN	In a store front, they might be products, costumers, shopping carts, sales, etc...
+.EN	Merb was designed to give developers as much latitude as possible in describing their models.
+.EN	Models can be anything a developer can represent with Ruby classes.
+
+.EN	Having said this, the vast majority of applications will use some kind of [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping) (Object Relational Mapper) to persist data between requests, and most will store their data in some form of a database.
+.EN	The default Merb Stack uses DataMapper to communicate with an SQLite database.
+.EN	This is an excellent choice for easy development of new projects.
+.EN	Once in production, however, it is generally recommended that developers make the switch to one of the more powerful database engines like Postgres or MySQL.
+.EN	Projects which are coming from the Rails world may wish to keep their ActiveRecord models; Merb supports this as well.
+.EN	Having said this, the vast majority of application will use some kind of ORM (Object Relational Mapper) to persist data between requests; most apps will store their data in with some form of a database.
+.EN	The default Merb Stack uses DataMapper to communicate with an SQLite database.
+.EN	This is an excellent choice for easy development of new projects.
+
+.EN	Once in production, however, it is generally recommended that developers make the switch to one of the more powerful database engines, such has Postgres or MySQL.
+
+.EN	The rest of this chapter will focus on using DataMapper to create Model classes.
+
+.EN	## Attributes
+
+.EN	## Associations
+
+.EN	## Callbacks
