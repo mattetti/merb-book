@@ -1,0 +1,46 @@
+
+class String
+  def end_with?(s)
+    self[-s.length..-1] == s
+  end
+end
+
+en_dir = "../en"
+
+task "copy" do
+
+  Dir.glob("#{en_dir}/**/*").sort.each do |orig_path|
+    trans_path = orig_path[(en_dir.length+1)..-1]
+    #$stderr.puts "*** debug: trans_path=#{trans_path.inspect}"
+    if File.directory?(orig_path)
+      #$stderr.puts "*** debug: dir: trans_path=#{trans_path.inspect}"
+      dir = trans_path
+      Dir.mkdir(dir) unless File.directory?(dir)
+    elsif File.file?(orig_path)
+      #$stderr.puts "*** debug: file: trans_path=#{trans_path.inspect}"
+      s = File.open(orig_path) {|f| f.read }
+      File.open(trans_path + '.org', 'w') {|f| f.write(s) }
+      #s = s.gsub(/^(?!$|<div id=".*">$|<\/div>$)/, ".EN\t")
+      s = s.gsub(/^(?=.)/, ".EN\t")
+      File.open(trans_path + '.en', 'w') {|f| f.write(s) }
+    end
+  end
+
+end
+
+
+require 'fileutils'
+
+task "generate" do
+
+  Dir.glob("**/*.jp").sort.each do |trans_path|
+    dir = File.dirname(trans_path)
+    FileUtils.mkdir_p(dir) if !File.directory?(dir)
+    s = File.open(trans_path) {|f| f.read }
+    s = s.gsub(/^\.EN\t.*\n/, '').gsub(/^\.JP\t/, '')
+    #s = s.gsub(/^\.EN\t?\n/, "\n").gsub(/^\.EN\t.*\n/, '').gsub(/^\.JP\t/, '')
+    dist_path = trans_path.sub(/\.jp$/, '')
+    File.open(dist_path, 'w') {|f| f.write(s) }
+  end
+
+end
