@@ -61,6 +61,13 @@ equivalent to:
     end
 {:lang=ruby html_use_syntax=true}
 
+equivalent to:
+
+		if DateTime.now > DateTime.parse("2008-12-01")
+		  access_allowed = true 
+		end
+{:lang=ruby html_use_syntax=true}
+
 **Ternary operator:**
 
     age_classification = age > 12 ? "adult" : "child"
