@@ -51,14 +51,14 @@ To learn more about the Ruby language, check the [Official Ruby language website
 
 **Conditional statement:**
 
-	access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
+    access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
 {:lang=ruby html_use_syntax=true}
 
 equivalent to:
 
-		if DateTime.now > DateTime.parse("2008-12-01")
-		  access_allowed = true 
-		end
+    if DateTime.now > DateTime.parse("2008-12-01")
+      access_allowed = true
+    end
 {:lang=ruby html_use_syntax=true}
 
 **Ternary operator:**
@@ -93,7 +93,7 @@ equivalent to:
 
 	haystack = ["Mac", "NT", "Irix", "Linux"]
 	needle   = "Windows"
-	haystack.include?(needle)	# => false
+	haystack.include?(needle) # => false
 {:lang=ruby html_use_syntax=true}
 
 **Push an item into an Array instance:**
