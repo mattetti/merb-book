@@ -42,6 +42,7 @@ If you are copying a page or chapter to your language folder and want to mark a 
 * Spanish: (pending)
 * Russian: http://github.com/cheba (Alex Mankuta)
 * Italian:
+* Bosnian: http://github.com/sidonath (Damir Zekić)
 
 ## Legal
 
