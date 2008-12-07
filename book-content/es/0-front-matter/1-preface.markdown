@@ -10,7 +10,7 @@ Tener una plataforma maravillosa es grandioso, pero como Jason Seifer de [RailsE
 
 > Merb tiene una excelente documentación en el código fuente, por lo que éste es muy fácil de leer pero todavía no hay una documentación para el usuario.
 
-Jason tenia razón, nuestra documentación para el usuario no era buena. Por supuesto, tenemos un [wiki](http://wiki.merbivore.com) y existen algunos libros disponibles, pero tengo que admitir que mirando otras plataformas como [Django](http://www.djangobook.com/) todo el equipo central (core team) sabia que teníamos que hacer algo al respecto.
+Jason tenia razón, nuestra documentación para el usuario no era buena. Por supuesto, tenemos una [wiki](http://wiki.merbivore.com) y existen algunos libros disponibles, pero tengo que admitir que mirando otras plataformas como [Django](http://www.djangobook.com/) todo el equipo central (core team) sabía que teníamos que hacer algo al respecto.
 
 Los esfuerzos de Ford fueron tempranamente notados y la editora Apress le ofreció un acuerdo para escribir un [libro sobre Merb].(http://www.apress.com/book/view/9781430218234). Como se pueden imaginar, se hizo algo difícil para Matt escribir un libro para un editor, tener un trabajo de tiempo completo, contribuir con varios proyectos de código abierto, mantenerse actualizado con Merb y finalmente asegurarse de que el proyecto del libro de fuente abierta que comenzó hace un tiempo atrás estuviese al día. Encima de todo esto, se han realizado muchos cambios en la plataforma previo al lanzamiento de la versión 1.0 y una gran parte del contenido existente necesita ser nuevamente escrito.
 
