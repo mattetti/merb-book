@@ -28,7 +28,7 @@ Volgens de [TIOBE index](http://www.tiobe.com/index.php/content/paperinfo/tpci/i
 
 ## Sleutelelementen van de taal ##{: #key-elements}
 
-> Ik wou een scripting-taal die was krachtiger dan Perl, en meer dan een object-georiënteerd Python.
+> Ik wou een scripting-taal die krachtiger was dan Perl, en meer dan de object-georiënteerde Python.
 > - Matz
 {: cite=http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html}
 
@@ -114,7 +114,7 @@ overeenkomstig met:
 
 ## Merb en Ruby ##{: #merb-and-ruby}
 
-Merb probeert zo dicht mogelijk bij de Ruby taal zelf te blijven. Daarom is het belangrijk te begrijpen wat wordt verstaan al de "Ruby Way".
+Merb probeert om zo dicht mogelijk bij de Ruby taal zelf te blijven. Daarom is het belangrijk te begrijpen wat wordt verstaan al de "Ruby Way".
 
 Gedurende RubyConf 2008, maakte Matz volgende opmerking over Merb:
 
