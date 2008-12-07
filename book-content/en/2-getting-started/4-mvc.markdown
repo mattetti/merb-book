@@ -29,8 +29,3 @@ Instead, developers are well advised to keep their controllers as 'skinny' as po
 
 In the default Merb application, the code for all three of these pieces is found in folders of the same name under the '<tt>app</tt>' directory.
 In the next chapters, we will look at how Merb implements each of these parts.  
-Controllers deal with taking an incoming request and turning it into a response.
-They are responsible for interpreting the incoming request, getting instances of the needed Models, and passing this information along to the View.
-
-Novice users are often tempted to add lots of code into the controller layer, but this leads to code that is brittle and hard to test.
-Instead, developers are well advised to keep their controllers as 'skinny' as possible by pushing code that does not directly relate to the request/response cycle (or the gathering of data) into the Model.
