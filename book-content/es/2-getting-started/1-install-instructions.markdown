@@ -1,13 +1,13 @@
-# Getting started
-We will need to install Merb in order to use the framework. However, before we install Merb you will need to have installed, a C compiler, Ruby and [RubyGems](http://www.rubygems.org/), and database (if you want to persist your models).
+# Comenzando
+Neccesitaremos instalar Merb para usar la plataforma. Claro, antes de que instalemos Merb necesitarás tener instalado un compilador C, Ruby y [RubyGems](http://www.rubygems.org/), y una base de datos (si quieres hacer tus modelos persistentes).
 
 ## OS X
 
-### Prerequisites
-You will need to install XCode from the OS X CD or download it from the [Apple developer website](http://developer.apple.com/technology/xcode.html).
+### Prerequisitos
+Necesitarás instalar XCode del CD OS X o descargarle del [sitio web para desarrolladores de Apple](http://developer.apple.com/technology/xcode.html).
 
 ### Ruby & RubyGems
-If you have OS X 10.5 (Leopard), then most likely you already have Ruby installed.
+Si tienes OS X 10.5 (Leopard), es muy probable que tengas ya Ruby instalado.
 
 ### Merb
     $ sudo gem install merb
@@ -15,7 +15,7 @@ If you have OS X 10.5 (Leopard), then most likely you already have Ruby installe
 
 ## Linux
 
-### Prerequisites
+### Prerequisitos
 
     $ sudo apt-get install build-essential libxslt-dev libsqlite3-0 libsqlite3-dev
 
