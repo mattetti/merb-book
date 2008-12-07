@@ -1,10 +1,13 @@
 # Getting started
-We will need to install Merb in order to use the framework. However, before we install Merb you will need to have installed a C compiler, Ruby and [RubyGems](http://www.rubygems.org/), and a database (if you want to persist your models).
+We will need to install Merb in order to use the framework.
+However, before we install Merb you will need to have installed a C compiler,
+Ruby and [RubyGems](http://www.rubygems.org/), and a database (if you want to persist your models).
 
 ## OS X
 
 ### Prerequisites
-You will need to install XCode (aka Developer Tools) from the Mac OS X DVD or download it from the [Apple developer website](http://developer.apple.com/technology/xcode.html).
+You will need to install XCode (aka Developer Tools) from the Mac OS X DVD or
+download it from the [Apple developer website](http://developer.apple.com/technology/xcode.html).
 
 ### Ruby & RubyGems
 If you have OS X 10.5 (Leopard), then most likely you already have Ruby installed.
@@ -14,6 +17,10 @@ If you have OS X 10.5 (Leopard), then most likely you already have Ruby installe
 
 
 ## Linux
+The following instructions are for Debian-based distributions ([Ubuntu](http://www.ubuntu.com/), for example),
+which uses the <tt>apt-get</tt> package manager.
+If you are using a different distribution, use that distribution's package manager
+(for example, [RedHat](http://www.redhat.com/) systems use <tt>yum</tt> as its package manager).
 
 ### Prerequisites
 
@@ -38,3 +45,10 @@ If you have OS X 10.5 (Leopard), then most likely you already have Ruby installe
 ### Merb
 
     $ sudo gem install merb
+
+
+## Windows
+Windows users have a couple of options for installing Ruby and RubyGems.
+One way is to download the Ruby binaries, install them, and then install RubyGems.
+An alternative is to use the [One-Click Ruby Installer](http://rubyinstaller.rubyforge.org/wiki/wiki.pl)
+which comes packaged with RubyGems (as well as a few other things).
