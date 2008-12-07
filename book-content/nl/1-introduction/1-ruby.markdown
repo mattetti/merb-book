@@ -19,9 +19,9 @@ Ruby is een [Open Source](http://en.wikipedia.org/wiki/Open_Source), [dynamische
 
 Ruby focust op eenvoud en productiviteit. Ruby heeft een elegante syntax die natuurlijk leest en eenvoudig is om te schrijven.
 
-Matz ontleende ideeen en borrowed ideeën en uitdrukkingen van enkele van zijn favoriete programmeertalen ([Perl](http://en.wikipedia.org/wiki/Perl), [Smalltalk](http://en.wikipedia.org/wiki/Smalltalk), [Eiffel](http://en.wikipedia.org/wiki/Eiffel_%28programming_language%29), [Ada](http://en.wikipedia.org/wiki/Ada_%28programming_language%29), en [Lisp](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29)) tot een nieuwe taal die [functionele programmatie](http://en.wikipedia.org/wiki/Functional_programming) balanceert met [imperatieve programmatie](http://en.wikipedia.org/wiki/Imperative_programming).
+Matz ontleende ideeën en uitdrukkingen van enkele van zijn favoriete programmeertalen ([Perl](http://en.wikipedia.org/wiki/Perl), [Smalltalk](http://en.wikipedia.org/wiki/Smalltalk), [Eiffel](http://en.wikipedia.org/wiki/Eiffel_%28programming_language%29), [Ada](http://en.wikipedia.org/wiki/Ada_%28programming_language%29), en [Lisp](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29)) tot een nieuwe taal die [functionele programmatie](http://en.wikipedia.org/wiki/Functional_programming) balanceert met [imperatieve programmatie](http://en.wikipedia.org/wiki/Imperative_programming).
 
-Het resultaat is een aantrekkelijke taal die heel natuurlijk aanvoelt. In de Ruby gemeenschap, we verwijzen vaak naar de term POLS (Principle of Least Surprise). Het concept achter dit principe is heel eenvoudig: als je weet een minimum van Ruby kent, ben je niet verrast door de manier waarop de taal zal reageren.
+Het resultaat is een aantrekkelijke taal die heel natuurlijk aanvoelt. In de Ruby gemeenschap verwijzen we vaak naar de term POLS (Principle of Least Surprise). Het concept achter dit principe is heel eenvoudig: als je een minimum van Ruby kent, ben je niet verrast door de manier waarop de taal zich gedraagt.
 
 ## Adoptie ##{: #adoption}
 Volgens de [TIOBE index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html), zit Ruby in de top 10 van programmeertalen die wereldwijd wordt gebruikt. Een groot deel van de groei is toe te schrijven aan de populariteit van de software die is geschreven in Ruby, in het bijzonder het [Ruby on Rails web framework](http://rubyonrails.org).
@@ -33,7 +33,7 @@ Volgens de [TIOBE index](http://www.tiobe.com/index.php/content/paperinfo/tpci/i
 {: cite=http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html}
 
 * Alles is een object
-* Alles kan uitgebreid en gewijzigd worden
+* Alles is uitbreidbaar en kan gewijzigd worden
 * Hoge code leesbaarheid
 
 Voor meer informatie over de taal Ruby, bekijk de [Officiele Ruby programmeertaal website](http://www.ruby-lang.org/en/about).
