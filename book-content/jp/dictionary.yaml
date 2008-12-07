@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+
+- { en: validation,     ja: 検証 }
+- { en: relation,       ja: 関連 }
+- { en: query,          ja: 検索 }
+- { en: router,         ja: ルータ }
+- { en: deployment,     ja: 配備 }
+- { en: lead developer, ja: 主任開発者 }
