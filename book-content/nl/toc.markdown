@@ -15,7 +15,7 @@
 	2. [Merb Web Framework](/nl/introduction/merb)
 	3. [DataMapper ORM](/nl/introduction/datamapper)
 	4. [RSpec test framework](/nl/introduction/rspec)
-2. [Hoe te starten ?](/nl/getting-started)
+2. [Aan de slag](/nl/getting-started)
   1. [Installatie Instructies](/nl/getting-started/install-instructions)
 	1. [Genereer een applicatie](/nl/getting-started/generate-an-application)
 	1. [Project structuur](/nl/getting-started/project-structure)
