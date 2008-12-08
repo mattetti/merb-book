@@ -1,7 +1,7 @@
 #Table of Contents
 
 <div id="intro" class=".available-for-translation">
-	<p>Welcome to the Merb Open Source Book. The purpose of this book is simple: to guide beginners and advanced users through the Merb Framework.</p>
+	<p>Benvenuti al libro open source su Merb. Lo scopo di questo libro è semplice: guidare gli utenti principianti e avanzati attraverso il framework Merb.</p>
 	<p>In all honesty, this book won't answer all of your questions about Merb or Ruby, let alone cover all of the use cases. However, with the help of the Ruby Community, we will be able to cover most of what you need to use Merb on a daily basis.</p>
 	<p>If you are learning through this material, or if you already use Merb frequently, <strong>please consider helping improve the content of this book</strong>.</p>
 </div>
