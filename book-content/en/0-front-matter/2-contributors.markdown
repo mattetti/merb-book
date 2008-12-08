@@ -1,6 +1,7 @@
 # Contributors
 
-Without the following contributors, this book would not have possible. Thank you all!
+Without the following contributors, this book would not have possible.
+Thank you all!
 
 **In alphabetical order:**
 

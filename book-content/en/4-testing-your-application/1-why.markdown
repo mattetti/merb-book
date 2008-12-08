@@ -1,5 +1,6 @@
 #Why test
-There are many parts of the application which you can test to ensure that you minimize the chances of [regression](http://en.wikipedia.org/wiki/Software_regression).
+There are many parts of the application which you can test
+to ensure that you minimize the chances of [regression][].
 
 ## Types of Tests
 
@@ -8,3 +9,6 @@ There are many parts of the application which you can test to ensure that you mi
 ### Requests
 
 ### Integration Tests
+
+
+[regression]:         http://en.wikipedia.org/wiki/Software_regression
