@@ -10,16 +10,16 @@
 		<string>6.0</string>
 		<key>CFBundlePackageType</key>
 		<string>dSYM</string>
-		<key>CFBundleShortVersionString</key>
-		<string>1.0</string>
 		<key>CFBundleSignature</key>
 		<string>????</string>
-		<key>CFBundleVersion</key>
+		<key>CFBundleShortVersionString</key>
 		<string>1.0</string>
+		<key>CFBundleVersion</key>
+		<string>1</string>
 		<key>dSYM_UUID</key>
 		<dict>
 			<key>i386</key>
-			<string>18 89 a3 bb 8e ba 65 91  ca 88 89 e6 9a 9c 4a 80</string>
+			<string>222E7519-2143-1420-301F-1036238D0C60</string>
 		</dict>
 	</dict>
 </plist>
