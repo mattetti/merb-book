@@ -9,12 +9,12 @@
 ## Introduction
 
 [RSpec][] is a Behavior Driven Development framework for Ruby.
-It provides two frameworks for writing and executing examples of how your Ruby 
+It provides two frameworks for writing and executing examples of how your Ruby
 application should behave[^rspec]:
 
  * a Scenario Framework[^cucumber] for describing behavior at the application level
  * a Code Example Framework for describing behavior at the object level
- 
+
 [RSpec][] was influenced by [Dan North][] and his Java-based BDD testing framework called [JBehave][].
 
 ## History
@@ -27,10 +27,10 @@ these ideas could be easily implemented in [Smalltalk][] or [Ruby][].
 RSpec 0.1. Later in 2006, maintenance was handed over to [David Chelimsky][].[^rspec-history]
 
 
-## Behavior Driven Development 
+## Behavior Driven Development
 
-Behavior Driven Development[^BDD] is an [Agile][] development process that comprises 
-aspects of [Acceptance Test Driven Planning][], [Domain Driven Design][] and 
+Behavior Driven Development[^BDD] is an [Agile][] development process that comprises
+aspects of [Acceptance Test Driven Planning][], [Domain Driven Design][] and
 [Test Driven Development][].
 
 > Behaviour-driven development is an “outside-in” methodology.
@@ -42,11 +42,11 @@ aspects of [Acceptance Test Driven Planning][], [Domain Driven Design][] and
 {: cite=http://dannorth.net/whats-in-a-story}
 
 By focusing on the expected behaviors rather than the technical details,
-developers can have a better communication with project owner and other stakeholders.
+developers can have better communication with the project owner and other stakeholders.
 
 ## Implementation
 
-RSpec is a Domain Specific Language for describing the expected behavior 
+RSpec is a Domain Specific Language for describing the expected behavior
 of a system with executable examples.
 
 Here is a very simple RSpec example.
