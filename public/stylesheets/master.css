@@ -222,13 +222,23 @@ div#nav-links a:hover {
 /* @end */
 
 /* @group TOC */
-
 #table-of-contents {
  	display: none;
  	padding: 1em;
  	position: fixed;
  	top: 0;
  	background: #fff;
+}
+/* @end */
+
+/* @group references */
+div.footnotes li{ line-height: 0.5em}
+
+a[rev="footnote"] { 
+	float: right;
+	font-size: 0.7em;
+	line-height: 0.3em;
+	margin: -2em;
 }
 
 /* @end */
