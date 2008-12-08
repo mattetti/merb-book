@@ -18,7 +18,7 @@
 2. [Iniciando](/pt/getting-started)
   1. [Instalando](/pt/getting-started/install-instructions)
 	1. [Generate an application](/pt/getting-started/generate-an-application)
-	1. [Project structure](/pt/getting-started/project-structure)
+	1. [Estrutura do projeto](/pt/getting-started/project-structure)
 	1. [MVC](/pt/getting-started/mvc)
 	1. [Controllers](/pt/getting-started/controllers)
 	1. [Views](/pt/getting-started/views)

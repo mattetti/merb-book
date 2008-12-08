@@ -53,8 +53,7 @@ body {
 }
 
 div.maruku_toc{
-	float:right;
-	display: block;
+	text-align: right;
 }
 
 #language-switch{
@@ -102,6 +101,11 @@ div#footer a, div#footer a:visited{
 #book-content {
  	font-size: 1.3em;
  	text-align: left;
+}
+
+.rtl{
+direction: rtl;
+text-align: right !important;
 }
 
 

@@ -15,6 +15,10 @@ module Merb
         "<a href='#{href}'>#{lang[:name]}</a>" unless lang[:code] == language
       end.compact.join(" | ")
     end
+    
+    def rtl_support_class
+      "class='rtl'" if ['ar', 'ur', 'he'].include?(language)
+    end
 
     # Returns links to the previous and next pages.
     def page_nav_links(format = 'markdown')
