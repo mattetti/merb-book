@@ -8,7 +8,7 @@ It is also the structure used by Rails, CakePHP, Django, and many other popular 
 To develop in Merb effectively, it is important that one understands both how the MVC structure works, and the most effective way to work with it.
 This chapter will discuss the overall framework; the following three chapters will look at each piece in detail.
 
-[Models](/getting-started/models) are the core of the framework.  
+[Models](/getting-started/models) are the core of the framework.
 They are responsible for the business logic of your application, and in Merb, they are most often associated with database access through an ORM such as DataMapper or Active Record.
 Sometimes models are used with an ORM as nothing more than a wrapper for a database table.
 However, it is generally considered a best practice to have 'fat' models.
@@ -17,18 +17,18 @@ Models are the core of the framework.
 They are responsible for the business logic of your application.
 In Merb, they are most often associated with database access through an ORM such as DataMapper or ActiveRecord.
 
-[Views](/getting-started/views) are the glitzy outer shell of an application.  
+[Views](/getting-started/views) are the glitzy outer shell of an application.
 Views are responsible for generating the actual content(HTML, XML, JSON) returned by a request.
 Most commonly, views are written in a templating format such as [Erb](http://en.wikipedia.org/wiki/ERuby) (embedded Ruby) or [Haml](http://haml.hamptoncatlin.com/).
 Wise developers will attempt to put as little code as possible into their Views.
 
-[Controllers](/getting-started/controllers) deal with taking an incoming request and turning it into a response.  
+[Controllers](/getting-started/controllers) deal with taking an incoming request and turning it into a response.
 They are responsible for interpreting the incoming request, getting instances of the needed Models, and passing this information along to the View.
 Novice users are often tempted to add lots of code into the controller layer, but this leads to brittle and hard to test code.
 Instead, developers are well advised to keep their controllers as 'skinny' as possible by pushing code that does not directly relate to the request/response cycle (or the gathering of data) into the Model.
 
 In the default Merb application, the code for all three of these pieces is found in folders of the same name under the '<tt>app</tt>' directory.
-In the next chapters, we will look at how Merb implements each of these parts.  
+In the next chapters, we will look at how Merb implements each of these parts.
 Controllers deal with taking an incoming request and turning it into a response.
 They are responsible for interpreting the incoming request, getting instances of the needed Models, and passing this information along to the View.
 
