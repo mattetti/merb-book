@@ -58,6 +58,7 @@ to the CSS selector of your content, as shown below:
 * Portuguese:  http://github.com/akitaonrails (Fabio Akita)
 * Russian:     http://github.com/cheba (Alex Mankuta)
 * Spanish:     (pending)
+* Dutch:       http://github.com/pvelder (Peter De Velder)
 
 ## Legal
 
