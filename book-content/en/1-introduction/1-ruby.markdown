@@ -1,12 +1,13 @@
 # Ruby Language
 
-* This will become a table of contents (this text will be scraped).
-{:toc}
-
 ![Ruby](/images/ruby-header.gif){: .no-border}
 
 **Reference website:**
 [http://ruby-lang.org](http://ruby-lang.org){: .reference}
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 
 > Coding in Ruby makes me happy because it’s one of the shortest paths
 > between my brain and a computer.
