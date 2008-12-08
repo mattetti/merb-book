@@ -41,12 +41,12 @@
 5. [ المزيد من Merb](/ar/merb-more)
   1. [التوثيق](/ar/merb-more/authentication)
   1. [مزود البريد](/ar/merb-more/mailer)
-  1. [التخزين المؤقت](/ar/merb-more/caching)
-  1. [الإستثناءات](/ar/merb-more/exceptions)
+  1. [التخزين المؤقت Caching](/ar/merb-more/caching)
+  1. [الإستثناءات Exceptions](/ar/merb-more/exceptions)
   1. [الشرائح Slices](/ar/merb-more/slices)
 6. [الوصفات](/ar/recipes)
 	1. [مدوّنة بسيطة](/ar/recipes/simple-blog)
-	1. [بناء شريحة slice لمدونة](/ar/recipes/blog-slice)
+	1. [بناء شريحة لمدونة](/ar/recipes/blog-slice)
 7. [التوظيف](/ar/deployment)
   1. [Passenger](/ar/deployment/passenger)
   1. [nginx](/ar/deployment/nginx)
@@ -57,7 +57,7 @@
 
 * [ملحق](/ar/appendix)
   1. [تلميحات وحيل](/ar/appendix/hints-tips)
-  1. [ال Slices المتوافرة ](/ar/appendix/slices)
+  1. [الشرائح المتوافرة ](/ar/appendix/slices)
   1. [Gems مفيدة](/ar/appendix/gems)
 
 {: #appendices}
