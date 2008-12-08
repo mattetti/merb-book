@@ -15,7 +15,7 @@ and the most effective way to work with it.
 This chapter will discuss the overall framework;
 the following three chapters will look at each piece in detail.
 
-[Models][] are the core of the framework.  
+[Models][] are the core of the framework.
 They are responsible for the business logic of your application;
 in Merb, they are most often associated with database access
 through an ORM such as DataMapper or Active Record.
@@ -30,7 +30,7 @@ They are responsible for the business logic of your application.
 In Merb, they are most often associated with database access
 through an ORM such as DataMapper or ActiveRecord.
 
-[Views][] are the glitzy outer shell of an application.  
+[Views][] are the glitzy outer shell of an application.
 Views are responsible for generating the actual content (HTML, XML, JSON)
 returned by a request.
 Most commonly, views are written in a templating format
@@ -39,7 +39,7 @@ Wise developers will attempt to put as little code as possible
 into their Views.
 
 [Controllers][] deal with taking an incoming request
-and turning it into a response.  
+and turning it into a response.
 They are responsible for interpreting the incoming request,
 getting instances of the needed Models,
 and passing this information along to the View.

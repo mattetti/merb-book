@@ -19,10 +19,10 @@ it is likely that you already have Ruby installed.
 
 
 ## Linux
-The following instructions are for Debian-based distributions ([Ubuntu](http://www.ubuntu.com/), for example),
+The following instructions are for Debian-based distributions ([Ubuntu][], for example),
 which uses the <tt>apt-get</tt> package manager.
 If you are using a different distribution, use that distribution's package manager
-(for example, [RedHat](http://www.redhat.com/) systems use <tt>yum</tt> as its package manager).
+(for example, [RedHat][] systems use <tt>yum</tt> as its package manager).
 
 ### Prerequisites
 
@@ -53,7 +53,7 @@ If you are using a different distribution, use that distribution's package manag
 Windows users have a couple of options for installing Ruby and RubyGems.
 One way is to download the Ruby binaries, install them, and then install RubyGems.
 
-An alternative is to use the [One-Click Ruby Installer](http://rubyinstaller.rubyforge.org/wiki/wiki.pl)
+An alternative is to use the [One-Click Ruby Installer][]
 which comes packaged with RubyGems (as well as a few other things). If you use
 the One-Click Installer, make sure you check the 'Enable RubyGems' box in the
 install wizard.
@@ -73,8 +73,12 @@ cache, fetch all Merb related gems and then install them.
 
 _Note_: If you want to use SQLite database (which is the default), you must
 download and install it separately. More information can be found on the
-[SQLite](http://www.sqlite.org/) site.
+[SQLite][] site.
 
 
-[Apple developer website]: http://developer.apple.com/technology/xcode.html)
-[RubyGems]:                http://www.rubygems.org/
+[Apple developer website]:  http://developer.apple.com/technology/xcode.html
+[RubyGems]:                 http://www.rubygems.org/
+[Ubuntu]:                   http://www.ubuntu.com/
+[RedHat]:                   http://www.redhat.com/
+[One-Click Ruby Installer]: http://rubyinstaller.rubyforge.org/wiki/wiki.pl
+[SQLite]:                   http://www.sqlite.org/
