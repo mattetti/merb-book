@@ -103,6 +103,11 @@ div#footer a, div#footer a:visited{
  	text-align: left;
 }
 
+.rtl{
+direction: rtl;
+text-align: right !important;
+}
+
 
 #book-content h1,
 #book-content h2 {
