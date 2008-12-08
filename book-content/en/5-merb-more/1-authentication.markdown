@@ -5,10 +5,10 @@
 
 > The responsibilities of an Authentication system is to prove a user’s claimed
 > identity is indeed his real identity. There’s quite a few approaches an
-> Authentication system can go about doing this including trusted hosts, 
-> password verification, and trust networks (like ‘Open-ID’).
+> Authentication system can go about doing this including trusted hosts,
+> password verification, and trust networks (like ‘OpenID’).
 > After the verification has occurred, the Authentication’s system responsibilities
-> are complete.  
+> are complete.
 > [Adam French][]{: .quote-author}
 {: cite=http://adam.speaksoutofturn.com/post/57615195/entication-vs-orization .lead-quote}
 
@@ -27,7 +27,7 @@ As of Merb 1.0.x merb-auth uses 3 gems:
 
 [merb-auth-core][] does not try to dictate what you should use as a user model,
 or how it should authenticate.
-Instead it focuses on the logic required to check that an object 
+Instead it focuses on the logic required to check that an object
 passes authentication, and store the keys of authenticated objects
 in the session.
 
@@ -38,27 +38,27 @@ with a sprinkling of controller helpers.
 You can choose to protect a controller action, or a route/group of routes.
 This is why you might hear people refer to an authenticated session.
 
-MerbAuth makes use of Merb’s exception handling facilities which 
-return correct HTTP status codes. 
+MerbAuth makes use of Merb’s exception handling facilities which
+return correct HTTP status codes.
 To fail a login, or to force a login at any point in your controller code,
-simply raise an Unauthenticated exception, with an optional message 
+simply raise an ``Unauthenticated`` exception, with an optional message
 and the user will be presented with login page.
-The login page is in fact the html view for Extensions#unauthenticated
+The login page is in fact the view template for ``Extensions#unauthenticated``.
 
 It is possible to use MerbAuth with any object as a user object,
-provided that object does not evaluate to false and 
-it can be serialized in an out of the session.
+provided that object does not evaluate to false and
+it can be serialized in and out of the session.
 
-Finally merb-auth is very powerful mainly because of its chained strategies capacity.
+Finally, merb-auth is very powerful mainly because of its chained strategies capacity.
 You can add as many strategies as you like and they will be tried one after another
 until either one is found that works (login), or none of them have passed (failed attempt).
 
-An authentication strategy is just a way to authenticate a request. 
-Examples of strategies would be: 
-* salted user (user login with a password using a "salted" encryption)
-* openid
-* api key/token
-* basic http authentication
+An authentication strategy is just a way to authenticate a request.
+Examples of strategies would be:
+* Salted user (user login with a password using a "salted" encryption)
+* OpenID
+* API key/token
+* Basic HTTP Authentication
 
 
 ### merb-auth-more
@@ -68,8 +68,8 @@ The gem offers a series of generic Strategies and "User" object mixins.
 
 Strategies:
 * login or email password form (aka password\_form)
-* basic http authentication (aka basic\_auth)
-* openid
+* basic HTTP authentication (aka basic\_auth)
+* OpenID
 
 
 Mixins:
@@ -90,7 +90,7 @@ By default it also include the form based password logins and basic authenticati
 
 By default the slice will load the password\_form and the basic\_auth strategies
 
-Views and strategies can be customized as exlained in the 
+Views and strategies can be customized as exlained in the
 Authenticated Hello World example.
 
 
@@ -161,7 +161,7 @@ It's not protected yet, so let's fix that.
 We can either protect it in the routes in config/router.rb or in the controller action.
 Let's do the router option first.
 
-Open up config/router.rb 
+Open up config/router.rb
 
     Merb::Router.prepare do
       authenticate do
@@ -239,15 +239,15 @@ The easiest way to login when you are running a request spec is to use a helper.
 Here is an example of two helpers added to /spec/spec\_helper.rb
 
     Merb::Test.add_helpers do
- 
+
       def create_default_user
         unless User.first(:login => "krusty")
-          User.create( :login => "krusty", 
-                       :password => "klown", 
+          User.create( :login => "krusty",
+                       :password => "klown",
                        :password_confirmation => "klown") or raise "can't create user"
         end
       end
- 
+
       def login
         create_default_user
         request("/login", {
@@ -258,7 +258,7 @@ Here is an example of two helpers added to /spec/spec\_helper.rb
           }
         })
       end
- 
+
     end
 {:lang=ruby html_use_syntax=true}
 
@@ -281,3 +281,5 @@ In the above example, the request sent to the articles URI will be authenticated
 [merb-auth-core]:   <http://github.com/wycats/merb/tree/master/merb-auth/merb-auth-core>
 [merb-auth-more]:   <http://github.com/wycats/merb/tree/master/merb-auth/merb-auth-more
 [merb-auth-slice-password]: <http://github.com/wycats/merb/tree/master/merb-auth/merb-auth-slice-password>
+
+*[API]: Application Programming Interface

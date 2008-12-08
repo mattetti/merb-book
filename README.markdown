@@ -2,6 +2,8 @@
 
 This book is an open source book written for and by the Merb community.
 
+Preview: <http://book.merbist.com>
+
 To run the book locally,
 just clone this repo and start the bundled copy of Merb:
 
@@ -12,7 +14,7 @@ And open http://localhost:4000/ in your browser
 Note that you might have to "redeploy" the native gems
 if the <tt>merb</tt> app server doesn't start:
 
-		$ thor merb:gem:redeploy
+		$ ./bin/thor merb:gem:redeploy
 
 A static HTML and a PDF version will soon be available online.
 
@@ -45,7 +47,14 @@ and want to mark a section of your text as requiring translation,
 just add the <tt>to-translate</tt> class
 to the CSS selector of your content, as shown below:
 
-		{: .to-translate}
+    {: .to-translate}
+
+Please follow our editor guidelines, especially:
+
+* use a language branch (so you can see what changed in the English content)
+* one sentence per line (so merging is easier)
+
+<http://groups.google.com/group/merb-book/web/guidelines>
 
 ## Translation leaders
 
@@ -59,6 +68,7 @@ to the CSS selector of your content, as shown below:
 * Russian:     http://github.com/cheba (Alex Mankuta)
 * Spanish:     (pending)
 * Dutch:       http://github.com/pvelder (Peter De Velder)
+* Arabic       
 
 ## Legal
 
