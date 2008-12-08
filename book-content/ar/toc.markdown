@@ -15,7 +15,7 @@
 	1. [لغة Ruby](/ar/introduction/ruby)
 	2. [إطار عمل Merb](/ar/introduction/merb)
 	3. [DataMapper ORM](/ar/introduction/datamapper)
-	4. [RSpec إطار الإختبار](/ar/introduction/rspec)
+	4. [إطار الإختبار RSpec](/ar/introduction/rspec)
 2. [بدء العمل](/ar/getting-started)
   1. [تعليمات التنصيب](/ar/getting-started/install-instructions)
 	1. [توليد التطبيق](/ar/getting-started/generate-an-application)
