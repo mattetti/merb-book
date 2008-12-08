@@ -1,10 +1,10 @@
 # Começando
-Nós precisaremos instalar o Merb para usar o framework. Entretanto, antes de instalar o Merb você precisará instalar um compilador C, o Ruby e o [RubyGems](http://www.rubygems.org/), e um servidor de banco de dados (se quiser persistir seus models).
+Nós precisaremos instalar o Merb para usar o framework. Entretanto, antes disso você precisará instalar um compilador C, o Ruby e o [RubyGems](http://www.rubygems.org/), e um servidor de banco de dados (se quiser persistir seus models).
 
 ## OS X
 
 ### Pré-requisitos
-Você precisará instalar o XCode a partir do CD do OS X or fazer o download no [Apple developer website](http://developer.apple.com/technology/xcode.html).
+Você precisará instalar o XCode a partir do CD do OS X ou fazer o download no [Apple developer website](http://developer.apple.com/technology/xcode.html).
 
 ### Ruby & RubyGems
 Se você tem o OS X 10.5 (Leopard), então provavelmente você já tem o Ruby instalado.

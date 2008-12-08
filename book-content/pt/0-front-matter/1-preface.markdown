@@ -1,4 +1,4 @@
-﻿# Prefácio
+# Prefácio
 
 Um tempo atrás quando não havia a stack Merb, API fixa, documentação organizada e o código estava mudando frequentemente [Matthew Ford](http://github.com/deimos1986) decidiu trabalhar em um livro open source com um objetivo simples: ajudar Rubyistas corajosos que queriam viver "on the edge" e decidiram tentar usar Merb, DataMapper e RSpec.
 

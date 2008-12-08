@@ -42,11 +42,11 @@ Para aprender mais sobre a linguagem Ruby, verifique o [website oficial da lingu
 
 **Imprima a *string* "Hello world" 10 vezes:**
 
-	10.times do
-	  print "Hello world!"
-	end
-	# => "Hello world!Hello world!Hello world!Hello world!Hello world!Hello, world!
-	Hello world!Hello world!Hello world!Hello world!"
+		10.times do
+		  print "Hello world!"
+		end
+		# => "Hello world!Hello world!Hello world!Hello world!Hello world!Hello, world!
+		Hello world!Hello world!Hello world!Hello world!"
 {:lang=ruby html_use_syntax=true}
 
 **Declaração condicional:**
@@ -63,52 +63,52 @@ Para aprender mais sobre a linguagem Ruby, verifique o [website oficial da lingu
 
 **Operador ternário:**
 
-	age_classification = age > 12 ? "adult" : "child"
+	  age_classification = age > 12 ? "adult" : "child"
 {:lang=ruby html_use_syntax=true}
 
 é equivalente a:
 
-	if age > 12
-		age_classification =  "adult"
-	else
-		age_classification = "child"
-	end
+	  if age > 12
+		  age_classification =  "adult"
+	  else
+		  age_classification = "child"
+	  end
 {:lang=ruby html_use_syntax=true}
 
 **Array:**
 
-	drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
-	# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
-	# Accessando a instância do Array
-	drinks[0] # => "Coke"
-	drinks.first # => "Coke"
-	drinks.last # => "DrPepper"
-	drinks[3] # => "DrPepper"
-	drinks[drinks.length - 1] # => "DrPepper"
+		drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
+		# => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
+		# Accessando a instância do Array
+		drinks[0] # => "Coke"
+		drinks.first # => "Coke"
+		drinks.last # => "DrPepper"
+		drinks[3] # => "DrPepper"
+		drinks[drinks.length - 1] # => "DrPepper"
 {:lang=ruby html_use_syntax=true}
 
 
 **Verifica se um item existe em uma instância de um Array:**
 
-	haystack = ["Mac", "NT", "Irix", "Linux"]
-	needle = "Windows"
-	haystack.include?(needle)	# => false
+		haystack = ["Mac", "NT", "Irix", "Linux"]
+		needle = "Windows"
+		haystack.include?(needle)	# => false
 {:lang=ruby html_use_syntax=true}
 
 **Adiciona um item em uma instância de um Array:**
 
-	haystack = ["Mac", "NT", "Irix", "Linux"]
-	needle = "Windows"
-	haystack.push(needle)
-	# Or do it like this:
-	haystack << needle
+		haystack = ["Mac", "NT", "Irix", "Linux"]
+		needle = "Windows"
+		haystack.push(needle)
+		# Or do it like this:
+		haystack << needle
 {:lang=ruby html_use_syntax=true}
 
 **Define um método:**
 
-	def greet_visitor(visitor_name)
-	  "Hi #{visitor_name}!"
-	end
+		def greet_visitor(visitor_name)
+		  "Hi #{visitor_name}!"
+		end
 {:lang=ruby html_use_syntax=true}
 
 ## Merb e Ruby ##{: #merb-and-ruby}
