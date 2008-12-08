@@ -53,8 +53,7 @@ body {
 }
 
 div.maruku_toc{
-	float:right;
-	display: block;
+	text-align: right;
 }
 
 #language-switch{
