@@ -1,1 +1,1 @@
-#Model Relationships
+#Връзка между моделите

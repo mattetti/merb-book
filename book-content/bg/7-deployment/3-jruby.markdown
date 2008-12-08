@@ -1,1 +1,1 @@
-# JRuby and Glassfish
+# JRuby и Glassfish

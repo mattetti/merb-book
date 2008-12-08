@@ -1,14 +1,13 @@
-#Why test
-There are many parts of the application which you can test
-to ensure that you minimize the chances of [regression][].
+#Защо да тестваме
+Има няколко части от апликацията, които трябва да тестваме за да осигурим минимални шансове за [regression][].
 
-## Types of Tests
+## Видове тестове
 
-### Models
+### Модели
 
-### Requests
+### Заявки
 
-### Integration Tests
+### Тестове за интеграция
 
 
 [regression]:         http://en.wikipedia.org/wiki/Software_regression

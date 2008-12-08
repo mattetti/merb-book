@@ -1,1 +1,1 @@
-#Setting Up DataMapper
+#Конфигурация на връзката

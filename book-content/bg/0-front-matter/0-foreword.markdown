@@ -1,3 +1,3 @@
-## Foreword
+## Предисловие
 
-By Yehuda Katz, Merb lead developer
+Предговор от Яхуда Катз, главен разработчик на Merb

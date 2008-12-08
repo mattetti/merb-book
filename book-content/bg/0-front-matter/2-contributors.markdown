@@ -1,17 +1,16 @@
-# Contributors
+# Хора, които допринасят за развитието на Merb
 
-Without the following contributors, this book would not have possible.
-Thank you all!
+Благодарим на хората, виновни за написването на книгата !
 
-**In alphabetical order:**
+**В азбучен ред :**
 
-* [Matt     Aimonetti   ](http://merbist.com)
-* [Fabio    Akita       ](http://akitaonrails.com)
-* [Dale     Campbell    ](http://corrupt.save-state.net/)
-* [Matthew  Ford        ](http://github.com/deimos1986)
-* [Mathieu  Fosse       ](http://blog.kawooa.org)
-* [Markus   Prinz       ](http://blog.nuclearsquid.com/)
-* [Yehuda   Katz        ](http://yehudakatz.com)
-* [Makoto   Kuwata      ](http://www.kuwata-lab.com/)
-* [Rich     Morin       ](http://cfcl.com/rdm)
-* [Foy      Savas       ](http://foysavas.com/)
+* [Мат     Аимонети   ](http://merbist.com)
+* [Фабио    Акита       ](http://akitaonrails.com)
+* [Дейл     Кембъл    ](http://corrupt.save-state.net/)
+* [Матю  Форд        ](http://github.com/deimos1986)
+* [Матю  Фос       ](http://blog.kawooa.org)
+* [Маркъс   Принс       ](http://blog.nuclearsquid.com/)
+* [Яхуда   Катз        ](http://yehudakatz.com)
+* [Макото   Кувата      ](http://www.kuwata-lab.com/)
+* [Рич     Морин       ](http://cfcl.com/rdm)
+* [Фой      Сава       ](http://foysavas.com/)

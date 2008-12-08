@@ -1,1 +1,1 @@
-# Available Slices
+# Налични Slices

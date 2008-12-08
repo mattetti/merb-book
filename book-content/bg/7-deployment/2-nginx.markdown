@@ -1,28 +1,27 @@
 #Nginx
 ![Nginx](/images/nginx-header.jpg){: .no-border}
 
-**Reference website:**
+**Сайт за повече информация :**
 [http://wiki.codemongers.com/Main][]{: .reference}
 
 
-[Nginx][] (pronounced "engine x") is a free, open-source,
-high-performance HTTP server and [reverse proxy][],
-as well as an IMAP/POP3 [proxy server][].
-Written by [Igor Sysoev](http://sysoev.ru/en/) in 2005,
-Nginx now hosts between 1% and 4% of all domains worldwide
-(sources: [1](http://googleonlinesecurity.blogspot.com/2007/06/web-server-software-and-malware.html),
+[Nginx][] (произнася се "енджин екс") е безплатен, open-source,
+високо-производителен HTTP сървър и [reverse proxy][],
+както и IMAP/POP3 [proxy server][].
+Написан от [Igor Sysoev](http://sysoev.ru/en/) през 2005,
+Nginx обслужва между 1% и 4% от всички домейни в интернет
+(източник: [1](http://googleonlinesecurity.blogspot.com/2007/06/web-server-software-and-malware.html),
 [2](http://survey.netcraft.com/Reports/200806/)).
-Although still in beta, Nginx is known for its stability, rich feature set,
-simple configuration, and low resource consumption.
+Въпреки, че е в бета вариант, Nginx е известен със своята стабилност, богата функционалност, лесна конфигурация и ниска консумация на ресурси.
 
 
-## Installation
+## Инсталация
 
 
-## Configuration
+## Конфигурация
 
 
-## Capistrano Task
+## Capistrano задача
 
 
 

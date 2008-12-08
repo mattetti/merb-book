@@ -7,9 +7,9 @@
 </div>
 
 0. [Предисловие](/front-matter)
-	1. [Предговор от Яхуда Катз Katz](/front-matter/foreword)
+	1. [Предговор от Яхуда Катз](/front-matter/foreword)
 	2. [Уводни думи от Мат Аимонети](/front-matter/preface)
-	3. [Хора, които спомагат за развитието на Merb](/front-matter/contributors)
+	3. [Хора, които допринасят за развитието на Merb](/front-matter/contributors)
 1. [Въведение](/introduction)
 	1. [Езикът Ruby](/introduction/ruby)
 	2. [Merb Web Framework](/introduction/merb)
@@ -36,7 +36,7 @@
 	1. [Защо да тестваме](/testing-your-application/why)
 	1. [Тестване на модлите](/testing-your-application/models)
 	1. [Тестване на заявките](/testing-your-application/requests)
-	1. [Интеграция с RSpec Cucumber](/testing-your-application/cucumber)
+	1. [Интеграция на тестване с RSpec Cucumber](/testing-your-application/cucumber)
 5. [Дуопълнителен модул Merb More](/merb-more)
   1. [Автентикация](/merb-more/authentication)
   1. [Mailer](/merb-more/mailer)

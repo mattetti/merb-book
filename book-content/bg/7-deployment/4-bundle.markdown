@@ -1,1 +1,1 @@
-# Bundling your Merb application
+# Създавене на вашата Merb апликация

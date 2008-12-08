@@ -1,59 +1,36 @@
-# Preface
+# Уводни думи
 
-Way back when, there was no Merb stack, no locked API,
-no organized documentation, and the code base was changing often.
-So, [Matthew Ford][] decided to work on an [Open Source][] book
-with a simple goal:
-help courageous Rubyists who wanted to live on the edge
-and had decided to try Merb, [DataMapper][], and [RSpec][].
+Назад във времето, когато нямаше Merb стек, нямаше недостъпен API,
+нямаше оргранизирана документация и кодовата база се променяше често, [Матю  Форд](http://github.com/deimos1986) реши да работи върху [Open Source][] книга със семплата цел: да помогне на смелите рубисти, които живеят на ръба и бяха решили да пробват Merb, [DataMapper][], and [RSpec][].
 
-Since then, Merb matured a lot, getting up and running became way easier
-and Merb decided to offer an **opinionated** version of the stack
-using Merb, DataMapper, and RSpec!
+От тогава Merb се разви много, разработката и употребата се улесниха, което доведе до решение да бъде напревена "**opinionated**" версия на стека: Merb, DataMapper, and RSpec!
 
-As an early Merb developer myself,
-I really enjoyed having access to Matt's book
-and I even contributed to the early version of the book.
-Since then, I joined the Merb team;
-with the rest of them, I focused on the big 1.0 release.
-We did this (successfully!) in two steps:
-the first Release Candidate during [MerbCamp 2008][]
-and the 1.0 final during [RubyConf 2008][].
+Като един от първите разработчици на Merb, имах удоволствието да чета книгата на Мат, както и да помагам с идеи и съдържание. Тогава се присъдединих към екипа разработчици на Merb;
+с останалите се фокусирахме върху версия 1.0.
+Направихме това в две(успешни!) стъпки:
+първият Release Candidate по време на  [MerbCamp 2008][]
+и финалната версия 1.0 по време на [RubyConf 2008][].
 
-Having a wonderful framework is great,
-but as Jason Seifer from [RailsEnvy.com][] said to me after 1.0 was released:
+Наличието на Merb 1.0 е страхотно, но Джейсън Сайфър от [RailsEnvy.com][] ми сподели след обявяването на 1.0 следното:
 
-> Merb has some awesome code documentation, the code is so easy to read,
-> but the user documentation is still lacking.
+> Merb притежава страхотна и лесно четима документация на кода, но липсва документация на ниво потребител.
 
-Jason was right; our user documentation was not that great.
-Of course, we have the [Merb wiki][] and a bunch of books available out there,
-but I have to say that looking at other frameworks such as [Django][],
-the entire core team knew we had to do something.
+И беше прав. Естествено, имахме [Merb wiki][] и няколко налични книги, но имайки предвид други "frameworks" като [Django][], екипа знаеше, че трява да направи нещо по въпроса. 
 
-Ford's efforts were noticed early on
-and he was offered a deal to write [Beginning Merb][] for [Apress][].
-As you can imagine,
-it became a bit hard for Matt to write a book for a publisher,
-have a full time job, contribute to various Open Source projects,
-keep up with Merb,
-and finally make sure the open source book he started a while back
-would stay up to date.
-On top of that, many things changed pre-1.0
-and a good part of the existing content needed a full rewrite.
+Усилията на Форд бяха забелязани и [Apress][] му предложиха да напише книга: [Beginning Merb][].
+Както можете да си представите, беше друдно за Мат да напише книга за издател, да работи отделно и да допринася на няколко Open Source проекта, да следи развитието на Merb и да редактира и дописва "Оpen Source" книгата, която започна преди време.
+Освен това много неща в pre-1.0 бяха променени и някои части на наличното съдържание трябваше да бъдат написани на ново.
 
-That's why the Merb team decided it was time to get involved
-and to get the community focused on a centralized, user-oriented book.
+За това екипът на Merb реши, че е време да се намеси и фокусира върху потребителски ориентирана книга.
 
-I am really glad that the Merb team decided
-to take responsibility for this book
-and that we will make sure it stays well organized, up to date, and relevant.
-However, this book, very much like Merb,
-won't grow and evolve much without the community's help.
-So, please, send us corrections, new examples, and new chapters,
+Щастлив съм от решението на екипа да поеме отговорността за тази книга и Ви уверявам, че тя ще остане организирана и актуална и  организиране.
+
+Въперки това, книгата, както Merb,
+не би се развила без помоща на обществото.
+За това Ви моля да ни изпращата корекции, нови примери, нови глави.
 so this book can help the community as a whole.
 
-[Matt Aimonetti][], Merb Core team member
+[Мат Аимонети](http://merbist.com), член на Merb Core екипа
 
 
 [Apress]:           http://www.apress.com/

@@ -1,7 +1,7 @@
-#Views
+#Изгледи
 
 
 
 ##Form Helpers
 
-##Date and Time Helpers
+##Date и Time Helpers

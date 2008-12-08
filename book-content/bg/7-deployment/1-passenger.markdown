@@ -2,47 +2,43 @@
 
 ![Phusion Passenger](/images/phusion_banner.png){: .no-border}
 
-**Reference website:**
+**Сайт за повече информация:**
 [http://www.modrails.com/documentation/Users%20guide.html][]{: .reference}
 
-[Phusion Passenger][] is an Apache module for deploying [Rack][] applications.
-Because Merb is built on Rack,
-you can easily run it on Passenger and [Ruby Enterprise Edition][].
-Ruby Enterprise Edition is a version of Ruby 1.8.6
-with improvements to Ruby's garbage collection,
-which can typically reduce an application's memory footprint by 33%.
-The following instructions are for Linux.
+[Phusion Passenger][] е Apache модул за обслужването на [Rack][] апликации.
+Тъй като Merb е изграден върху Rack,
+можете лесно да го стартирате чрез Passenger и [Ruby Enterprise Edition][].
+Ruby Enterprise Edition е версия на Ruby 1.8.6
+която има реализирана оптимизация на garbage collection,
+ водеща до намаляване на използваната оперативна памет до 33%.
+Следните инструкции са за инсталация на Linux.
 
-##Installing Ruby Enterprise Edition (REE)
-Ruby Enterprise Edition can be installed
-alongside a version of Ruby you currently have installed,
-as it will be installed into the <tt>/opt</tt> directory.
+##Инсталация на Ruby Enterprise Edition (REE)
+Ruby Enterprise Edition може да бъде инсталирана в <tt>/opt</tt> директорията, отделно от стандартната версия на Ruby.
 
-*Note:*
-You will need to have the development <tt>readline</tt> libraries installed
-if you want run Merb interactively.
+*Бележка:*
+Трябва да разполагате с development <tt>readline</tt> бибилиотеките ако иската да стартирате интерактивно Merb
 
-### Download REE
+### Изтегляне на REE
 
     $ wget http://rubyforge.org/frs/download.php/41040/ruby-enterprise-1.8.6-20080810.tar.gz
 
-### Install
+### Инсталация
 
     $ tar xzvf ruby-enterprise-1.8.6-20080810.tar.gz
     $ cd ruby-enterprise-1.8.6-20080810
     $ ./installer
 
 
-##Installing Passenger
+##Инсталация на Passenger
 
     $ gem install passenger
     $ passenger-install-apache2-module
 
-##Configuration
+##Конфигурация
 
 ###config.ru
-The following file needs to be placed
-into your Merb application's root directory:
+Следния файл трябва да бъде разположен във вашата основна директория на Merb:
 
     # config.ru
     require 'rubygems'
@@ -68,7 +64,7 @@ into your Merb application's root directory:
 
     run Merb::Rack::Application.new
 
-## Capistrano Task
+## Capistrano задача
 
 
 [http://www.modrails.com/documentation/Users%20guide.html]:  http://www.modrails.com/documentation/Users%20guide.html
