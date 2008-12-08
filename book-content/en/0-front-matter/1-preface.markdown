@@ -9,7 +9,7 @@ and had decided to try Merb, [DataMapper][], and [RSpec][].
 
 Since then, Merb matured a lot, getting up and running became way easier
 and Merb decided to offer an **opinionated** version of the stack
-using Merb, DataMapper, and RSpec! 
+using Merb, DataMapper, and RSpec!
 
 As an early Merb developer myself,
 I really enjoyed having access to Matt's book
