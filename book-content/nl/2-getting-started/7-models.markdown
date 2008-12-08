@@ -20,7 +20,7 @@ Dit is een uitstekende keuze voor een eenvoudige ontwikkeling van nieuwe project
 Eens in productie echter,
 is het doorgaans aanbevolen dat developers gebruik maken 
 van een van de krachtiger database-engines zoals Postgres of MySQL.
-Projecten afkomstig uit de Rails wereld
+Projecten die overkomen uit de Rails wereld
 kunnen nog steeds van ActiveRecord modellen gebruik maken; Merb supporteert ook deze.
 
 De rest van dit hoofdstuk is gericht op het gebruik van DataMapper
