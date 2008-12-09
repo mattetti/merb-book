@@ -25,45 +25,43 @@ A estrutura t&iacute;pica de uma nova aplica&ccedil;&atilde;o Merb (gerada com <
 Segue uma breve explicação sobre cada diretório e seu propósito.
 
 ## app
-This directory is where you'll spend most of your time,
-as it contains the "guts" of your Merb application.
+Este diretório é onde você irá gastar a maior parte de seu tempo,
+já que ele contem as "tripas" da sua aplicação Merb.
 
 ### controllers
-All of your application's controllers are stored here (no surprise there).
-Controllers are typically named in pluralized form.
-For example, if you have a "<tt>Page</tt>" model,
-the controller file would most likely be called <tt>pages.rb</tt>.
-This is simply a convention, however;
-you're free to name your controllers whatever you like.
-See the [controllers][] section for more information.
+Todos os <i>controllers</i> da sua aplica&ccedil;&atilde;o s&atilde;o guardados aqui (sem maiores surpresas).
+<i>Controllers</i> s&atilde;o, tipicamente, nomeados de uma forma pluralizada.
+Por exemplo, se voc&ecirc; tiver um <i>model</i> "<tt>Page</tt>" o arquivo <i>controller</i> ir&aacute; ter o nome <tt>pages.rb</tt>.
+Isto &eacute; uma conven&ccedil;&atilde;o, portanto voc&ecirc; est&aacute; livre para nomear seus <i>controllers</i> da maneira que quiser.
+Veja a seção [controllers][] para maiores informações.
 
 ### models
-This directory contains your model classes.
-These classes typically serve as your [ORM][]s,
-which provide object-oriented access to your database tables.
-See the [models][] section for more information.
+Este diret&oacute;rio cont&eacute;m suas classes <i>model</i>.
+Estas classes servem como seus [ORM][]s,
+que permite um acesso orientado a objetos para as suas tabelas do banco de dados.
+Veja a seção [models][] para maiores informações.
 
 ### views
-Any templates will be stored here.
-By default, this directory contains <tt>exceptions</tt>
-and <tt>layout</tt> subdirectories.
-The <tt>exceptions</tt> directory stores templates
-which are generally related to HTTP errors.
-For example, a fresh Merb app
-will contain a <tt>not_found.html.{erb,haml}</tt> file,
-which corresponds to the 404 HTTP status code.
-The <tt>layout</tt> directory contains overall application templates,
-into which action templates can be rendered.
-The default application layout file
-is called <tt>application.html.{erb,haml}</tt>.
-See the [views][] section for more information.
+Qualquer <i>template</i> ser&aacute; guardado aqui.
+Por default, este diret&oacute;rio cont&eacute;m os subdiret&oacute;rios <tt>exceptions</tt>
+e <tt>layout</tt>.
+O diret&oacute;rio <tt>exceptions</tt> guarda <i>templates</i> que s&atilde;o, geralmente,
+relacionados aos erros de HTTP.
+Por exemplo, uma nova aplica&ccedil;&atilde;o Merb ir&aacute; conter um
+arquivo <tt>not_found.html.{erb,haml}</tt> que corresponde ao c&oacute;digo
+de status HTTP 404.
+O diret&oacute;rio <tt>layout</tt> cont&eacute;m <i>templates</i> globais da aplica&ccedil;&atilde;o,
+no qual as <i>actions templates</i> podem ser renderizadas.
+O arquivo de <i>layout</i> default da aplica&ccedil;&atilde;o &eacute; o
+<tt>application.html.{erb,haml}</tt>.
+Veja a seção [views][] para maiores informações.
 
 ## config
-Yep, you guessed it.
-Merb configuration files are located here.
-The <tt>router.rb</tt> file contains your application's URL [routes][],
-which define the structure, order, and appearance of your URLs.
-Another important file, <tt>init.rb</tt>, handles the base Merb configuration.
+Sim, você advinhou.
+Os arquivos de configuração do Merb estão localizados aqui.
+O arquivo <tt>router.rb</tt> contém a URL da sua aplicação [routes][],
+que define a estrutura, ordem e aparência das suas URLs.
+Outro arquivo importante, <tt>init.rb</tt>, trata da configuração de base do Merb.
 This is where you can configure your ORM, template engine,
 and testing framework.
 You can also add custom configuration to the <tt>Merb::BootLoader</tt>
