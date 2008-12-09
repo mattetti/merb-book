@@ -1,47 +1,46 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="<%= language %>">
   <head>
-    <title>The Merb Open Source Book</title>
+    <title>- The Merb Open Source Book - <%= params[:page_name] || params[:chapter_name] %></title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="/stylesheets/master.css" type="text/css"
+    <link rel="stylesheet" href="/stylesheets/merb_book.css" type="text/css"
           media="screen" charset="utf-8" />
   </head>
   <body>
-		<p id="warning">This book is a work in progress; feel free to
-		   <a href="http://github.com/mattetti/merb-book">contribute</a>.</p>
-    <%#= message[:notice] %>
+    <p id="warning">This book is a work in progress; feel free to
+       <a href="http://github.com/mattetti/merb-book">contribute</a>.</p>
 
-		<div id="book-title"><a href="/">The Merb Open Source Book</a></div>
-		<div id="book">
-			<div class="toc-link">
-			  <a href="<%= url(:toc, :language => language) %>"
-			    >table of contents</a></div>
-			
-			<div id="language-switch">
-				<%= language_switch %>
-			</div>
+    <div id="book-title"><a href="/">The Merb Open Source Book</a></div>
+    <div id="book">
+      <div class="toc-link">
+        <a href="<%= url(:toc, :language => language) %>">table of contents</a>
+      </div>
+      
+      <div id="language-switch">
+        <%= language_switch %>
+      </div>
 
-			<div id="book-content" <%= rtl_support_class %> >
-				<%= catch_content :for_layout %>
-			</div>
-			
-			<div id="nav-links">
-			  <%= page_nav_links %>
-			</div>
+      <div id="book-content" <%= rtl_support_class %> >
+        <%= catch_content :for_layout %>
+      </div>
+      
+      <div id="nav-links">
+        <%= page_nav_links %>
+      </div>
 
-		</div>
+    </div>
     
-		<div id="footer">
-			<span>The content of this book is licensed under the
-			<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/"
-			  >Creative Commons Attribution-Non Commercial-Share Alike 3.0
-			   license</a>.</span>
+    <div id="footer">
+      <span>The content of this book is licensed under the
+      <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/"
+        >Creative Commons Attribution-Non Commercial-Share Alike 3.0
+         license</a>.</span>
 
-			<p>The source code of the book application is dual licensed under the
-			  <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a>
-			  and <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> licenses. </p>
-		</div>
-		<script type="text/javascript">
+      <p>The source code of the book application is dual licensed under the
+        <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a>
+        and <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> licenses. </p>
+    </div>
+    <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
     </script>
