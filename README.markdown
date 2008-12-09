@@ -68,7 +68,7 @@ Please follow our editor guidelines, especially:
 * Russian:     http://github.com/cheba (Alex Mankuta)
 * Spanish:     (pending)
 * Dutch:       http://github.com/pvelder (Peter De Velder)
-* Arabic       
+* Arabic       http://github.com/khelll (Khaled AlHabache)
 
 ## Legal
 
