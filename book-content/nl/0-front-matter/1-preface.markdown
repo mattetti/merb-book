@@ -8,7 +8,7 @@ Als een vroege Merb developer, genoot ik er van gebruik te kunnen maken van Matt
 
 Een knap framework hebben is fantastisch, maar zoals Jason Seifer van [RailsEnvy.com](http://railsenvy.com) me vertelde nadat  1.0 was uitgebracht:
 
-> Merb heeft ongelofelijke code documentatie, de code is zo makkelijk te lezen, maar de gebruiksdocumentatie was onvoldoende.
+> Merb heeft ongelofelijke code documentatie, de code is zo makkelijk te lezen, maar de gebruiksdocumentatie ontbreekt nog steeds.
 
 Jason had gelijk, onze gebruiksdocumentatie was niet zo fantastisch. Natuurlijk hebben we de [wiki](http://wiki.merbivore.com) en een aantal boeken beschikbaar, maar ik moet zeggen dat - lettend op andere frameworks zoals [Django](http://www.djangobook.com/) - het hele team wist dat er iets moest gebeuren.
 
