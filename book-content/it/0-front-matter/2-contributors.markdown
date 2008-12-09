@@ -1,8 +1,9 @@
-# Contributors
+# Contributori
 
-Without the following contributors this book would not have possible. Thank you all!
+Senza i seguenti contributori non sarebbe stato possibile scrivere questo testo. Grazie a tutti!
 
-**In alphabetical order:**
+
+**In ordine alfabetico:**
 
 * [Matt Aimonetti](http://merbist.com)
 * [Fabio Akita](http://akitaonrails.com)

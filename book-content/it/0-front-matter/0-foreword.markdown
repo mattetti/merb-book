@@ -1,3 +1,3 @@
-## Foreword
+## Prefazione di Yehuda Katz
 
-By Yehuda Katz, Merb lead developer
+Yehuda Katz, Merb lead developer
