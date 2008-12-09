@@ -15,3 +15,4 @@ Thank you all!
 * [Makoto   Kuwata      ](http://www.kuwata-lab.com/)
 * [Rich     Morin       ](http://cfcl.com/rdm)
 * [Foy      Savas       ](http://foysavas.com/)
+* [Arthur   Zapparoli   ](http://arthurgeek.net/)
