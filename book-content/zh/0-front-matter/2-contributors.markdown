@@ -1,9 +1,9 @@
-# Contributors
+# 本书的作者
 
-Without the following contributors, this book would not have possible.
-Thank you all!
+如果没有下列作者的贡献，我们不可能完成这本书。
+谢谢你们！
 
-**In alphabetical order:**
+**按姓氏字母排序**
 
 * [Matt     Aimonetti   ](http://merbist.com)
 * [Fabio    Akita       ](http://akitaonrails.com)
