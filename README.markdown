@@ -62,13 +62,13 @@ Please follow our editor guidelines, especially:
 * Chinese:     http://github.com/zhhz (Zhonghai Zuo)
 * French:      http://github.com/pointcom  (Mathieu Fosse)
 * German:      http://github.com/cypher (Markus Prinz)
-* Italian:     (pending)
+* Italian:     http://github.com/carlopecchia (Carlo Pecchia)
 * Japanese:    http://github.com/kwatch (Makoto Kuwata)
 * Portuguese:  http://github.com/akitaonrails (Fabio Akita)
 * Russian:     http://github.com/cheba (Alex Mankuta)
 * Spanish:     (pending)
 * Dutch:       http://github.com/pvelder (Peter De Velder)
-* Arabic       
+* Arabic       http://github.com/khelll (Khaled AlHabache)
 
 ## Legal
 
