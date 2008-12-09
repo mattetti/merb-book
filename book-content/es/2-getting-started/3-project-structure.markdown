@@ -36,7 +36,7 @@ Visita la sección [controladores](/getting-started/controllers) para más infor
 
 ### models
 Este directorio contiene las clases de tus modelos.
-Estas clases típicamente sirven como tu jk_ [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping)s, que proveen acceso orientado a objecto a tus tablas en la base de datos.
+Estas clases típicamente sirven como tu [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping)s, que proveen acceso orientado a objecto a tus tablas en la base de datos.
 Visita la sección [modelos](/getting-started/models) para más información.
 
 ### views
@@ -54,7 +54,7 @@ Los archivos de configuration de Merb son guardados aquí.
 El archivo <tt>router.rb</tt> contiene las [rutas](/getting-started/router) URL de tu aplicación, que definen la estructura, ordednr, y apariencia de tus URLs.
 Otro archivo importante, <tt>init.rb</tt>, se encarga de la configuration base de Merb.
 Aquí es donde puedes configurar tu ORM, motor de plantillas, y plataforma de pruebas.
-También puedes adicionar configuraciones jk_custom al <tt>Merb::BootLoader</tt> en sus bloques <tt>before_app_loads</tt> y <tt>after_app_loads</tt>.
+También puedes adicionar configuraciones a medida al <tt>Merb::BootLoader</tt> en sus bloques <tt>before_app_loads</tt> y <tt>after_app_loads</tt>.
 Otro archivo importante, <tt>dependencies.rb</tt>, es donde puedes defindire las dependencias de tu aplicación: otras librarias o gemas que tu aplicación requiere.
 Cualquire dependencia listada en ese archivo será cargada cuando tu aplicación Merb arranca.
 
@@ -81,7 +81,7 @@ Si tienes cantidades pequeñas de código JavaScript específico a tu aplicació
 Si resulta que esto se demuestra inviable, puedes adicionar más archivos según necesites.
 
 ### stylesheets
-Siguiendo la idea de la separación de jk_concerns, cualquier jk_styling visual deberá ser puesto en una hoja de estilos.
+Siguiendo la idea de la separación de intereses, cualquier estilismo visual deberá ser puesto en una hoja de estilos.
 Cuando generas una aplicación Merb, se crea un archivo de hoja de estilos (llamado <tt>master.css</tt>), que puedes ajustar a tus deseos.
 
 ## spec

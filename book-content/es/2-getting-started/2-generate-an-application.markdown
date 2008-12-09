@@ -12,14 +12,14 @@ Diferentes estructuras para la aplicación pueden generarse, dependiendo de las 
 Las diferentes estructuras para la aplicación que puedes generar son <tt>app</tt> para una stack, <tt>core</tt> para un núcleo, <tt>flat</tt> para aplicaciones planas, y <tt>very_flat</tt> para aplicaciones muy planas.
 
 ### App (stack)
-El stack jk_opinado de Merb.
+El stack dogmático de Merb.
 Esto genera una estructura de directorios completa para la aplicación con un conjunto completo de archivos de configuración.
 También adiciona un archivo <tt>config/dependancies.rb</tt> que incluye todo el <tt>merb-more</tt> y <tt>DataMapper</tt>.
 
     $ merb-gen app my-application
 
 Esta aplicación tiene todo lo necesario para comenzar a construir una aplicación web completa; es la más similar a la estructura típica de Rails.
-Mucho en este libro funcionará con la jk_assumption de que has comenzado de esta manera.
+Mucho en este libro funcionará con la suposición de que has comenzado de esta manera.
 
 Arranca esta aplicación ejecutando <tt>merb</tt> en el directorio raiz de la aplicación.
 Esto iniciará Merb y lo pondrá a escuchar en el puerto por defecto 4000.
@@ -27,7 +27,7 @@ Para ver tu aplicación en acción, visita [http://localhost:4000/](http://local
 
 ### Core (núcleo)
 Core generará una estructura de directorios completa para la aplicación con un conjunto completo de archivos de configuración.
-A diferecnia de <tt>app</tt> -- la stack completa jk_opinada -- ninguna dependencia se adicionará.
+A diferencia de <tt>app</tt> -- la stack completa dogmática -- ninguna dependencia se adicionará.
 
     $ merb-gen core my-apliccation
 
