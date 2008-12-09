@@ -62,6 +62,7 @@ Please follow our editor guidelines, especially:
 * Chinese:     http://github.com/zhhz (Zhonghai Zuo)
 * French:      http://github.com/pointcom  (Mathieu Fosse)
 * German:      http://github.com/cypher (Markus Prinz)
+* Indonesian:  http://github.com/ripta (Ripta Pasay)
 * Italian:     http://github.com/carlopecchia (Carlo Pecchia)
 * Japanese:    http://github.com/kwatch (Makoto Kuwata)
 * Portuguese:  http://github.com/akitaonrails (Fabio Akita)
