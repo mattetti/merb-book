@@ -37,7 +37,8 @@ Merb::BootLoader.before_app_loads do
             {:name => "Bosanski",   :code => "bs"},
             {:name => "Nederlands", :code => "nl"},
             {:name => "العربية",    :code => "ar"},
-            {:name => "Български",  :code => "bg"}
+            {:name => "Български",  :code => "bg"},
+            {:name => "Italiano",   :code => "it"}
           ]
      }
    
