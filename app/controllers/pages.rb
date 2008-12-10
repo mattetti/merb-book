@@ -1,21 +1,21 @@
 class Pages < Application
 
   def index
-    page_file = find_toc
-    raise NotFound unless page_file    
+    @page_file = find_toc
+    raise NotFound unless @page_file    
     
-    text = File.open(page_file).read
+    text = File.open(@page_file).read
     render Maruku::new(text).to_html
   end
   
   def show
-    chapter   = params[:chapter]
-    page_name = params[:page_name]
+    @chapter   = params[:chapter]
+    @page_name = params[:page_name]
     
-    page_file = find_page_file(chapter, page_name)
-    raise NotFound unless page_file    
+    @page_file = find_page_file(@chapter, @page_name)
+    raise NotFound unless @page_file    
     
-    text = File.open(page_file).read
+    text = File.open(@page_file).read
     render Maruku::new(text).to_html
   end
   
