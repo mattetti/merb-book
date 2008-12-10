@@ -18,7 +18,7 @@ our servers.
 Along the way proxies, caches and firewalls may look at the request, modify it,
 and possibly store what we send back.
 If all goes well this will be transparent to both our server and the user.
-There are time, particularly with dynamic sites, where these things will need
+There are times, particularly with dynamic sites, where these things will need
 to be taken into account.
 There are also ways to take advantage of the infrastructure of the internet
 that reduce the load on the server
@@ -54,7 +54,7 @@ Merb receives the request as a [Rack][] environment. A Rack environment wraps
 all the cgi style headers for the request.
 Because Merb uses Rack as an abstraction layer, it becomes really easy to change
 web servers.
-You might hear people referring to these web servers as adapters.
+You might hear people refer to these web servers as adapters.
 
 Before Merb dispatches the request through the stack, one can add "Rack middlewares".
 Rack middlewares can process the request before it's sent through Merb or even wrap it
@@ -67,21 +67,21 @@ but you can find Merb's Rack setup in 'config/rack.rb' (full stack app).
 
 ## Router
 
-Once the request is being passed to the stack, the first step is the router.
-The Router's job is to map a request to a controller method (action)
-and pass it the request parameters.
-However, you might decide to process the request in the router directly using
-a deferred route.
-This will stop the request cycle at the router, and a controller isn't used.
-We will not cover this use case in this chapter.
+Once the request is being passed to the stack, the router is asked where to go
+by the request.
+The request then sends itself to the controller.
+
+The Router's job is to set up parameters extracted from the request
+and to tell the request where to go. 
+In most cases, the router maps a request to a controller method (action) and also
+sets up parameters extracted from the request.
 
 Behind the scenes the Merb framework has already done some work for you.
 By the time a request reaches the controller, Merb has:
 
-* Extracted the request URI Path.
-* Looked through the requests Cookies and populated the cookies hash.
-* Restored the session if it existed for this request.
-* parsed any Post or Query data sent by the client into the params hash.
+    * Extracted the request URI Path.
+    * Parses any Post or Query data sent by the client into the params hash.
+    * Setup access to request cookies and the current session.
 
 The developer can use any of this information to route the request.
 Please see the chapter on routing for more information.
@@ -106,7 +106,7 @@ The client receives the response and interprets by, for example, rendering a web
 
 If caching is enabled, the request might not go through the entire process
 described above.
-Caching may happen within Merb, by Rack Middleware, by a Proxy server,
+Caching may happen within Merb, by a Rack Middleware, a Proxy server,
 or by the client web browser.
 
 
