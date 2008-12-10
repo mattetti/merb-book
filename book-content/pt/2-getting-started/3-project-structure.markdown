@@ -1,5 +1,6 @@
 # Estrutura do projeto
-A estrutura t&iacute;pica de uma nova aplica&ccedil;&atilde;o Merb (gerada com <tt>merb-gen app</tt>) irá parecer algo como isso:
+A estrutura típica de uma nova aplicação Merb (gerada com <tt>merb-gen app</tt>)
+irá se parecer com:
 
     Diretório da aplicação (Merb.root)
       - app
