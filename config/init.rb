@@ -36,7 +36,9 @@ Merb::BootLoader.before_app_loads do
             {:name => "Русский",    :code => 'ru'},
             {:name => "Bosanski",   :code => "bs"},
             {:name => "Nederlands", :code => "nl"},
-            {:name => "العربية",    :code => "ar"}
+            {:name => "العربية",    :code => "ar"},
+            {:name => "Български",  :code => "bg"},
+            {:name => "Italiano",   :code => "it"}
           ]
      }
    
@@ -44,4 +46,5 @@ end
  
 Merb::BootLoader.after_app_loads do
   # This will get executed after your app's classes have been loaded.
+  require 'maruku/ext/div'
 end

@@ -1,6 +1,12 @@
 #Why test
-There are many parts of the application which you can test
-to ensure that you minimize the chances of [regression][].
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
+It is important to test your application to ensure that you minimize the chances
+of [regression][].
+Merb stack's default testing framework uses the [RSpec][] testing framework and a combination of
+model specs, request specs, and integration specs.
 
 ## Types of Tests
 
@@ -8,7 +14,8 @@ to ensure that you minimize the chances of [regression][].
 
 ### Requests
 
-### Integration Tests
+### Integration
 
 
 [regression]:         http://en.wikipedia.org/wiki/Software_regression
+[RSpec]:              http://rspec.info/

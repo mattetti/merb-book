@@ -1,5 +1,8 @@
 #MVC
 
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 MVC is an acronym that stands for Model, View, Controller.
 It describes a form of web-application structuring
 that is easy to test and maintain

@@ -1,0 +1,8 @@
+#Models
+
+
+## Attributes
+
+## Associations
+
+## Callbacks
