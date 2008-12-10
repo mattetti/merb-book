@@ -1,37 +1,62 @@
-#Controllers
+# Controllers
 
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-In the [MVC][] Framework controllers are the glue layer that connects the
-business logic of the Model with the appropriate View templates to respond to
-generate a response.
-In Merb controllers are implemented classes that inherit form Merb::Controller.
-In most applications a single class called 'Application' is created
-as a place to hold application wide setup.
-Controllers are then formed as child classes of Application.
+**TECHNICAL REVIEW IN PROGRESS, PLEASE DO NOT TRANSLATE**
 
-Controllers are instantiated directly by the Merb Framework.
-The [Router][] logic in Merb chooses a controller and an action
-based on the information about the incoming request.
-An instance of the controller is created for each request
-and a method is called based on the action.
-The return value of this call becomes the body of the HTML Response.
-(c.f. Rack)
+In the [MVC][] paradign, controllers are the glue layer that connects the
+business logic of the Model with the View.
 
-In this chapter we will look at
-how organize controllers using two of the common controller styles,
-discuss how to write the methods that are called be the framework on a controller,
-and how to extend the functionality of a controller
-using filter, inheritance and private methods.
+In Merb, controllers are classes inheriting from ``Merb::Controller``.
+In a Merb stack app, a controller class called ``Application`` is created.
+All generated controllers will inherit from ``Application`` and therefore
+share the same attributes as ``Application``.
 
-##Controller Styles
+The [Router][] logic in Merb finds a controller and an action to send the
+request to based on the incoming request details.
 
-There are two standard ways to create controllers.
-The first is based on the default Merb routing.
-The second is based on a RESTful <!-- need reference --> Resource model.
+In this chapter we will look at how to organize controllers.
+We will also discuss how to write **actions**;
+the methods that are called on a controller.
+Finally, we will look at how to extend the functionalities of a controller.
 
-###The Default Routing Style
+## RESTful controllers
+
+You can generate two types of controllers.
+An normal controller and a [RESTful][] controller.
+
+    $ merb-gen controller birds
+      [ADDED]  app/controllers/birds.rb
+      [ADDED]  app/views/birds/index.html.erb
+      [ADDED]  spec/requests/birds_spec.rb
+      [ADDED]  app/helpers/birds_helper.rb
+{:lang=shell html_use_syntax=true}
+  
+or
+
+    $ merb-gen resource_controller 
+{:lang=shell html_use_syntax=true}
+
+
+The first command will generate a controller with an ``index action`` and 
+an ``index view``(template).
+    
++-- {: .notes}
+  If you realized you made a mistake when generating your controller,
+  You can delete the generated controller by appending ``-d`` at the
+  end of the command you just sent:
+
+      $ merb-gen controller cats -d
+        [DELETED]  app/controllers/birds.rb
+        [DELETED]  app/views/birds/index.html.erb
+        [DELETED]  spec/requests/birds_spec.rb
+        [DELETED]  app/helpers/birds_helper.rb
+  {:lang=shell html_use_syntax=true}
+=--
+
+
+### The Default Routing Style
 
 When a new application is generated, the router contains a single default route
 which maps URL Paths <!-- is this the right name --> to Controllers like this:
@@ -462,4 +487,5 @@ This can be a security hole.
 [MVC]:      /getting-started/mvc
 [Router]:   /getting-started/router
 [redirect]: http://merbivore.com/documentation/1.0/doc/rdoc/merb-core-1.0/index.html?a=M000529&name=redirect
+[RESTful]:  http://en.wikipedia.org/wiki/Representational_State_Transfer#RESTful_Web_services
 [View]:     /getting-started/view
