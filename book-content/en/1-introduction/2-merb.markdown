@@ -1,4 +1,4 @@
-## Merb
+# Merb
 
 Merb is the brainchild of [Ezra Zygmuntowicz](http://brainspl.at/).
 The very first 'public' version of Merb appeared as a pastie on September 21st, 2006.
