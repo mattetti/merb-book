@@ -58,39 +58,25 @@ def generate_toc_for_chapter(chapter_name, language)
     page_content = File.open(page).read
     m_doc = Maruku::new(page_content)
 
-    if m_doc.toc.immediate_children.size > 0 
+    if m_doc.toc.section_level > 0
       page_name = page[/\/book-content\/#{language}\/.*-#{chapter_name}\/.*-(.*)\.markdown/,1]
       toc = m_doc.toc.create_toc.dup
       
       # create a new entry for the file itself
+      top_ul = REXML::Element.new("ul")
+      top_ul.attributes["class"] = "toc"
       top_li = REXML::Element.new("li")
       top_li_a = REXML::Element.new("a")
       top_li_a.attributes["href"] = "/#{language}/#{chapter_name}/#{page_name}"
       top_li_a.text = m_doc.attributes[:title]
       top_li << top_li_a
-      # 
-      if REXML::XPath.first( toc, "//ul/li" ) 
-        top_li << toc
-        top_li.to_s.to_s.gsub("href='#", "href='/#{language}/#{chapter_name}/#{page_name}#")
-      else
-        nil
-      end
-      
+      top_ul << top_li
+      top_li << toc
+      top_ul.to_s.to_s.gsub("href='#", "href='/#{language}/#{chapter_name}/#{page_name}#")
     else
       nil
     end
   end.compact.join("\n\n")
-  
-  # merged_files = files.map{|file| File.open(file).read}.join("\n")
-  # toc = "\n* This will become a table of contents (this text will be scraped).\n{:toc}\n"
-  # 
-  # merged_files.gsub!(toc, "")
-  # merged_files = toc + merged_files
-  # 
-  # mf = Maruku::new(merged_files)
-  # list = mf.to_html[/(<div class='maruku_toc'>.*<\/li><\/ul><\/div>)/, 1]
-  # 
-  # list #? list.gsub("href='#", "href='") : nil
 end
 
 def save_chapter_toc(chapter, language)
