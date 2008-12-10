@@ -203,6 +203,10 @@ or the show page contains a form to edit the resource already.
 In these cases,
 simply not providing the method will prevent it from being called.
 
+##Using merb-gen With Controllers
+
+TODO -- need to mention both normal controllers and resources
+
 ##Controller Action Methods
 
 This section will deal with what actually goes on in your controller methods.
@@ -280,24 +284,179 @@ Developers should consult the API Documentation for both of them.
 
 ###Interaction with Model
 
-###The Three Hashes: params, session and request
+Most action methods will want to interact with Model.
+How this is done will depend on the ORM used.
+Records returned from the model should be stored in instance variables
+(these begin with an '@') so they can be used by the Views.
+
+While we cannot antisipate all circumstances,
+the need to use more then two or three Model methods is often a sign
+that more functionality need to be added to the model layer.
+If the same Model class is being called repeatedly,
+moving that login into a new method for that class is a good way to refactor.
+When more then two or three Model classes are needed by a controller,
+ether rework the controller to match your models more closely,
+or create a presentor model that encapisolates these relationships.
+
+Merb can handle many of the exceptions thrown by ORM with 404 pages.
+It is a good practice howevever to catch exceptions from the Model layer,
+and give the user a better discription of the problem.
+
+###Information From the Request: The 'params' and 'request' Hashes
+
+The controller has access to two hashes that are formed out of the request.
+
+The params hash contains:
+
+* The controller and action the router decided on.
+* A hash of any Post or Query data sent by the client.
+  (this is where the data from forms ends up)
+* Other elements from the URI parsing, such as :id
+  (please see the chapter on the [Router][] for more information
+
+The request hash contains information from the HTML request and the envrionment.
+Normally, Merb will translate the infromation here into an easier to use form
+for you, but that is not always sufficient.
+
+###Persistant Information About the Client: Sessions and Cookies
+
+HTTP is a stateless protocol.
+That means that each request stands on its own,
+and there is no way to keep information between calls.
+For web applications it is convient to simulate a persistant state.
+Cookies are used to idintify clients.
+They can be used through the cookies hash in the controller.
+
+However, there is an easier and more flexible way to give an app the illusion
+that there is a persistant state that follows a client around.
+The session hash persists between different requests from the same client.
+There are a number of different ways to maintain sessions,
+which we will not go into here.
+The result is the same however.
+Any object that is stored into the session will still be there the next time
+the user makes a request.
+
+Sessions can be use to store user credentials.
+Indeed it is the session that Merb-Auth is authintication.
+Sessions can be used to store error messages after a redirect.
+It can also store information about the steps completed in a multi-step
+process.
+eg.
+
+    class Users < Application
+      def login
+        if login_was_successful
+          #make sure that when the user reaches the home page we can remember
+          #who they were.
+          session[:user] = User.current_user
+          redirect url(:home)
+        else
+          #Provide a message telling the user why ther are back at the login
+          #screen.
+          session[:error_message] = "Could not log you in please try again."
+          redirect url(:login)
+        end
+      end
+    end
+{:lang=ruby html_use_syntax=true}
+
+Developers coming from rails will note that there is not 'flash' hash in merb.
+Instead Sessions can be used directly to send messages between pages.
 
 ###Redirecting
 
+Instead of sending a page back to the browser,
+a server can ask the browser to go to a different page for information.
+In Merb, this is often done in response to a request to modify a resource
+through a POST, PUT, or DELETE request.
+
+To accomplish this the server sends the client a specially formatted response,
+usually without any body.
+Merb will create these responses for you with the [redirect][] function.
+eg.
+
+    class Posts < Application
+      def update(id)
+        post = Post.get(id)
+        if post.update_attributes(params[:post])
+          redirect resource(post) #show the client the updated post
+        else
+          session[:errors] = post.errors
+
+          #send the client back to the edit page so they can fix the errors.
+          redirect resource(:edit, post)
+        end
+      end
+    end
+    #
+    #NOTE: The resource method in the example above returns a URI.  It is
+    #      simular to the url method.
+{:lang=ruby html_use_syntax=true}
+
+
+
 ###Exceptions and Status Codes
 
-###Cookies
+TODO -- How does merb deal with exceptions
+
+In addation to raising exceptions,
+Merb can set the status code directly using the 'status=' method.
+eg.
+
+    class Posts < Application
+      def update(id)
+        unless params[:post]
+          status = 401 #tell the client we could not understand the request.
+          return render("We could not seem to find the content of modified post",
+              :layout=>'error')
+        end
+        post = Post.get(id)
+        post.update_attributes(params[:post])
+        redirect resource(post) #show the client the updated post
+      end
+    end
+{:lang=ruby html_use_syntax=true}
 
 ##Extending Controllers
 
+In this section, we will look at the Controller classes
+and how to use them to fine tune the behavior of an application.
+
 ###Formats
+
+TODO - What formats are, How do we determin the format of a
+request(.format || accept-format header), using provides, generating differnt
+formats, examples.  Mention the value of RESTful controllers and web services.
 
 ###Before and After Filters
 
+TODO -- about filter, creating filters, order of exicution, breaking out of
+the filter chain, returning or modifying the responce in a filter, examples.
+
 ###Use of 'Application'
+
+The default stack for the merb app as well as the controller generators make
+all their controllers inherit from Application.
+Developers can take advantage of this by putting methods
+in the application class.
+These methods will then be availible to all controllers.
+
+The application class can also set before and after filters that will be run
+for all controllers.
+
+The Application class is defined in the file, "app/controllers/application.rb"
 
 ###Private Methods
 
-[MVC]:    /getting-started/mvc
-[Router]: /getting-started/router
-[MVC]:    /getting-started/view
+It is best to refactor as much logic out of the controller as possible.
+When the controller does need to have more complex logig in it,
+it should be placed in private methods.
+This keeps action methods cleaner and easier to test an debug.
+It is important to make these methods private
+because public methods can be invoked by the router by default.
+This can be a security hole.
+
+[MVC]:      /getting-started/mvc
+[Router]:   /getting-started/router
+[redirect]: http://merbivore.com/documentation/1.0/doc/rdoc/merb-core-1.0/index.html?a=M000529&name=redirect
+[View]:     /getting-started/view
