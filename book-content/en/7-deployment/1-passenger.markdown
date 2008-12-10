@@ -5,6 +5,9 @@
 **Reference website:**
 [http://www.modrails.com/documentation/Users%20guide.html][]{: .reference}
 
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 [Phusion Passenger][] is an Apache module for deploying [Rack][] applications.
 Because Merb is built on Rack,
 you can easily run it on Passenger and [Ruby Enterprise Edition][].

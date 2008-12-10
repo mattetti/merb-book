@@ -1,5 +1,8 @@
 #Controllers
 
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 In the [MVC][] Framework controllers are the glue layer that connects the
 business logic of the Model with the appropriate View templates to respond to
 generate a response.
@@ -17,7 +20,7 @@ The return value of this call becomes the body of the HTML Response.
 (c.f. Rack)
 
 In this chapter we will look at
-how organize controllers using two of thecommon controller styles,
+how organize controllers using two of the common controller styles,
 discuss how to write the methods that are called be the framework on a controller,
 and how to extend the functionality of a controller
 using filter, inheritance and private methods.
@@ -26,12 +29,12 @@ using filter, inheritance and private methods.
 
 There are two standard ways to create controllers.
 The first is based on the default Merb routing.
-The second is based on a RESTful (#need reference) Resource model.
+The second is based on a RESTful <!-- need reference --> Resource model.
 
 ###The Default Routing Style
 
 When a new application is generated, the router contains a single default route
-which maps URL Paths (#is this the right name) to Controllers like this:
+which maps URL Paths <!-- is this the right name --> to Controllers like this:
 
     /:controller/:action/:id(.:format)
 
@@ -62,7 +65,7 @@ The REST philosophy is to view every web request as a request to retrieve(GET),
 create (POST), change(PUT), or remove(DELETE) some resource
 over which the server is keeping track.
 There are a number of benefits to this model.
-(#we need achapter on resources)
+<!-- we need a chapter on resources -->
 Among them are clean URI name spaces,
 well organized interaction between Models and Controllers,
 and performance.
@@ -255,7 +258,7 @@ Both of these file would have the @post variable available to them.
 Also note that render was the last item in the method.
 Ruby automatically returns the last value in a method
 as the return value for that method.
-(#can anyone be clearer here?)
+<!-- can anyone be clearer here? -->
 
 The 'display' method does everything the render method does
 but goes a step further.
@@ -272,11 +275,11 @@ eg:
     end
 {:lang=ruby html_use_syntax=true}
 
-Here, we might render the same templates as before, in responce to a request
+Here, we might render the same templates as before, in response to a request
 for HTML.
 But, if this method was marked as providing XML(see format below for how)
 and there was no XML template,
-then the display method would instead call @post.to_xml
+then the display method would instead call ``@post.to_xml``
 and return the result.
 
 There are many other options for both of these methods.
