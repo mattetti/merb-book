@@ -21,7 +21,7 @@ are <tt>app</tt>, <tt>core</tt>, <tt>flat</tt>, and <tt>very_flat</tt>.
 The opinionated Merb stack.
 This generates a full application directory structure
 with a full set of configuration files.
-It also adds a <tt>config/dependancies.rb</tt> file
+It also adds a <tt>config/dependencies.rb</tt> file
 which includes all of <tt>merb-more</tt> and <tt>DataMapper</tt>.
 
     $ merb-gen app my-application
