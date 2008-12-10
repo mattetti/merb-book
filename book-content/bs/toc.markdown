@@ -14,14 +14,13 @@
   </p>
   <p>
     Ukoliko učite kroz ovaj materijal ili ako već redovno koristite Merb,
-    <strong>molimo da razmislite o pomoći pri unaprijeđenju ove
-    knjige</strong>.
+    <strong>molimo da razmislite o pomoći pri unaprjeđenju ove knjige</strong>.
   </p>
 </div>
 
 1. [Prve stranice](/bs/front-matter)
-  1. [Predgovor Katz Yehude](/bs/front-matter/foreword)
-  1. [Uvod Aimonetti Matta](/bs/front-matter/preface)
+  1. [Predgovor](/bs/front-matter/foreword)
+  1. [Riječ autora](/bs/front-matter/preface)
   1. [Suradnici](/bs/front-matter/contributors)
 1. [Uvod](/bs/introduction)
   1. [Ruby programski jezik](/bs/introduction/ruby)
