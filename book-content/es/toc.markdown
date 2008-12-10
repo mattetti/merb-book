@@ -13,7 +13,7 @@
   de este libro</strong>.</p>
 </div>
 
-0. [Portada](/es/front-matter)
+0. [Palabras preliminares](/es/front-matter)
    1. [Prólogo por Yehuda Katz](/es/front-matter/foreword)
    2. [Prefacio por Matt Aimonetti](/es/front-matter/preface)
    3. [Colaboradores](/es/front-matter/contributors)
@@ -66,12 +66,12 @@
   1. [ Gemas útiles](/es/appendix/gems)
 {: #appendices}
 
-[Instrucciones para la instalación]:/es/getting-started/install-instructions
 [Configurando la conexión a la base de datos]:
-   /es/interacting-with-the-database/dm-setting-up
+    /es/interacting-with-the-database/dm-setting-up
 [Consultas a la base de datos]:/es/interacting-with-the-database/dm-queries
-[Relaciones entre Modelos]: /es/interacting-with-the-database/dm-relationships
+[Instrucciones para la instalación]:/es/getting-started/install-instructions
 [Migraciones a la base de datos]:/es/interacting-with-the-database/dm-migrations
-[Validaciones de los Modelos]:/es/interacting-with-the-database/dm-validations
 [Pruebas de Integración con RSpec Cucumber]:
-   /es/testing-your-application/cucumber
+    /es/testing-your-application/cucumber
+[Relaciones entre Modelos]: /es/interacting-with-the-database/dm-relationships
+[Validaciones de los Modelos]:/es/interacting-with-the-database/dm-validations
