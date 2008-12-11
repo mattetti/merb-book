@@ -68,7 +68,7 @@ fate riferimento al [sito web ufficiale di Ruby][].
 
 ## Esempi di codice ##{: #code-examples}
 
-** Stampare 5 volte la striga "Hello world":**
+**Stampare 5 volte la striga "Hello world":**
 
     5.times do
       print "Hello world!"
