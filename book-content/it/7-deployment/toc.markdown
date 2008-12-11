@@ -4,6 +4,6 @@
 
 <ul class='toc'><li><a href='/it/deployment/nginx'>Nginx</a><ul style='list-style: none;'><li><a href='/it/deployment/nginx#installation'>Installation</a></li><li><a href='/it/deployment/nginx#configuration'>Configuration</a></li><li><a href='/it/deployment/nginx#capistrano_task'>Capistrano Task</a></li></ul></li></ul>
 
-<ul class='toc'><li><a href='/it/deployment/jruby'>JRuby and Glassfish</a><ul style='list-style: none;'/></li></ul>
+<ul class='toc'><li><a href='/it/deployment/jruby'>JRuby and Glassfish</a></li></ul>
 
-<ul class='toc'><li><a href='/it/deployment/bundle'>Bundling your Merb application</a><ul style='list-style: none;'/></li></ul> 
+<ul class='toc'><li><a href='/it/deployment/bundle'>Bundling your Merb application</a></li></ul> 
