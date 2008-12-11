@@ -17,3 +17,4 @@ Thank you all!
 * [Markus   Prinz       ](http://blog.nuclearsquid.com/)
 * [Foy      Savas       ](http://foysavas.com/)
 * [Kurt     Schrader    ](http://kurt.karmalab.org/)
+* [Arthur   Zapparoli   ](http://arthurgeek.net/)

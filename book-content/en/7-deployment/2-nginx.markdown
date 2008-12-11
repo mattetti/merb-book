@@ -4,6 +4,8 @@
 **Reference website:**
 [http://wiki.codemongers.com/Main][]{: .reference}
 
+* This will become a table of contents (this text will be scraped).
+{:toc}
 
 [Nginx][] (pronounced "engine x") is a free, open-source,
 high-performance HTTP server and [reverse proxy][],

@@ -1,4 +1,8 @@
 # Project structure
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 The typical structure of a new Merb app (generated with <tt>merb-gen app</tt>)
 will look something like this:
 

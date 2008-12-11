@@ -1,21 +1,32 @@
-# Getting started
-We will need to install Merb in order to use the framework. However, before we install Merb you will need to have installed, a C compiler, Ruby and [RubyGems](http://www.rubygems.org/), and database (if you want to persist your models).
+# Comenzando
+
+* Esto será una tabla de contenidos (este texto será pegado).
+{:toc}
+
+Necesitaremos instalar Merb para usar la plataforma.
+Claro, antes de que instalemos Merb necesitarás tener instalado un compilador C, Ruby y
+[RubyGems][], y una base de datos (si quieres hacer tus modelos persistentes).
 
 ## OS X
 
-### Prerequisites
-You will need to install XCode from the OS X CD or download it from the [Apple developer website](http://developer.apple.com/technology/xcode.html).
+### Prerequisitos
+Necesitarás instalar XCode del CD OS X o descargarle del
+[sitio web para desarrolladores de Apple][].
 
 ### Ruby & RubyGems
-If you have OS X 10.5 (Leopard), then most likely you already have Ruby installed.
+Si tienes OS X 10.5 (Leopard), es muy probable que tengas ya Ruby instalado.
 
 ### Merb
     $ sudo gem install merb
 
 
 ## Linux
+Las siguientes instrucciones son para distribuciones basadas en Debian ([Ubuntu][], por
+ejemplo) que usen el manejador de paquetes <tt>apt-get</tt>.
+Si estás usando una distribución diferente, usa el manejador de paquetes de tu distribución
+(por ejemplo, los sistemas [RedHat][] usan <tt>yum</tt> como su manejador de paquetes).
 
-### Prerequisites
+### Prerequisitos
 
     $ sudo apt-get install build-essential libxslt-dev libsqlite3-0 libsqlite3-dev
 
@@ -38,3 +49,37 @@ If you have OS X 10.5 (Leopard), then most likely you already have Ruby installe
 ### Merb
 
     $ sudo gem install merb
+
+
+## Windows
+Los usuarios de Windows tienen un par de opciones para instalar Ruby and RubyGems.
+Una manera es descargar los binarios de Ruby, instalarlos, y luego instalar RubyGems.
+
+Una alternativa es usar el [One-Click Ruby Installer][] que viene empaquetado con RubyGems
+(y algunas otras cosas).
+Si usas el One-Click Installer, asegúrate de seleccionar la opción 'Enable RubyGems' en el
+wizard de instalación.
+
+Por defecto te instalará Ruby en el directorio <tt>C:\Ruby</tt>.
+Una vez instalado, has lo siguiente:
+
+Start --&gt; Programs --&gt; Ruby-&lt;version&gt; --&gt; RubyGems --&gt; RubyGems Package Manager
+
+Esto abrirá un prompt de comando en el directorio <tt>C:\Ruby</tt> y mostrará alguna
+información sobre cómo usar.  Entonces es solo a cuestión de instalar Merb:
+
+    C:\Ruby> gem install merb
+
+Este comando puede demorar unos minutos en ejecutarse, pues debe actualizar la cache de
+las gemas, traer todas las gemas relacionadas con Merb e instalarlas.
+
+_Nota_: Si quieres usar una base de datos SQLite (es la que viene por defecto), tienes que
+descargarla e instalarla por separado. Más información puede ser encontrada en el sitio de
+[SQLite][].
+
+[sitio web para desarrolladores de Apple]: http://developer.apple.com/technology/xcode.html
+[RubyGems]:                 http://www.rubygems.org/
+[Ubuntu]:                   http://www.ubuntu.com/
+[RedHat]:                   http://www.redhat.com/
+[One-Click Ruby Installer]: http://rubyinstaller.rubyforge.org/wiki/wiki.pl
+[SQLite]:                   http://www.sqlite.org/

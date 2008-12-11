@@ -1,7 +1,11 @@
 #Why test
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 It is important to test your application to ensure that you minimize the chances
 of [regression][].
-An opinionated Merb application is tested using [RSpec][] and a combination of
+Merb stack's default testing framework uses the [RSpec][] testing framework and a combination of
 model specs, request specs, and integration specs.
 
 ## Types of Tests

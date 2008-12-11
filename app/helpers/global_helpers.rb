@@ -22,15 +22,10 @@ module Merb
 
     # Returns links to the previous and next pages.
     def page_nav_links(format = 'markdown')
-      return unless params[:action] == 'show' # Don't need navigation for the TOC (index).
+      return if params[:action] != 'show' # Don't need navigation for the TOC (index).
       links = []
-      chapter = params[:chapter]
-      page_name = params[:page_name]
-      current_file = Dir["#{Merb.root}/book-content/#{language}/*-#{chapter}/*-#{page_name||"*"}.#{format}"].entries.first
-      if current_file
-        current_file.grep(/book-content\/\w{2}\/(\d{1,})-[a-z-]+\/(\d{1,})-[a-z-]+[.]\w+/)
-        chapter_number, page_number = $1, $2
-      end
+      @current_file =~ /book-content\/\w{2}\/(\d{1,})-[a-z-]+\/(\d{1,})-[a-z-]+[.]\w+/
+      chapter_number, page_number = $1, $2
 
       chapter_name, page_name = extract_previous_page(chapter_number, page_number)
       links << previous_page(chapter_name, page_name)

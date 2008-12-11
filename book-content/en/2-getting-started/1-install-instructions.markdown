@@ -1,4 +1,8 @@
-# Getting started
+# Install instruction
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 You will need to install Merb in order to use the framework.
 However, before installing Merb,
 you will need to have installed a C compiler, Ruby and [RubyGems][],
