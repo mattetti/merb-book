@@ -1,5 +1,8 @@
 #Models
 
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 Broadly stated, models are the programmatic representation
 of the concepts and data that an application uses.
 In a blogging application, these would be things

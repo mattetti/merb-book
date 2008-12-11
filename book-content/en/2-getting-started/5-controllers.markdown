@@ -1,37 +1,197 @@
-#Controllers
+# Controllers
 
-In the [MVC][] Framework controllers are the glue layer that connects the
-business logic of the Model with the appropriate View templates to respond to
-generate a response.
-In Merb controllers are implemented classes that inherit form Merb::Controller.
-In most applications a single class called 'Application' is created
-as a place to hold application wide setup.
-Controllers are then formed as child classes of Application.
+* This will become a table of contents (this text will be scraped).
+{:toc}
 
-Controllers are instantiated directly by the Merb Framework.
-The [Router][] logic in Merb chooses a controller and an action
-based on the information about the incoming request.
-An instance of the controller is created for each request
-and a method is called based on the action.
-The return value of this call becomes the body of the HTML Response.
-(c.f. Rack)
+In the [MVC][] paradigm, controllers represent the glue layer that connects the
+business logic (Model) with the View.
 
-In this chapter we will look at
-how organize controllers using two of thecommon controller styles,
-discuss how to write the methods that are called be the framework on a controller,
-and how to extend the functionality of a controller
-using filter, inheritance and private methods.
+In Merb, technically speaking, controllers are classes inheriting from 
+``Merb::Controller``.
+In a Merb stack app, a controller class called ``Application`` is created.
+All generated controllers will inherit from ``Application`` and therefore
+share the same attributes as ``Application``.
 
-##Controller Styles
+The [Router][] logic in Merb finds a controller and an action to send the
+request to while taking in consideration the incoming request details.
 
-There are two standard ways to create controllers.
-The first is based on the default Merb routing.
-The second is based on a RESTful (#need reference) Resource model.
+In this chapter we will look at how to generate and organize controllers.
+We will also discuss how to write **actions**;
+the methods that are called on a controller.
+Finally, we will look at how to extend the functionalities of a controller.
 
-###The Default Routing Style
+## Generating controllers
+
+You can generate two types of controllers.
+A standard controller and a [RESTful][] controller.
+
+### A standard controller
+
+    $ merb-gen controller birds
+      [ADDED]  app/controllers/birds.rb
+      [ADDED]  app/views/birds/index.html.erb
+      [ADDED]  spec/requests/birds_spec.rb
+      [ADDED]  app/helpers/birds_helper.rb
+{:lang=shell html_use_syntax=true}
+  
+The command above will generate a controller with an ``index action`` and 
+an ``index view`` (template).
+
+Let's quickly look at the generated controller:
+
+    class Birds < Application
+
+      def index
+        render
+      end
+
+    end
+{:lang=ruby html_use_syntax=true}
+
+The generator added a new class called ``Birds`` inheriting from ``Application``.
+The new class has one method called index. In the context of a controller, we will
+often refer to these methods as ``controller actions`` or simply ``actions``.
+
+
+Remember what we said earlier? 
+
+``Application`` is the controller class from which all controller usually inherits and ``Application`` is just a subclass of ``Merb::Controller`` and a convenient way
+to share code between controllers.<!-- break added on purpose -->  
+(_use with care_)
+
+
++-- {: .notes}
+  If you realized you made a mistake when generating your controller,
+you can delete the generated controller by appending ``-d`` at the
+end of the command you just sent:
+
+      $ merb-gen controller birds -d
+        [DELETED]  app/controllers/birds.rb
+        [DELETED]  app/views/birds/index.html.erb
+        [DELETED]  spec/requests/birds_spec.rb
+        [DELETED]  app/helpers/birds_helper.rb
+  {:lang=shell html_use_syntax=true}
+=--
+
+### A REStful controller
+
+    $ merb-gen resource_controller cats
+      [ADDED]  spec/requests/cats_spec.rb
+      [ADDED]  app/controllers/cats.rb
+      [ADDED]  app/views/cats/index.html.erb
+      [ADDED]  app/views/cats/show.html.erb
+      [ADDED]  app/views/cats/edit.html.erb
+      [ADDED]  app/views/cats/new.html.erb
+      [ADDED]  app/helpers/cats_helper.rb
+{:lang=shell html_use_syntax=true}
+
+If you open the newly generated controller file (``app/controllers/cats.rb``)
+you will notice that the generator created a new class called ``Cats``.
+As expected, the class inherits from Application.
+However, this time, instead of an empty index action, we find 7 fully defined
+actions.
+
+Let's look at the generated file:
+
+    class Cats < Application
+      # provides :xml, :yaml, :js
+
+      def index
+        @cats = Cat.all
+        display @cats
+      end
+
+      def show(id)
+        @cat = Cat.get(id)
+        raise NotFound unless @cat
+        display @cat
+      end
+
+      def new
+        only_provides :html
+        @cat = Cat.new
+        display @cat
+      end
+
+      def edit(id)
+        only_provides :html
+        @cat = Cat.get(id)
+        raise NotFound unless @cat
+        display @cat
+      end
+
+      def create(cat)
+        @cat = Cat.new(cat)
+        if @cat.save
+          redirect resource(@cat), :message => {:notice => "Cat was successfully created"}
+        else
+          message[:error] = "Cat failed to be created"
+          render :new
+        end
+      end
+
+      def update(id, cat)
+        @cat = Cat.get(id)
+        raise NotFound unless @cat
+        if @cat.update_attributes(cat)
+           redirect resource(@cat)
+        else
+          display @cat, :edit
+        end
+      end
+
+      def destroy(id)
+        @cat = Cat.get(id)
+        raise NotFound unless @cat
+        if @cat.destroy
+          redirect resource(:cats)
+        else
+          raise InternalServerError
+        end
+      end
+
+    end # Cats
+{:lang=ruby html_use_syntax=true}
+
+
+Wow, that's a lot code.
+As a rule of thumb, you should **not** use generated code you don't understand.
+Luckily, the code above is pretty simple to understand and we'll go through in 
+great details
+
+But before we dig into the code, let's talk about [REST][].
+
+## REST
+
+[REST][] is an acronym for [Representational State Transfer][].
+It was first introduced in 2000 by [Roy Fielding][][^rest\_intro].
+REST refers to a software architectural style outlining how [resources][] are defined and addressed.
+So, the center piece of REST are [resources][].
+
+**What are resources in the REST context?**
+
+A resource is a source of specific information referenced by a URI (global identifier).
+In lay terms, it's some information you can access via a specific address.
+REST uses the HTTP protocol to communicate data between the different actors.
+It's often used for web services since its principles apply very well to web resources.
+
+**Here is how people usually map REST web resources:**
+
+``URI:``      http://site.com/cats or http://site.com/cats/1-felix  (global identifier/address)
+
+``Format``:   MIME Type or extension (HTML, JSON, XML, YAML, CSV, PDF...)
+
+``action``:   map the HTTP methods (POST, GET, PUT and DELETE) to resource methods
+
+----
+
+**TECHNICAL REVIEW IN PROGRESS, PLEASE DO NOT TRANSLATE**
+
+
+### The Default Routing Style
 
 When a new application is generated, the router contains a single default route
-which maps URL Paths (#is this the right name) to Controllers like this:
+which maps URL Paths <!-- is this the right name --> to Controllers like this:
 
     /:controller/:action/:id(.:format)
 
@@ -62,7 +222,7 @@ The REST philosophy is to view every web request as a request to retrieve(GET),
 create (POST), change(PUT), or remove(DELETE) some resource
 over which the server is keeping track.
 There are a number of benefits to this model.
-(#we need achapter on resources)
+<!-- we need a chapter on resources -->
 Among them are clean URI name spaces,
 well organized interaction between Models and Controllers,
 and performance.
@@ -195,7 +355,7 @@ having multiple ways to view a resource
 or needing more then one form to create or edit a resource.
 These methods must be passed as option to the 'resources' declaration in the
 router.
-(Please seeAPI documentation)
+(Please see API documentation)
 
 There are also circumstances where it is not necessary to use all the methods.
 Perhaps no on is allowed to delete a resource,
@@ -255,7 +415,7 @@ Both of these file would have the @post variable available to them.
 Also note that render was the last item in the method.
 Ruby automatically returns the last value in a method
 as the return value for that method.
-(#can anyone be clearer here?)
+<!-- can anyone be clearer here? -->
 
 The 'display' method does everything the render method does
 but goes a step further.
@@ -272,11 +432,11 @@ eg:
     end
 {:lang=ruby html_use_syntax=true}
 
-Here, we might render the same templates as before, in responce to a request
+Here, we might render the same templates as before, in response to a request
 for HTML.
 But, if this method was marked as providing XML(see format below for how)
 and there was no XML template,
-then the display method would instead call @post.to_xml
+then the display method would instead call ``@post.to_xml``
 and return the result.
 
 There are many other options for both of these methods.
@@ -456,7 +616,17 @@ It is important to make these methods private
 because public methods can be invoked by the router by default.
 This can be a security hole.
 
-[MVC]:      /getting-started/mvc
-[Router]:   /getting-started/router
+[MVC]:          /getting-started/mvc
+[Router]:       /getting-started/router
 [redirect]: http://merbivore.com/documentation/1.0/doc/rdoc/merb-core-1.0/index.html?a=M000529&name=redirect
-[View]:     /getting-started/view
+[Representational State Transfer]:         http://en.wikipedia.org/wiki/Representational_State_Transfer
+[resources]:  http://en.wikipedia.org/wiki/Representational_State_Transfer#REST.27s_central_principle:_resources
+[REST]:         http://en.wikipedia.org/wiki/Representational_State_Transfer
+[RESTful]:      http://en.wikipedia.org/wiki/Representational_State_Transfer#RESTful_Web_services
+[Roy Fielding]: http://en.wikipedia.org/wiki/Roy_Fielding]
+[View]:         /getting-started/view
+
+[^rest\_intro]: Chapter 5 of Fielding’s dissertation is ["Representational State Transfer (REST)"](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+
+*[REST]:    Representational state transfer
+*[HTTP]:    Hypertext Transfer Protocol

@@ -1,5 +1,8 @@
 #Integration testing with Cucumber
 
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 [Cucumber][] is the preferred method for integration testing your Merb
 applications.
 Cucumber is a tool that can execute feature documentation written in plain text.

@@ -1,0 +1,9 @@
+# deployment
+
+ <ul class='toc'><li><a href='/en/deployment/passenger'>Passenger</a><ul style='list-style: none;'><li><a href='/en/deployment/passenger#installing_ruby_enterprise_edition_ree'>Installing Ruby Enterprise Edition (REE)</a><ul style='list-style: none;'><li><a href='/en/deployment/passenger#download_ree'>Download REE</a></li><li><a href='/en/deployment/passenger#install'>Install</a></li></ul></li><li><a href='/en/deployment/passenger#installing_passenger'>Installing Passenger</a></li><li><a href='/en/deployment/passenger#configuration'>Configuration</a><ul style='list-style: none;'><li><a href='/en/deployment/passenger#configru'>config.ru</a></li></ul></li><li><a href='/en/deployment/passenger#capistrano_task'>Capistrano Task</a></li></ul></li></ul>
+
+<ul class='toc'><li><a href='/en/deployment/nginx'>Nginx</a><ul style='list-style: none;'><li><a href='/en/deployment/nginx#installation'>Installation</a><ul style='list-style: none;'><li><a href='/en/deployment/nginx#mac_os_x_requires_macports'>Mac OS X (requires <a href='http://macports.org/'>MacPorts</a>)</a></li><li><a href='/en/deployment/nginx#debian__ubuntu_linux'>Debian / Ubuntu Linux</a></li><li><a href='/en/deployment/nginx#gentoo_linux'>Gentoo Linux</a></li></ul></li><li><a href='/en/deployment/nginx#configuration'>Configuration</a><ul style='list-style: none;'><li><a href='/en/deployment/nginx#etcnginxnginxconf'>/etc/nginx/nginx.conf</a></li></ul></li><li><a href='/en/deployment/nginx#capistrano_task'>Capistrano Task</a></li><li><a href='/en/deployment/nginx#monit'>Monit</a></li></ul></li></ul>
+
+<ul class='toc'><li><a href='/en/deployment/jruby'>JRuby and Glassfish</a></li></ul>
+
+<ul class='toc'><li><a href='/en/deployment/bundle'>Bundling your Merb application</a></li></ul> 

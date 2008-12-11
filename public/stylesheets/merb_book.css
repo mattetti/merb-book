@@ -52,9 +52,10 @@ body {
 	margin-right: -6em;
 }
 
-div.maruku_toc{
-	text-align: right;
+div.maruku_toc ul{
+	list-style: disc !important;
 }
+
 
 #language-switch{
 	float:left;
@@ -92,6 +93,12 @@ div#footer a, div#footer a:visited{
 
 .no-border{
 	border:none !important;
+}
+
+div.notes{
+	background-color: #ccc;
+	padding: 1em;
+	border: 2px solid #999;
 }
 
 /* @end */

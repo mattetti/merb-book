@@ -1,4 +1,8 @@
 # Generate an application
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 Merb comes with a generator (<tt>merb-gen</tt>)
 in order to create Merb applications.
 The generator can generate different types of Merb applications;
