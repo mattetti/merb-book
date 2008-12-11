@@ -34,19 +34,28 @@ task :default => 'spec'
 # NAME YOUR RAKE FILES file_name.rake
 ##############################################################################
 
-desc "create chapter TOC"
+desc "create chapter TOC, usage: rake create_chapter_tocs LANG='en'"
 task :create_chapter_tocs do
-  
   require 'maruku'
+  require 'maruku/ext/div'
   
-  languages = Dir["#{Merb.root}/book-content/*"].entries.map{|f| File.basename(f) unless f.include? 'markdown'}
-  languages.each do |language|
-    chapters = Dir["#{Dir.pwd}/book-content/#{language}/*-*"].entries.map{|f| File.basename(f)[/\d-(.*)/, 1]}
+  raise "You need to pass a language code or ALL" unless ENV["LANG"]
+  puts "generating chapter TOCs for language: #{ENV["LANG"]}"
+  
+  if ENV["LANG"] =~ /all/i
+    languages = Dir["#{Merb.root}/book-content/*"].entries.map{|f| File.basename(f) unless f.include? 'markdown'}
+    languages.each do |language|
+      chapters = Dir["#{Dir.pwd}/book-content/#{language}/*-*"].entries.map{|f| File.basename(f)[/\d-(.*)/, 1]}
+      chapters.each do |chapter|
+        save_chapter_toc(chapter, language)
+      end
+    end
+  else
+    chapters = Dir["#{Dir.pwd}/book-content/#{ENV["LANG"]}/*-*"].entries.map{|f| File.basename(f)[/\d-(.*)/, 1]}
     chapters.each do |chapter|
-      save_chapter_toc(chapter, language)
+      save_chapter_toc(chapter, ENV["LANG"])
     end
   end
-
 end
 
 def generate_toc_for_chapter(chapter_name, language)
@@ -76,7 +85,7 @@ def generate_toc_for_chapter(chapter_name, language)
     else
       nil
     end
-  end.compact.join("\n\n")
+  end.compact.join("\n\n").gsub("<ul style='list-style: none;'/>", "")
 end
 
 def save_chapter_toc(chapter, language)
