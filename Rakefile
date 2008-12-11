@@ -95,12 +95,3 @@ def save_chapter_toc(chapter, language)
     f.write( "# #{chapter}\n\n #{generate_toc_for_chapter(chapter, language)} ")
   end
 end
-
-# each chapter
-  # each page
-   # generate toc for the file  .toc.create_toc
-   # gsub the links with chapter/page#anchor
-   # save the toc in memory
-# save it in the chapter
-
- 
