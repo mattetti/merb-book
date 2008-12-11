@@ -1,0 +1,3 @@
+# introduction
+
+ <ul class='toc'><li><a href='/bs/introduction/ruby'>Ruby programski jezik</a><ul style='list-style: none;'><li><a href='/bs/introduction/ruby#origin'>Porijeklo</a></li><li><a href='/bs/introduction/ruby#adoption'>Usvajanje</a></li><li><a href='/bs/introduction/ruby#key-elements'>Ključni elementi jezika</a></li><li><a href='/bs/introduction/ruby#code-examples'>Primjeri programskog kôda</a></li><li><a href='/bs/introduction/ruby#merb-and-ruby'>Merb i Ruby</a></li></ul></li></ul> 
