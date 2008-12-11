@@ -16,7 +16,7 @@
 
 ## Ruby语言 ##{: #origin}
 ![Yukihiro Matsumoto](/images/Yukihiro_Matsumoto.jpg){: .left}
-Ruby语言是一个开放源码，动态，反射，通用，面向对象的编程语言，由日本软件设计师[Yukihiro "Matz" Matsumoto-san (まつもとゆきひろ)]编写于20世纪90年代中期。
+Ruby语言是一个开放源码，动态，反射，通用，面向对象的编程语言，由日本软件设计师[Yukihiro "Matz" Matsumoto-san (まつもとゆきひろ)](http://en.wikipedia.org/wiki/Yukihiro_Matsumoto)编写于20世纪90年代中期。
 
 Ruby侧重于简单和高效。 它拥有优雅的语法，很容易阅读和编写。
 
@@ -39,9 +39,9 @@ Matz借鉴其他编程语言([Perl][], [Smalltalk][], [Eiffel][], [Ada][], and [
 
 若要了解更多关于Ruby语言，请参考Ruby语言的官方网站。
 
-## Code Examples ##{: #code-examples}
+## 代码范例 ##{: #code-examples}
 
-**Print the string "Hello world" 5 times:**
+**打印字符串“Hello World”5次：**
 
     5.times do
       print "Hello world!"
@@ -49,33 +49,34 @@ Matz借鉴其他编程语言([Perl][], [Smalltalk][], [Eiffel][], [Ada][], and [
     # => "Hello world!Hello world!Hello world!Hello world!Hello world!"
 {:lang=ruby html_use_syntax=true}
 
-**Conditional statement:**
+**条件声明:**
 
     access_allowed = true if DateTime.now > DateTime.parse("2008-12-01")
 {:lang=ruby html_use_syntax=true}
 
-equivalent to:
+相当于：
 
     if DateTime.now > DateTime.parse("2008-12-01")
       access_allowed = true
     end
 {:lang=ruby html_use_syntax=true}
 
-**Ternary operator:**
+**三元操作符:**
 
     age_classification = age > 12 ? "adult" : "child"
 {:lang=ruby html_use_syntax=true}
 
-equivalent to:
+相当于：
 
     if age > 12
       age_classification = "adult"
     else
       age_classification = "child"
     end
+
 {:lang=ruby html_use_syntax=true}
 
-**Array:**
+**数组：**
 
 	drinks = ["Coke", "Pepsi", "Orangina", "DrPepper"]
 	#     => ["Coke", "Pepsi", "Orangina", "DrPepper"]
@@ -89,14 +90,14 @@ equivalent to:
 {:lang=ruby html_use_syntax=true}
 
 
-**Check if an item exists in an Array instance:**
+**检查一个数组实例中是否包含一个条目:**
 
 	haystack = ["Mac", "NT", "Irix", "Linux"]
 	needle   = "Windows"
 	haystack.include?(needle) # => false
 {:lang=ruby html_use_syntax=true}
 
-**Push an item into an Array instance:**
+**追加一个条目到数组实例中:**
 
 	haystack = ["Mac", "NT", "Irix", "Linux"]
 	needle   = "Windows"
@@ -105,28 +106,19 @@ equivalent to:
 	haystack << needle
 {:lang=ruby html_use_syntax=true}
 
-**Define a method:**
+**定义一个方法：**
 
     def greet_visitor(visitor_name)
       "Hi #{visitor_name}!"
     end
 {:lang=ruby html_use_syntax=true}
 
-## Merb and Ruby ##{: #merb-and-ruby}
+## Merb和Ruby ##{: #merb-and-ruby}
 
-Merb tries to stay as close as possible to the Ruby language itself.
-That's why it's important to understand what people call the "Ruby Way".
+Merb试图保持尽可能接近Ruby语言本身。 这就是为什么要理解被人们称为“Ruby Way”的重要行性。
 
-During RubyConf 2008, Matz made a comment about Merb:
-
-> Merb has a bright future for the people who are not satisfied
-> by the fixed ways in Rails.
-> I think that Merb will give users more freedom
-> in a Ruby-ish way of programming
-> - [Matz][]{: .quote-author},
-> author of the [Ruby programming language][]
-{: cite=http://merbist.com/2008/11/09/merb-1-0-released/}
-
+在Ruby2008年年会上，Matz发表了如下评论：
+> 对于那些不太满意Ruby on Rails相对僵化的解决方案的人来说，Merb的前途是光明的。我认为，Merb将让使用者获得更大的自由，就象Ruby语言本身一样 - [Matz][]{: .quote-author}，Ruby编程语言的作者
 
 [Ada]: http://en.wikipedia.org/wiki/Ada_%28programming_language%29)
 [Dave Thomas]:          http://pragdave.pragprog.com/
