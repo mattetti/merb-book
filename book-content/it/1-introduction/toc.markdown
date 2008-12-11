@@ -1,0 +1,3 @@
+# introduction
+
+ <ul class='toc'><li><a href='/it/introduction/ruby'>Ruby</a><ul style='list-style: none;'><li><a href='/it/introduction/ruby#origin'>Origin</a></li><li><a href='/it/introduction/ruby#adoption'>Adoption</a></li><li><a href='/it/introduction/ruby#key-elements'>Key Elements of the language</a></li><li><a href='/it/introduction/ruby#code-examples'>Code Examples</a></li><li><a href='/it/introduction/ruby#merb-and-ruby'>Merb and Ruby</a></li></ul></li></ul> 
