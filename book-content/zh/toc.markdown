@@ -9,7 +9,7 @@
 0. [序言](/zh/front-matter)
   1. [序－Yehuda Katz](/zh/front-matter/foreword)
   2. [前言－Matt Aimonetti](/zh/front-matter/preface)
-  3. [Merb开发程序员](/zh/front-matter/contributors)
+  3. [作者](/zh/front-matter/contributors)
 1. [简介](/zh/introduction)
   1. [Ruby语言](/zh/introduction/ruby)
   2. [Merb应用程序框架](/zh/introduction/merb)
@@ -42,10 +42,10 @@
   1. [邮件](/zh/merb-more/mailer)
   1. [缓存](/zh/merb-more/caching)
   1. [异常](/zh/merb-more/exceptions)
-  1. [切片(模块化应用)](/zh/merb-more/exceptions)
-6. [常见问题解决方案](/zh/recipes)
+  1. [slice(模块化应用)](/zh/merb-more/exceptions)
+6. [应用小例子](/zh/recipes)
   1. [简单的博客](/zh/recipes/simple-blog)
-  1. [博客切片](/zh/recipes/blog-slice)
+  1. [创建一个博客slice](/zh/recipes/blog-slice)
 7. [部署](/zh/deployment)
   1. [Passenger](/zh/deployment/passenger)
   1. [nginx](/zh/deployment/nginx)
@@ -56,8 +56,8 @@
 
 * [附录](/zh/appendix)
   1. [提示与诀窍](/zh/appendix/hints-tips)
-  1. [可用的切片](/zh/appendix/slices)
-  1. [有用的Gem](/zh/appendix/gems)
+  1. [可使用的slice](/zh/appendix/slices)
+  1. [经常使用的Gem](/zh/appendix/gems)
 
 {: #appendices}
 
