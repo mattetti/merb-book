@@ -26,6 +26,7 @@ Merb::BootLoader.before_app_loads do
    Merb::Plugins.config[:Merb_babel] = { 
      :default_language    => 'en',
      :available_languages => [
+            {:name => "Bahasa Indonesia", :code => 'id'},
             {:name => "English",    :code => 'en'}, 
             {:name => "Français",   :code => 'fr'}, 
             {:name => "日本語",        :code => 'jp'}, 
