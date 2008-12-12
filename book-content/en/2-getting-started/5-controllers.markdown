@@ -3,8 +3,23 @@
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
+> A controller is the link between a user and the system. 
+> It provides the user with input by  arranging for relevant views to present
+> themselves in appropriate places on the screen.<!-- break -->  
+> It provides means for user output by presenting the user with menus or other
+> means of giving commands and data.<!-- break -->  
+> The controller receives such user output, translates it into the appropriate
+> messages and pass these messages onto one or more of the views. <!-- break -->  
+> - [Trygve Reenskaug][]{: .quote-author}, author of the model-view-controller
+> pattern design[^mvc-essay]
+{: cite=http://heim.ifi.uio.no/~trygver/1979/mvc-2/1979-12-MVC.pdf .lead-quote}
+
+
 In the [MVC][] paradigm, controllers represent the glue layer that connects the
 business logic (Model) with the View.
+
+Concretely, the controller is responsible for mapping an end-user action to 
+an application response.
 
 In Merb, technically speaking, controllers are classes inheriting from 
 ``Merb::Controller``.
@@ -168,7 +183,7 @@ It was first introduced in 2000 by [Roy Fielding][][^rest\_intro].
 REST refers to a software architectural style outlining how [resources][] are defined and addressed.
 So, the center piece of REST are [resources][].
 
-**What are resources in the REST context?**
+**What is a resource in the context of REST?**
 
 A resource is a source of specific information referenced by a URI (global identifier).
 In lay terms, it's some information you can access via a specific address.
@@ -177,11 +192,12 @@ It's often used for web services since its principles apply very well to web res
 
 **Here is how people usually map REST web resources:**
 
-``URI:``      http://site.com/cats or http://site.com/cats/1-felix  (global identifier/address)
-
-``Format``:   MIME Type or extension (HTML, JSON, XML, YAML, CSV, PDF...)
-
+``URI:``      http://site.com/cats or http://site.com/cats/1-felix  (global identifier/address)<!-- break -->  
+``Format``:   MIME Type or extension (HTML, JSON, XML, YAML, CSV, PDF...)<!-- break -->  
 ``action``:   map the HTTP methods (POST, GET, PUT and DELETE) to resource methods
+
+If a resource is defined, Merb uses the ``URI`` and the the HTTP method to pick
+a controller and an action.
 
 ----
 
@@ -599,7 +615,7 @@ The default stack for the merb app as well as the controller generators make
 all their controllers inherit from Application.
 Developers can take advantage of this by putting methods
 in the application class.
-These methods will then be availible to all controllers.
+These methods will then be available to all controllers.
 
 The application class can also set before and after filters that will be run
 for all controllers.
@@ -609,7 +625,7 @@ The Application class is defined in the file, "app/controllers/application.rb"
 ###Private Methods
 
 It is best to refactor as much logic out of the controller as possible.
-When the controller does need to have more complex logig in it,
+When the controller does need to have more complex logic in it,
 it should be placed in private methods.
 This keeps action methods cleaner and easier to test an debug.
 It is important to make these methods private
@@ -617,16 +633,18 @@ because public methods can be invoked by the router by default.
 This can be a security hole.
 
 [MVC]:          /getting-started/mvc
-[Router]:       /getting-started/router
 [redirect]: http://merbivore.com/documentation/1.0/doc/rdoc/merb-core-1.0/index.html?a=M000529&name=redirect
 [Representational State Transfer]:         http://en.wikipedia.org/wiki/Representational_State_Transfer
 [resources]:  http://en.wikipedia.org/wiki/Representational_State_Transfer#REST.27s_central_principle:_resources
-[REST]:         http://en.wikipedia.org/wiki/Representational_State_Transfer
-[RESTful]:      http://en.wikipedia.org/wiki/Representational_State_Transfer#RESTful_Web_services
-[Roy Fielding]: http://en.wikipedia.org/wiki/Roy_Fielding]
-[View]:         /getting-started/view
+[REST]:             http://en.wikipedia.org/wiki/Representational_State_Transfer
+[RESTful]:          http://en.wikipedia.org/wiki/Representational_State_Transfer#RESTful_Web_services
+[Router]:           /getting-started/router
+[Roy Fielding]:     http://en.wikipedia.org/wiki/Roy_Fielding]
+[Trygve Reenskaug]: http://en.wikipedia.org/wiki/Trygve_Reenskaug
+[View]:             /getting-started/view
 
 [^rest\_intro]: Chapter 5 of Fielding’s dissertation is ["Representational State Transfer (REST)"](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+[^mvc-essay]:   http://heim.ifi.uio.no/~trygver/1979/mvc-2/1979-12-MVC.pdf
 
 *[REST]:    Representational state transfer
 *[HTTP]:    Hypertext Transfer Protocol
