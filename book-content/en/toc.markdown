@@ -41,7 +41,7 @@ frequently, **please consider helping improve the content of this book**.
   1. [Database Migrations](/interacting-with-the-database/dm-migrations)
   1. [Model Validations](/interacting-with-the-database/dm-validations)
 1. [Interacting with the database (Sequel)](/interacting-with-the-database-sequel)
-  1. [Setting up the database connection](/interacting-with-the-database-sequel/setting-up)
+  1. [Installation and setup](/interacting-with-the-database-sequel/setting-up)
   1. [Database Migrations](/interacting-with-the-database-sequel/migrations)
 1. [Testing your application](/testing-your-application)
   1. [Why test](/testing-your-application/why)

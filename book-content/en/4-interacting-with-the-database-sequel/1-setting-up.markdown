@@ -1,4 +1,4 @@
-#Setting Up A Database Connection
+#Installation and setup
 
 * This will become a table of contents (this text will be scraped).
 {:toc}
