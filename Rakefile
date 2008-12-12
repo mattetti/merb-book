@@ -58,6 +58,19 @@ task :create_chapter_tocs do
   end
 end
 
+desc "add a timestamp to the warning banner"
+task :add_timestamp do
+  update_msg = "<small>last update: #{Time.now.strftime("%Y-%m-%d %T %Z")}</small> "
+  file = "#{Dir.pwd}/app/views/layout/application.html.erb"
+  old_content = File.open(file, "r").read
+  File.open(file, "w+") do |f|
+     f.write old_content.gsub('<p id="warning">', "<p id='warning'>#{update_msg}")
+  end
+end
+
+
+
+
 def generate_toc_for_chapter(chapter_name, language)
   require 'rexml/document'
   
