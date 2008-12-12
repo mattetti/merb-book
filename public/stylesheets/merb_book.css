@@ -95,6 +95,12 @@ div#footer a, div#footer a:visited{
 	border:none !important;
 }
 
+div.notes{
+	background-color: #ccc;
+	padding: 1em;
+	border: 2px solid #999;
+}
+
 /* @end */
 
 /* @group Book styles */

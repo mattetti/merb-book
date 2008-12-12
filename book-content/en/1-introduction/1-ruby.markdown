@@ -153,26 +153,26 @@ During RubyConf 2008, Matz made a comment about Merb:
 {: cite=http://merbist.com/2008/11/09/merb-1-0-released/}
 
 
-[Ada]: http://en.wikipedia.org/wiki/Ada_%28programming_language%29)
+[Ada]:                  http://en.wikipedia.org/wiki/Ada_%28programming_language%29)
 [Dave Thomas]:          http://pragdave.pragprog.com/
 [dynamic]:              http://en.wikipedia.org/wiki/Dynamic
-[Eiffel]: http://en.wikipedia.org/wiki/Eiffel_%28programming_language%29
+[Eiffel]:               http://en.wikipedia.org/wiki/Eiffel_%28programming_language%29
 [functional programming]: http://en.wikipedia.org/wiki/Functional_programming
 [imperative programming]: http://en.wikipedia.org/wiki/Imperative_programming
-[Lisp]: http://en.wikipedia.org/wiki/Lisp_%28programming_language%29
+[Lisp]:                 http://en.wikipedia.org/wiki/Lisp_%28programming_language%29
 [Matz]:                 http://en.wikipedia.org/wiki/Yukihiro_Matsumoto
-[object-oriented]: http://en.wikipedia.org/wiki/Object-oriented_programming
+[object-oriented]:      http://en.wikipedia.org/wiki/Object-oriented_programming
 [Official Ruby language website]: http://www.ruby-lang.org/en/about
 [Open Source]:          http://en.wikipedia.org/wiki/Open_Source
 [Perl]:                 http://en.wikipedia.org/wiki/Perl)
 [programming language]: http://en.wikipedia.org/wiki/Programming_language
 [Programming Ruby]:     http://pragprog.com/titles/ruby/programming-ruby
-[reflective]: http://en.wikipedia.org/wiki/Reflection_%28computer_science%29
+[reflective]:           http://en.wikipedia.org/wiki/Reflection_%28computer_science%29
 [Ruby programming language]: http://ruby-lang.org/
 [Ruby on Rails web framework]: http://rubyonrails.org
 [Smalltalk]:            http://en.wikipedia.org/wiki/Smalltalk
 [software architect]:   http://en.wikipedia.org/wiki/Software_architect
-[TIOBE index]:  http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
+[TIOBE index]:          http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
 [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)]:  http://en.wikipedia.org/wiki/Yukihiro_Matsumoto
 
 
