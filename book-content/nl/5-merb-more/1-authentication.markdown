@@ -3,7 +3,7 @@
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-> Het is de verantwoordelijkheid van een Authenticatie systeem te bewijzen dat de identiteit die een gebruiker beweerd te hebben
+> Het is de verantwoordelijkheid van een Authenticatie systeem om te bewijzen dat de identiteit die een gebruiker beweerd te hebben
 > wel degelijk zijn echte identiteit is. Er zijn verschillende manieren om dit te bereiken, onder andere
 > via trusted hosts, paswoord verificatie, en trust netwerken (zoals ‘Open-ID’).
 > Nadat de verificatie heeft plaatstgevonden, zijn de verantwoordelijkheden van het Authenticatie systeem voldaan.
@@ -72,14 +72,14 @@ Strategieën:
 
 
 Mixins:
-* ActiveRecord salted user
-* DataMapper salted user
-* relaxdb salted user
-* sequel salted user
+* ActiveRecord salted gebruiker
+* DataMapper salted gebruiker
+* relaxdb salted gebruiker
+* sequel salted gebruiker
 
-The salted user mixin provides basic salted SHA1 password authentication.
-It implements the required User.authenticate method for use with
-the default password strategies.
+De salted gebruiker mixin biedt basic salted SHA1 password authenticatie.
+Dit implementeert de vereiste User authenticate methode te gebruiken met 
+de standaard paswoord strategieën.
 
 ### merb-auth-slice-password
 

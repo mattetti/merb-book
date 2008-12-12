@@ -15,12 +15,12 @@ een vorm van [ORM][] (Object Relational Mapper) gebruiken
 om data op disk te bewaren tussen de requests.
 De meeste apps stockeren hun data onder de vorm van een database.
 De standaard Merb Stack gebruikt DataMapper om te communiceren het een SQLite database.
-Dit is een uitstekende keuze voor eenvoudige ontwikkeling van nieuwe projecten.
+Dit is een uitstekende keuze voor een eenvoudige ontwikkeling van nieuwe projecten.
 
 Eens in productie echter,
 is het doorgaans aanbevolen dat developers gebruik maken 
 van een van de krachtiger database-engines zoals Postgres of MySQL.
-Projecten die overkomen uit de Rails wereld
+Projecten afkomstig uit de Rails wereld
 kunnen nog steeds van ActiveRecord modellen gebruik maken; Merb supporteert ook deze.
 
 De rest van dit hoofdstuk is gericht op het gebruik van DataMapper
