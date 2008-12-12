@@ -20,37 +20,38 @@ A static HTML and a PDF version will soon be available online.
 
 ## How to contribute
 
- * Install the github gem from http://github.com/defunkt/github-gem/tree/master
+ * Install the github gem from http://github.com/defunkt/github-gem/tree/master.
 
 		$ gem install defunkt-github -s http://gems.github.com
 
  * Fork the mattetti/merb-book project by clicking the fork button at http://github.com/mattetti/merb-book/tree/master
- * Clone a copy of the repository to the local machine
+ * Clone a copy of the repository to the local machine.
 
 		$ git clone git@github.com:YOUR_GITHUB_USERNAME/merb-book.git
 
- * Checkout the remote branch for the LANGUAGE that you're working on
+ * Choose the LANGUAGE the you're going to contribute in from the branches in Mattetti's repo (i.e. 'english').
+ * Checkout the remote branch for the LANGUAGE that you're working on.
 
 		$ gh pull mattetti LANGUAGE
 
- * Checkout a local copy of your language branch
+ * Checkout a local copy of your language branch.
 
 		$ gh checkout -b LANGUAGE
 
- * Set up a remote branch on github for your language
+ * Set up a remote branch on github for your language.
 
 		$ git push origin LANGUAGE
 
- * Modify, fix, and add content in your local LANGUAGE branch
- * Merge in the upstream changes
+ * Modify, fix, and add content in your local LANGUAGE branch.
+ * Merge in the upstream changes.
 
 		$ gh pull --merge mattetti LANGUAGE
 
- * Push your changes back to github
+ * Push your changes back to github.
 
 		$ git push
 
- * Send Mattetti a pull request
+ * Send Mattetti a pull request.
 
 For the moment, the content of the book
 is located inside <tt>./book-content/</tt>
