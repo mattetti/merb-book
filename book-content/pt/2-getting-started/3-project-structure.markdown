@@ -1,5 +1,5 @@
 # Estrutura do projeto
-A estrutura típica de uma nova aplicação Merb (gerada com <tt>merb-gen app</tt>)
+A estrutura t&iacute;pica de uma nova aplica&ccedil;&atilde;o Merb (gerada com <tt>merb-gen app</tt>)
 irá se parecer com:
 
     Diretório da aplicação (Merb.root)
@@ -58,70 +58,69 @@ O arquivo de <i>layout</i> default da aplica&ccedil;&atilde;o &eacute; o
 Veja a seção [views][] para maiores informações.
 
 ## config
-Sim, você advinhou.
-Os arquivos de configuração do Merb estão localizados aqui.
-O arquivo <tt>router.rb</tt> contém a URL da sua aplicação [routes][],
-que define a estrutura, ordem e aparência das suas URLs.
-Outro arquivo importante, <tt>init.rb</tt>, trata da configuração de base do Merb.
-This is where you can configure your ORM, template engine,
-and testing framework.
-You can also add custom configuration to the <tt>Merb::BootLoader</tt>
-in its <tt>before_app_loads</tt> and <tt>after_app_loads</tt> blocks.
-Another important file, <tt>dependencies.rb</tt>,
-is where you can define your application's dependencies:
-other libraries or gems that your application requires.
-Any dependency listed in that file will be loaded when your Merb app starts.
+Sim, voc&ecirc; advinhou.
+Os arquivos de configura&ccedil;&atilde;o do Merb est&atilde;o localizados aqui.
+O arquivo <tt>router.rb</tt> cont&eacute;m configura&ccedil;&otilde;es 
+sobre as URLs da sua aplica&ccedil;&atilde;o [routes][].
+Nele &eacute; definido a estrutura, ordem e apar&ecirc;ncia das suas URLs.
+Outro arquivo importante, <tt>init.rb</tt>, trata da configura&ccedil;&atilde;o de base do Merb.
+Nele &eacute; onde voc&ecirc; pode configurar seu ORM, <i>template engine</i> e framework de testes.
+Voc&ecirc; tamb&eacutem pode adicionar configura&ccedil;&otilde;es customizadas
+para o <tt>Merb::BootLoader</tt> nos seus <tt>before_app_loads</tt> e <tt>after_app_loads</tt> blocos.
+Outro arquivo importante, <tt>dependencies.rb</tt>,
+&eacute; onde voc&ecirc; pode definir as depend&ecirc;ncias da sua aplica&ccedil;&atilde;o:
+outras bibliotecas ou gems que a sua aplica&ccedil;&atilde;o precisa.
+Qualquer depend&ecirc;ncia listada neste arquivo ser&aacute; carregada
+quando sua aplica&ccedil;&atilde;o Merb iniciar.
 
 ### environments
-Here is where any environment-specific configuration files are located.
-There are a few default (pure Ruby) configuration files;
-each corresponds to a specific Merb environment
-(development, production, etc.).
+Aqui é onde qualquer arquivo de configuração específico dos ambientes está localizado.
+Existem alguns arquivos default (em Ruby puro) de configuração; cada um corresponde
+a um ambiente do Merb (desenvolvimento, produção, etc.).
 
 ## gems
-When you get ready to [deploy][] your application,
-it's recommended that you [bundle][] all of your dependencies
-inside the application directory.
-The <tt>gems</tt> directory is where these packaged dependencies
-will be stored.
-When you start the Merb application,
-it will load any gems from this directory, overriding the system-wide gems.
+Quando você estiver pronto para fazer o [deploy][] da sua aplicação,
+é recomendado que você [bundle][] todas as suas dependências
+dentro do diretório da aplicação.
+O diretório <tt>gems</tt> é onde estas dependências empacotadas serão guardadas
+Quando você arranca a aplicação Merb, ela irá carregar qualquer gem deste diretório,
+sobrescrevendo as gems do sistema.
 
 ## public
-Here is where you can store "static" files,
-such as the <tt>favicon.ico</tt> and <tt>robots.txt</tt> files.
+Aqui &eacute; onde voc&ecirc; pode armazenar arquivos "est&aacute;ticos",
+como, por exemplo, os arquivos <tt>favicon.ico</tt> e <tt>robots.txt</tt>.
 
 ### images
-Any images that your templates might use should go here.
+Qualquer imagem que seu template utilizar deve estar aqui.
 
 ### javascripts
-In the default "Merb stack", this directory contains two files:
-<tt>application.js</tt> and <tt>jquery.js</tt>.
-The default Merb stack comes packaged
-with the wonderful [jQuery][] JavaScript framework.
+No "Merb stack" default, este diretório contém dois arquivos:
+<tt>application.js</tt> e <tt>jquery.js</tt>.
+O "Merb stack" default vem empacotado com o maravilhoso
+<i>framework</i> JavaScript [jQuery][].
 
-If you have relatively small amounts of application-specific JavaScript code,
-it should go inside the <tt>application.js</tt> file.
-If this proves unwieldy, however, you can add subsidiary files as needed.
+Se você tem pequenos pedaços de código JavaScript, específicos da sua aplicação,
+eles devem ficar dentro do arquivo <tt>application.js</tt>.
+Se isso se tornar muito "pesado", entretanto, você pode acrescentar arquivos adicionais quando necessário.
 
 ### stylesheets
-In keeping with the separation of concerns,
-any visual styling should be placed in a stylesheet.
-When you generate a Merb app,
-it creates a stylesheet file (called <tt>master.css</tt>),
-which you can customize to your heart's content.
+Acompanhando a separação de concerns,
+qualquer estilização visual deve ser colocada em uma folha de estilos.
+Quando você gera uma aplicação Merb, ele cria uma arquivo
+de folha de estilos (chamado <tt>master.css</tt>),
+que você pode customizar com seu conteúdo preferido.
 
 ## spec
-If you're using [RSpec][] as your [testing][] framework,
-this directory will contain those tests.
-By default, this directory contains two files:
-an empty <tt>spec.opts</tt> file,
-which you can use to add command-line arguments to rspec
-(add colorized output, etc.) and <tt>spec_helper.rb</tt>,
-which is where you can customize the actual spec runner (among other things).
+Se você está usando [RSpec][] como seu <i>framework</i> de [testing][],
+este diretório irá conter os testes.
+Por default, este diretório contém dois arquivos:
+um arquivo vazio <tt>spec.opts</tt>,
+que você pode usar para adicionar argumentos de linha de comando para o rspec
+(adicionar um output em cores, etc.) e <tt>spec_helper.rb</tt>,
+que é onde você pode customizar o inicializador real do spec (dentre outras coisas).
 
 ## tasks
-This directory contains Merb's [thor][] tasks.
+Este diretório contém tarefas [thor][] do Merb.
 
 
 [bundle]:           /deployment/bundle
