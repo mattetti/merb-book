@@ -23,7 +23,7 @@ A static HTML and a PDF version will soon be available online.
  * Install the github gem from http://github.com/defunkt/github-gem/tree/master
  * Fork this project
  * Clone a copy of your repository to the local machine
- * Checkout the remote branch for the LANGUAGE that you're working on using
+ * Checkout the remote branch for the LANGUAGE that you're working on
 
 		$ gh pull mattetti LANGUAGE
 
@@ -31,16 +31,16 @@ A static HTML and a PDF version will soon be available online.
 
 		$ gh checkout -b LANGUAGE
 
- * Set up a remote branch on github for your language with 
+ * Set up a remote branch on github for your language
 
 		$ git push origin LANGUAGE
 
  * Modify, fix, and add content in your local LANGUAGE branch
- * Merge in the upstream changes using the command
+ * Merge in the upstream changes
 
 		$ gh pull --merge mattetti LANGUAGE
 
- * Push your changes back to github using
+ * Push your changes back to github
 
 		$ git push
 
