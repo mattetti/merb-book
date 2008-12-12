@@ -20,9 +20,16 @@ A static HTML and a PDF version will soon be available online.
 
 ## How to contribute
 
+ * Install the github gem from http://github.com/defunkt/github-gem/tree/master
  * Fork this project
- * Modify, fix, add content
- * send me a pull request
+ * Clone a copy of your repository to the local machine
+ * Checkout the remote branch for the LANGUAGE that you're working on using '$ gh pull mattetti LANGUAGE'
+ * Checkout a local copy of language branch '$ gh checkout -b LANGUAGE'
+ * Set up a remote branch on github for your language with '$ git push origin LANGUAGE'
+ * Modify, fix, and add content in your local LANGUAGE branch
+ * Merge in the upstream changes using the command '$ gh pull --merge mattetti LANGUAGE'
+ * Push your changes back to github using 'git push'
+ * Send Mattetti a pull request
 
 For the moment, the content of the book
 is located inside <tt>./book-content/</tt>
