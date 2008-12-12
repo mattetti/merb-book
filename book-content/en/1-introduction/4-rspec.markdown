@@ -60,11 +60,13 @@ Here is a very simple RSpec example.
 {:lang=ruby html_use_syntax=true}
 
 
+<!-- References -->
 [^rspec]:       [RSpec website](http://rspec.info)
 [^cucumber]:    [Cucumber wiki](http://github.com/aslakhellesoy/cucumber/wikis)
 [^BDD]:         [BDD by Dan North](http://dannorth.net/tags/agile/bdd)
 [^rspec-history]:  [Nick Sieger: BDD with RSpec](http://blog.nicksieger.com/articles/2007/11/04/rubyconf-day-3-behaviour-driven-development-with-rspec)
 
+<!-- Links -->
 [Acceptance Test Driven Planning]: http://testing.thoughtworks.com/node/89
 [Agile]: http://en.wikipedia.org/wiki/Agile_software_development
 [Aslak Hellesøy]: http://blog.aslakhellesoy.com/
@@ -80,5 +82,6 @@ Here is a very simple RSpec example.
 [Test Driven Development]: http://en.wikipedia.org/wiki/Test-driven_development
 [ThoughtWorks]: http://www.thoughtworks.com/
 
+<!-- Abbreviations -->
 *[TDD]: Test Driven Development
 *[BDD]: Behavior Driven Development
