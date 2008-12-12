@@ -27,7 +27,7 @@ A static HTML and a PDF version will soon be available online.
 
 		$ gh pull mattetti LANGUAGE
 
- * Checkout a local copy of language branch
+ * Checkout a local copy of your language branch
 
 		$ gh checkout -b LANGUAGE
 
