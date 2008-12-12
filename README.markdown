@@ -20,11 +20,11 @@ A static HTML and a PDF version will soon be available online.
 
 ## How to contribute
 
- * Install the github gem from http://github.com/defunkt/github-gem/tree/master.
+ * Install the github gem from <http://github.com/defunkt/github-gem/tree/master>.
 
 		$ gem install defunkt-github -s http://gems.github.com
 
- * Fork the mattetti/merb-book project by clicking the fork button at http://github.com/mattetti/merb-book/tree/master
+ * Fork the mattetti/merb-book project by clicking the fork button at <http://github.com/mattetti/merb-book/tree/master>.
  * Clone a copy of the repository to the local machine.
 
 		$ git clone git@github.com:YOUR_GITHUB_USERNAME/merb-book.git
