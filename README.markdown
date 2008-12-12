@@ -24,8 +24,11 @@ A static HTML and a PDF version will soon be available online.
 
 		$ gem install defunkt-github -s http://gems.github.com
 
- * Fork this project
- * Clone a copy of your repository to the local machine
+ * Fork the mattetti/merb-book project
+ * Clone a copy of the repository to the local machine
+
+		$ git clone git@github.com:YOUR_GITHUB_USERNAME/merb-book.git
+
  * Checkout the remote branch for the LANGUAGE that you're working on
 
 		$ gh pull mattetti LANGUAGE
