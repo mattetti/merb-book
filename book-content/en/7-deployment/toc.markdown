@@ -4,6 +4,6 @@
 
 <ul class='toc'><li><a href='/en/deployment/nginx'>Nginx</a><ul style='list-style: none;'><li><a href='/en/deployment/nginx#installation'>Installation</a><ul style='list-style: none;'><li><a href='/en/deployment/nginx#mac_os_x_requires_macports'>Mac OS X (requires <a href='http://macports.org/'>MacPorts</a>)</a></li><li><a href='/en/deployment/nginx#debian__ubuntu_linux'>Debian / Ubuntu Linux</a></li><li><a href='/en/deployment/nginx#gentoo_linux'>Gentoo Linux</a></li></ul></li><li><a href='/en/deployment/nginx#configuration'>Configuration</a><ul style='list-style: none;'><li><a href='/en/deployment/nginx#etcnginxnginxconf'>/etc/nginx/nginx.conf</a></li></ul></li><li><a href='/en/deployment/nginx#capistrano_task'>Capistrano Task</a></li><li><a href='/en/deployment/nginx#monit'>Monit</a></li></ul></li></ul>
 
-<ul class='toc'><li><a href='/en/deployment/jruby'>JRuby and Glassfish</a><ul style='list-style: none;'/></li></ul>
+<ul class='toc'><li><a href='/en/deployment/jruby'>JRuby and Glassfish</a></li></ul>
 
-<ul class='toc'><li><a href='/en/deployment/bundle'>Bundling your Merb application</a><ul style='list-style: none;'/></li></ul> 
+<ul class='toc'><li><a href='/en/deployment/bundle'>Bundling your Merb application</a></li></ul> 
