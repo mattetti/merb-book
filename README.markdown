@@ -21,6 +21,9 @@ A static HTML and a PDF version will soon be available online.
 ## How to contribute
 
  * Install the github gem from http://github.com/defunkt/github-gem/tree/master
+
+		$ gem install defunkt-github -s http://gems.github.com
+
  * Fork this project
  * Clone a copy of your repository to the local machine
  * Checkout the remote branch for the LANGUAGE that you're working on
