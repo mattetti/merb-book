@@ -24,12 +24,16 @@ A static HTML and a PDF version will soon be available online.
 
 		$ gem install defunkt-github -s http://gems.github.com
 
- * Fork the mattetti/merb-book project by clicking the fork button at <http://github.com/mattetti/merb-book/tree/master>.
+ * Fork the mattetti/merb-book project by clicking the fork button
+   at <http://github.com/mattetti/merb-book/tree/master>.
+
  * Clone a copy of the repository to the local machine.
 
 		$ git clone git@github.com:YOUR_GITHUB_USERNAME/merb-book.git
 
- * Choose the LANGUAGE the you're going to contribute in from the branches in Mattetti's repo (i.e. 'english').
+ * Choosing from the branches in Mattetti’s repo (i.e., ‘english’),
+   select the LANGUAGE you're going to contribute to.
+
  * Checkout the remote branch for the LANGUAGE that you're working on.
 
 		$ gh pull mattetti LANGUAGE
