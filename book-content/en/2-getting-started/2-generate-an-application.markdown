@@ -8,7 +8,7 @@ in order to create Merb applications.
 The generator can generate different types of Merb applications;
 to see all of the available generator options, type
 
-    $ merb-gen -h
+    $ merb-gen -H
 {:lang=shell html_use_syntax=true}
 
 For now, let's just stick with the types of Merb applications
@@ -85,7 +85,7 @@ where the entire application is in one file.
 To run a very flat application, start up Merb with the following command
 (within your application directory):
 
-    $ merb -I my-applcation.rb
+    $ merb -I my-application.rb
 {:lang=shell html_use_syntax=true}
 
 This will start Merb and bind it to the default port (4000).
