@@ -50,9 +50,9 @@ A static HTML and a PDF version will soon be available online.
  * Do a sanity check.
 
 		$ git branch
-		* english
+		* LANGUAGE
 		master
-		mattetti/english
+		mattetti/LANGUAGE
 
  * Set up a remote branch on github for your language.
 
