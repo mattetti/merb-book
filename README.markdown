@@ -20,7 +20,8 @@ A static HTML and a PDF version will soon be available online.
 
 ## How to contribute
 
- * Install the github gem from <http://github.com/defunkt/github-gem/tree/master>.
+ * Install the github gem
+   from <http://github.com/defunkt/github-gem/tree/master>.
 
 		$ gem install defunkt-github -s http://gems.github.com
 
@@ -34,6 +35,10 @@ A static HTML and a PDF version will soon be available online.
  * Choosing from the branches in Mattetti’s repo (i.e., ‘english’),
    select the LANGUAGE you're going to contribute to.
 
+ * Enter the `merb-book` directory.
+
+		$ cd merb-book
+
  * Checkout the remote branch for the LANGUAGE that you're working on.
 
 		$ gh pull mattetti LANGUAGE
@@ -42,11 +47,23 @@ A static HTML and a PDF version will soon be available online.
 
 		$ gh checkout -b LANGUAGE
 
+ * Do a sanity check.
+
+		$ git branch
+		* english
+		master
+		mattetti/english
+
  * Set up a remote branch on github for your language.
 
 		$ git push origin LANGUAGE
 
  * Modify, fix, and add content in your local LANGUAGE branch.
+
+ * Commit your changes into your local Git repository.
+
+		$ git commit -a
+
  * Merge in the upstream changes.
 
 		$ gh pull --merge mattetti LANGUAGE
