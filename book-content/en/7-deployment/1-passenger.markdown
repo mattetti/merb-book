@@ -1,9 +1,9 @@
-#Passenger
+# Passenger
 
 ![Phusion Passenger](/images/phusion_banner.png){: .no-border}
 
 **Reference website:**
-[http://www.modrails.com/documentation/Users%20guide.html][]{: .reference}
+<http://www.modrails.com/documentation/Users%20guide.html>{: .reference}
 
 * This will become a table of contents (this text will be scraped).
 {:toc}
@@ -74,7 +74,6 @@ into your Merb application's root directory:
 ## Capistrano Task
 
 
-[http://www.modrails.com/documentation/Users%20guide.html]:  http://www.modrails.com/documentation/Users%20guide.html
 [Phusion Passenger]:          http://www.modrails.com/
 [Rack]:                       http://rack.rubyforge.org/
 [Ruby Enterprise Edition]:    http://www.rubyenterpriseedition.com/
