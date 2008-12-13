@@ -8,10 +8,10 @@
 
 0. [Pages Liminaires](/fr/front-matter)
   1. [Avant-propos par Yehuda Katz](/fr/front-matter/foreword)
-  2. [Preface par Matt Aimonetti](/fr/front-matter/preface)
+  2. [Préface par Matt Aimonetti](/fr/front-matter/preface)
   3. [Contributeurs](/fr/front-matter/contributors)
 1. [Introduction](/fr/introduction)
-  1. [Le Language Ruby](/fr/introduction/ruby)
+  1. [Le Langage Ruby](/fr/introduction/ruby)
   2. [Le Framework Web Merb](/fr/introduction/merb)
   3. [L'ORM DataMapper](/fr/introduction/datamapper)
   4. [Le framework de test RSpec](/fr/introduction/rspec)
@@ -50,7 +50,7 @@
   1. [Passenger](/fr/deployment/passenger)
   2. [nginx](/fr/deployment/nginx)
   3. [JRuby et Glassfish](/fr/deployment/jruby)
-  4. [Packager votre application Merb](/fr/deployment/bundle)
+  4. [Emballer votre application Merb](/fr/deployment/bundle)
 
 {: #toc .available-for-translation}
 
