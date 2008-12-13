@@ -88,7 +88,7 @@ Quando voc&ecirc; arranca a aplica&ccedil;&atilde;o Merb, ela ir&aacute;
 carregar qualquer gem deste diret&oacute;rio, sobrescrevendo as gems do sistema.
 
 ## public
-Aqui &eacute; onde voc&ecirc; pode armazenar arquivos "est&aacute;ticos",
+Aqui &eacute; onde voc&ecirc; pode armazenar arquivos que s&atilde;o "est&aacute;ticos",
 como, por exemplo, os arquivos <tt>favicon.ico</tt> e <tt>robots.txt</tt>.
 
 ### images
