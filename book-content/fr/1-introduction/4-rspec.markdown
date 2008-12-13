@@ -41,30 +41,30 @@ des aspects de [Acceptance Test Driven Planning][], [Domain Driven Design][] et
 > - [Dan North][]{: .quote-author}
 {: cite=http://dannorth.net/whats-in-a-story}
 
-En se concentrant sur les comportement exceptés plutôt que sur les détails techniques,
+En se concentrant sur les comportement attendus plutôt que sur les détails techniques,
 les développeurs peut avoir une meilleure communication avec le chef de projet et les autres parties prenantes.
 
-## Implementation
+## Implémentation
 
-RSpec is a Domain Specific Language for describing the expected behavior
-of a system with executable examples.
+RSpec est un langage dédié (Domain Specific Language) pour décrire les comportements attendus
+d'un système avec des exemples exécutables.
 
-Here is a very simple RSpec example.
+Voici un exemple très simple de RSpec.
 
-    describe "Reader" do
-      it "should have a browser" do
-        reader = Reader.new
-        reader.browser.should_not be_nil
+    describe "Lecteur" do
+      it "devrait avoir un navigateur" do
+        lecteur = Lecteur.new
+        Lecteur.navigateur.should_not be_nil
       end
     end
 {:lang=ruby html_use_syntax=true}
 
 
 <!-- References -->
-[^rspec]:       [RSpec website](http://rspec.info)
-[^cucumber]:    [Cucumber wiki](http://github.com/aslakhellesoy/cucumber/wikis)
-[^BDD]:         [BDD by Dan North](http://dannorth.net/tags/agile/bdd)
-[^rspec-history]:  [Nick Sieger: BDD with RSpec](http://blog.nicksieger.com/articles/2007/11/04/rubyconf-day-3-behaviour-driven-development-with-rspec)
+[^rspec]:       [site de RSpec](http://rspec.info)
+[^cucumber]:    [wiki Cucumber](http://github.com/aslakhellesoy/cucumber/wikis)
+[^BDD]:         [BDD par Dan North](http://dannorth.net/tags/agile/bdd)
+[^rspec-history]:  [Nick Sieger: BDD avec RSpec](http://blog.nicksieger.com/articles/2007/11/04/rubyconf-day-3-behaviour-driven-development-with-rspec)
 
 <!-- Links -->
 [Acceptance Test Driven Planning]: http://testing.thoughtworks.com/node/89
