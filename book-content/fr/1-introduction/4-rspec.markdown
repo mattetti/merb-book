@@ -8,7 +8,7 @@
 
 ## Introduction
 
-RSpec est un framework de Behavior Driven Development pour Ruby.
+RSpec est un framwork de Développement Comportemental (Behavior Driven Development, BDD) pour Ruby.
 Il fournit 2 frameworks pour l'écriture et l'exécution d'exemples
 sur la façon que votre application Ruby 
 
