@@ -55,7 +55,7 @@
 {: #toc .available-for-translation}
 
 * [Annexes](/fr/appendix)
-  1. [Trucs/Astuces](/fr/appendix/hints-tips)
+  1. [Trucs et Astuces](/fr/appendix/tips)
   1. [Slices Disponibles](/fr/appendix/slices)
   1. [Gems Utiles](/fr/appendix/gems)
 
