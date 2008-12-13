@@ -17,14 +17,14 @@ sur la façon que votre application Ruby
 
 [RSpec][] a été influencé par [Dan North][] et son framework de test BDD en java appelé [JBehave][].
 
-## History
+## Histoire
 
-Initially BDD was just a discussion between [Aslak Hellesøy][] and [Dan North][]
-in the [ThoughtWorks][] London office.
-[Dave Astels][] joined the conversation with a blog post stating that he thought
-these ideas could be easily implemented in [Smalltalk][] or [Ruby][].
-[Steven Baker][] jumped in with an initial implementation, and released
-RSpec 0.1. Later in 2006, maintenance was handed over to [David Chelimsky][].[^rspec-history]
+A l'origine, BDD n'était qu'une discussion entre [Aslak Hellesøy][] et [Dan North][]
+dans les bureaux londoniens de [ThoughtWorks][].
+[Dave Astels][] s'est joint à la conversation avec un article dans son blog disant qu'il pensait
+que ces idées pouvaient être facilement implentées en [Smalltalk][] ou [Ruby][].
+[Steven Baker][] a expérimenté une implémentation initiales, a sorti
+RSpec 0.1. Plus tard en 2006, la maintenance a été donnée à [David Chelimsky][].[^rspec-history]
 
 
 ## Behavior Driven Development
