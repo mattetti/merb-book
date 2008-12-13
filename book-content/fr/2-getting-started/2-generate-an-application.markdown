@@ -14,7 +14,7 @@ pour voir toutes les options disponibles du créateur, saisissez:
 Pour l'instant, regardons les types d'applications Merb
 qui peuvent être générés.
 
-## Types
+## Types d'Applications
 Merb peut être utilisé pour des applications allant du simple fichier, très petit et rapide
 au service web large et complexe.
 Différentes structures applicatives peuvent être générées,
@@ -23,7 +23,7 @@ Les différentes structures applicatives que vous pouvez générer
 sont: ``app``, ``core``, ``flat``, et ``very_flat``.
 
 ### App
-La couche Merb complète.
+La couche Merb complète avec une opinion.
 Ceci génère une structure de répertoire pour une application complète
 avec l'intégralité des fichiers de configuration.
 Le fichier ``config/dependencies.rb`` est aussi créé,
@@ -40,61 +40,53 @@ que vous générez votre application de cette manière.
 
 Vous pouvez démarrer cette application en saisissant ``merb``
 dans le répertoire racine de l'application.
-Cela démarrera Merb et le connectera au port par défut: 4000
+Cela démarrera Merb et le connectera au port par défaut, 4000.
 Pour voir votre application en action, visitez <http://localhost:4000/>.
 
 ### Core
-Core will generate the full application directory structure
-with a full set of configuration files.
-Unlike the ``app`` -- the opinionated full stack --
-no dependencies will be added.
-{: .to-translate}
+Core va générer la structure complète des dossiers de l'application
+avec l'intégralité des fichiers de configuration.
+Contrairement à  ``app`` -- la couche complète avec une opinion --
+aucune dépendance ne sera ajoutée.
 
     $ merb-gen core my-application
 {:lang=shell html_use_syntax=true}
 
-Start up this application by running ``merb``
-in the application's root directory.
-Notice that, unlike the other three generated apps,
-there is no default content in core.
-Visiting <http://localhost:4000/> will generate an error
-until content and routing are added.
-{: .to-translate}
+Vous pouvez démarrer cette application en saisissant ``merb``
+dans le répertoire racine de l'application.
+Veuillez noter que, contrairement aux autres applications générées,
+il n'y a pas de contenu par défaut dans ``core``.
+Visiter <http://localhost:4000/> donnera une erreur
+tant que le contenu et le routage ne sera pas ajouté.
 
 ### Flat
-A flat application still keeps all its logic in a single file,
-but has separate files for configuration and its own view directory.
-{: .to-translate}
+Une application ``flat`` garde toute la logique dans un seul fichier,
+mais a des fichiers séparés pour la configuration et son propre dossier pour les vues.
 
     $ merb-gen flat my-application
 {:lang=shell html_use_syntax=true}
 
-Flat applications are run, like any other generated merb app,
-by running ``merb`` in the application's root directory.
-By default, all methods in the ``my-application`` class
-will be treated as actions with ``my-application`` as the controller.
-e.g.: <http://localhost:4000/my-application/foo>
-{: .to-translate}
+Les applications ``flat`` sont exécutées, comme n'importe quelle autre application merb,
+en saisissant ``merb`` dans le répertoire racine de l'application.
+Par défaut, toutes les méthodes dans la classe ``my-application``
+seront traitées comme des actions, avec ``my-application`` comme contrôleur.
+Par exemple: <http://localhost:4000/my-application/foo>
 
-This will call ``MyApplication#foo``
-and render the output from the ``foo.html.*`` template.
-{: .to-translate}
+Ceci appelle ``MyApplication#foo``
+et affiche en sortie le template ``foo.html.*``.
 
 ### Very Flat
-A Very Flat application is similar to other Ruby micro frameworks,
-where the entire application is in one file.
-{: .to-translate}
+Une application ``very flat`` est similaire à d'autres micro frameworks Ruby,
+où toute l'application se trouve dans le même fichier.
 
     $ merb-gen very_flat my-applcation
 {:lang=shell html_use_syntax=true}
 
-To run a very flat application, start up Merb with the following command
-(within your application directory):
-{: .to-translate}
+Pour exécuter une application ``very flat``, démarrer Merb avec la commande suivante
+(dans le répertoire de votre application):
 
     $ merb -I my-applcation.rb
 {:lang=shell html_use_syntax=true}
 
-This will start Merb and bind it to the default port (4000).
-To see your application in action, visit <http://localhost:4000/>.
-{: .to-translate}
+Cela démarrera Merb et le connectera au port par défaut:, 4000.
+Pour voir votre application en action, visitez <http://localhost:4000/>.
