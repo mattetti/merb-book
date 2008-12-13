@@ -59,7 +59,6 @@ Si vous apprenez ou que vous utilisez quotidiennement Merb par le biais de cet o
   1. [nginx](/fr/deployment/nginx)
   1. [JRuby et Glassfish](/fr/deployment/jruby)
   1. [Emballer votre application Merb](/fr/deployment/bundle)
-
 {: #toc .available-for-translation}
 
 * [Annexes](/fr/appendix)
