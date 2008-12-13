@@ -51,7 +51,6 @@ d'un système avec des exemples exécutables.
 
 Voici un exemple très simple de RSpec.
 
-<<<<<<< HEAD:book-content/fr/1-introduction/4-rspec.markdown
     describe "Lecteur" do
       it "devrait avoir un navigateur" do
         lecteur = Lecteur.new
