@@ -219,7 +219,7 @@ It might look something like this:
     Posts < Application
       def display
         #Post is a Model class
-        @post = Post.git(params[:id])
+        @post = Post.get(params[:id])
         display @post
       end
     end.
