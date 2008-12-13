@@ -88,5 +88,5 @@ Pour exécuter une application ``very flat``, démarrer Merb avec la commande su
     $ merb -I my-applcation.rb
 {:lang=shell html_use_syntax=true}
 
-Cela démarrera Merb et le connectera au port par défaut:, 4000.
+Cela démarrera Merb et le connectera au port par défaut, 4000.
 Pour voir votre application en action, visitez <http://localhost:4000/>.
