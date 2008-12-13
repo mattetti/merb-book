@@ -90,7 +90,7 @@ By default it also include the form based password logins and basic authenticati
 
 By default the slice will load the password\_form and the basic\_auth strategies
 
-Views and strategies can be customized as exlained in the
+Views and strategies can be customized as explained in the
 Authenticated Hello World example.
 
 
