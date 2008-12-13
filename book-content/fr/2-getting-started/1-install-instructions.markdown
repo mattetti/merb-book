@@ -19,7 +19,9 @@ Si vous possédez OS X 10.5 (Leopard),
 il est probable que Ruby soit déjà installé.
 
 ### Merb
+
     $ sudo gem install merb
+{:lang=shell html_use_syntax=true}
 
 
 ## Linux
@@ -31,12 +33,11 @@ Si vous utilisez une distribution différente, utilisez le gestionnaire de paque
 ### Pré-requis
 
     $ sudo apt-get install build-essential libxslt-dev libsqlite3-0 libsqlite3-dev
+{:lang=shell html_use_syntax=true}
 
 ### Ruby et RubyGems
 
-    $ sudo apt-get ruby ruby1.8-dev rdoc irb libyaml-ruby libzlib-ruby ri libopenssl-ruby \
-      libxml-ruby
-
+    $ sudo apt-get ruby ruby1.8-dev rdoc irb libyaml-ruby libzlib-ruby ri libopenssl-ruby libxml-ruby
     $ wget "http://rubyforge.org/frs/download.php/45905/rubygems-1.3.1.tgz"
     $ tar -xvzf rubygems-1.3.1.tgz
     $ rm rubygems-1.3.1.tgz
@@ -46,11 +47,13 @@ Si vous utilisez une distribution différente, utilisez le gestionnaire de paque
     $ rm -r rubygems-1.3.1
     $ sudo ln -s /usr/bin/gem1.8 /usr/bin/gem
     $ sudo gem update --system
+{:lang=shell html_use_syntax=true}
 
 
 ### Merb
 
     $ sudo gem install merb
+{:lang=shell html_use_syntax=true}
 
 ## Windows
 Les utilisateurs de Windows peuvent choisir entre plusieurs options pour installer Ruby et Rubygems.
@@ -70,6 +73,7 @@ Cela ouvrira une console avec une ligne de commande dans le répertoire <tt>C:\R
 des informations d'utilisation. Après, il vous suffit d'installer Merb:
 
     C:\Ruby> gem install merb
+{:lang=shell html_use_syntax=true}
 
 Cette commande peut nécessiter quelques minutes pour se terminer, elle doit mettre à jour
 le cache des gems, récupérer tous les gems relatifs à Merb et les installer.
