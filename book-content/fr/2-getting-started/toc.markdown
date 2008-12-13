@@ -58,4 +58,6 @@
 			<li><a href='/fr/getting-started/project-structure#tasks'>tasks</a></li>
 		</ul>
 	</li>
+	
+	<li><a href='/fr/getting-started/mvc'>MVC</a></li>
 </ul> 
