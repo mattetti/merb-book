@@ -55,7 +55,7 @@ Par défaut, ce dossier contient les sous-dossiers
 Le dossier ``exceptions`` contient les templates
 qui sont généralement relatifs aux erreurs HTTP.
 Par exemple, une nouvelle application Merb
-aura un fichier nommé `not_found.html.{erb,haml}``,
+aura un fichier nommé ``not_found.html.{erb,haml}``,
 qui correspond au code de statut HTTP 404.
 Le dossier ``layout`` contient les templates généraux de l'application,
 dans lesquels les templates d'actions seront rendus.
