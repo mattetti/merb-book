@@ -27,7 +27,7 @@ Segue uma breve explicação sobre cada diretório e seu propósito.
 
 ## app
 Este diretório é onde você irá gastar a maior parte de seu tempo,
-já que ele contem as "tripas" da sua aplicação Merb.
+já que ele contém as "tripas" da sua aplicação Merb.
 
 ### controllers
 Todos os <i>controllers</i> da sua aplica&ccedil;&atilde;o s&atilde;o guardados aqui (sem maiores surpresas).
@@ -66,7 +66,8 @@ Nele &eacute; definido a estrutura, ordem e apar&ecirc;ncia das suas URLs.
 Outro arquivo importante, <tt>init.rb</tt>, trata da configura&ccedil;&atilde;o de base do Merb.
 Nele &eacute; onde voc&ecirc; pode configurar seu ORM, <i>template engine</i> e framework de testes.
 Voc&ecirc; tamb&eacutem pode adicionar configura&ccedil;&otilde;es customizadas
-para o <tt>Merb::BootLoader</tt> nos seus <tt>before_app_loads</tt> e <tt>after_app_loads</tt> blocos.
+para o <tt>Merb::BootLoader</tt> nos blocos <tt>before_app_loads</tt> e <tt>after_app_loads</tt> do 
+arquivo <tt>init.rb</tt>.
 Outro arquivo importante, <tt>dependencies.rb</tt>,
 &eacute; onde voc&ecirc; pode definir as depend&ecirc;ncias da sua aplica&ccedil;&atilde;o:
 outras bibliotecas ou gems que a sua aplica&ccedil;&atilde;o precisa.
@@ -79,12 +80,12 @@ Existem alguns arquivos default (em Ruby puro) de configuração; cada um corres
 a um ambiente do Merb (desenvolvimento, produção, etc.).
 
 ## gems
-Quando você estiver pronto para fazer o [deploy][] da sua aplicação,
-é recomendado que você [bundle][] todas as suas dependências
-dentro do diretório da aplicação.
-O diretório <tt>gems</tt> é onde estas dependências empacotadas serão guardadas
-Quando você arranca a aplicação Merb, ela irá carregar qualquer gem deste diretório,
-sobrescrevendo as gems do sistema.
+Quando voc&ecirc; estiver pronto para fazer o [deploy][] da sua aplica&ccedil;&atilde;o,
+&eacute; recomendado que voc&ecirc; empacote ([bundle][]) todas as suas depend&ecirc;ncias
+dentro do diret&oacute;rio da aplica&ccedil;&atilde;o.
+O diret&oacute;rio <tt>gems</tt> &eacute; onde estas depend&ecirc;ncias empacotadas ser&atilde;o guardadas.
+Quando voc&ecirc; arranca a aplica&ccedil;&atilde;o Merb, ela ir&aacute; 
+carregar qualquer gem deste diret&oacute;rio, sobrescrevendo as gems do sistema.
 
 ## public
 Aqui &eacute; onde voc&ecirc; pode armazenar arquivos "est&aacute;ticos",
@@ -94,30 +95,30 @@ como, por exemplo, os arquivos <tt>favicon.ico</tt> e <tt>robots.txt</tt>.
 Qualquer imagem que seu template utilizar deve estar aqui.
 
 ### javascripts
-No "Merb stack" default, este diretório contém dois arquivos:
+No "Merb stack" default, este diret&oacute;rio cont&eacute;m dois arquivos:
 <tt>application.js</tt> e <tt>jquery.js</tt>.
 O "Merb stack" default vem empacotado com o maravilhoso
 <i>framework</i> JavaScript [jQuery][].
 
-Se você tem pequenos pedaços de código JavaScript, específicos da sua aplicação,
+Se voc&ecirc; tem pequenos peda&ccedil;os de c&oacute;digo JavaScript, espec&iacute;ficos da sua aplica&ccedil;&atilde;o,
 eles devem ficar dentro do arquivo <tt>application.js</tt>.
-Se isso se tornar muito "pesado", entretanto, você pode acrescentar arquivos adicionais quando necessário.
+Se isso se tornar muito "pesado" você pode acrescentar arquivos adicionais sempre que necessário.
 
 ### stylesheets
-Acompanhando a separação de concerns,
-qualquer estilização visual deve ser colocada em uma folha de estilos.
-Quando você gera uma aplicação Merb, ele cria uma arquivo
+Seguindo a preocupa&ccedil;&atilde;o em manter as coisas separadas,
+qualquer estiliza&ccedil;&atilde;o visual deve ser colocada em uma folha de estilos.
+Quando voc&ecirc; gera uma aplica&ccedil;&atilde;o Merb, ele cria uma arquivo
 de folha de estilos (chamado <tt>master.css</tt>),
 que você pode customizar com seu conteúdo preferido.
 
 ## spec
-Se você está usando [RSpec][] como seu <i>framework</i> de [testing][],
-este diretório irá conter os testes.
-Por default, este diretório contém dois arquivos:
+Se voc&ecirc; est&aacute; usando [RSpec][] como seu <i>framework</i> de testes([testing][]),
+este diret&oacute;rio ir&aacute; conter os testes.
+Por default, este diret&oacute;rio cont&eacute;m dois arquivos:
 um arquivo vazio <tt>spec.opts</tt>,
-que você pode usar para adicionar argumentos de linha de comando para o rspec
-(adicionar um output em cores, etc.) e <tt>spec_helper.rb</tt>,
-que é onde você pode customizar o inicializador real do spec (dentre outras coisas).
+que voc&ecirc; pode usar para adicionar argumentos de linha de comando para o rspec
+(por exemplo, adicionar um output em cores, etc.) e <tt>spec_helper.rb</tt>,
+que &eacute; onde voc&ecirc; pode customizar o inicializador do spec (dentre outras coisas).
 
 ## tasks
 Este diretório contém tarefas [thor][] do Merb.
