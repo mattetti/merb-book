@@ -62,7 +62,9 @@ Si vous apprenez ou que vous utilisez quotidiennement Merb par le biais de cet o
 
 {: #toc .available-for-translation}
 
-1. [Annexes Trucs/Astuces:](/fr/appendix/hints-tips)
-1. [Annexes Slices Disponibles:](/fr/appendix/slices)
-1. [Annexes Gems Utiles:](/fr/appendix/gems)
+* [Annexes](/fr/appendix)
+  1. [Trucs/Astuces](/fr/appendix/hints-tips)
+  1. [Slices Disponibles](/fr/appendix/slices)
+  1. [Gems Utiles](/fr/appendix/gems)
+
 {: #appendices}
