@@ -24,7 +24,6 @@ senza prima discutere della vera ragione per cui Merb
 
 ## Le origini ##{: #origin}
 ![Yukihiro Matsumoto](/images/Yukihiro_Matsumoto.jpg){: .left}
-
 Ruby è un [linguaggio di programmazione][] [open source][], [dinamico][],
 [orientato agli oggetti][], di uso generale e con [riflessione][], scritto durante
 la metà degli anni 09 dall'[architetto del software][] giapponese

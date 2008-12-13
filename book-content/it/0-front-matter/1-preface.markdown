@@ -29,7 +29,7 @@ Ovviamente abbiamo a disposizione un [Merb wiki][] e diversi testi pubblicati,
 ma devo ammettere che guardando altri framework, come [Django][] ad esempio,
 l'intero core team era ben conscio che occorresse fare qualcosa. 
 
-L'impegno di Ford su subito notato,
+L'impegno di Ford su presto notato,
 e gli venne proposto un accordo per scrivere "[Beginning Merb][]" per [Apress][].
 Come potete immaginare,
 divenne troppo impegnativo per Matt scrivere un libro per un editore,

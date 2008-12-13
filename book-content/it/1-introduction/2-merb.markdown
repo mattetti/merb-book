@@ -1,7 +1,7 @@
-## Merb
+# Merb
 
 Merb è stato ideato da [Ezra Zygmuntowicz][].
-La prima versione "pubblica" di Merb apparve come pastie il 21 settembre del 2006.
+La prima versione "pubblica" di Merb apparve come pastie il 21 settembre del 2006[^first-pastie].
 Potete trovare questo pastie [qui](http://pastie.org/14416) oppure
 [qui](http://gist.github.com/33252) (copia).
 Attualmente, il lead developer del progetto Merb è [Yehuda Katz][].
@@ -14,8 +14,11 @@ La versione 1.0 è stata annunciata nell'evento [RubyConf][] il 7 novembre 2008.
 
 Il repository principale è su [GitHub][].
 
-
+<!-- Links -->
 [Ezra Zygmuntowicz]:	http://brainspl.at/
 [Yehuda Katz]:	http://yehudakatz.com/
 [RubyConf]:	http://rubyconf.org/
 [Github]:	http://github.com/wycats/merb/
+
+<!-- References -->
+[^first-pastie]: http://pastie.org/14416
