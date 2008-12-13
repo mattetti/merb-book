@@ -8,12 +8,12 @@
 
 ## Introduction
 
-RSpec est un framwork de Développement Comportemental (Behavior Driven Development, BDD) pour Ruby.
+RSpec est un framework de Behavior Driven Development pour Ruby.
 Il fournit 2 frameworks pour l'écriture et l'exécution d'exemples
 sur la façon que votre application Ruby 
 
- * Un framework de Scenario[^cucumber] pour décrire le comportement au niveau applicatif
- * Un framework d'exemple de code pour décrire le comportemment au niveau objet
+ * Un framework de Scénario[^cucumber] pour décrire le comportement au niveau applicatif
+ * Un framework d'exemple de code pour décrire le comportement au niveau objet
 
 [RSpec][] a été influencé par [Dan North][] et son framework de test BDD en java appelé [JBehave][].
 
@@ -29,20 +29,20 @@ RSpec 0.1. Plus tard en 2006, la maintenance a été donnée à [David Chelimsky
 
 ## Behavior Driven Development
 
-Behavior Driven Development[^BDD] is an [Agile][] development process that comprises
-aspects of [Acceptance Test Driven Planning][], [Domain Driven Design][] and
+Behavior Driven Development[^BDD] est un processus de développement [Agile][] qui comprend
+des aspects de [Acceptance Test Driven Planning][], [Domain Driven Design][] et
 [Test Driven Development][].
 
-> Behaviour-driven development is an “outside-in” methodology.
-> It starts at the outside by identifying business outcomes, and then drills down
-> into the feature set that will achieve those outcomes.
-> Each feature is captured as a “story”, which defines the scope of the feature
-> along with its acceptance criteria.
+> Le développement comportemental est une méthodologie "extérieur-intérieur".
+> Cela commencer à l'extérieur en identifiant les résultats d'affaires, puis en navigant
+> jusqu'aux fonctionnalités qui amèneront ces résultats.
+> Chaque fonctionnalité est enregistrée comme une "histoire", qui défini la portée
+> de la fonctionnalité avec ses critères de validation.
 > - [Dan North][]{: .quote-author}
 {: cite=http://dannorth.net/whats-in-a-story}
 
-By focusing on the expected behaviors rather than the technical details,
-developers can have better communication with the project owner and other stakeholders.
+En se concentrant sur les comportement exceptés plutôt que sur les détails techniques,
+les développeurs peut avoir une meilleure communication avec le chef de projet et les autres parties prenantes.
 
 ## Implementation
 
