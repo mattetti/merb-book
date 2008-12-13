@@ -1,0 +1,9 @@
+# Déploiement
+
+<ul class='toc'>
+
+<ul style='list-style: none;'><li><a href='/fr/deployment/passenger#installer_ruby_enterprise_edition_ree'>Installer Ruby Enterprise Edition (REE)</a><ul style='list-style: none;'><li><a href='/fr/deployment/passenger#télécharger_ree'>Télécharger REE</a></li><li><a href='/fr/deployment/passenger#installer'>Installer</a></li></ul></li><li><a href='/fr/deployment/passenger#installer_passenger'>Installer Passenger</a></li><li><a href='/fr/deployment/passenger#configuration'>Configuration</a><ul style='list-style: none;'><li><a href='/fr/deployment/passenger#configru'>config.ru</a></li></ul></li><li><a href='/fr/deployment/passenger#capistrano_task'>Capistrano Task</a></li></ul>
+
+<ul style="list-style-type: none; list-style-image: none; list-style-position: outside;"><li><a href="/fr/deployment/nginx#installation">Installation</a><ul style="list-style-type: none; list-style-image: none; list-style-position: outside;"><li><a href="/fr/deployment/nginx#mac_os_x_nécessite_macports">Mac OS X (nécessite </a><a href="http://macports.org/">MacPorts</a>)</li><li><a href="/fr/deployment/nginx#debian__ubuntu_linux">Debian / Ubuntu Linux</a></li><li><a href="/fr/deployment/nginx#gentoo_linux">Gentoo Linux</a></li></ul></li><li><a href="/fr/deployment/nginx#configuration">Configuration</a><ul style="list-style-type: none; list-style-image: none; list-style-position: outside;"><li><a href="/fr/deployment/nginx#etcnginxnginxconf">/etc/nginx/nginx.conf</a></li></ul></li><li><a href="/fr/deployment/nginx#tâche_capistrano">Tâche Capistrano</a></li><li><a href="/fr/deployment/nginx#monit">Monit</a></li></ul>
+
+</ul>
