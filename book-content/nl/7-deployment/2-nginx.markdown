@@ -154,7 +154,7 @@ en /opt/local/etc/nginx/nginx.conf op Mac OS X.
       end
     end
 
-Om je Merb applicatie voor de eerste keer te deployen, moet je volgende commando runnen
+Om je Merb applicatie voor de eerste keer te deployen, moet je het volgende commando runnen
 
     $ cap deploy:setup
 
@@ -164,15 +164,15 @@ Nadien, kan je deployen met
 
 ## Monit
 
-[Monit][] is een tool die kan worden gebruikt voor het starting, stoppen en monitoren
-van arbitraire services. Engine Yard creeerde een wrapper script 
+[Monit][] is een tool die kan worden gebruikt voor het starten, stoppen en opvolgen
+van arbitraire services. Engine Yard creëerde een wrapper script 
 [monit\_merb\_mpc][] genoemd, dat  monit helpt Merb
 en zijn master process te behandelen.
 In zijn huidige vorm, heeft monit\_merb\_mpc een aantal kleine wijzigingen nodig
 om buiten de Engine Yard stack te kunnen draaien.
 Een volledige introductie kan gevonden worden op [Ezra's blog][].
 
-Om de Merb master en worker processen te monitoren, moet je volgende configuratie toevoegen aan monit:
+Om de Merb master en worker processen op te volgen, moet je volgende configuratie toevoegen aan monit:
 
     check process merb_app_master
       with pidfile /var/log/engineyard/app/app-production-merb.main.pid

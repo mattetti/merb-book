@@ -52,7 +52,7 @@ Zie de [views](/getting-started/views) sectie voor meer informatie.
 Yep, je raadt het al. 
 De Merb configuratie-bestanden bevinden zich hier.
 De <tt>router.rb</tt> file bevat je applicatie URL [routes](/getting-started/router), die de structuur, volgorde en verschijning van je URLs defineert.
-Een andere belangrijke file, <tt>init.rb</tt>, behandeld de basisch Merb configuratie.
+Een andere belangrijke file, <tt>init.rb</tt>, behandeld de basis Merb configuratie.
 Hier configureerd je de ORM, de template engine, en het test framework.
 Je kan ook custom configuraties toevoegen aan de <tt>Merb::BootLoader</tt> in zijn <tt>before_app_loads</tt> en <tt>after_app_loads</tt> blocken.
 Een ander belangrijk bestand, <tt>dependencies.rb</tt>, is waar je de applicatie afhankelijkheden kan definiëren: andere libraries of gems die je application vereist.

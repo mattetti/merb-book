@@ -3,10 +3,10 @@
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-> Het is de verantwoordelijkheid van een Authenticatie systeem om te bewijzen dat de identiteit die een gebruiker beweerd te hebben
+> Het is de verantwoordelijkheid van een authenticatie systeem om te bewijzen dat de identiteit die een gebruiker beweerd te hebben
 > wel degelijk zijn echte identiteit is. Er zijn verschillende manieren om dit te bereiken, onder andere
 > via trusted hosts, paswoord verificatie, en trust netwerken (zoals ‘Open-ID’).
-> Nadat de verificatie heeft plaatstgevonden, zijn de verantwoordelijkheden van het Authenticatie systeem voldaan.
+> Nadat de verificatie heeft plaatstgevonden, zijn de verantwoordelijkheden van het authenticatie systeem voldaan.
 > [Adam French][]{: .quote-author}
 {: cite=http://adam.speaksoutofturn.com/post/57615195/entication-vs-orization .lead-quote}
 
@@ -83,38 +83,38 @@ de standaard paswoord strategieën.
 
 ### merb-auth-slice-password
 
-[merb-auth-slice-password][] is a very simple Merb slice.
-The slice will provide developers with a basic login and logout function.
-By default it also include the form based password logins and basic authentication.
+[merb-auth-slice-password][] is een heel eenvoudige Merb slice.
+De slice voorziet developers van een basic login en logout functie.
+Standaard bevat het ook de form based paswoord logins en basic authenticatie.
 
-By default the slice will load the password\_form and the basic\_auth strategies
+Standaard laadt de slice de password\_form en de basic\_auth strategieën.
 
-Views and strategies can be customized as exlained in the 
-Authenticated Hello World example.
+Views en strategieën kunnen worden aangepast zoals wordt uigelegd in het 
+Authenticated Hello World voorbeeld.
 
 
-## Authentication in Merb Stack
+## Authenticatie in Merb Stack
 
-When you generate an application with the default merb stack[^merb-stack-app],
-merb-auth is already setup for normal usage.
+Wanneer je een applicatie genereert met de standaard merb stack [^ merb-stack-app], 
+is merb-auth reeds ingesteld voor normaal gebruik. 
 
-If you don't want to use this, simply comment out the dependency on merb-auth
-in config/dependencies.rb
+Als je hiervan geen gebruik wilt maken, zet dan de merb-auth dependency  
+in config / dependencies.rb gewoon in commentaar.
 
 
 ## Authenticated Hello World
 
 
-### Generate an application
+### Genereer een application
 
-First step is to generate your application using the Merb stack.
+De eerste stap is je applicatie te genereren met de Merb stack.
 
     $ merb-gen app hello_world
     $ cd hello_world
 {:lang=shell html_use_syntax=true}
 
-This generates an application stub, with authentication already configured.
-The basic elements are:
+Dit genereert een application stub, met de authenticatie reeds geconfigureerd.
+De elementen aan de basis zijn:
 
     app/models/user.rb
 
@@ -122,9 +122,9 @@ The basic elements are:
     merb/merb-auth/strategies.rb
 {:lang=ruby html_use_syntax=true}
 
-The setup for user authentication is taken care of by default using a password
-and login.
-Of course we need to setup the database and add a user first.
+De setup voor user authenticatie werd standaard gedaan met een paswoord
+en login.
+Uiteraard moeten we eerst ook een database opzetten en een gebruiker toevoegen.
 
 
     $ rake db:automigrate
@@ -135,14 +135,14 @@ Of course we need to setup the database and add a user first.
 {:lang=ruby html_use_syntax=true}
 
 
-### Generate something to protect
+### Genereer iets om te beschermen 
 
-Now we have an application, and a user, we need something to protect.
+Nu we een applicatie hebben, en een gebruiker, hebben we iets nodig om te beschermen.
 
     $ merb-gen controller hello_world
 {:lang=ruby html_use_syntax=true}
 
-Let's put something into the controller.
+Laat ons iets in de controller stoppen.
 
     class HelloWorld < Application
       def index
@@ -151,16 +151,16 @@ Let's put something into the controller.
     end
 {:lang=ruby html_use_syntax=true}
 
-If you fire up merb now and head on over to <http://localhost:4000/hello_world>
-you'll see the "Hello World" results.
+Indien je nu merb opstart en in je browser gaat naar <http://localhost:4000/hello_world>
+zie je de "Hello World" resultaten.
 
-### Protect the route
+### Bescherm de route
 
-It's not protected yet, so let's fix that.
-We can either protect it in the routes in config/router.rb or in the controller action.
-Let's do the router option first.
+Dit is nog niet afgeschermd, dus laat ons dit even in orde brengen.
+We kunnen dit zowel in de routes in config/router.rb als in de controller actie zelf.
+We proberen eerst de router optie.
 
-Open up config/router.rb 
+Open het bestand config/router.rb 
 
     Merb::Router.prepare do
       authenticate do
@@ -169,27 +169,26 @@ Open up config/router.rb
     end
 {:lang=ruby html_use_syntax=true}
 
-This will cause the user to login.
-This is discovered in the router and when it fails, it stops in the router.
-Try to hit <http://localhost:4000/hello_world> now.
-You'll see that you need to login to access it!
+Dit zorgt ervoor dat de gebruiker moet aanloggen.
+Dit wordt ontdekt tijdens de routering and wanneer aanloggen niet lukt, dan stopt de routering. 
+Probeer nu even  <http://localhost:4000/hello_world> uit.
+Je zal zien dat je deze keer moet aanloggen om dezelfde pagina te krijgen.
 
 Ok.  Logout, <http://localhost:4000/logout>
 
 
-### Protect the controller
+### Bescherm de controller
 
-Now let's remove the code from the router, and put the protection at the
-controller level.
-This will allow a finer control over resources for example.
-
+Laat ons nu de code van de router terug verwijderen, en de bescherming op 
+controller niveau plaatsen.
+Dit laat een fijnere controle over toe over de resources. 
 
     Merb::Router.prepare do
      match("/hello_world").to(:controller => "hello_world")
     end
 {:lang=ruby html_use_syntax=true}
 
-Let's now put it into the controller:
+Laat het ons nu in de controller zetten: 
 
     class HelloWorld < Application
 
@@ -202,40 +201,39 @@ Let's now put it into the controller:
     end
 {:lang=ruby html_use_syntax=true}
 
-
-To get access to the currently logged in user inside your controller use:
+Om toegang te krijgen tot de momenteel aangelogde gebruiker binnen de controller gebruikt je: 
 
     session.user
 {:lang=ruby html_use_syntax=true}
 
-Really... For a basic Hello World authentication, that's it.
+Echt ... Voor een basis Hello World authenticatie is dit het.  
 
 
-### Overwrite the default views
+### Overschrijf de standaard views
 
-If you want more customization, you can do:
+Indien je meer aanpassingen wenst, kan je ook:
 
 
     rake slices:merb-auth-slice-password:freeze:views
 {:lang=ruby html_use_syntax=true}
 
-What that will do is copy the views from the slice to the /slices/ folder
-in your application.
+Dit zal de views van de slice copiëren naar de /slices/ directory
+in je applicatie.
 
-Then you need to move/copy them to your /views/.
-Editing the copied views in /app/views/ should now be taken into account.
+Nadien moet je ze verplaatsen/copiëren naar je /views/.
+Je kan nu overwegen om de gecopiëerde views in /app/views/ te editeren.
 
 
 
 
 [^merb-stack-app]: merb-gen app hello\_world
 
-## Testing an authenticated request
+## Testen van een authenticated request
 
-To test a request that needs to be authenticated, you will first need to login.
-The easiest way to login when you are running a request spec is to use a helper.
+Om een request te testen die moet geauthenticeerd worden, moet je eerst aanloggen.
+De eenvoudigste weg om aan te loggen wanneer je een request spect runt is om een helper te gebruiken.
 
-Here is an example of two helpers added to /spec/spec\_helper.rb
+Hier is een voorbeeld van twee helpers toegevoegd aan /spec/spec\_helper.rb
 
     Merb::Test.add_helpers do
  
@@ -261,11 +259,11 @@ Here is an example of two helpers added to /spec/spec\_helper.rb
     end
 {:lang=ruby html_use_syntax=true}
 
-The first helper creates a default user unless it already exists.
-The second helper sends a login request using the default user's attributes.
-Note that the login action uses the PUT HTTP verb.
+De eerste helper creëert een standaard gebruiker tenzij deze reeds bestaat.
+De tweede helper stuurt een login request gebruik makend van de attributen van de standaard gebruiker.
+Merk op dat de login acties gebruik maken van het PUT HTTP werkwoord.
 
-Now that you added these helpers, you just need to slightly modify your examples:
+Nu je deze helpers hebt toegevoegd, moet je enkel je voorbeelden lichtjes wijzigen:
 
     before(:each) do
       login
@@ -273,7 +271,7 @@ Now that you added these helpers, you just need to slightly modify your examples
     end
 {:lang=ruby html_use_syntax=true}
 
-In the above example, the request sent to the articles URI will be authenticated.
+In het bovenstaand voorbeeld, zal de request naar de articles URI worden geauthenticeerd.
 
 [Adam French]:      <http://adam.speaksoutofturn.com>
 [merb-auth]:        <http://github.com/wycats/merb/tree/master/merb-auth>
