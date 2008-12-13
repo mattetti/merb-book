@@ -1,6 +1,6 @@
 # Genereer een applicatie
 Merb komt met een generator (<tt>merb-gen</tt>) voor het aanmaken van Merb applicaties.
-De generator kan verschillende types van Merb applicaties gernereren; om de beschikbare generator opties te zien, typ je
+De generator kan verschillende types van Merb applicaties genereren; om de beschikbare generator opties te zien, typ je
 
     $ merb-gen -h
 

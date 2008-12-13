@@ -1,5 +1,5 @@
 # Aan de slag
-Om het framework te gebruiken moeten we eerste Merb installeren. Maar, voor je Merb kan installeren moet je een C compiler, Ruby en [RubyGems](http://www.rubygems.org/) installeren en een database (indien je je modellen wil persisteren).
+Om het framework te gebruiken moeten we eerst Merb installeren. Maar, voor je Merb kan installeren moet je een C compiler, Ruby en [RubyGems](http://www.rubygems.org/) installeren en een database (indien je je modellen wil persisteren).
 
 ## OS X
 
