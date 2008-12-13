@@ -32,4 +32,30 @@
 			</li>
 		</ul>
 	</li>
+	<li><a href='/fr/getting-started/project-structure'>La Structure d'un Projet</a>
+		<ul style='list-style: none;'>
+			<li><a href='/fr/getting-started/project-structure#app'>app</a>
+				<ul style='list-style: none;'>
+					<li><a href='/fr/getting-started/project-structure#controllers'>controllers</a></li>
+					<li><a href='/fr/getting-started/project-structure#models'>models</a></li>
+					<li><a href='/fr/getting-started/project-structure#views'>views</a></li>
+				</ul>
+			</li>
+			<li><a href='/fr/getting-started/project-structure#config'>config</a>
+				<ul style='list-style: none;'>
+					<li><a href='/fr/getting-started/project-structure#environments'>environments</a></li>
+				</ul>
+			</li>
+			<li><a href='/fr/getting-started/project-structure#gems'>gems</a></li>
+			<li><a href='/fr/getting-started/project-structure#public'>public</a>
+				<ul style='list-style: none;'>
+					<li><a href='/fr/getting-started/project-structure#images'>images</a></li>
+					<li><a href='/fr/getting-started/project-structure#javascripts'>javascripts</a></li>
+					<li><a href='/fr/getting-started/project-structure#stylesheets'>stylesheets</a></li>
+				</ul>
+			</li>
+			<li><a href='/fr/getting-started/project-structure#spec'>spec</a></li>
+			<li><a href='/fr/getting-started/project-structure#tasks'>tasks</a></li>
+		</ul>
+	</li>
 </ul> 
