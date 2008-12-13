@@ -1,7 +1,7 @@
-# getting-started
+# Mise en route
 
 <ul class='toc'>
-	<li><a href='/fr/getting-started/instructions'>Mise en route</a>
+	<li><a href='/fr/getting-started/instructions'>Installation</a>
 		<ul style='list-style: none;'>
 			<li><a href='/fr/getting-started/instructions#os_x'>OS X</a>
 				<ul style='list-style: none;'>
