@@ -19,10 +19,11 @@ Se você tem o OS X 10.5 (Leopard),
 
 
 ## Linux
-As instruções seguintes são para distribuições baseados no Debian ([Ubuntu][], por exemplo),
-que usa o gerenciador de pacotes <tt>apt-get</tt>.
-Se você estiver usando uma distribuição diferente, use o gerenciador de pacotes desta distribuição
-(por examplo, sistemas [RedHat][] usam o <tt>yum</tt> como seu gerenciador de pacotes).
+As instruções seguintes são para distribuições baseados no Debian
+([Ubuntu][], por exemplo), que usa o gerenciador de pacotes <tt>apt-get</tt>.
+Se você estiver usando uma distribuição diferente, use o gerenciador de pacotes
+desta distribuição (por examplo, sistemas [RedHat][] usam o <tt>yum</tt> como
+seu gerenciador de pacotes).
 
 ### Pré-requisitos
 
@@ -51,7 +52,8 @@ Se você estiver usando uma distribuição diferente, use o gerenciador de pacot
 
 ## Windows
 Usuários de Windows tem diversas opções para instalar o Ruby e RubyGems.
-Uma maneira é fazer download dos binários do Ruby, instalá-los, e então instalar o RubyGems.
+Uma maneira é fazer download dos binários do Ruby, instalá-los, e então instalar
+o RubyGems.
 
 Uma alternativa é usar o [One-Click Ruby Installer][]
 que já vem com o RubyGems (e algumas outras coisas). Se você usar
@@ -68,12 +70,12 @@ algumas informações de uso. Depois, basta apenas instalar o Merb:
 
     C:\Ruby> gem install merb
 
-Este comando pode levar algums minutos para terminar, visto que ele atualizará o cache da gem,
-buscar todas as gems relacionadas ao Merb e instalá-las.
+Este comando pode levar algums minutos para terminar, visto que ele atualizará o
+cache da gem, buscar todas as gems relacionadas ao Merb e instalá-las.
 
 _Nota_: Se você quiser usar o banco de dados SQLite (que é o padrão), você deve
-fazer download e instalá-lo separadamente. Mais informações podem ser encontradas no
-site do [SQLite][].
+fazer download e instalá-lo separadamente. Mais informações podem ser
+encontradas no site do [SQLite][].
 
 
 [Apple developer website]:  http://developer.apple.com/technology/xcode.html
