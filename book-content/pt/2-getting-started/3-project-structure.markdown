@@ -1,4 +1,4 @@
-# Estrutura do projeto
+# Estrutura
 A estrutura t&iacute;pica de uma nova aplica&ccedil;&atilde;o Merb (gerada com <tt>merb-gen app</tt>)
 irá se parecer com:
 
@@ -61,7 +61,7 @@ Veja a seção [views][] para maiores informações.
 Sim, voc&ecirc; advinhou.
 Os arquivos de configura&ccedil;&atilde;o do Merb est&atilde;o localizados aqui.
 O arquivo <tt>router.rb</tt> cont&eacute;m configura&ccedil;&otilde;es 
-sobre as URLs da sua aplica&ccedil;&atilde;o [routes][].
+sobre as URLs da sua aplica&ccedil;&atilde;o ([routes][]).
 Nele &eacute; definido a estrutura, ordem e apar&ecirc;ncia das suas URLs.
 Outro arquivo importante, <tt>init.rb</tt>, trata da configura&ccedil;&atilde;o de base do Merb.
 Nele &eacute; onde voc&ecirc; pode configurar seu ORM, <i>template engine</i> e framework de testes.
@@ -70,7 +70,7 @@ para o <tt>Merb::BootLoader</tt> nos blocos <tt>before_app_loads</tt> e <tt>afte
 arquivo <tt>init.rb</tt>.
 Outro arquivo importante, <tt>dependencies.rb</tt>,
 &eacute; onde voc&ecirc; pode definir as depend&ecirc;ncias da sua aplica&ccedil;&atilde;o:
-outras bibliotecas ou gems que a sua aplica&ccedil;&atilde;o precisa.
+bibliotecas ou gems que a sua aplica&ccedil;&atilde;o necessite.
 Qualquer depend&ecirc;ncia listada neste arquivo ser&aacute; carregada
 quando sua aplica&ccedil;&atilde;o Merb iniciar.
 
@@ -84,12 +84,12 @@ Quando voc&ecirc; estiver pronto para fazer o [deploy][] da sua aplica&ccedil;&a
 &eacute; recomendado que voc&ecirc; empacote ([bundle][]) todas as suas depend&ecirc;ncias
 dentro do diret&oacute;rio da aplica&ccedil;&atilde;o.
 O diret&oacute;rio <tt>gems</tt> &eacute; onde estas depend&ecirc;ncias empacotadas ser&atilde;o guardadas.
-Quando voc&ecirc; arranca a aplica&ccedil;&atilde;o Merb, ela ir&aacute; 
+Quando voc&ecirc; inicia a aplica&ccedil;&atilde;o Merb, ela ir&aacute; 
 carregar qualquer gem deste diret&oacute;rio, sobrescrevendo as gems do sistema.
 
 ## public
 Aqui &eacute; onde voc&ecirc; pode armazenar arquivos que s&atilde;o "est&aacute;ticos",
-como, por exemplo, os arquivos <tt>favicon.ico</tt> e <tt>robots.txt</tt>.
+como por exemplo, os arquivos <tt>favicon.ico</tt> e <tt>robots.txt</tt>.
 
 ### images
 Qualquer imagem que seu template utilizar deve estar aqui.
@@ -102,7 +102,7 @@ O "Merb stack" default vem empacotado com o maravilhoso
 
 Se voc&ecirc; tem pequenos peda&ccedil;os de c&oacute;digo JavaScript, espec&iacute;ficos da sua aplica&ccedil;&atilde;o,
 eles devem ficar dentro do arquivo <tt>application.js</tt>.
-Se isso se tornar muito "pesado" você pode acrescentar arquivos adicionais sempre que necessário.
+Se este arquivos se tornar muito "pesado", você pode acrescentar arquivos adicionais sempre que necessário.
 
 ### stylesheets
 Seguindo a preocupa&ccedil;&atilde;o em manter as coisas separadas,
