@@ -128,14 +128,14 @@ où vous pouvez personnaliser le lanceur de spec (entre autres).
 ## tasks
 Ce dossier contient les tâches du [thor][] associé à Merb.
 
-[d'emballer]:		/fr/deployment/bundle
-[contrôleurs]:		/fr/getting-started/controllers
-[déploiement]:		/fr/deployment
-[jQuery]:			http://jquery.com/
-[modèles]:			/fr/getting-started/models
-[ORM]:				http://en.wikipedia.org/wiki/Object-relational_mapping
-[routage]:			/fr/getting-started/router
-[RSpec]:			http://rspec.info/
-[test]:				/fr/testing-your-application
-[thor]:				http://wiki.merbivore.com/faqs/thor
-[vues]:				/fr/getting-started/views
+[d'emballer]:   /fr/deployment/bundle
+[contrôleurs]:  /fr/getting-started/controllers
+[déploiement]:  /fr/deployment
+[jQuery]:       http://jquery.com/
+[modèles]:      /fr/getting-started/models
+[ORM]:          http://en.wikipedia.org/wiki/Object-relational_mapping
+[routage]:      /fr/getting-started/router
+[RSpec]:        http://rspec.info/
+[test]:         /fr/testing-your-application
+[thor]:         http://wiki.merbivore.com/faqs/thor
+[vues]:         /fr/getting-started/views
