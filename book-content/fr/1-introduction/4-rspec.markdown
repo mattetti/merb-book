@@ -10,7 +10,7 @@
 
 RSpec est un framework de Behavior Driven Development pour Ruby.
 Il fournit 2 frameworks pour l'écriture et l'exécution d'exemples
-sur la façon que votre application Ruby 
+sur la façon dont votre application Ruby doit se comporter[^rspec]: 
 
  * Un framework de Scénario[^cucumber] pour décrire le comportement au niveau applicatif
  * Un framework d'exemple de code pour décrire le comportement au niveau objet
@@ -22,8 +22,13 @@ sur la façon que votre application Ruby
 A l'origine, BDD n'était qu'une discussion entre [Aslak Hellesøy][] et [Dan North][]
 dans les bureaux londoniens de [ThoughtWorks][].
 [Dave Astels][] s'est joint à la conversation avec un article dans son blog disant qu'il pensait
+<<<<<<< HEAD:book-content/fr/1-introduction/4-rspec.markdown
 que ces idées pouvaient être facilement implentées en [Smalltalk][] ou [Ruby][].
 [Steven Baker][] a expérimenté une implémentation initiales, a sorti
+=======
+que ces idées pouvaient être facilement implémentées en [Smalltalk][] ou [Ruby][].
+[Steven Baker][] a expérimenté une première implémentation, et a sorti
+>>>>>>> fde551d887b4c20b1d15e559e3ca5b732e044c76:book-content/fr/1-introduction/4-rspec.markdown
 RSpec 0.1. Plus tard en 2006, la maintenance a été donnée à [David Chelimsky][].[^rspec-history]
 
 
@@ -34,15 +39,15 @@ des aspects de [Acceptance Test Driven Planning][], [Domain Driven Design][] et
 [Test Driven Development][].
 
 > Le développement comportemental est une méthodologie "extérieur-intérieur".
-> Cela commencer à l'extérieur en identifiant les résultats d'affaires, puis en navigant
+> Cela commence à l'extérieur en identifiant les résultats d'affaires, puis en naviguant
 > jusqu'aux fonctionnalités qui amèneront ces résultats.
 > Chaque fonctionnalité est enregistrée comme une "histoire", qui défini la portée
 > de la fonctionnalité avec ses critères de validation.
 > - [Dan North][]{: .quote-author}
 {: cite=http://dannorth.net/whats-in-a-story}
 
-En se concentrant sur les comportement attendus plutôt que sur les détails techniques,
-les développeurs peut avoir une meilleure communication avec le chef de projet et les autres parties prenantes.
+En se concentrant sur les comportements attendus plutôt que sur les détails techniques,
+les développeurs peuvent avoir une meilleure communication avec le chef de projet et les autres parties prenantes.
 
 ## Implémentation
 
