@@ -82,9 +82,9 @@ _Note_: Si vous voulez utilisez la base de données SQLite (qui vient par défau
 la télécharger et l'installer séparément. Vous aurez plus d'informations sur le site [SQLite][]
 
 
-[site développeur d'Apple]:  	http://developer.apple.com/technology/xcode.html
-[RubyGems]:                 	http://www.rubygems.org/
-[Ubuntu]:                   	http://www.ubuntu.com/
-[RedHat]:                   	http://www.redhat.com/
-[l'installeur Ruby One-Click]: 	http://rubyinstaller.rubyforge.org/wiki/wiki.pl
-[SQLite]:                   	http://www.sqlite.org/
+[site développeur d'Apple]:     http://developer.apple.com/technology/xcode.html
+[RubyGems]:                     http://www.rubygems.org/
+[Ubuntu]:                       http://www.ubuntu.com/
+[RedHat]:                       http://www.redhat.com/
+[l'installeur Ruby One-Click]:  http://rubyinstaller.rubyforge.org/wiki/wiki.pl
+[SQLite]:                       http://www.sqlite.org/
