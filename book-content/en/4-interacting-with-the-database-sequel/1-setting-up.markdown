@@ -18,8 +18,7 @@ merb-gen will now include a sequel-app generator.  This will generate an app tha
     
     $merb-gen sequel-app new_app
     
-For more info, check out the [repository][].
-
+By default, `merb-gen sequel-app` will generate a database.yml file that uses sqlite3. For more info, check out the [repository][].
 
 
 [repository]:       http://github.com/jackdempsey/merb-sequel-stack/watchers
