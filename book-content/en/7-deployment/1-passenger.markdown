@@ -22,7 +22,7 @@ alongside a version of Ruby you currently have installed,
 as it will be installed into the <tt>/opt</tt> directory.
 
 *Note:*
-You will need to have the development <tt>readline</tt> libraries installed
+You will need to have the development ``readline`` libraries installed
 if you want run Merb interactively.
 
 ### Download REE
@@ -74,7 +74,7 @@ into your Merb application's root directory:
 ## Capistrano Task
 
 
+<!-- Links -->
 [Phusion Passenger]:          http://www.modrails.com/
 [Rack]:                       http://rack.rubyforge.org/
 [Ruby Enterprise Edition]:    http://www.rubyenterpriseedition.com/
-

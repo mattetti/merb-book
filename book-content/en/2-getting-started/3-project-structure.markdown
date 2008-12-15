@@ -130,6 +130,7 @@ which is where you can customize the actual spec runner (among other things).
 This directory contains Merb's [thor][] tasks.
 
 
+<!-- Links -->
 [bundle]:           /deployment/bundle
 [controllers]:      /getting-started/controllers
 [deploy]:           /deployment

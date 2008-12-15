@@ -10,7 +10,7 @@
 [Nginx][] (pronounced "engine x") is a free, open-source,
 high-performance HTTP server and [reverse proxy][],
 as well as an IMAP/POP3 [proxy server][].
-Written by [Igor Sysoev](http://sysoev.ru/en/) in 2005,
+Written by [Igor Sysoev][] in 2005,
 Nginx now hosts between 1% and 4% of all domains worldwide
 (sources: [1](http://googleonlinesecurity.blogspot.com/2007/06/web-server-software-and-malware.html),
 [2](http://survey.netcraft.com/Reports/200806/)).
@@ -42,8 +42,8 @@ Use the package manager your system provides to install Nginx.
 
 ## Configuration
 
-The nginx configuration lives in /etc/nginx/nginx.conf, if you're on Linux,
-and /opt/local/etc/nginx/nginx.conf on Mac OS X.
+The nginx configuration lives in ``/etc/nginx/nginx.conf``, if you're on Linux,
+and ``/opt/local/etc/nginx/nginx.conf`` on Mac OS X.
 
 ### /etc/nginx/nginx.conf
     
@@ -164,15 +164,16 @@ After that, you can deploy with
 
 ## Monit
 
-[Monit][] is a tool that can be used for starting, stopping and monitoring
-arbitrary services. Engine Yard created a wrapper script called
-[monit\_merb\_mpc][], that helps monit handle Merb
-and its master process.
-At its current incarnation, monit\_merb\_mpc needs some minor modifications
-to run outside of the Engine Yard stack.
+[Monit][] is a tool that can be used for starting, stopping,
+and monitoring arbitrary services.
+Engine Yard created a wrapper script called [monit\_merb\_mpc][]
+that helps monit handle Merb and its master process.
+In its current incarnation, ``monit\_merb\_mpc``
+needs some minor modifications to run outside of the Engine Yard stack.
 A full introduction can be found on [Ezra's blog][].
 
-To monitor the Merb master process and workers, you need to add this configuration to monit:
+To monitor the Merb master process and workers,
+you need to add this configuration to monit:
 
     check process merb_app_master
       with pidfile /var/log/engineyard/app/app-production-merb.main.pid
@@ -195,17 +196,18 @@ To monitor the Merb master process and workers, you need to add this configurati
       stop program = "/engineyard/bin/monit_merb_mpc app restart_worker 4001" 
       if totalmem is greater than 80.0 MB for 2 cycles then restart       # eating up memory?
       group merb_app
-      
 
+
+<!-- Links -->
+[Ebb]:                                  http://ebb.rubyforge.org/
+[Ezra's blog]: http://brainspl.at/articles/2008/12/07/merb-master-worker-monit-control-setup
+[Glassfish]:                            https://glassfish.dev.java.net/
 [Igor Sysoev]:                          http://sysoev.ru/en/
+[MacPorts]:                             http://macports.org/
+[Mongrel]:                              http://mongrel.rubyforge.org/
+[Monit]:                                http://mmonit.com/monit/
+[monit\_merb\_mpc]:                     http://pastie.org/333352
 [Nginx]:                                http://wiki.codemongers.com/Main
 [proxy server]: http://en.wikipedia.org/wiki/Proxy_server
 [reverse proxy]: http://en.wikipedia.org/wiki/Reverse_proxy
-[Mongrel]:                              http://mongrel.rubyforge.org/
 [Thin]:                                 http://code.macournoyer.com/thin/
-[Ebb]:                                  http://ebb.rubyforge.org/
-[Glassfish]:                            https://glassfish.dev.java.net/
-[MacPorts]:                             http://macports.org/
-[Monit]:                                http://mmonit.com/monit/
-[monit\_merb\_mpc]:                       http://pastie.org/333352
-[Ezra's blog]: http://brainspl.at/articles/2008/12/07/merb-master-worker-monit-control-setup

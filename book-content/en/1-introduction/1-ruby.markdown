@@ -153,6 +153,7 @@ During RubyConf 2008, Matz made a comment about Merb:
 {: cite=http://merbist.com/2008/11/09/merb-1-0-released/}
 
 
+<!-- Links -->
 [Ada]:                  http://en.wikipedia.org/wiki/Ada_%28programming_language%29)
 [Dave Thomas]:          http://pragdave.pragprog.com/
 [dynamic]:              http://en.wikipedia.org/wiki/Dynamic
