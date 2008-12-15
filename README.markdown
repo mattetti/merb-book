@@ -116,9 +116,10 @@ Please follow our editor guidelines, especially:
 * Japanese:    http://github.com/kwatch (Makoto Kuwata)
 * Portuguese:  http://github.com/akitaonrails (Fabio Akita)
 * Russian:     http://github.com/cheba (Alex Mankuta)
-* Spanish:     (pending)
+* Spanish:     http://github.com/joahking (Joaquin Rivera Padron)
 * Dutch:       http://github.com/pvelder (Peter De Velder)
 * Arabic       http://github.com/khelll (Khaled AlHabache)
+* Indonesian   (pending)
 
 ## Legal
 
