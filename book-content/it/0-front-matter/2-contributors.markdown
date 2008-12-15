@@ -3,7 +3,6 @@
 Senza i seguenti contributori non sarebbe stato possibile scrivere questo testo.
 Grazie a tutti!
 
-
 **In ordine alfabetico:**
 
 * [Matt     Aimonetti   ](http://merbist.com)

@@ -7,7 +7,7 @@
 applicazioni Merb.
 Cucumber è uno strumento che può eseguire specifiche di funzionalità scritte
 in testo semplice.
-Nel seguito un esempio tipico di una funzionalità (feature, NdT) in Cucumber: 
+Nel seguito un esempio tipico di una funzionalità (feature, NdT) in Cucumber:
 
     Feature: Login
       To ensure the safety of the application
@@ -86,6 +86,7 @@ vi fornirà dei suggerimenti su come implementare ogni passo.
 Ulteriori informazioni su come scrivere funzionalità in Cucumber posso essere
 consultate sul [wiki di Cucumber][].
 
+<!-- Links -->
 [Cucumber]:         http://github.com/aslakhellesoy/cucumber/wikis/home
 [merb\_cucumber]:   http://github.com/david/merb_cucumber/tree/master
 [Webrat]:           http://github.com/brynary/webrat/wikis
