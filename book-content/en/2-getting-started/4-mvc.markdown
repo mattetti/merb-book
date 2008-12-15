@@ -59,6 +59,8 @@ to keep their controllers as 'skinny' as possible
 by pushing code that does not directly relate to the request/response cycle
 (or the gathering of data) into the Model.
 
+
+<!-- Links -->
 [CakePHP]:              http://www.cakephp.org/
 [Controllers]:          /getting-started/controllers
 [Django]:               http://www.djangoproject.com/
