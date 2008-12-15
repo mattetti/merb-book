@@ -56,6 +56,7 @@ so this book can help the community as a whole.
 [Matt Aimonetti][], Merb Core team member
 
 
+<!-- Links -->
 [Apress]:           http://www.apress.com/
 [Beginning Merb]:   http://www.apress.com/book/view/9781430218234
 [DataMapper]:       http://datamapper.org/doku.php

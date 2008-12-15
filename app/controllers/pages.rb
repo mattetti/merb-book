@@ -20,12 +20,13 @@ class Pages < Application
   end
   
   private
-    # If no page name is being passed, the first page is being returned
+    # If no page name is passed, the first page is returned.
     def find_page_file(format="markdown")
+      base = "#{Merb.root}/book-content/#{language}/*-#{@chapter}"
       if @page_name
-        Dir["#{Merb.root}/book-content/#{language}/*-#{@chapter}/*-#{@page_name}.#{format}"].entries.first
+        Dir["#{base}/*-#{@page_name}.#{format}"].entries.first
       else
-        Dir["#{Merb.root}/book-content/#{language}/*-#{@chapter}/toc.#{format}"].entries.first
+        Dir["#{base}/toc.#{format}"].entries.first
       end
     end
     
