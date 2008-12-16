@@ -1,1 +1,1 @@
-#Database Schema
+#Schema del database

@@ -58,31 +58,35 @@ Windows users have a couple of options for installing Ruby and RubyGems.
 One way is to download the Ruby binaries, install them, and then install RubyGems.
 
 An alternative is to use the [One-Click Ruby Installer][]
-which comes packaged with RubyGems (as well as a few other things). If you use
-the One-Click Installer, make sure you check the 'Enable RubyGems' box in the
-install wizard.
+which (as well as a few other things) comes packaged with RubyGems.
+If you use the One-Click Installer,
+make sure you check the "Enable RubyGems" box in the install wizard.
 
 By default, it will install Ruby in the <tt>C:\Ruby</tt> directory.
 Once installed, do the following:
 
-Start --&gt; Programs --&gt; Ruby-&lt;version&gt; --&gt; RubyGems --&gt; RubyGems Package Manager
+Start --&gt; Programs --&gt; Ruby-&lt;version&gt;
+--&gt; RubyGems --&gt; RubyGems Package Manager
 
-This will open a command prompt in the <tt>C:\Ruby</tt> directory and display
-some usage information.  Then it's just a simple matter of installing Merb:
+This will open a command prompt in the <tt>C:\Ruby</tt> directory
+and display some usage information.
+Then it's just a simple matter of installing Merb:
 
     C:\Ruby> gem install merb
 
-This command might take a couple of minutes to run, since it must update the gem
-cache, fetch all Merb related gems and then install them.
+This command might take a couple of minutes to run,
+because it must update the gem cache, fetch all Merb-related gems,
+and then install them.
 
-_Note_: If you want to use SQLite database (which is the default), you must
-download and install it separately. More information can be found on the
-[SQLite][] site.
+_Note_: If you want to use SQLite database (which is the default),
+you must download and install it separately.
+More information can be found on the [SQLite][] site.
 
 
+<!-- Links -->
 [Apple developer website]:  http://developer.apple.com/technology/xcode.html
-[RubyGems]:                 http://www.rubygems.org/
-[Ubuntu]:                   http://www.ubuntu.com/
-[RedHat]:                   http://www.redhat.com/
 [One-Click Ruby Installer]: http://rubyinstaller.rubyforge.org/wiki/wiki.pl
+[RedHat]:                   http://www.redhat.com/
+[RubyGems]:                 http://www.rubygems.org/
 [SQLite]:                   http://www.sqlite.org/
+[Ubuntu]:                   http://www.ubuntu.com/

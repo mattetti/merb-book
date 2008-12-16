@@ -36,7 +36,7 @@
 	1. [Perché fare i test](/it/testing-your-application/why)
 	1. [Test dei vostri modelli](/it/testing-your-application/models)
 	1. [Test delle vostre richieste](/it/testing-your-application/requests)
-	1. [Test di integrazione con RSpec Cucumber](/it/testing-your-application/cucumber)
+	1. [Test di integrazione con Cucumber](/it/testing-your-application/cucumber)
 5. [Di più su Merb](/it/merb-more)
   1. [Autenticazione](/it/merb-more/authentication)
   1. [Mailer](/it/merb-more/mailer)

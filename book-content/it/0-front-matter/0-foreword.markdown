@@ -1,3 +1,3 @@
-## Prefazione di Yehuda Katz
+# Prefazione di Yehuda Katz
 
 Yehuda Katz, Merb lead developer
