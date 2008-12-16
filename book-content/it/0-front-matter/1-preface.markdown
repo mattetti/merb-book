@@ -27,9 +27,9 @@ ma come mi disse Jason Seifer ([RailsEnvy.com][]) dopo il rilascio della 1.0:
 Jason aveva ragione, la documentazione utente lasciava a desiderare.
 Ovviamente abbiamo a disposizione un [Merb wiki][] e diversi testi pubblicati,
 ma devo ammettere che guardando altri framework, come [Django][] ad esempio,
-l'intero core team era ben conscio che occorresse fare qualcosa. 
+l'intero core team era ben conscio che occorresse fare qualcosa.
 
-L'impegno di Ford su subito notato,
+L'impegno di Ford fu presto notato,
 e gli venne proposto un accordo per scrivere "[Beginning Merb][]" per [Apress][].
 Come potete immaginare,
 divenne troppo impegnativo per Matt scrivere un libro per un editore,
@@ -52,6 +52,7 @@ affinché questo testo possa essere d'aiuto a tutta la community.
 [Matt Aimonetti][], membro del team Merb Core
 
 
+<!-- Links -->
 [Apress]:           http://www.apress.com/
 [Beginning Merb]:   http://www.apress.com/book/view/9781430218234
 [DataMapper]:       http://datamapper.org/doku.php

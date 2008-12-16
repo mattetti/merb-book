@@ -3,7 +3,6 @@
 Senza i seguenti contributori non sarebbe stato possibile scrivere questo testo.
 Grazie a tutti!
 
-
 **In ordine alfabetico:**
 
 * [Matt     Aimonetti   ](http://merbist.com)
@@ -18,3 +17,4 @@ Grazie a tutti!
 * [Markus   Prinz       ](http://blog.nuclearsquid.com/)
 * [Foy      Savas       ](http://foysavas.com/)
 * [Kurt     Schrader    ](http://kurt.karmalab.org/)
+* [Arthur   Zapparoli   ](http://arthurgeek.net/)
