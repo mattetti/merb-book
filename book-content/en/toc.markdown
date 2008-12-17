@@ -44,6 +44,7 @@ frequently, **please consider helping improve the content of this book**.
   1. [Installation and setup](/interacting-with-the-database-sequel/setting-up)
   1. [Database Migrations](/interacting-with-the-database-sequel/migrations)
   1. [Data Retrieval and Manipulation](/interacting-with-the-database-sequel/data-retrieval-and-manipulation)
+  1. [Model Associations](/interacting-with-the-database-sequel/model-associations)
 1. [Testing your application](/testing-your-application)
   1. [Why test](/testing-your-application/why)
   1. [Testing your models](/testing-your-application/models)
