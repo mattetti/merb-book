@@ -23,4 +23,4 @@ By default, `merb-gen sequel-app` will generate a database.yml file that uses sq
 For more info, check out the [repository][].
 
 
-[repository]:       http://github.com/jackdempsey/merb-sequel-stack/watchers
+[repository]:       http://github.com/jackdempsey/merb-sequel-stack/tree
