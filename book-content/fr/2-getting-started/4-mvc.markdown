@@ -19,9 +19,9 @@ Ce chapitre discutera du framework en général;
 les 3 chapitres suivants analyseront chaque partie en détails.
 
 [Les Modèles][] sont le coeur du framework.
-Il sont responsable de la logique métier de votre application;
-dans Merb, ils sont le plus souvent associé aux accès à la base de donnée
-à travers d'un ORM comme DataMapper ou Active Record.
+Ils sont responsables de la logique métier de votre application;
+dans Merb, ils sont le plus souvent associés aux accès à la base de donnée
+à travers un ORM comme DataMapper ou Active Record.
 Parfois les Modèles ne sont rien de plus 
 qu'une enveloppe définissant une table de la base de donnée.
 Cependant, avoir des Modèles 'lourds' est généralement une bonne pratique.
@@ -30,7 +30,7 @@ les relations entre les données et les méthodes
 pour toute recherche ou manipulation de morceaux de données.
 
 [Les Vues][] sont la couche externe flashy de votre application.
-Les Vues sont responsable de la génération du contenu (HTML, XML, JSON)
+Les Vues sont responsables de la génération du contenu (HTML, XML, JSON)
 rendu par une requête.
 Le plus souvent, les Vues sont écrites dans un format de mise en page
 comme [Erb][] (embedded Ruby) ou [Haml][].
@@ -39,19 +39,19 @@ Les développeurs les plus sages tenteront de mettre le moins de code possible
 
 [Les Contrôleurs][] s'occupent de récupérer une requête entrante
 et de la transformer en une réponse.
-Il sont responsable de l'interprétation des requêtes entrantes,
+Ils sont responsables de l'interprétation des requêtes entrantes,
 en récupérant les instances des Modèles nécessaires,
 et en passant cette information vers la Vue.
 
 Dans une application Merb par défaut,
 le code pour toutes ces 3 parties se trouvent
-dans les dossier '``models``', '``views``' et '``controlleurs``',
+dans les dossiers '``models``', '``views``' et '``controlleurs``',
 à l'intérieur du dossier '``app``'.
 Dans les prochains chapitres, nous verrons comment Merb implémente chacune de ces pièces.
 
-Les utilisateurs débutant sont souvent tentés d'ajouter beaucoup de code dans la couche contrôleur,
+Les utilisateurs débutants sont souvent tentés d'ajouter beaucoup de code dans la couche contrôleur,
 mais cela se termine avec un code fragile est difficile à tester.
-A la place, il est conseiller aux développeurs
+A la place, il est conseillé aux développeurs
 de garder leurs contrôleurs le plus 'maigre' possible,
 en poussant le code qui ne se rapporte directement pas au cycle requête/réponse
 (ou la récupération de donnée) dans le Modèle.

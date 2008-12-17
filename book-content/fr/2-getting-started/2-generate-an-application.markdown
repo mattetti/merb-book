@@ -3,10 +3,10 @@
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-Merb est fourni avec un créateur (``merb-gen``)
+Merb est fourni avec un générateur (``merb-gen``)
 afin de créer des applications Merb.
-Le créateur peut générer différents types d'application Merb;
-pour voir toutes les options disponibles du créateur, saisissez:
+Le générateur peut générer différents types d'application Merb;
+pour voir toutes les options disponibles du générateur, saisissez:
 
     $ merb-gen -h
 {:lang=shell html_use_syntax=true}

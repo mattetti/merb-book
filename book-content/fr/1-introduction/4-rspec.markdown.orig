@@ -22,7 +22,19 @@ sur la façon dont votre application Ruby doit se comporter[^rspec]:
 A l'origine, BDD n'était qu'une discussion entre [Aslak Hellesøy][] et [Dan North][]
 dans les bureaux londoniens de [ThoughtWorks][].
 [Dave Astels][] s'est joint à la conversation avec un article dans son blog disant qu'il pensait
+<<<<<<< HEAD:book-content/fr/1-introduction/4-rspec.markdown
+=======
+<<<<<<< HEAD:book-content/fr/1-introduction/4-rspec.markdown
+que ces idées pouvaient être facilement implentées en [Smalltalk][] ou [Ruby][].
+[Steven Baker][] a expérimenté une implémentation initiales, a sorti
+=======
+>>>>>>> alx/french:book-content/fr/1-introduction/4-rspec.markdown
+que ces idées pouvaient être facilement implémentées en [Smalltalk][] ou [Ruby][].
 [Steven Baker][] a expérimenté une première implémentation, et a sorti
+<<<<<<< HEAD:book-content/fr/1-introduction/4-rspec.markdown
+=======
+>>>>>>> fde551d887b4c20b1d15e559e3ca5b732e044c76:book-content/fr/1-introduction/4-rspec.markdown
+>>>>>>> alx/french:book-content/fr/1-introduction/4-rspec.markdown
 RSpec 0.1. Plus tard en 2006, la maintenance a été donnée à [David Chelimsky][].[^rspec-history]
 
 
