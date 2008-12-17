@@ -494,7 +494,7 @@ While we cannot anticipate all circumstances,
 the need to use more then two or three Model methods is often a sign
 that more functionality needs to be added to the Model layer.
 If the same Model class is being called repeatedly,
-moving that login (???) into a new method for that class
+moving that login <!-- (???) --> into a new method for that class
 is a good way to refactor.
 When more then two or three Model classes are needed by a controller,
 ether rework the controller to match your models more closely,

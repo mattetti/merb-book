@@ -93,7 +93,7 @@ By the time a request reaches the controller, Merb has:
 * Set up access to request cookies and the current session.
 
 The developer can use any of this information to route the request.
-Please see the chapter on routing (???) for more information.
+Please see the chapter on routing <!-- (???) --> for more information.
 
 ## Controller Action
 
