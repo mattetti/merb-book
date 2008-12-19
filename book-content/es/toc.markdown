@@ -33,7 +33,7 @@
    1. [Camino de una petición (Request path)](/es/getting-started/request-path)
    1. [Enrutador (Router)](/es/getting-started/router)
 3. [Interactuando con la base de datos](/es/interacting-with-the-database)
-   1. [Configurando la conexión a la base de datos][]
+   1. [Configurando la conexion a la base de datos][]
    1. [Esquema de la base de datos](/es/interacting-with-the-database/dm-schema)
    1. [Consultas a la base de datos][]
    1. [Relaciones entre Modelos][]
@@ -66,12 +66,10 @@
   1. [ Gemas útiles](/es/appendix/gems)
 {: #appendices}
 
-[Configurando la conexión a la base de datos]:
-    /es/interacting-with-the-database/dm-setting-up
+[Configurando la conexion a la base de datos]:/es/interacting-with-the-database/dm-setting-up
 [Consultas a la base de datos]:/es/interacting-with-the-database/dm-queries
 [Instrucciones para la instalación]:/es/getting-started/install-instructions
 [Migraciones a la base de datos]:/es/interacting-with-the-database/dm-migrations
-[Pruebas de Integración con RSpec Cucumber]:
-    /es/testing-your-application/cucumber
+[Pruebas de Integración con RSpec Cucumber]:/es/testing-your-application/cucumber
 [Relaciones entre Modelos]: /es/interacting-with-the-database/dm-relationships
 [Validaciones de los Modelos]:/es/interacting-with-the-database/dm-validations
