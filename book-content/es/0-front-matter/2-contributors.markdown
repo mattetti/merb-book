@@ -1,6 +1,7 @@
 # Colaboradores
 
-Sin la ayuda de los siguientes colaboradores este libro no hubiese sido posible. Gracias a todos!
+Sin la ayuda de los siguientes colaboradores este libro no hubiese sido posible.
+Gracias a todos!
 
 **En order alfabético:**
 
