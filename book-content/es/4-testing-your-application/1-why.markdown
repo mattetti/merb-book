@@ -1,10 +1,21 @@
-#Why test
-There are many parts of the application which you can test to ensure that you minimize the chances of regression.
+#¿Por qué hacer tests?
 
-## Parts
+* Esto será una tabla de contenidos (este texto será pegado).
+{:toc}
 
-### Models
+Es importante testear o probar tus aplicaciones para asegurarte que minimizas las posibilidades
+de introducir errores [regression][].
+El framework de pruebas predeterminado de Merb utiliza el framework de pruebas [RSpec][] y una combinación de
+especificaciones de modelos (model specs), de peticiones (request specs) y de integración (integration specs).
 
-### Request
+## Tipos de pruebas (tests)
 
-### Integration tests
+### Modelos
+
+### Peticiones (Requests)
+
+### Integración
+
+
+[regression]:         http://en.wikipedia.org/wiki/Software_regression
+[RSpec]:              http://rspec.info/
