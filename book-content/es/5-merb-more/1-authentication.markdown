@@ -3,16 +3,17 @@
 * Esto será una tabla de contenidos (este texto será pegado).
 {:toc}
 
-> Las responsabilidades de un sistema de Autenticación son probar que la identidad que un usuario proclama
-> es realmente su identidad real. Hay un buen numero de enfoques que un
-> sistema de Autenticación puede utilizar para ello, incluyendo hosts de confianza,
-> verificación de contraseñas, redes de confianza (como 'OpenId').
-> Despues de que la verificación ha ocurrido, las responsabilidades  del sitema de Autenticación 
-> han terminado. 
+> La responsabilidad de un sistema de Autenticación es probar que la identidad
+> que un usuario proclama es en efecto su identidad real. Hay un buen número de
+> enfoques que un sistema de Autenticación puede utilizar para ello, incluyendo
+> hosts de confianza, verificación de contraseñas, redes de confianza (como
+> 'OpenId').
+> Después de que la verificación ha ocurrido, las responsabilidades  del sistema
+> de Autenticación han terminado.
 > [Adam French][]{: .quote-author}
 {: cite=http://adam.speaksoutofturn.com/post/57615195/entication-vs-orization .lead-quote}
 
-## Gemas Merb-auth 
+## Gemas de  Merb-auth
 
 [merb-auth][] es una meta-gema.
 Una meta-gema es una gema de Ruby sin ningún código.
@@ -25,8 +26,8 @@ A partir de Merb 1.0.x merb-auth usa 3 gemas:
 
 ### merb-auth-core
 
-[merb-auth-core][] no intenta imponer que modelo de usuario deberías utilizar,
-o como debería autenticarse.
+[merb-auth-core][] no intenta imponer qué modelo de usuario deberías utilizar,
+o como deberías hacer la autenticación.
 En lugar de ello se centra en la lógica necesaria para comprobar que un objeto
 pasa la autenticación, y en almacenar las claves de los objetos autenticados
 durante la sesión.
@@ -35,27 +36,36 @@ Este es de hecho el principio guía de MerbAuth.
 La Sesión es usada como lugar para la autenticación,
 con un número de métodos de ayuda (helpers) de controlador.
 
-Puedes elegir proteger una acción de un controlador, o una ruta o grupos de rutas.
-Esta es la razón por la que puedes oir a la gente referirse a una sesión autenticada.
+Puedes elegir proteger una acción de un controlador, o una ruta o grupos de
+rutas.
+Esta es la razón por la que puedes oir a la gente referirse a una sesión
+autenticada.
 
 MerbAuth utiliza las facilidades de gestión de excepciones de Merb que devuelven
 códigos de estado HTTP correctos.
-Para que falle el acceso, o para forzar un inicio de sesión en cualquier punto del código del controlador,
-simplemente genera una ``Unauthenticated`` excepción, con un mensaje opcional
+Para que falle el acceso, o para forzar un inicio de sesión en cualquier punto
+del código del controlador,
+simplemente genera una excepción ``Unauthenticated``, con un mensaje opcional
 y al usuario se le presentará la página de inicio de sesión.
-Esta página de inicio de sesión es de hecho la plantilla de la vista para ``Extensions#unauthenticated``.
+Esta página de inicio de sesión es de hecho la plantilla de la vista para
+``Extensions#unauthenticated``.
 
 Es posible utilizar MerbAuth con cualquier objeto como objeto usuario,
 siempre y cuando el valor de ese objeto no sea 'false' y pueda
-ser serializado hacia y desde la sesión. 
+ser serializado hacia y desde la sesión.
 
-Por ultimo, merb-auth es muy potente principalmente por su capacidad de encadenar estrategias.
-Puedes añadir tantas estrategias como quieras y seran intentadas una tras otra hasta encontrar
-finalmente una que funcione (acceso), o descubrir que ho ha pasado ninguna (intento fallido).
+Por ultimo, merb-auth es muy potente principalmente por su capacidad de
+"encadenar estrategias".
+Puedes añadir tantas estrategias como quieras y serán intentadas una tras otra
+hasta encontrar finalmente una que funcione (acceso), o descubrir que no ha
+sido exitosa ninguna (intento fallido).
 
-Una estrategia de autenticación es simplemente una forma de autenticar una solicitud (request).
+Una estrategia de autenticación es simplemente una forma de autenticar una
+solicitud (request).
 Ejemplos de estrategías serían:
-* Salted user (el usuario inicia sesión con su password utilizando una encriptación "salada")
+
+* Salted user (el usuario inicia sesión con su password utilizando una
+encriptación "salada")
 * OpenID
 * API key/token
 * Autenticación básica HTTP
@@ -63,12 +73,14 @@ Ejemplos de estrategías serían:
 
 ### merb-auth-more
 
-[merb-auth-more][] añada característcas extras a merb-auth-core.
+[merb-auth-more][] añade característcas extras a merb-auth-core.
 La gema ofrece una serie de estrategias genéricas y mixins para el objeto "User"
 
 Estrategias:
-* login or email password form (aka password\_form)
-* basic HTTP authentication (aka basic\_auth)
+
+* formulario de usuario o email y contraseña (también conocida como
+password\_form)
+* autenticación básica HTTP (también conocida como basic\_auth)
 * OpenID
 
 
@@ -78,29 +90,33 @@ Mixins:
 * 'salted user' para relaxdb
 * 'salted user' para sequel
 
-El módulo mixin 'salted user' proporciona autenticación básica con password encriptado SHA1 'salted'.
-Implementa el método requerido User.authenticate para ser usado con
-las estrategias de password predeterminadas.
-{: .to-translate}
+El módulo mixin 'salted user' proporciona autenticación básica con contraseña
+'salada' SHA1.
+El módulo implementa el método requerido User.authenticate para ser usado con
+las estrategias de contraseña predeterminadas.
 
 ### merb-auth-slice-password
 
-[merb-auth-slice-password][] es una 'Merb slice' muy sencilla.
-La slice proporcionará a los desarrolladore con unas funciones de inicio y final de sesión basicas.
-Por defecto también incluirá la autenticación basada en formularios y la autenticación básica.
+[merb-auth-slice-password][] es un slice de Merb muy sencillo.
+El slice proporcionará a los desarrolladores funcionalidades básicas de inicio y
+fin de sesión.
+Por defecto también incluirá la autenticación basada en formularios y la
+autenticación básica.
 
-Por defecto la slice cargará las estrategias de autorización básica y la basada en formularios.
+Por defecto la slice cargará las estrategias ``password\_form``
+y ``basic\_auth``.
 
-Vistas y estrategias pueden ser personalizadas como se se explica en el
+Las vistas y estrategias pueden ser personalizadas como se se explica en el
 ejemplo 'Hola Mundo - Autenticado'
 
 
 ## Autenticación en Merb Stack
 
-Cuando generas una aplicación con la pila predeterminadas de merb[^merb-stack-app],
-merb-auth esta ya configurada para la utilización normal.
+Cuando generas una aplicación con la pila predeterminada de
+merb[^merb-stack-app],
+merb-auth está ya configurada para ser utilizada normalmente.
 
-Si no quieres utilizarla, simplemente comenta la dependencia en merb-auth en 
+Si no quieres utilizarla, simplemente comenta la dependencia de merb-auth en
 config/dependencies.rb
 
 
@@ -116,7 +132,7 @@ El primer paso es generar la aplicación utilizando la pila Merb.
 {:lang=shell html_use_syntax=true}
 
 Esto genera una aplicación vacia, con la autenticación ya configurada.
-Los elemento básicos son:
+Los elementos básicos son:
 
     app/models/user.rb
 
@@ -124,9 +140,9 @@ Los elemento básicos son:
     merb/merb-auth/strategies.rb
 {:lang=ruby html_use_syntax=true}
 
-La configuración de la autenticación de usuarios se preocupará por defecto de 
-la utilización del login y el password 
-Por supuesto tienes que configurar la base de datos y añadir el usuario antes.
+La configuración de la autenticación de usuarios por defecto es proveida usando
+usuario y contraseña.
+Por supuesto antes tienes que configurar la base de datos y añadir un usuario.
 
 
     $ rake db:automigrate
@@ -139,7 +155,7 @@ Por supuesto tienes que configurar la base de datos y añadir el usuario antes.
 
 ### Generar algo que proteger
 
-Ahora tenemos una aplicación, y un usuario, necesitamos algo que proteger.
+Ahora que tenemos una aplicación y un usuario, necesitamos algo que proteger.
 
     $ merb-gen controller hello_world
 {:lang=ruby html_use_syntax=true}
@@ -148,21 +164,22 @@ Pongamos algo en el controlador.
 
     class HelloWorld < Application
       def index
-        "Hello World"
+        "Hola mundo"
       end
     end
 {:lang=ruby html_use_syntax=true}
 
 Si inicias el merb ahora y vas a <http://localhost:4000/hello_world>
-veras los resultados "Hello world".
+verás que devuelve "Hola mundo".
 
 ### Proteger la ruta
 
-Todavía no esta protegido, así que arreglemoslo.
-Podemos o protegerlo en las rutas en config/router.rb o en la acción del controlador.
+Todavía no está protegido, así que arreglemoslo.
+Podemos o protegerlo en las rutas en ``config/router.rb`` o en la acción del
+controlador.
 Tomemos primero la opción del router.
 
-Abre para editar config/router.rb
+Abre para editar ``config/router.rb``:
 
     Merb::Router.prepare do
       authenticate do
@@ -171,18 +188,19 @@ Abre para editar config/router.rb
     end
 {:lang=ruby html_use_syntax=true}
 
-Esto causará que el usuario tenga que iniciar sesión
-Esto es descubierto en el "router" y cuando falla, para en el router.
+Esto causará que el usuario tenga que iniciar sesión.
+Esto es descubierto en el enrutador (router) y cuando falla, se detiene allí. (???)
 Intenta acceder a <http://localhost:4000/hello_world> ahora.
-Verás que necesitas iniciar sesión para acceder alli.
+¡Verás que necesitas iniciar sesión para acceder!
 
-Bien!.  Logout, <http://localhost:4000/logout>
+Bien.  Termina la sesión usando <http://localhost:4000/logout>
 
 
 ### Proteger el controlador
 
-Ahora quitemos el codigo del 'router', y pongamos la protección an el controlador.
-Esto permitirá por ejemplo un control mas fino sobre los recursos.
+Ahora quitemos el codigo del router, y pongamos la protección en el
+controlador.
+Esto permitirá por ejemplo un control más fino sobre los recursos.
 
 
     Merb::Router.prepare do
@@ -190,21 +208,21 @@ Esto permitirá por ejemplo un control mas fino sobre los recursos.
     end
 {:lang=ruby html_use_syntax=true}
 
-Pongamolo ahora dento del controlador:
+Pongámoslo ahora dentro del controlador:
 
     class HelloWorld < Application
 
       before :ensure_authenticated
 
       def index
-        "Hello World"
+        "Hola mundo"
       end
 
     end
 {:lang=ruby html_use_syntax=true}
 
 
-Para acceder al usuario actualmente logueado/logado desde el controlador usa:
+Para acceder al usuario conectado actualmente desde el controlador usa:
 
     session.user
 {:lang=ruby html_use_syntax=true}
@@ -214,30 +232,29 @@ Realmente... Para una autenticación básica "Hola Mundo", esto es todo.
 
 ### Sobrescribir las vistas predeterminadas
 
-Si necesitas mas personalización, puedes hacer:
+Si necesitas más personalización, puedes hacer:
 
 
     rake slices:merb-auth-slice-password:freeze:views
 {:lang=ruby html_use_syntax=true}
 
-Lo que esto hará es copiar las vistas desde la slice a la carpeta /slices/ de
+Lo que esto hará es copiar las vistas desde la slice a la carpeta ``slices`` de
 tu aplicación.
 
-Entonces solo necesitas copiar o mover las plantillas a tu carpeta /views/.
-Modificar las plantillas copiadas a /app/views/ debería ahora ser considerado. 
-
-
+Entonces solo necesitas copiar o mover las plantillas a tu carpeta ``app/views``
+y editarlas.
 
 
 [^merb-stack-app]: merb-gen app hello\_world
 
 ## Probando un solicitud autenticada
 
-Para probar una solicitud que necesita ser autenticada, necesitarás primero iniciar la sesión.
-La forma mas fácil de iniciar la sesión cuando estas ejecutando una especificacion (spec) es 
-utilizar un metodo helper.
+Para probar una solicitud que necesita ser autenticada, necesitarás primero
+iniciar la sesión.
+La forma mas fácil de iniciar la sesión cuando estás ejecutando una
+especificación (spec) es utilizar un método helper.
 
-Aquí tenemos un ejemplo de dos 'helpers' añadidos a /spec/spec\_helper.rb
+Aquí tenemos un ejemplo de dos 'helpers' añadidos a ``spec/spec\_helper.rb``.
 
     Merb::Test.add_helpers do
 
@@ -245,7 +262,7 @@ Aquí tenemos un ejemplo de dos 'helpers' añadidos a /spec/spec\_helper.rb
         unless User.first(:login => "krusty")
           User.create( :login => "krusty",
                        :password => "klown",
-                       :password_confirmation => "klown") or raise "can't create user"
+                       :password_confirmation => "klown") or raise "no puedo crear usuario"
         end
       end
 
@@ -263,12 +280,13 @@ Aquí tenemos un ejemplo de dos 'helpers' añadidos a /spec/spec\_helper.rb
     end
 {:lang=ruby html_use_syntax=true}
 
-El primer helper crea un usuario preseterminado a menos que ya exista.
-El segundo helper envia una solicitud de inicio de sesión utilizando los atributos del usuario predeterminado.
+El primer helper crea un usuario predeterminado a menos que ya exista.
+El segundo helper envía una solicitud de inicio de sesión utilizando los
+atributos del usuario predeterminado.
 Observa que la acción de inicio de sesión (login) utiliza el verbo PUT de HTTP.
 
-
-Ahora que has añadido estos 'helpers', solo necesitas modificar ligeramente tus ejemplos:
+Ahora que has añadido estos 'helpers', solo necesitas modificar ligeramente tus
+ejemplos:
 
     before(:each) do
       login
@@ -276,7 +294,8 @@ Ahora que has añadido estos 'helpers', solo necesitas modificar ligeramente tus
     end
 {:lang=ruby html_use_syntax=true}
 
-En el ejemplo anterior, la solicitud enviada a la URI de articulos será autenticada.
+En el ejemplo anterior, la solicitud enviada a la URI de articulos será
+autenticada.
 
 [Adam French]:      <http://adam.speaksoutofturn.com>
 [merb-auth]:        <http://github.com/wycats/merb/tree/master/merb-auth>
