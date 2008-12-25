@@ -1,1 +1,0 @@
-# JRuby and Glassfish

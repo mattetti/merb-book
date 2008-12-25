@@ -1,1 +1,0 @@
-# Hints and Tips
