@@ -1,46 +1,120 @@
-
 class String
   def end_with?(s)
     self[-s.length..-1] == s
   end
+  def start_with?(prefix)
+    self[0...prefix.length] == prefix
+  end
 end
 
-en_dir = "../en"
+def File.write(filepath, content)
+  File.open(filepath, 'w') {|f| f.write(content) }
+end
 
-task "copy" do
+def _debug(str)
+  $stderr.puts "*** debug: #{str}" if ENV['DEBUG']
+end
 
-  Dir.glob("#{en_dir}/**/*").sort.each do |orig_path|
-    trans_path = orig_path[(en_dir.length+1)..-1]
-    #$stderr.puts "*** debug: trans_path=#{trans_path.inspect}"
-    if File.directory?(orig_path)
-      #$stderr.puts "*** debug: dir: trans_path=#{trans_path.inspect}"
-      dir = trans_path
-      Dir.mkdir(dir) unless File.directory?(dir)
-    elsif File.file?(orig_path)
-      #$stderr.puts "*** debug: file: trans_path=#{trans_path.inspect}"
-      s = File.open(orig_path) {|f| f.read }
-      File.open(trans_path + '.org', 'w') {|f| f.write(s) }
-      #s = s.gsub(/^(?!$|<div id=".*">$|<\/div>$)/, ".EN\t")
-      s = s.gsub(/^(?=.)/, ".EN\t")
-      File.open(trans_path + '.en', 'w') {|f| f.write(s) }
+def mark_en(str); str.gsub(/^(?=.)/, ".EN\t"); end
+def mark_jp(str); str.gsub(/^(?=.)/, ".JP\t"); end
+
+def unmark_en(str); str.gsub(/^\.EN\t/, ""); end
+def unmark_jp(str); str.gsub(/^\.JP\t/, ""); end
+
+def remove_en(str); str.gsub(/^\.EN\t.*\n/, ''); end
+def remove_jp(str); str.gsub(/^\.JP\t.*\n/, ''); end
+
+EN_DIR = "../en"
+
+#desc "copy original file as *.orig"
+#task :orig do |t|
+#  Dir.glob("#{EN_DIR}/**/*").sort.each do |en_path|
+#    orig_path = en_path[(EN_DIR.length+1)..-1]
+#    _debug "en_path=#{en_path.inspect}"
+#    _debug "orig_path=#{orig_path.inspect}"
+#    if File.directory?(en_path)
+#      mkdir orig_path unless File.exist?(orig_path)
+#    elsif File.file?(en_path)
+#      cp en_path, orig_path
+#    else
+#      raise "#{en_path}: not file nor directory."
+#    end
+#  end
+#end
+#
+#desc "add '.EN' preifx and save as *.mark"
+#task :mark do |t|
+#  Dir.glob("**/*.orig") do |orig_path|
+#    mark_path = orig_path.sub(/\.orig\z/, '.mark')
+#    s = File.read(orig_path)
+#    File.write(mark_path, mark_en(s))
+#  end
+#end
+#
+#desc "create japanese content from *.trans files."
+#task :generate do |t|
+#  Dir.glob("**/*.trans").sort.each do |trans_path|
+#    jp_path = trans_path.sub(/\.trans\z/, '')
+#    s = File.read(trans_path)
+#    File.write(jp_path, unmark_jp(remove_en(s)))
+#  end
+#end
+
+## usage1:  rake trans F=../en/path/to/file.markdown   # create *.trans
+## usage2:  rake trans F=path/to/file.markdown         # create *.trans
+## usage3:  rake trans                                 # create all *.trans
+desc "add '.EN' prefix and save as '*.trans' file."
+task :trans do |t|
+  filepath = ENV['F']
+  filepaths = filepath ? filepath : Dir.glob("#{EN_DIR}/**/*.markdown")
+  filepaths.each do |filepath|
+    basepath = filepath.sub(/\.trans\z/, '')
+    if basepath.start_with?(EN_DIR)
+      basepath = basepath[(EN_DIR.length+1)..-1]
+    end
+    en_path = File.join(EN_DIR, basepath)
+    trans_path = basepath + '.trans'
+    create_p = true
+    if File.exist?(trans_path) && File.read(trans_path) =~ /^\.JP\t/
+      puts "** #{trans_path}: already has JP contents. skipped."
+    else
+      puts "[create] #{trans_path}"
+      s = File.read(en_path)
+      File.write(trans_path, mark_en(s))
     end
   end
-
 end
 
 
-require 'fileutils'
-
-task "generate" do
-
-  Dir.glob("**/*.jp").sort.each do |trans_path|
-    dir = File.dirname(trans_path)
-    FileUtils.mkdir_p(dir) if !File.directory?(dir)
-    s = File.open(trans_path) {|f| f.read }
-    s = s.gsub(/^\.EN\t.*\n/, '').gsub(/^\.JP\t/, '')
-    #s = s.gsub(/^\.EN\t?\n/, "\n").gsub(/^\.EN\t.*\n/, '').gsub(/^\.JP\t/, '')
-    dist_path = trans_path.sub(/\.jp$/, '')
-    File.open(dist_path, 'w') {|f| f.write(s) }
+## usage1: rake diff F=path/to/file.markdown.trans  # for a *.trans file
+## usage2: rake diff                                # for all *.trans
+desc "show diff between *.trans and original (optional: F=filename)"
+task :diff do |t|
+  filepath = ENV['F']
+  filepaths = filepath ? [filepath] : Dir.glob("**/*.trans")
+  filepaths.each do |filepath|
+    basepath = filepath.sub(/\.(mark|trans)\z/, '')
+    trans_p = $1 == 'trans' || $1.nil?
+    mark_p  = $1 == 'mark'
+    en_path = File.join(EN_DIR, basepath)
+    tmp_path  = filepath + '.tmp'
+    s = File.read(filepath)
+    if trans_p
+      s = unmark_en(remove_jp(s))
+    elsif mark_p
+      s = unmark_en(s)
+    else
+      raise "*** unreachable"
+    end
+    if s != File.read(en_path)
+      begin
+        File.write(tmp_path, unmark_en(s))
+        command = ['diff', '-u', tmp_path, en_path]
+        $stdout.puts command.join(' ')
+        system *command
+      ensure
+        File.unlink(tmp_path) if File.exist?(tmp_path)
+      end
+    end
   end
-
 end
