@@ -1,0 +1,98 @@
+.EN	# Preface
+.JP	# 前書き
+
+.EN	Way back when, there was no Merb stack, no locked API,
+.EN	no organized documentation, and the code base was changing often.
+.EN	So, [Matthew Ford][] decided to work on an [Open Source][] book
+.EN	with a simple goal:
+.EN	help courageous Rubyists who wanted to live on the edge
+.EN	and had decided to try Merb, [DataMapper][], and [RSpec][].
+.JP	かつては、Merb スタックがなく、決まった API もなく、系統的なドキュメントもなく、コードベースも頻繁に変更されていました。
+.JP	そのため、[Matthew Ford][] は [Open Source][] で本を書くことに決めました。
+.JP	そのときのゴールはひとつ: Merb の最新版を使ってみたいという勇気ある Rubyist に、Merb と [DataMapper][] と [RSpec][] を使うための手助けをすることです。
+
+.EN	Since then, Merb matured a lot, getting up and running became way easier
+.EN	and Merb decided to offer an **opinionated** version of the stack
+.EN	using Merb, DataMapper, and RSpec!
+.JP	それからは、Merb はたいへん成熟し、起動して実行するのは簡単になり、Merb と DataMapper と RSpec を使ったスタックを提供するようになりました。
+.JP	これは、 **自分の意見を持った(opinionated)** バージョンのスタックを Merb でも提供することに決定されたためです。
+
+.EN	As an early Merb developer myself,
+.EN	I really enjoyed having access to Matt's book
+.EN	and I even contributed to the early version of the book.
+.EN	Since then, I joined the Merb team;
+.EN	with the rest of them, I focused on the big 1.0 release.
+.EN	We did this (successfully!) in two steps:
+.EN	the first Release Candidate during [MerbCamp 2008][]
+.EN	and the 1.0 final during [RubyConf 2008][].
+.JP	私自身、初期の Merb 開発者として、Matt の本に触れることは本当に楽しかったですし、私も本の初期のバージョンに寄稿しました。
+.JP	それからは、私は Merb チームに参加しています;
+.JP	他のみんなと共に、私は偉大なる 1.0 リリースに向けて注力しました。
+.JP	私たちは 2 段階でそれをやり遂げました (成功裏に!):
+.JP	[MerbCamp 2008][] での最初のリリース候補と、[RubyConf 2008][] 期間中にリリースした 1.0 完成版です。
+
+.EN	Having a wonderful framework is great,
+.EN	but as Jason Seifer from [RailsEnvy.com][] said to me after 1.0 was released:
+.JP	素晴らしいフレームワークを持つことは大事ですが、1.0 のリリース後、[RailsEnvy.com][] の Jason Seifer は私にこう語ってくれました:
+
+.EN	> Merb has some awesome code documentation, the code is so easy to read,
+.EN	> but the user documentation is still lacking.
+.JP	> Merb にはすごいコードドキュメントがあるし、コードはすごく読みやすい。
+.JP	> けどユーザドキュメントが欠けている。
+
+.EN	Jason was right; our user documentation was not that great.
+.EN	Of course, we have the [Merb wiki][] and a bunch of books available out there,
+.EN	but I have to say that looking at other frameworks such as [Django][],
+.EN	the entire core team knew we had to do something.
+.JP	Jason の言うことは正しかったです; 私たちのユーザドキュメントはそう大したものではありませんでした。
+.JP	もちろん、[wiki][] を用意してますし、本も何冊か出版されます。
+.JP	しかし [Django][] のような他のフレームワークを見たときに、コアチームのみんなが、何かしなければならないということを知りました。
+
+.EN	Ford's efforts were noticed early on
+.EN	and he was offered a deal to write [Beginning Merb][] for [Apress][].
+.EN	As you can imagine,
+.EN	it became a bit hard for Matt to write a book for a publisher,
+.EN	have a full time job, contribute to various Open Source projects,
+.EN	keep up with Merb,
+.EN	and finally make sure the open source book he started a while back
+.EN	would stay up to date.
+.EN	On top of that, many things changed pre-1.0
+.EN	and a good part of the existing content needed a full rewrite.
+.JP	Ford の尽力は初期の頃から知られていましたし、[Apress][] から [Beginning Merb][] という本を出す取引を受けていました。
+.JP	ご想像の通り、Matt にとって、出版用の本を書き、フルタイムの仕事を持ち、さまざまなオープンソースプロジェクトに参加し、Merb に追従し、そしてしばらく前に彼が始めたオープンソースの本を最新版に保つのは、少々重荷になりました。
+.JP	それに加え、pre-1.0 では数多くの変更がなされ、既存の内容のうちかなりの部分は完全に書き直す必要がありました。
+
+.EN	That's why the Merb team decided it was time to get involved
+.EN	and to get the community focused on a centralized, user-oriented book.
+.JP	これが、一元管理されたユーザ指向の本を作るためのコミュニティを形成し自ら参加するべき時が来たと、Merb チームが決断した理由です。〔訳注: ???〕
+
+.EN	I am really glad that the Merb team decided
+.EN	to take responsibility for this book
+.EN	and that we will make sure it stays well organized, up to date, and relevant.
+.EN	However, this book, very much like Merb,
+.EN	won't grow and evolve much without the community's help.
+.EN	So, please, send us corrections, new examples, and new chapters,
+.EN	so this book can help the community as a whole.
+.JP	筆者は、Merb チームがこの本に対して責任を持つと決め、また我々がその本をうまくまとめ、最新版に更新し、適切な内容にするつもりであることを嬉しく思います。
+.JP	しかし、この本はちょうと Merb と同じように、コミュニティの助けなしでは成長し発展することはありません。
+.JP	ですので、この本が総じてコミュニティの助けになるよう、訂正や、新しい例や節をぜひ我々に送ってください。
+
+.EN	[Matt Aimonetti][], Merb Core team member
+.JP	[Matt Aimonetti][], Merb コアチームメンバー
+
+
+[Apress]:           http://www.apress.com/
+[Beginning Merb]:   http://www.apress.com/book/view/9781430218234
+[DataMapper]:       http://datamapper.org/doku.php
+[Django]:           http://www.djangobook.com/
+[Matt Aimonetti]:   http://merbist.com
+[Matthew Ford]:     http://github.com/deimos1986
+[MerbCamp 2008]:    http://merbcamp.com
+[Open Source]:      http://en.wikipedia.org/wiki/Open_Source
+[RailsEnvy.com]:    http://railsenvy.com
+[RSpec]:            http://rspec.info
+[RubyConf 2008]:    http://rubyconf.org
+[Merb wiki]:        http://wiki.merbivore.com
+
+
+
