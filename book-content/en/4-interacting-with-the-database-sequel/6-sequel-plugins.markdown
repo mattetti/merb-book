@@ -58,6 +58,23 @@ This will create a transparent polymorphic relationship between the Note and its
 
 Here's the [sequel\_polymorphic source][].
 
+###sequel\_taggable
+
+Sequel taggable is another plugin developed by Jack Dempsey while working with Merb.
+It just adds simple tagging methods to a model.
+As of right now, there are no tasks with the plugin to generate a Tag table.
+There is, however, a migration included in the plugin source.
+
+    class Article < Sequel::Model
+      is :taggable
+    end
+    
+    a = Article.create(:title => "My first article")
+    t = Tag.create(:name => "a tag")
+    a.add_tag(t)
+
+Here's the [sequel\_taggable source][].
+
 [sequel_timestamped source]:    http://github.com/bricooke/sequel_timestamped/tree/master
 
 [sequel_notnaughty source]:     http://github.com/boof/sequel_notnaughty/tree/master
@@ -65,3 +82,5 @@ Here's the [sequel\_polymorphic source][].
 [not-naughty source]:           http://github.com/boof/not-naughty/tree/master
 
 [sequel_polymorphic source]:    http://github.com/jackdempsey/sequel_polymorphic/tree/master
+
+[sequel_taggable source]: http://github.com/jackdempsey/sequel_taggable/tree/master
