@@ -1,5 +1,5 @@
-.EN	## Foreword
-.JP	## 序文
+.EN	# Foreword
+.JP	# 序文
 
 .EN	By Yehuda Katz, Merb lead developer
 .JP	Yehuda Katz (Merb 主任開発者)
