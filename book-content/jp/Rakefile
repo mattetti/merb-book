@@ -93,22 +93,15 @@ task :diff do |t|
   filepath = ENV['F']
   filepaths = filepath ? [filepath] : Dir.glob("**/*.trans")
   filepaths.each do |filepath|
-    basepath = filepath.sub(/\.(mark|trans)\z/, '')
-    trans_p = $1 == 'trans' || $1.nil?
-    mark_p  = $1 == 'mark'
-    en_path = File.join(EN_DIR, basepath)
-    tmp_path  = filepath + '.tmp'
-    s = File.read(filepath)
-    if trans_p
-      s = unmark_en(remove_jp(s))
-    elsif mark_p
-      s = unmark_en(s)
-    else
-      raise "*** unreachable"
-    end
+    trans_path = filepath
+    trans_path += '.trans' unless trans_path.end_with?('.trans')
+    en_path = File.join(EN_DIR, trans_path.sub(/\.trans\z/, ''))
+    tmp_path = trans_path + '.EN'
+    s = File.read(trans_path)
+    s = unmark_en(remove_jp(s))
     if s != File.read(en_path)
       begin
-        File.write(tmp_path, unmark_en(s))
+        File.write(tmp_path, s)
         command = ['diff', '-u', tmp_path, en_path]
         $stdout.puts command.join(' ')
         system *command
