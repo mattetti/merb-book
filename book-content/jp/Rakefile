@@ -80,6 +80,8 @@ task :trans do |t|
     else
       puts "[create] #{trans_path}"
       s = File.read(en_path)
+      dir = File.dirname(trans_path)
+      mkdir_p dir unless File.directory?(dir)
       File.write(trans_path, mark_en(s))
     end
   end
