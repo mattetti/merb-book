@@ -111,3 +111,20 @@ task :diff do |t|
     end
   end
 end
+
+
+## usage1: rake jp F=path/to/file.markdown.trans  # for a *.trans file
+## usage2: rake jp                                # for all *.trans
+desc "retrieve '.JP' from *.trans (optional: F=filename)"
+task :jp do |t|
+  filepath = ENV['F']
+  filepaths = filepath ? [filepath] : Dir.glob("**/*.trans")
+  filepaths.each do |filepath|
+    trans_path = filepath
+    trans_path += '.trans' unless filepath.end_with?('.trans')
+    jp_path = trans_path.sub(/\.trans\z/, '')
+    $stdout.puts "* #{trans_path} -> #{jp_path}"
+    s = File.read(trans_path)
+    File.write(jp_path, unmark_jp(remove_en(s)))
+  end
+end
