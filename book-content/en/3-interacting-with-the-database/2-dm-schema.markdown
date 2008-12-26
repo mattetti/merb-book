@@ -23,14 +23,18 @@ Default Model (with comments):
       
       #You can change this if you want
       property :id, Serial
+      
       #more properties here
-      property :name, Type, :option => value, :option2 => value
+      # in format: 
+      #property :name, Type, :option => value, :option2 => value2
       ... 
       
     end
 
 ### Types you can have:
 As stolen from [http://datamapper.org](http://datamapper.org/):
+
+* * * * *
 
 DM-Core supports the following 'primitive' data-types.
 
@@ -90,7 +94,10 @@ If you include DM-Types, the following data-types are supported:
 
 Find out more about these types <a href="http://datamapper.org/doku.php?id=dm-more:dm-types" class="wikilink1" title="dm-more:dm-types">here</a>
 
-------------------------done stealing
+* * * * *
+
+More specifics on properties are found here:
+[http://datamapper.org/doku.php?id=docs:properties](http://datamapper.org/doku.php?id=docs:properties)
 
 ### Migrate
 
@@ -101,4 +108,5 @@ The short story is that you run
 and then
 
     rake db:automigrate
-And you should have db all happy. 
+And you should have the db all happy. 
+For more info on migrations, see the [migrations page](/interacting-with-the-database/dm-migrations)
