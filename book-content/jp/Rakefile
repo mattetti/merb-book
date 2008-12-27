@@ -61,6 +61,12 @@ EN_DIR = "../en"
 #end
 
 
+task :default do |t|
+  #sh "git status | egrep '	(modifield:   ).*\\.markdown$'"
+  sh "git status | egrep -v '[ \t]([0-9].*|toc)\\.markdown$'"
+end
+
+
 ## usage: rake path/to/file.markdown.trans   # create *.trans from ../en/path/to/file.markdown
 desc "add '.EN' prefix and save as '*.trans' file."
 #rule '.trans' => proc {|path| "#{EN_DIR}/#{path.sub(/\.trans\z/, '')}" } do |t|   # infinite recursive
