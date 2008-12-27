@@ -27,20 +27,29 @@ def remove_jp(str); str.gsub(/^\.JP\t.*\n/, ''); end
 EN_DIR = "../en"
 
 
-desc "display output of 'git status' except '*.markdown' files"
-task :default do |t|
-  #sh "git status | egrep '	(modifield:   ).*\\.markdown$'"
-  sh "git status | egrep -v '[ \t]([0-9].*|toc)\\.markdown$'"
-end
-
-
 desc "remove or revert *.markdown files."
 task :clean do |t|
+  clean_markdown_files()
+end
+
+desc "same as 'rake clean'"
+task :default do |t|
+  clean_markdown_files()
+end
+
+def clean_markdown_files
   #rm_f Dir.glob("**/*.markdown")
   Dir.glob("**/*.markdown").each {|filename| File.unlink(filename) }
   filenames = `git status`.scan(/\tdeleted:\s+(.*?\.markdown)$/).flatten
   #sh "git checkout #{filenames.join(' ')}"
   system *['git', 'checkout', filenames].flatten
+end
+
+
+desc "display output of 'git status' except '*.markdown' files"
+task :status do |t|
+  #sh "git status | egrep '	(modifield:   ).*\\.markdown$'"
+  sh "git status | egrep -v '[ \t]([0-9].*|toc)\\.markdown$'"
 end
 
 
