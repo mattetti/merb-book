@@ -3,19 +3,19 @@
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-> Een controller is de link tussen de gebruiker en het systeem. 
+> Een controller vormt de link tussen de gebruiker en het systeem. 
 > Het voorziet de gebruiker van input door de relevante views zichzelf te laten schikken
 > op de gepaste plaatsen op het scherm.<!-- break -->  
 > Het voorziet de middelen voor gebruikersoutput door de gebruiker menus en andere
 > middelen te geven om commando's en data in te geven.<!-- break -->  
 > De controller ontvangt dergelijke gebruikersoutput, vertaalt dit in de gepaste
-> messages en geeft deze messages door naar een of meerdere views. <!-- break -->  
+> messages en geeft deze messages door naar één of meerdere views. <!-- break -->  
 > - [Trygve Reenskaug][]{: .quote-author}, auteur van de model-view-controller
 > pattern design[^mvc-essay]
 {: cite=http://heim.ifi.uio.no/~trygver/1979/mvc-2/1979-12-MVC.pdf .lead-quote}
 
 
-In het [MVC][] paradigma, vertegenwoordigen de controllers de lijm tussen
+In het [MVC][] paradigma vormen de controllers de lijm tussen
 de business logica (Model) en de View.
 
 Concreet is de controller verantwoordelijk voor de mapping tussen een eind-gebruiker actie
@@ -23,7 +23,7 @@ en het antwoord van de applicatie.
 
 In Merb zijn controllers, technisch gesproken,
 de classes die erven van ``Merb::Controller``.
-In een Merb-stack app, wordt een controller class gecreëerd ``Application`` genaamd.
+In een Merb-stack app, wordt een controller class gecreëerd met de naam ``Application``.
 Alle gegenereerde controllers erven van ``Application``;
 daarom delen zij allen dezelfde eigenschappen als ``Application``.
 
@@ -50,16 +50,16 @@ een standaard controlleren een [RESTful][] controller.
       [ADDED]  spec/requests/birds_spec.rb
       [ADDED]  app/helpers/birds_helper.rb
 {:lang=shell html_use_syntax=true}
-  
-The command above generates several files.
-The controller file (``birds.rb``) will contain methods for each action,
-as well as other methods needed by the controller.
-The view template file (``index.html.erb``) can be used to generate HTML,
-using an ``erb`` (embedded Ruby) processor.
-The remaining files (``birds_spec.rb``, ``birds_helper.rb``)
-should be used to store test specifications and helper methods.
 
-Let's take a quick look at the generated controller:
+Het commando hierboven genereert verschillende bestanden.  
+De controller file (``birds.rb``) zal methodes bevatten voor elke actie,
+maar ook andere methodes nodig door de controller.
+De view template file (``index.html.erb``) kan worden gebruikt om HTML te genereren,
+gebruik makend van een ``erb`` (embedded Ruby) processor.
+De overige files (``birds_spec.rb``, ``birds_helper.rb``)
+moeten worden gebruikt om de test specificaties te stockeren en de helper methodes.
+
+Laat ons even kijken naar de gegenereerde controller:
 
     class Birds < Application
 
@@ -70,23 +70,23 @@ Let's take a quick look at the generated controller:
     end
 {:lang=ruby html_use_syntax=true}
 
-The generator added a new class called ``Birds``,
-inheriting from ``Application``.
-The new class has one method called ``index``.
-In the context of a controller,
-we will often refer to these methods as **controller actions** or simply **actions**.
+De generator heeft een nieuwe class toegevoegd ``Birds`` genaamd,
+deze erft van ``Application``.
+De nieuwe class heeft een methode ``index``.
+In de context van de controller,
+zullen we dikwijls verwijzen naar deze methodes als **controller acties** of eenvoudig **acties**.
 
 
-``Application`` (a subclass of ``Merb::Controller``)
-is the class from which controllers usually inherit.
-So, it is a convenient place to share code between controllers.<!-- break -->  
+``Application`` (een subclass van ``Merb::Controller``)
+is de class waarvan de controllers gewoonlijk erven.
+Zo is het ook een geschikte plaats om gemeenschappelijke code te delen tussen controllers.<!-- break -->  
 (_use with care_)
 
 
 +-- {: .notes}
-If you realize that you made a mistake when generating your controller,
-you can delete the generated controller by appending ``-d`` at the
-end of the command you just sent:
+Indien je besteft dat je een fout maakte tijdens de generatie van de controller,
+kan je de gegenereerde controller verwijderen door ``-d`` toe te voegen aan het einde 
+van het commando dat je net hebt uitgevoerd:
 
       $ merb-gen controller birds -d
         [DELETED]  app/controllers/birds.rb
@@ -96,7 +96,7 @@ end of the command you just sent:
   {:lang=shell html_use_syntax=true}
 =--
 
-### A REStful controller
+### Een REStful controller
 
     $ merb-gen resource_controller cats
       [ADDED]  spec/requests/cats_spec.rb
@@ -108,13 +108,13 @@ end of the command you just sent:
       [ADDED]  app/helpers/cats_helper.rb
 {:lang=shell html_use_syntax=true}
 
-If you open the newly generated controller file (``app/controllers/cats.rb``),
-you will notice that the generator created a new class called ``Cats``.
-As expected, the class inherits from ``Application``.
-However, this time, instead of an empty ``index`` action,
-we find seven fully-defined actions.
+Indien je het nieuw gegenereerde controller bestand (``app/controllers/cats.rb``) opent,
+merk je dat de generator een nieuwe class creëerde genaamd ``Cats``.
+Zoals verwacht erft de class van ``Application``.
+Maar deze keer, vinden we i.p.v. een lege ``index`` actie,
+zeven volledig gedefinieerde acties.
 
-Let's look at the generated file:
+Laat ons even kijken naar de gegenereerde file:
 
     class Cats < Application
       # provides :xml, :yaml, :js
@@ -177,40 +177,40 @@ Let's look at the generated file:
 {:lang=ruby html_use_syntax=true}
 
 
-Wow, that's a lot code.
-As a rule of thumb,
-you should **not** use generated code that you don't understand.
-Luckily, the code above is pretty simple to understand
-and we'll go through it in great detail.
+Wow, dat is heel wat code.
+Als vuistregel
+moet je geen gegenereerde code gebruiken die je niet begrijpt.
+Gelukkig is de code hierboven vrij eenvoudig te begrijpen
+en we gaan hier vrij gedetailleerd doorheen.
 
-But before we dig into the code, let's talk about [REST][].
+Maar vooraleer we de code uitspitten, hebben we het over [REST][].
 
 ## REST
 
-[REST][] is an acronym for [Representational State Transfer][].
-It was first introduced in 2000 by [Roy Fielding][][^rest\_intro].
-REST refers to a software architectural style outlining how [resources][]
-are defined and addressed.
-So, [resources][] are the key components of REST.
+[REST][] is een acroniem voor [Representational State Transfer][].
+Het werd eerst gentroduceerd in 2000 door [Roy Fielding][][^rest\_intro].
+REST verwijst naar een software architecturele stijl doe omschrijft hoe [resources][]
+worden gedefinieerd defined en geadresseerd.
+Dus, [resources][] zijn de sleutel componenten van REST.
 
-**What is a resource, in the context of REST?**
+**Wat is een resource, in de context van REST?**
 
-A resource is a source of specific information,
-referenced by a URI (global identifier).
-In lay terms, it's some information you can access via a specific address.
-REST uses the HTTP protocol to communicate data between the different actors.
-It's often used for web services,
-because its principles apply very well to web resources.
+Een resource is een bren van specfieke informatie,
+waarnaar wordt verwezen door een URI (global identifier).
+In voorzichtige bewoordingen, is het informatie waarnaar je toegang krijgt via een een bepaald adres.
+REST gebruikt het HTTP protocol om data te communiceren tussen verchillende actors.
+Het wordt dikwijls gebruikt voor web services,
+omdat zijn principes heel goed pgaan voor web resources.
 
-**Here is how people usually map REST web resources:**
+**Hier is hoe mensen gewoonlijk REST web resources gaan mappen:**
 
-**URI:**      http://site.com/cats or http://site.com/cats/1-felix
+**URI:**      http://site.com/cats of http://site.com/cats/1-felix
 (global identifier/address)<!-- break -->  
-**Format:**  MIME Type or extension (HTML, JSON, XML, YAML, CSV, PDF, ...)<!-- break -->  
-**action:**   map the HTTP methods (POST, GET, PUT, and DELETE) to resource methods
+**Format:**  MIME Type of extensie (HTML, JSON, XML, YAML, CSV, PDF, ...)<!-- break -->  
+**action:**   map de HTTP methodes (POST, GET, PUT, and DELETE) naar de resource methodes
 
-If a resource is defined, Merb uses the ``URI`` and the HTTP method
-to pick a controller and an action.
+Indien een resource is gedefinieerd, gebruikt Merb de ``URI`` en de HTTP methode
+om een controller en een action te kiezen.
 
 ----
 
