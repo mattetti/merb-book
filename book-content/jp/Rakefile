@@ -26,40 +26,6 @@ def remove_jp(str); str.gsub(/^\.JP\t.*\n/, ''); end
 
 EN_DIR = "../en"
 
-#desc "copy original file as *.orig"
-#task :orig do |t|
-#  Dir.glob("#{EN_DIR}/**/*").sort.each do |en_path|
-#    orig_path = en_path[(EN_DIR.length+1)..-1]
-#    _debug "en_path=#{en_path.inspect}"
-#    _debug "orig_path=#{orig_path.inspect}"
-#    if File.directory?(en_path)
-#      mkdir orig_path unless File.exist?(orig_path)
-#    elsif File.file?(en_path)
-#      cp en_path, orig_path
-#    else
-#      raise "#{en_path}: not file nor directory."
-#    end
-#  end
-#end
-#
-#desc "add '.EN' preifx and save as *.mark"
-#task :mark do |t|
-#  Dir.glob("**/*.orig") do |orig_path|
-#    mark_path = orig_path.sub(/\.orig\z/, '.mark')
-#    s = File.read(orig_path)
-#    File.write(mark_path, mark_en(s))
-#  end
-#end
-#
-#desc "create japanese content from *.trans files."
-#task :generate do |t|
-#  Dir.glob("**/*.trans").sort.each do |trans_path|
-#    jp_path = trans_path.sub(/\.trans\z/, '')
-#    s = File.read(trans_path)
-#    File.write(jp_path, unmark_jp(remove_en(s)))
-#  end
-#end
-
 
 task :default do |t|
   #sh "git status | egrep '	(modifield:   ).*\\.markdown$'"
