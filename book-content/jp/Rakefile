@@ -34,6 +34,16 @@ task :default do |t|
 end
 
 
+desc "remove or revert *.markdown files."
+task :clean do |t|
+  #rm_f Dir.glob("**/*.markdown")
+  Dir.glob("**/*.markdown").each {|filename| File.unlink(filename) }
+  filenames = `git status`.scan(/\tdeleted:\s+(.*?\.markdown)$/).flatten
+  #sh "git checkout #{filenames.join(' ')}"
+  system *['git', 'checkout', filenames].flatten
+end
+
+
 ## usage: rake path/to/file.markdown.trans   # create *.trans from ../en/path/to/file.markdown
 desc "add '.EN' prefix and save as '*.trans' file"
 #rule '.trans' => proc {|path| "#{EN_DIR}/#{path.sub(/\.trans\z/, '')}" } do |t|   # infinite recursive
