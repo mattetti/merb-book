@@ -43,7 +43,7 @@ Bovendien, wijzigden een aantal dingen voor 1.0
 en een groot deel van de bestaande inhoud vereiste een volledig herschrijven.
 
 Daarom besloot het Merb team dat het tijd was om er bij betrokken te worden 
-en zich samen met de Merb gemeenschap te cncentreren op een gecentralizeerd, gebruikers-georiënteerd boek.
+en zich samen met de Merb gemeenschap te concentreren op een gecentralizeerd, gebruikers-georiënteerd boek.
 
 Ik ben echt blij dat het Merb team besloot 
 verantwoordelijkheid op te nemen voor dit boek 
