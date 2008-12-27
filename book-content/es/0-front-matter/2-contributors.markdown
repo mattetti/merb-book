@@ -13,7 +13,7 @@ Gracias a todos!
 * [Yehuda   Katz        ](http://yehudakatz.com)
 * [Makoto   Kuwata      ](http://www.kuwata-lab.com/)
 * [Rich     Morin       ](http://cfcl.com/rdm)
-* [Carlo    Pecchia	](http://carlopecchia.eu)
+* [Carlo    Pecchia		](http://carlopecchia.eu)
 * [Markus   Prinz       ](http://blog.nuclearsquid.com/)
 * [Foy      Savas       ](http://foysavas.com/)
 * [Kurt     Schrader    ](http://kurt.karmalab.org/)
