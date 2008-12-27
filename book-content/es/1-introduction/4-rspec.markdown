@@ -8,89 +8,89 @@
 
 ## Introducción
 
-[RSpec][] es una plataforma de Desarrollo Dirigido por Comportamiento (Behavior
-Driven Development) para Ruby.
-RSpec provee dos plataformas para escribir y ejecutar ejemplos de como tu
-aplicación debe comportarse[^rspec]:
+[RSpec][] es una plataforma de Desarrollo Dirigido por Comportamiento[^BDD] para Ruby.
+Esta provee, a su vez, dos plataformas para escribir y ejecutar ejemplos
+de como su aplicación Ruby debería comportarse[^rspec]:
 
- * una Plataforma de Escenarios[^cucumber] para describir comportamiento a nivel
-de aplicación
- * una Plataforma de Ejemplos de Código para describir comportamiento a nivel de
-objetos
+ * una plataforma de Escenarios[^cucumber] para describir comportamientos a nivel de aplicación 
+ * una plataforma de Ejemplos de Codigo para describir comportamientos a nivel de objeto.
 
-[RSpec][] fue influenciado by [Dan North][] y su plataforma de pruebas BDD en
-Java llamada [JBehave][].
+[RSpec][] fue influenciado por [Dan North][]
+y su plataforma de pruebas DDC llamada [JBehave][] para el lenguaje [Java][].
 
 ## Historia
 
-Inicialmente BDD era solo una discusión entre [Aslak Hellesøy][] y [Dan North][]
-en la oficina de [ThoughtWorks][] en Londres.
-[Dave Astels][] se unió a la conversación con un post en su blog exponiendo que
-él creía que estas ideas podrían ser facilmente implementadas en [Smalltalk][] o
-[Ruby][].
-[Steven Baker][] se unió con una implementación inicial, y liberó RSpec 0.1.
-Más  tarde en 2006, el mantenimiento fue transferido a [David Chelimsky][].
-[^rspec-history]
+Inicialmente, el Desarrollo Dirigido por Comportamiento nació de una conversación entre 
+[Aslak Hellesøy][] y [Dan North][] que tuvo lugar en la oficina londinense de [ThoughtWorks][].
+[Dave Astels][] se unió a la conversación publicando un articulo en su blog,
+sugiriendo que estas ideas podrían ser fácilmente implementadas 
+en [Smalltalk][] o [Ruby][].
+[Steven Baker][] fue quien realizo la primera implementación, 
+conocida como RSpec 0.1.
+A fines del 2006,
+[David Chelimsky][] fue nombrado responsable del mantenimiento de [RSpec][].[^rspec-history]
 
+## Desarrollo Dirigido por Comportamiento
 
-## Desarrollo Dirigido por Comportamiento (BDD)
+Desarrollo Dirigido por Comportamiento es un proceso de desarrollo [Agil][]
+que incorpora aspectos de la [Planificación Dirigida por Pruebas de Aceptación][],
+el [Diseño Dirigido por Dominios][], y el [Desarrollo Dirigido por Pruebas][].
 
-Desarrollo Dirigido por Comportamiento (Behavior Driven Development) [^BDD] es
-un proceso de desarrollo [Agil][] que contiene aspectos del Planeo dirigido por
-Test de Aceptación ([Acceptance Test Driven Planning][]), Diseño Dirigido por
-Dominios [Domain Driven Design][] y Desarrollo Dirigido por Pruebas
-[Test Driven Development][].
-
-> El Desarrollo Dirigido por Comportamiento es una metodología “de afuera hacia
-> adentro” (“outside-in”).
-> Comienza en el exterior identificando resultados de negocio, y entonces se
-> enfoca en el conjunto de características que posibilitarán obtener estos
-> resultados.
-> Cada característica es capturada como una “historia”, que define el alcance de
-> la característica junto a su criterios de aceptación.
+> El Desarrollo Dirigido por Comportamiento es una metodología "de afuera hacia adentro".
+> Este comienza en el exterior identificando los resultados de negocios, 
+> y luego se enfoca hacia la característica que se encargara de generar esos resultados.
+> Cada característica es capturada como una "historia",
+> la cual define el alcance de la misma junto con su criterio de aceptación.
 > - [Dan North][]{: .quote-author}
 {: cite=http://dannorth.net/whats-in-a-story}
 
-Concentrandose en el comportamiento esperado más que en los detalles técnicos,
-los desarrolladores pueden tener una mejor comunicación con el cliente y otros
-inversores.
+Al enfocarse en los comportamientos esperados y no en los detalles técnicos,
+los programadores pueden entablar una mejor comunicación 
+con el dueño del proyecto y otras personas involucradas en el mismo.
 
 ## Implementación
 
-RSpec es un Lenguaje Específico de Dominio (Domain Specific Language) para
-describir el comportamiento esperado de un sistema mediante ejemplos
-ejecutables.
+RSpec es un [Lenguaje Especifico del Dominio][] 
+que describe el comportamiento esperado de un sistema,
+usando una colección de ejemplos ejecutables.
 
-Aquí está un ejemplo muy simple de RSpec.
+Aquí se le presenta un ejemplo simple de RSpec.
 
     describe "Lector" do
-      it "debe tener un browser" do
+      it "deberia tener un navegador web." do
         lector = Lector.new
-        lector.browser.should_not be_nil
+        lector.navegador_web.should_not be_nil
       end
     end
 {:lang=ruby html_use_syntax=true}
 
 
-[^rspec]:       [RSpec website](http://rspec.info)
-[^cucumber]:    [Cucumber wiki](http://github.com/aslakhellesoy/cucumber/wikis)
-[^BDD]:         [BDD by Dan North](http://dannorth.net/tags/agile/bdd)
-[^rspec-history]:  [Nick Sieger: BDD with RSpec](http://blog.nicksieger.com/articles/2007/11/04/rubyconf-day-3-behaviour-driven-development-with-rspec)
+<!-- References -->
+[^rspec]: [sitio web de RSpec](http://rspec.info)
+[^cucumber]: [Cucumber wiki](http://github.com/aslakhellesoy/cucumber/wikis)
+[^BDD]: [Desarrollo Dirigido por Comportamiento por Dan North](http://dannorth.net/tags/agile/bdd)
+[^rspec-history]: [Desarrollo Dirigido por Comportamiento con RSpec por Nick Sieger](http://blog.nicksieger.com/articles/2007/11/04/rubyconf-day-3-behaviour-driven-development-with-rspec)
 
-[Acceptance Test Driven Planning]: http://testing.thoughtworks.com/node/89
-[Agile]: http://en.wikipedia.org/wiki/Agile_software_development
+<!-- Links -->
+[Planificación Dirigida por Pruebas de Aceptación]: http://testing.thoughtworks.com/node/89
+[Agil]: http://en.wikipedia.org/wiki/Agile_software_development
 [Aslak Hellesøy]: http://blog.aslakhellesoy.com/
 [Dan North]: http://dannorth.net
 [Dave Astels]: http://blog.daveastels.com/
 [David Chelimsky]: http://blog.davidchelimsky.net
-[Domain Driven Design]: http://domaindrivendesign.org/
+[Diseño Dirigido por Dominios]: http://domaindrivendesign.org/
+[Lenguaje Especifico del Dominio]: http://en.wikipedia.org/wiki/Domain_Specific_Language
+[Java]: http://en.wikipedia.org/wiki/Java_(programming_language)
 [JBehave]: http://jbehave.org/
 [RSpec]: http://rspec.info
 [Ruby]: http://ruby-lang.org
 [Smalltalk]: http://www.smalltalk.org
 [Steven Baker]: http://blog.lavalamp.ca
-[Test Driven Development]: http://en.wikipedia.org/wiki/Test-driven_development
+[Desarrollo Dirigido por Pruebas]: http://en.wikipedia.org/wiki/Test-driven_development
 [ThoughtWorks]: http://www.thoughtworks.com/
 
-*[TDD]: Test Driven Development
+<!-- Abbreviations -->
 *[BDD]: Behavior Driven Development
+*[DSL]: Domain Specific Language
+*[TDD]: Test Driven Development
+
