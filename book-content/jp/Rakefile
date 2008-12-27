@@ -27,6 +27,7 @@ def remove_jp(str); str.gsub(/^\.JP\t.*\n/, ''); end
 EN_DIR = "../en"
 
 
+desc "display output of 'git status' except '*.markdown' files"
 task :default do |t|
   #sh "git status | egrep '	(modifield:   ).*\\.markdown$'"
   sh "git status | egrep -v '[ \t]([0-9].*|toc)\\.markdown$'"
@@ -34,7 +35,7 @@ end
 
 
 ## usage: rake path/to/file.markdown.trans   # create *.trans from ../en/path/to/file.markdown
-desc "add '.EN' prefix and save as '*.trans' file."
+desc "add '.EN' prefix and save as '*.trans' file"
 #rule '.trans' => proc {|path| "#{EN_DIR}/#{path.sub(/\.trans\z/, '')}" } do |t|   # infinite recursive
 rule(/\A(\d.*|toc)\.markdown\.trans\z/ => proc {|path| "#{EN_DIR}/#{path.sub(/\.trans\z/, '')}" }) do |t|
   #p t.name
@@ -47,7 +48,7 @@ end
 ## usage1:  rake trans F=../en/path/to/file.markdown   # create *.trans
 ## usage2:  rake trans F=path/to/file.markdown         # create *.trans
 ## usage3:  rake trans                                 # create all *.trans
-desc "add '.EN' prefix and save as '*.trans' file."
+desc "add '.EN' prefix and save as '*.trans' file"
 task :trans do |t|
   filepath = ENV['F']
   filepaths = filepath ? filepath : Dir.glob("#{EN_DIR}/**/*.markdown")
