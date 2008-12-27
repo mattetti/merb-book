@@ -60,6 +60,18 @@ EN_DIR = "../en"
 #  end
 #end
 
+
+## usage: rake path/to/file.markdown.trans   # create *.trans from ../en/path/to/file.markdown
+desc "add '.EN' prefix and save as '*.trans' file."
+#rule '.trans' => proc {|path| "#{EN_DIR}/#{path.sub(/\.trans\z/, '')}" } do |t|   # infinite recursive
+rule(/\A(\d.*|toc)\.markdown\.trans\z/ => proc {|path| "#{EN_DIR}/#{path.sub(/\.trans\z/, '')}" }) do |t|
+  #p t.name
+  #p t.source
+  trans_path = t.name
+  en_path    = t.source
+  create_trans_file(trans_path, en_path)
+end
+
 ## usage1:  rake trans F=../en/path/to/file.markdown   # create *.trans
 ## usage2:  rake trans F=path/to/file.markdown         # create *.trans
 ## usage3:  rake trans                                 # create all *.trans
@@ -74,16 +86,19 @@ task :trans do |t|
     end
     en_path = File.join(EN_DIR, basepath)
     trans_path = basepath + '.trans'
-    create_p = true
-    if File.exist?(trans_path) && File.read(trans_path) =~ /^\.JP\t/
-      puts "** #{trans_path}: already has JP contents. skipped."
-    else
-      puts "[create] #{trans_path}"
-      s = File.read(en_path)
-      dir = File.dirname(trans_path)
-      mkdir_p dir unless File.directory?(dir)
-      File.write(trans_path, mark_en(s))
-    end
+    create_trans_file(trans_path, en_path)
+  end
+end
+
+def create_trans_file(trans_path, en_path)
+  if File.exist?(trans_path) && File.read(trans_path) =~ /^\.JP\t/
+    puts "** #{trans_path}: already has JP contents. skipped."
+  else
+    s = File.read(en_path)
+    dir = File.dirname(trans_path)
+    mkdir_p dir unless File.directory?(dir)
+    puts "[create] #{trans_path}"
+    File.write(trans_path, mark_en(s))
   end
 end
 
@@ -115,6 +130,14 @@ task :diff do |t|
 end
 
 
+## usage: rake path/to/file.markdown   # create *.markdown file from *.markdown.trans
+desc "retrieve '.JP' from *.trans file and save as *.markdown."
+rule '.markdown' => '.markdown.trans' do |t|
+  jp_path    = t.name
+  trans_path = t.source
+  create_jp_markdown_file(jp_path, trans_path)
+end
+
 ## usage1: rake jp F=path/to/file.markdown.trans  # for a *.trans file
 ## usage2: rake jp                                # for all *.trans
 desc "retrieve '.JP' from *.trans (optional: F=filename)"
@@ -125,8 +148,12 @@ task :jp do |t|
     trans_path = filepath
     trans_path += '.trans' unless filepath.end_with?('.trans')
     jp_path = trans_path.sub(/\.trans\z/, '')
-    $stdout.puts "* #{trans_path} -> #{jp_path}"
-    s = File.read(trans_path)
-    File.write(jp_path, unmark_jp(remove_en(s)))
+    create_jp_markdown_file(jp_path, trans_path)
   end
+end
+
+def create_jp_markdown_file(jp_path, trans_path)
+  $stdout.puts "* #{trans_path} -> #{jp_path}"
+  s = File.read(trans_path)
+  File.write(jp_path, unmark_jp(remove_en(s)))
 end
