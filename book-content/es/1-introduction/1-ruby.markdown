@@ -8,7 +8,6 @@
 * Esto será una tabla de contenidos (este texto será pegado).
 {:toc}
 
-
 > Programar en Ruby me hace feliz porque es uno de los caminos más cortos entre
 > mi cerebro y una computadora. Puedo pensar en algo y expresarlo de manera
 > sucinta y elegante en Ruby sin utilizar ningún tipo de artilugios extraños que
@@ -29,7 +28,7 @@ por el [arquitecto de software][] japonés
 Ruby se enfoca en la simplicidad y en la productividad. Tiene una sintaxis
 elegante que es natural para leer y fácil para escribir.
 
-Matz tomó prestadas ideas y construcciones inspiradas en algunos de sus
+[Matz][] tomó prestadas ideas y construcciones inspiradas en algunos de sus
 lenguajes de programación favoritos ([Perl][], [Smalltalk][], [Eiffel][],
 [Ada][], y [Lisp][]) para conformar un nuevo lenguaje que balancea la
 [programación funcional][] con la [programación imperativa][].
@@ -50,7 +49,7 @@ popularidad del software escrito en Ruby, particularmente la
 
 > Yo quería un lenguaje de script más poderoso que Perl, y más orientado a
 > objetos que Python.
-> - Matz
+> - [Matz][]
 {: cite=http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html}
 
 * Todo es un objeto
@@ -82,7 +81,7 @@ Para aprender más sobre el lenguaje Ruby, referirse al [Sitio Oficial del lengu
 es equivalente a:
 
     if edad > 12
-        clasificacion_edad =  "adulto"
+        clasificacion_edad = "adulto"
     else
         clasificacion_edad = "niño"
     end
@@ -91,7 +90,7 @@ es equivalente a:
 **Arreglos:**
 
     bebidas = ["Coke", "Pepsi", "Orangina", "DrPepper"]
-    #    => ["Coke,", "Pepsi,", "Orangina,", "DrPepper"]
+    # => ["Coke", "Pepsi", "Orangina", "DrPepper"]
     # Acceder la instancia del Arreglo
     bebidas[0] # => "Coke"
     bebidas.first # => "Coke"
@@ -99,7 +98,6 @@ es equivalente a:
     bebidas[3] # => "DrPepper"
     bebidas[bebidas.length - 1] # => "DrPepper"
 {:lang=ruby html_use_syntax=true}
-
 
 **Verificar si un item existe en una instancia de un Arreglo:**
 
@@ -113,7 +111,7 @@ es equivalente a:
     pajar = ["Mac", "NT", "Irix", "Linux"]
     aguja = "Windows"
     pajar.push(aguja)
-    # Or do it like this:
+    # O también puede hacerse de este manera :
     pajar << aguja
 {:lang=ruby html_use_syntax=true}
 
@@ -129,7 +127,7 @@ es equivalente a:
 Merb intenta de ser tan parecido al lenguaje Ruby como sea posible.
 Por eso es que es importante entender lo que se ha dado en llamar la "Manera Ruby".
 
-Durante RubyConf 2008, Matz hizo un comentario sobre Merb:
+Durante [RubyConf 2008][], Matz hizo un comentario sobre Merb:
 
 > Merb tiene un futuro brillante para aquellos que no están satisfechos con las
 > pautas fijadas por Rails. Yo pienso que Merb le dará a los usuarios más
@@ -138,25 +136,25 @@ Durante RubyConf 2008, Matz hizo un comentario sobre Merb:
 {: cite=http://merbist.com/2008/11/09/merb-1-0-released/}
 
 [Ada]: http://en.wikipedia.org/wiki/Ada_%28programming_language%29)
-[Dave Thomas]:          http://pragdave.pragprog.com/
-[dinámico]:              http://en.wikipedia.org/wiki/Dynamic
+[Dave Thomas]: http://pragdave.pragprog.com/
+[dinámico]: http://en.wikipedia.org/wiki/Dynamic
 [Eiffel]: http://en.wikipedia.org/wiki/Eiffel_%28programming_language%29
 [programación funcional]: http://en.wikipedia.org/wiki/Functional_programming
 [programación imperativa]: http://en.wikipedia.org/wiki/Imperative_programming
 [Lisp]: http://en.wikipedia.org/wiki/Lisp_%28programming_language%29
-[Matz]:                 http://en.wikipedia.org/wiki/Yukihiro_Matsumoto
+[Matz]: http://en.wikipedia.org/wiki/Yukihiro_Matsumoto
 [orientado a objectos]: http://en.wikipedia.org/wiki/Object-oriented_programming
 [sitio oficial del Lenguaje Ruby]: http://www.ruby-lang.org/en/about
-[Código Abierto]:       http://en.wikipedia.org/wiki/Open_Source
-[Perl]:                 http://en.wikipedia.org/wiki/Perl)
+[Código Abierto]: http://en.wikipedia.org/wiki/Open_Source
+[Perl]: http://en.wikipedia.org/wiki/Perl)
 [lenguaje de programación]: http://en.wikipedia.org/wiki/Programming_language
 [Programando en Ruby]: http://pragprog.com/titles/ruby/programming-ruby
 [reflexivo]: http://en.wikipedia.org/wiki/Reflection_%28computer_science%29
 [Sitio Oficial del lenguaje Ruby]: http://ruby-lang.org/
 [lenguaje de programación Ruby]: http://ruby-lang.org/
 [plataforma web Ruby on Rails]: http://rubyonrails.org
-[Smalltalk]:            http://en.wikipedia.org/wiki/Smalltalk
-[arquitecto de software]:   http://en.wikipedia.org/wiki/Software_architect
+[Smalltalk]: http://en.wikipedia.org/wiki/Smalltalk
+[arquitecto de software]: http://en.wikipedia.org/wiki/Software_architect
 [índice TIOBE]: http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
-[Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)]:
-  http://en.wikipedia.org/wiki/Yukihiro_Matsumoto
+[Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)]:http://en.wikipedia.org/wiki/Yukihiro_Matsumoto
+[RubyConf 2008]: http://rubyconf.org
