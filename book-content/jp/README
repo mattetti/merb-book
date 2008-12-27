@@ -1,0 +1,298 @@
+
+大事なこと
+==========
+
+* 翻訳は必ず *.markdown.trans ファイルで行ってください。
+  翻訳を直接 *.markdown ファイルに書き込むのは禁止です。
+  (具体的な手順は後述します。)
+
+* 翻訳リポジトリに *.markdown ファイルをコミットしないでください。
+  みなさんがコミットするのは *.markdown.trans だけです。
+  翻訳された *.markdown は管理人が本家リポジトリにコミットし、それをこの翻訳リポジトリにマージします。
+  誤って *.markdown をコミットするのを防ぐために、頻繁に rake clean を実行しましょう。
+
+* 翻訳時の文字コードは UTF-8 です。
+  lv -Iu file.markdown を実行し、UTF-8 になっていることを確認してください。
+
+* コミットログは日本語でも構いません。ただし文字コードは UTF-8 限定です。
+
+
+
+分担表
+======
+
+作業の重複を避けるため、翻訳する人は下の分担表に名前を書いてください。
+また分担は特に決まってないので、翻訳したい人が翻訳したい章を勝手に翻訳してください。
+
+	--------------------------------------------------------------
+	担当者		担当物
+	--------------------------------------------------------------
+	kwatch		- toc
+	kwatch		+ 0-front-matter/
+	kwatch		    - 0-foreword
+	kwatch		    - 1-preface
+	kwatch		    - 2-contributors
+	(nobody)	+ 1-introduction/
+	(nobody)	+ 2-getting-started/
+	(nobody)	+ 3-interacting-with-the-database/
+	(nobody)	+ 4-testing-your-application/
+	(nobody)	+ 5-merb-more/
+	(nobody)	+ 6-recipes/
+	(nobody)	+ 7-deployment/
+	(nobody)	+ 8-appendix/
+	--------------------------------------------------------------
+
+
+
+用語解説
+========
+
+: 本家リポジトリ
+	http://github.com/mattetti/merb-book のこと。
+	だれでもコミットできるわけではない (管理人はコミット権限をもらった)。
+
+: 翻訳リポジトリ
+	http://github.com/kwatch/merb-book-jp のこと。
+	希望者にはもれなくコミット権限を進呈中。
+
+: *.markdown
+	拡張子が .markdown のファイル。
+	book-content/en/*.markdown が英語の元原稿。
+	book-content/jp/*.markdown が翻訳された原稿。
+
+: *.markdown.trans
+	英語原稿と日本語翻訳とが混在した、拡張子が .markdown.trans であるファイル。
+	英語部分には ".EN\t" が、日本語部分には ".JP\t" が接頭辞としてついている。
+	book-content/en/*.markdown から *.markdown.trans が作成され、それに日本語翻訳をつけて、そこから翻訳部分だけを自動的に抜き出して book-content/jp/*.markdown が作られる。
+
+: *.trans
+	今のところ *.markdown.trans ファイルと同義。
+
+
+
+作業方針
+========
+
+
+新しく翻訳するとき
+------------------
+
+1. book-content/en/XXXX.markdown から book-content/jp/XXXX.markdown.trans のスケルトンを自動生成
+2. book-content/jp/XXXX.markdown.trans に日本語翻訳を手動で追加
+3. book-content/jp/XXXX.markdown.trans から日本語部分だけを抜き出して book-content/jp/XXXX.markdown を自動生成
+
+
+英語部分が更新されたとき
+------------------------
+
+1. rake diff F=XXXX.markdown.trans を実行し、英語部分の更新内容を確認
+2. book-content/jp/XXXX.markdown.trans の英語と日本語を手動で更新
+3. book-content/jp/XXXX.markdown.trans から日本語部分だけを抜き出して book-content/jp/XXXX.markdown を自動生成
+
+
+日本語翻訳だけを更新するとき
+----------------------------
+
+1. book-content/jp/XXXX.markdown.trans を手動で更新
+2. book-content/jp/XXXX.markdown.trans から日本語部分だけを抜き出して book-content/jp/XXXX.markdown を自動生成
+
+
+
+作業手順
+========
+
+
+準備
+----
+
+	### 翻訳リポジトリをとってくる
+	### (コミット権限がない人は管理者まで連絡を!)
+	$ git clone git@github.com:kwatch/merb-book-jp.git
+	$ git cd merb-book-jp
+
+
+新しく翻訳するとき
+------------------
+
+	### 翻訳リポジトリを更新
+	$ cd merb-book-jp/
+	$ git stash         # 変更ファイルがあるとき
+	$ git pull --rebase
+	$ git stash pop     # git stash したとき
+
+	### *.trans ファイルを作成
+	$ cd book-content/jp/
+	$ ls ../en/XXX/YYY/ZZZ.markdown
+	../en/XXX/YYY/ZZZ.markdown
+	$ rake XXX/YYY/ZZZ.markdown.trans
+	[create] XXX/YYY/ZZZ.markdown.trans
+
+	### *.trans ファイルを翻訳
+	$ vi README                               # 分担表に名前を記入
+	$ git add README XXX/YYY/ZZZ.markdown.trans
+	$ git commit -m "Start translation of 'XXX/YYY/ZZZ.markdown'."
+	$ emacs XXX/YYY/ZZZ.markdown.trans        # 翻訳する
+
+	### 翻訳された *.markdown ファイルを生成
+	$ rake XXX/YYY/ZZZ.markdown
+	[create] XXX/YYY/ZZZ.markdown
+	$ lv -Iu XXX/YYY/ZZZ.markdown             # UTF-8 であることを確認
+	$ rake clean                              # 誤ったコミットを防ぐため
+
+	### *.trans ファイルをコミット (*.markdown はコミットしないこと!)
+	$ git add XXX/YYY/ZZZ.markdown.trans
+	$ git commit -m "Finish translation of 'XXX/YYY/ZZZ.markdown'."
+	$ git pull --rebase
+	$ git push
+
+
+英語部分が更新されたとき
+------------------------
+
+	### 翻訳リポジトリを更新
+	$ cd merb-book-jp/
+	$ git stash         # 変更ファイルがあるとき
+	$ git pull --rebase
+	$ git stash pop     # git stash したとき
+
+	### 英語の差分を確認
+	$ cd book-content/jp/
+	$ rake diff                               # 全体
+	$ rake diff F=XXX/YYY/ZZZ.markdown.trans  # 個別
+
+	### 英語の部分を更新
+	$ emacs XXX/YYY/ZZZ.markdown.trans        # 手動
+	$ rake diff F=XXX/YYY/ZZZ.markdown.trans  # 差分がないことを確認
+
+	### 翻訳を更新
+	$ git add XXX/YYY/ZZZ.markdown.trans
+	$ git commit -m "Start update of 'XXX/YYY/ZZZ.markdown.trans'."
+	$ emacs XXX/YYY/ZZZ.markdown.trans
+
+	### 翻訳された *.markdown ファイルを生成
+	$ rake XXX/YYY/ZZZ.markdown
+	[create] XXX/YYY/ZZZ.markdown
+	$ lv -Iu XXX/YYY/ZZZ.markdown             # UTF-8 であることを確認
+	$ rake clean                              # 誤ったコミットを防ぐため
+
+	### *.trans ファイルをコミット (*.markdown はコミットしないこと!)
+	$ git add XXX/YYY/ZZZ.markdown.trans
+	$ git commit -m "Finish update of 'XXX/YYY/ZZZ.markdown.trans'."
+	$ git pull --rebase
+	$ git push
+
+
+日本語翻訳だけを更新するとき
+----------------------------
+
+	### 翻訳リポジトリを更新
+	$ cd merb-book-jp/
+	$ git stash         # 変更ファイルがあるとき
+	$ git pull --rebase
+	$ git stash pop     # git stash したとき
+
+	### 翻訳を更新
+	$ cd book-content/jp/
+	$ emacs XXX/YYY/ZZZ.markdown.trans
+
+	### 翻訳された *.markdown ファイルを生成
+	$ rake XXX/YYY/ZZZ.markdown
+	[create] XXX/YYY/ZZZ.markdown
+	$ lv -Iu XXX/YYY/ZZZ.markdown             # UTF-8 であることを確認
+	$ rake clean                              # 誤ったコミットを防ぐため
+
+	### *.trans ファイルをコミット (*.markdown はコミットしないこと!)
+	$ git add XXX/YYY/ZZZ.markdown.trans
+	$ git commit -m "Change translation of 'XXX/YYY/ZZZ.markdown.trans'."
+	$ git pull --rebase
+	$ git push
+
+
+
+管理作業
+========
+
+管理人のみが行なう作業です。他の方は気にしなくてもいいはず。
+
+
+準備
+----
+
+	### 本家リポジトリを追加
+	$ cd merb-book-jp/
+	$ git remote add mattetti git://github.com/mattetti/merb-book.git
+	$ git remote -v              # 追加されたことを確認
+	mattetti        git@github.com:mattetti/merb-book.git
+	origin  git@github.com:kwatch/merb-book-jp.git
+
+
+本家リポジトリから翻訳リポジトリへのマージ
+------------------------------------------
+
+	### 本家リポジトリをマージ
+	$ git stash                  # 変更したファイルがある場合
+	$ git pull mattetti master   # --rebase はしない (でいいよね?)
+	$ git stash pop              # git stash した場合
+
+	### マージを翻訳リポジトリに反映
+	$ git push
+
+
+翻訳リポジトリから本家リポジトリへのマージ
+------------------------------------------
+
+	### 本家リポジトリ (のクローン) に移動し、更新
+	$ cd ../merb-book
+	$ git stash                  # 変更したファイルがある場合
+	$ git checkout master
+	$ git pull --rebase
+	$ git checkout japanese
+	$ git merge master
+	$ git rebase origin
+	$ git stash pop              # git stash した場合
+
+	### 翻訳された *.markdown を翻訳リポジトリからコピー
+	$ cd book-content/jp/
+	$ d=../../merb-book-jp/book-content/jp/
+	$ (cd $d; rake jp; tar cf - **/*.markdown) | tar xf -
+
+	### 翻訳された *.markdown を本家リポジトリに反映
+	$ git branch                 # japanese ブランチであることを確認
+	* japanese
+          master
+	$ git status
+	$ git add **/*.markdown
+	$ git ci -m "(jp) Translate 'XXX/YYY/ZZZ.markdown'."
+	$ git push
+
+
+
+Rake タスク
+===========
+
+: rake
+	rake clean と同義。
+
+: rake clean
+	新規作成された *.markdown を削除する。
+	また変更された *.markdown は git checkout でもとに戻す。
+	これは、誤って *.markdown をコミットしてしまうのを防ぐため。
+
+: rake status
+	git status の結果から *.markdown を取り除いて出力する。
+
+: rake XXX/YYY/ZZZ.markdown.trans
+	*.trans のスケルトンを、../en/XXX/YYY/ZZZ.markdown から作成する。
+
+: rake trans
+	すべての *.trans のスケルトンを作成する。
+
+: rake XXX/YYY/ZZZ.markdown
+	*.trans から日本語翻訳だけを取り出し、*.markdown ファイルに保存する。
+
+: rake jp
+	すべての *.trans から日本語翻訳だけを取り出し、*.markdown ファイルに保存する。
+
+: rake diff F=XXX/YYY/ZZZ.markdown.trans
+	*.trans と ../en/*.markdown の英語部分における差分を表示する。
+	F=... を指定しなかった場合はすべてのファイルが対象となる。
