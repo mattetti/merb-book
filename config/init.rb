@@ -27,7 +27,8 @@ Merb::BootLoader.before_app_loads do
      :default_language    => 'en',
      :available_languages => [
             {:name => "English",    :code => 'en'}, 
-            {:name => "Français",   :code => 'fr'}, 
+            {:name => "Français",   :code => 'fr'},
+            {:name => "한국어",        :code => 'kr'},              
             {:name => "日本語",        :code => 'jp'}, 
             {:name => "Português",  :code => 'pt'},
             {:name => "Deutsch",    :code => 'de'},

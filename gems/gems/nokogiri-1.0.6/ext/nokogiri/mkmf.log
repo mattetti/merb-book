@@ -1,6 +1,6 @@
 find_library: checking for xmlParseDoc() in -lxml2... -------------------- yes
 
-"gcc -o conftest -I. -I/opt/local/lib/ruby/1.8/i686-darwin9.1.0 -I. -I/opt/local/include -O2  -fno-common -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/opt/local/lib" -L. -L/opt/local/lib     -lruby-static -lxml2  -lpthread -ldl -lobjc  "
+"cc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC    -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic     -lruby1.8-static -lxml2  -lpthread -ldl -lcrypt -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘xmlParseDoc’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -12,7 +12,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
 /* end */
 
-"gcc -o conftest -I. -I/opt/local/lib/ruby/1.8/i686-darwin9.1.0 -I. -I/opt/local/include -O2  -fno-common -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/opt/local/lib" -L. -L/opt/local/lib     -lruby-static -lxml2  -lpthread -ldl -lobjc  "
+"cc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC    -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic     -lruby1.8-static -lxml2  -lpthread -ldl -lcrypt -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:3: warning: implicit declaration of function ‘xmlParseDoc’
 checked program was:
@@ -26,7 +26,7 @@ checked program was:
 
 find_library: checking for xsltParseStylesheetDoc() in -lxslt... -------------------- yes
 
-"gcc -o conftest -I. -I/opt/local/lib/ruby/1.8/i686-darwin9.1.0 -I. -I/opt/local/include -O2  -fno-common -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/opt/local/lib" -L. -L/opt/local/lib    -lxml2  -lruby-static -lxslt -lxml2  -lpthread -ldl -lobjc  "
+"cc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC    -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic    -lxml2  -lruby1.8-static -lxslt -lxml2  -lpthread -ldl -lcrypt -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘xsltParseStylesheetDoc’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -38,7 +38,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))xsltParseStylesheetDoc; return 0; }
 /* end */
 
-"gcc -o conftest -I. -I/opt/local/lib/ruby/1.8/i686-darwin9.1.0 -I. -I/opt/local/include -O2  -fno-common -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/opt/local/lib" -L. -L/opt/local/lib    -lxml2  -lruby-static -lxslt -lxml2  -lpthread -ldl -lobjc  "
+"cc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC    -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic    -lxml2  -lruby1.8-static -lxslt -lxml2  -lpthread -ldl -lcrypt -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:3: warning: implicit declaration of function ‘xsltParseStylesheetDoc’
 checked program was:
@@ -50,17 +50,16 @@ checked program was:
 
 --------------------
 
-find_header: checking for #include <libxml/xmlversion.h>
-... -------------------- yes
+find_header: checking for libxml/xmlversion.h in /usr/include/libxml2,/usr/include/libxml2... -------------------- yes
 
-"gcc -E -I. -I/opt/local/lib/ruby/1.8/i686-darwin9.1.0 -I. -I/opt/local/include -O2  -fno-common -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline  conftest.c -o conftest.i"
+"cc -E -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC    -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline  conftest.c -o conftest.i"
 conftest.c:1:31: error: libxml/xmlversion.h: No such file or directory
 checked program was:
 /* begin */
 1: #include <libxml/xmlversion.h>
 /* end */
 
-"gcc -E -I. -I/opt/local/lib/ruby/1.8/i686-darwin9.1.0 -I. -I/opt/local/include -O2  -fno-common -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/opt/local/include/libxml2 conftest.c -o conftest.i"
+"cc -E -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC    -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2 conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <libxml/xmlversion.h>
@@ -68,10 +67,9 @@ checked program was:
 
 --------------------
 
-find_header: checking for #include <libxslt/xslt.h>
-... -------------------- yes
+find_header: checking for libxslt/xslt.h in /usr/include,/usr/include... -------------------- yes
 
-"gcc -E -I. -I/opt/local/lib/ruby/1.8/i686-darwin9.1.0 -I. -I/opt/local/include/libxml2 -I/opt/local/include -O2  -fno-common -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline  conftest.c -o conftest.i"
+"cc -E -I. -I/usr/lib/ruby/1.8/i486-linux -I. -I/usr/include/libxml2  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC    -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <libxslt/xslt.h>
@@ -79,7 +77,7 @@ checked program was:
 
 --------------------
 
-"gcc -o conftest -I. -I/opt/local/lib/ruby/1.8/i686-darwin9.1.0 -I. -I/opt/local/include/libxml2 -I/opt/local/include -O2  -fno-common -pipe -fno-common  -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L"." -L"/opt/local/lib" -L. -L/opt/local/lib    -lxslt -lxml2  -lruby-static  -lpthread -ldl -lobjc  "
+"cc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I. -I/usr/include/libxml2  -D_FILE_OFFSET_BITS=64  -fno-strict-aliasing -g -g -O2  -fPIC    -g -DXP_UNIX -O3 -Wall -Wextra -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -rdynamic -Wl,-export-dynamic    -lxslt -lxml2  -lruby1.8-static  -lpthread -ldl -lcrypt -lm   -lc"
 checked program was:
 /* begin */
 1: #include <libxml/xmlversion.h>
