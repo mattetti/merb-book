@@ -34,8 +34,8 @@ If you are using a different distribution, use that distribution's package manag
 
 ### Ruby & RubyGems
 
-    $ sudo apt-get ruby ruby1.8-dev rdoc irb libyaml-ruby libzlib-ruby ri libopenssl-ruby \
-      libxml-ruby
+    $ sudo apt-get install ruby ruby1.8-dev rdoc irb libyaml-ruby libzlib-ruby ri \ 
+      libopenssl-ruby libxml-ruby
 
     $ wget "http://rubyforge.org/frs/download.php/45905/rubygems-1.3.1.tgz"
     $ tar -xvzf rubygems-1.3.1.tgz
