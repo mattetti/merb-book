@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["makoto kuwata"]
-  s.date = %q{2008-06-12}
+  s.date = %q{2008-06-13}
   s.default_executable = %q{erubis}
   s.description = %q{Erubis is an implementation of eRuby and has the following features:  * Very fast, almost three times faster than ERB and about 10% faster than eruby. * Multi-language support (Ruby/PHP/C/Java/Scheme/Perl/Javascript) * Auto escaping support * Auto trimming spaces around '<% %>' * Embedded pattern changeable (default '<% %>') * Enable to handle Processing Instructions (PI) as embedded pattern (ex. '<?rb ... ?>') * Context object available and easy to combine eRuby template with YAML datafile * Print statement available * Easy to extend and customize in subclass * Ruby on Rails support}
   s.email = %q{kwa(at)kuwata-lab.com}

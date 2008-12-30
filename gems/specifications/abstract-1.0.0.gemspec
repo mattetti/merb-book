@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = nil if s.respond_to? :required_rubygems_version=
   s.authors = ["makoto kuwata"]
   s.cert_chain = nil
-  s.date = %q{2006-03-12}
+  s.date = %q{2006-03-13}
   s.description = %q{'abstract.rb' is a library which enable you to define abstract method in Ruby.}
   s.files = ["lib/abstract.rb", "test/test.rb", "README.txt", "ChangeLog", "setup.rb", "abstract.gemspec"]
   s.homepage = %q{http://rubyforge.org/projects/abstract}
