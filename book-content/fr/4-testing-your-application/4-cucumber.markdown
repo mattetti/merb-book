@@ -25,7 +25,7 @@ Voici un exemple d'une fonctionnalité typique avec Cucumber:
 
 ## Merb et Cucumber
 
-Afin de pouvoir utiliser Cucumber avec Merb, vous devez installer le plugin 
+Afin de pouvoir utiliser Cucumber avec Merb, vous devez installer le plugin
 [merb\_cucumber][]
 Pour installer ce plugin, lancez la commande:
 
@@ -43,7 +43,7 @@ Ou, pour activer le support [Webrat][], lancez:
 
     $ merb-gen cucumber --session-type webrat
 
-Cela installera aussi la fonctionnalité de Login vue au dessus, qui devrait 
+Cela installera aussi la fonctionnalité de Login vue au dessus, qui devrait
 réussir si vous utilisez merb-auth.
 
 Exécuter vos fonctionnalités avec la simple commande suivante:
