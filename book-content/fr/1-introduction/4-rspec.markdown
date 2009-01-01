@@ -10,7 +10,7 @@
 
 RSpec est un framework de Behavior Driven Development pour Ruby.
 Il fournit 2 frameworks pour l'écriture et l'exécution d'exemples
-sur la façon dont votre application Ruby doit se comporter[^rspec]: 
+sur la façon dont votre application Ruby doit se comporter[^rspec]:
 
  * Un framework de Scénario[^cucumber] pour décrire le comportement au niveau applicatif
  * Un framework d'exemple de code pour décrire le comportement au niveau objet

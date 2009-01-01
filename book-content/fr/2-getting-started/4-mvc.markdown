@@ -22,7 +22,7 @@ les 3 chapitres suivants analyseront chaque partie en détails.
 Il sont responsable de la logique métier de votre application;
 dans Merb, ils sont le plus souvent associé aux accès à la base de donnée
 à travers d'un ORM comme DataMapper ou Active Record.
-Parfois les Modèles ne sont rien de plus 
+Parfois les Modèles ne sont rien de plus
 qu'une enveloppe définissant une table de la base de donnée.
 Cependant, avoir des Modèles 'lourds' est généralement une bonne pratique.
 Cela signifie que les classes de Modèle contiennent
