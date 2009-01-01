@@ -33,6 +33,7 @@ If you just want production to use MySQL, then leave the development part alone,
       <<:       *defaults
       database: production.db
 to
+
     production:
       adapter: mysql
       database: app_name_development
