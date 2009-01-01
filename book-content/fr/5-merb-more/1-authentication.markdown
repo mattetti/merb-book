@@ -5,7 +5,7 @@
 
 > Les responsabilité d'un système d'Authentification est de prouver que l'identité réclamée
 > par un utilisateur est en effet son identité réelle. Il y a de multiples approches depuis
-> lesquelles un système d'Authentification peut se contruire, incluant les hôtes de confiance,
+> lesquelles un système d'Authentification peut se construire, incluant les hôtes de confiance,
 > la vérification de mot de passe, ou les réseaux de confiance (comme 'OpenID').
 > Après que la vérification ait eu lieu, les responsabilités du système d'Authentification
 > sont terminées.
@@ -38,10 +38,10 @@ avec une couche d'aides pour les contrôleurs.
 Vous pouvez choisir de protéger une action d'un contrôleur, une route, ou un groupe de routes.
 C'est pourquoi vous entendrez les développeurs faire référence aux sessions authentifiées.
 
-MerbAuth fait appel aux installation de gestion des erreurs dans Merb,
+MerbAuth fait appel aux installations de gestion des erreurs dans Merb,
 qui retournent des codes de statuts HTTP correctes.
 Lors d'erreur de Login, ou pour forcer un Login à n'importe quel point de votre contrôleur,
-il suffit lancer une exception ``Unauthenticated`` avec un message optionnel
+il suffit de lancer une exception ``Unauthenticated`` avec un message optionnel
 et la page de Login sera envoyée à l'utilisateur
 La page de Login est en fait un template de Vue pour ``Extensions#unauthenticated``.
 
@@ -256,7 +256,7 @@ Voici un exemple de 2 snippets rajoutés dans /spec/spec\_helper.rb
 {:lang=ruby html_use_syntax=true}
 
 Le premier snippet crée un utilisateur par défaut, à moins qu'il n'existe déjà.
-Le second snippet envoi un requête de connexion en utilisant les attributs de l'utilisateur par défaut.
+Le second snippet envoie une requête de connexion en utilisant les attributs de l'utilisateur par défaut.
 Notez que l'action de connexion utilise la commande HTTP PUT.
 
 Maintenant que vous avez rajouté ces snippets, il vous suffit de modifier légèrement vos exemples:
