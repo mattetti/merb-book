@@ -73,6 +73,7 @@ There is, however, a migration included in the plugin source.
     t = Tag.create(:name => "a tag")
     a.add_tag(t)
 
+Sequel\_taggable depends on the sequel\_polymophic plugin.
 Here's the [sequel\_taggable source][].
 
 [sequel_timestamped source]:    http://github.com/bricooke/sequel_timestamped/tree/master
