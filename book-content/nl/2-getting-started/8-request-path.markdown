@@ -101,7 +101,7 @@ De request wordt nu gedispatched naar een controller methode.
 Bijvoorbeeld: de ``show`` methode/actie van de ``Articles`` controller.
 De actie kan een view renderen of eenvoudig een string terugkeren.
 De teruggekeerde waarde van de methode zal gebruikt worden om een Rack response te maken.
-Een Rack response is gewoon een eenvoudige tuple die [status, headers, body] bevat.
+Een Rack response is gewoon een eenvoudige tuple die \[status, headers, body\] bevat.
 
 ## Buiten de deur
 
@@ -122,11 +122,12 @@ of de client web browser.
 
 <!-- Links -->
 [Apache]:             http://httpd.apache.org/
-[GlassFish]:          /deployment/jruby
+[GlassFish]:          /nl/deployment/jruby
 [mod\_proxy]:         http://httpd.apache.org/docs/2.0/mod/mod_proxy.html
 [Mongrel]:            http://mongrel.rubyforge.org/
-[MVC]:                /getting-started/mvc
-[NginX]:              /deployment/nginx
-[Phusion Passenger]:  /deployment/passenger
+[MVC]:                /nl/getting-started/mvc
+[NginX]:              /nl/deployment/nginx
+[Phusion Passenger]:  /nl/deployment/passenger
 [Rack]:               http://rack.rubyforge.org/
 [Thin]:               http://code.macournoyer.com/thin/
+[Ebb]:                http://ebb.rubyforge.org/

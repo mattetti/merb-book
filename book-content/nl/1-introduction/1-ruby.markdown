@@ -24,7 +24,7 @@ zo flexibel, krachtig, en snel is: **Ruby**.
 ## Oorsprong ##{: #origin}
 ![Yukihiro Matsumoto](/images/Yukihiro_Matsumoto.jpg){: .left}
 Ruby is een [Open Source][], [dynamische][],[reflectieve][], algemeen-doel, 
-[object-georienteerde][] [programmeertaal][] 
+[object-geörienteerde][] [programmeertaal][] 
 geschreven midden de jaren 90 door de japanse [software architect][] [Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)][].
 
 Ruby focust op eenvoud en productiviteit. 
@@ -59,7 +59,7 @@ die is geschreven in Ruby, in het bijzonder het [Ruby on Rails web framework][].
 * Hoge code leesbaarheid
 
 Voor meer informatie over de taal Ruby, 
-bekijk de [Officiele Ruby programmeertaal website][].
+bekijk de [Officiële Ruby programmeertaal website][].
 
 ## Code voorbeelden ##{: #code-examples}
 
@@ -152,19 +152,19 @@ Gedurende RubyConf 2008, maakte Matz volgende opmerking over Merb:
 <!-- Links -->
 [Ada]:                  http://en.wikipedia.org/wiki/Ada_%28programming_language%29)
 [Dave Thomas]:          http://pragdave.pragprog.com/
-[dynamic]:              http://en.wikipedia.org/wiki/Dynamic
+[dynamische]:           http://en.wikipedia.org/wiki/Dynamic
 [Eiffel]:               http://en.wikipedia.org/wiki/Eiffel_%28programming_language%29
-[functional programming]: http://en.wikipedia.org/wiki/Functional_programming
-[imperative programming]: http://en.wikipedia.org/wiki/Imperative_programming
+[functionele programmatie]: http://en.wikipedia.org/wiki/Functional_programming
+[imperatieve programmatie]: http://en.wikipedia.org/wiki/Imperative_programming
 [Lisp]:                 http://en.wikipedia.org/wiki/Lisp_%28programming_language%29
 [Matz]:                 http://en.wikipedia.org/wiki/Yukihiro_Matsumoto
-[object-oriented]:      http://en.wikipedia.org/wiki/Object-oriented_programming
-[Official Ruby language website]: http://www.ruby-lang.org/en/about
+[object-geörienteerde]: http://en.wikipedia.org/wiki/Object-oriented_programming
+[Officiële Ruby programmeertaal website]: http://www.ruby-lang.org/en/about
 [Open Source]:          http://en.wikipedia.org/wiki/Open_Source
 [Perl]:                 http://en.wikipedia.org/wiki/Perl)
-[programming language]: http://en.wikipedia.org/wiki/Programming_language
+[programmeertaal]:      http://en.wikipedia.org/wiki/Programming_language
 [Programming Ruby]:     http://pragprog.com/titles/ruby/programming-ruby
-[reflective]:           http://en.wikipedia.org/wiki/Reflection_%28computer_science%29
+[reflectieve]:          http://en.wikipedia.org/wiki/Reflection_%28computer_science%29
 [Ruby programming language]: http://ruby-lang.org/
 [Ruby on Rails web framework]: http://rubyonrails.org
 [Smalltalk]:            http://en.wikipedia.org/wiki/Smalltalk
