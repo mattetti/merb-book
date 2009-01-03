@@ -8,16 +8,16 @@
 {:toc}
 
 [Nginx][] (uitgesproken als "engine x") is een free, open-source,
-high-performance HTTP server en [reverse proxy][],
-bovendien een IMAP/POP3 [proxy server][].
-Geschreven door [Igor Sysoev](http://sysoev.ru/en/) in 2005,
+high-performance HTTP server en zowel een [reverse proxy][],
+als een IMAP/POP3 [proxy server][].
+Geschreven door [Igor Sysoev][] in 2005,
 host Nginx nu tussen de 1% en 4% van alle domeinen wereldwijd
 (bronnen: [1](http://googleonlinesecurity.blogspot.com/2007/06/web-server-software-and-malware.html),
 [2](http://survey.netcraft.com/Reports/200806/)).
 Alhoewel hij nog steeds in beta is, is Nginx gekend voor zijn stabiliteit, rijke feature set,
 eenvoudige configuratie, en lage resource consumptie.
 
-Omdat Nginx geen  directe adapter voor Merb vooriet, zal de
+Omdat Nginx geen  directe adapter voor Merb voorziet, zal de
 de [reverse proxy][] moeten gebruiken in nginx om de requests te proxy-en naar
 een (of meerdere) aparte Merb processen. Deze kunnen runnen met om het even welke
 Rack-based applicatie server, zoals [Mongrel][], [Thin][],
@@ -42,8 +42,8 @@ Gebruik de package manager voorzien door je systeem om Nginx te installeren.
 
 ## Configuratie
 
-De nginx configuratie staat in /etc/nginx/nginx.conf, indien je op Linux werkt,
-en /opt/local/etc/nginx/nginx.conf op Mac OS X.
+De nginx configuratie staat in ``/etc/nginx/nginx.conf``, indien je op Linux werkt,
+en ``/opt/local/etc/nginx/nginx.conf`` op Mac OS X.
 
 ### /etc/nginx/nginx.conf
     
@@ -164,15 +164,16 @@ Nadien, kan je deployen met
 
 ## Monit
 
-[Monit][] is een tool die kan worden gebruikt voor het starten, stoppen en opvolgen
-van arbitraire services. Engine Yard creëerde een wrapper script 
-[monit\_merb\_mpc][] genoemd, dat  monit helpt Merb
-en zijn master process te behandelen.
-In zijn huidige vorm, heeft monit\_merb\_mpc een aantal kleine wijzigingen nodig
-om buiten de Engine Yard stack te kunnen draaien.
+[Monit][] is een tool die kan worden gebruikt voor het starten, stoppen 
+en opvolgen van arbitraire services. 
+Engine Yard creëerde een wrapper script [monit\_merb\_mpc][] genoemd, 
+dat monit helpt Merb en zijn master process te behandelen.
+In zijn huidige vorm, heeft ``monit\_merb\_mpc`` 
+een aantal kleine wijzigingen nodig om buiten de Engine Yard stack te kunnen draaien.
 Een volledige introductie kan gevonden worden op [Ezra's blog][].
 
-Om de Merb master en worker processen op te volgen, moet je volgende configuratie toevoegen aan monit:
+Om de Merb master en worker processen op te volgen, 
+moet je volgende configuratie toevoegen aan monit:
 
     check process merb_app_master
       with pidfile /var/log/engineyard/app/app-production-merb.main.pid
@@ -197,15 +198,16 @@ Om de Merb master en worker processen op te volgen, moet je volgende configurati
       group merb_app
       
 
+<!-- Links -->
+[Ebb]:                                  http://ebb.rubyforge.org/
+[Ezra's blog]: http://brainspl.at/articles/2008/12/07/merb-master-worker-monit-control-setup
+[Glassfish]:                            https://glassfish.dev.java.net/
 [Igor Sysoev]:                          http://sysoev.ru/en/
+[MacPorts]:                             http://macports.org/
+[Mongrel]:                              http://mongrel.rubyforge.org/
+[Monit]:                                http://mmonit.com/monit/
+[monit\_merb\_mpc]:                     http://pastie.org/333352
 [Nginx]:                                http://wiki.codemongers.com/Main
 [proxy server]: http://en.wikipedia.org/wiki/Proxy_server
 [reverse proxy]: http://en.wikipedia.org/wiki/Reverse_proxy
-[Mongrel]:                              http://mongrel.rubyforge.org/
 [Thin]:                                 http://code.macournoyer.com/thin/
-[Ebb]:                                  http://ebb.rubyforge.org/
-[Glassfish]:                            https://glassfish.dev.java.net/
-[MacPorts]:                             http://macports.org/
-[Monit]:                                http://mmonit.com/monit/
-[monit\_merb\_mpc]:                       http://pastie.org/333352
-[Ezra's blog]: http://brainspl.at/articles/2008/12/07/merb-master-worker-monit-control-setup

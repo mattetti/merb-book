@@ -5,7 +5,8 @@
 
 > Het is de verantwoordelijkheid van een authenticatie systeem om te bewijzen dat de identiteit die een gebruiker beweerd te hebben
 > wel degelijk zijn echte identiteit is. Er zijn verschillende manieren om dit te bereiken, onder andere
-> via trusted hosts, paswoord verificatie, en trust netwerken (zoals ‘Open-ID’).
+> via trusted hosts, 
+> paswoord verificatie, en trust netwerken (zoals ‘Open-ID’).
 > Nadat de verificatie heeft plaatstgevonden, zijn de verantwoordelijkheden van het authenticatie systeem voldaan.
 > [Adam French][]{: .quote-author}
 {: cite=http://adam.speaksoutofturn.com/post/57615195/entication-vs-orization .lead-quote}
@@ -179,7 +180,7 @@ Open het bestand ``config/router.rb``
 Dit zorgt ervoor dat de gebruiker moet aanloggen.
 Dit wordt ontdekt tijdens de routering and wanneer aanloggen niet lukt, dan stopt de routering. (???)
 Probeer nu even  <http://localhost:4000/hello_world> uit.
-Je zal zien dat je deze keer moet aanloggen om dezelfde pagina te krijgen.
+Je zal zien dat je deze keer moet aanloggen om dezelfde pagina te krijgen!
 
 Ok.  
 Logout, <http://localhost:4000/logout>

@@ -3,7 +3,10 @@
 ![Phusion Passenger](/images/phusion_banner.png){: .no-border}
 
 **Referentie website:**
-[http://www.modrails.com/documentation/Users%20guide.html][]{: .reference}
+<http://www.modrails.com/documentation/Users%20guide.html>{: .reference}
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
 
 [Phusion Passenger][] is een Apache module om [Rack][] applicaties te deployen.
 Omdat Merb is gebouwd is op Rack,
@@ -14,11 +17,12 @@ deze kan de memory footprint typisch met 33% reduceren.
 De volgende instructies zijn voor Linux.
 
 ##Installeren van Ruby Enterprise Edition (REE)
-Ruby Enterprise Edition kan worden geinstalleerd naast een reeds geinstalleerde versie van Ruby,
-aangzien het wordt geinstalleerd in de <tt>/opt</tt> directory.
+Ruby Enterprise Edition kan worden geinstalleerd 
+naast een reeds geinstalleerde versie van Ruby,
+aangezien het wordt geinstalleerd in de ``/opt`` directory.
 
 *Nota:*
-Je moet de development <tt>readline</tt> libraries geinstalleerd hebben
+Je moet de development ``readline`` libraries geinstalleerd hebben
 die je Merb interactief wenst te runnen.
 
 ### Download REE
@@ -40,7 +44,8 @@ die je Merb interactief wenst te runnen.
 ##Configuratie
 
 ###config.ru
-Volgend bestand moet in je Merb applicatie's root directory worden geplaatst:
+Volgend bestand moet in je Merb applicatie's 
+root directory worden geplaatst:
 
     # config.ru
     require 'rubygems'
@@ -69,8 +74,7 @@ Volgend bestand moet in je Merb applicatie's root directory worden geplaatst:
 ## Capistrano Task
 
 
-[http://www.modrails.com/documentation/Users%20guide.html]:  http://www.modrails.com/documentation/Users%20guide.html
+<!-- Links -->
 [Phusion Passenger]:          http://www.modrails.com/
 [Rack]:                       http://rack.rubyforge.org/
 [Ruby Enterprise Edition]:    http://www.rubyenterpriseedition.com/
-
