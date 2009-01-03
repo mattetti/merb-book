@@ -9,7 +9,7 @@ die makkelijk te testen en te onderhouden is
 door onderscheid te maken tussen de business logica, server logica, en content generatie.
 Dit is de structuur van de standaard Merb app 
 die is gegenereerd door het '``merb-gen app``' commando.
-Dit is tevens de structuur gebruikt door[Rails][], [CakePHP][], [Django][], 
+Dit is tevens de structuur gebruikt door [Rails][], [CakePHP][], [Django][], 
 en vele ander populaire web-development frameworks.
 
 Om doeltreffend te ontwikkelen in Merb, 
@@ -62,12 +62,12 @@ door code die niet rechtstreeks betrekking hebben op de vraag/antwoord-cyclus
 
 <!-- Links -->
 [CakePHP]:              http://www.cakephp.org/
-[Controllers]:          /getting-started/controllers
+[Controllers]:          /nl/getting-started/controllers
 [Django]:               http://www.djangoproject.com/
 [Erb]:                  http://en.wikipedia.org/wiki/ERuby
 [Haml]:                 http://haml.hamptoncatlin.com/
-[Models]:               /getting-started/models
+[Modellen]:             /nl/getting-started/models
 [Rails]:                http://rubyonrails.org
-[Views]:                /getting-started/views
+[Views]:                /nl/getting-started/views
 
 

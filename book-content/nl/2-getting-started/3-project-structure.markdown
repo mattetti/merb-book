@@ -132,14 +132,14 @@ Deze directory bevat Merb [thor][] taken.
 
 
 <!-- Links -->
-[bundle]:           /deployment/bundle
-[controllers]:      /getting-started/controllers
-[deploy]:           /deployment
+[bundelt]:          /nl/deployment/bundle
+[controllers]:      /nl/getting-started/controllers
+[deployen]:         /nl/deployment
 [jQuery]:           http://jquery.com/
-[models]:           /getting-started/models
+[modellen]:         /nl/getting-started/models
 [ORM]:              http://en.wikipedia.org/wiki/Object-relational_mapping
-[routes]:           /getting-started/router
+[routes]:           /nl/getting-started/router
 [RSpec]:            http://rspec.info/
-[testing]:          /testing-your-application
+[test]:             /nl/testing-your-application
 [thor]:             http://wiki.merbivore.com/faqs/thor
-[views]:            /getting-started/views
+[views]:            /nl/getting-started/views

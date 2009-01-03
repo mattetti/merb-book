@@ -24,7 +24,7 @@ Dit is een uitstekende keuze voor een eenvoudige ontwikkeling van nieuwe project
 Eens in productie echter,
 is het doorgaans aanbevolen dat developers de overgang maken  
 naar een van de krachtiger database-engines 
-zoals [Postgres][] of [MySQL][].
+zoals [PostgreSQL][] of [MySQL][].
 Projecten die overkomen uit de Rails wereld
 kunnen nog steeds van [ActiveRecord][] modellen gebruik maken; 
 Merb supporteert ook deze.
@@ -151,7 +151,7 @@ verwijzen we naar de DataMapper's [associaties][] pagina.
 Callbacks laten je toe om verschillende methodes te "hooken",
 om zo bijkomende functionaliteit te voorzien
 of (bij voorbeeld) te verzekeren dat een property werd geformatteerd op een bepaalde manier.
-DataMapper ondersteunt callbacks gebruik makend van een [aspect-georienteerde][] benadering
+DataMapper ondersteunt callbacks gebruik makend van een [aspect-geörienteerde][] benadering
 en omvat (o.a.) de ``before`` en ``after`` methodes.
 
 Laat ons zeggen dat je een Comment model hebt.
@@ -191,8 +191,8 @@ Voor meer details, verwijzen we naar de DataMapper's [hooks][] pagina.
 
 <!-- Links -->
 [ActiveRecord]:    http://en.wikipedia.org/wiki/ActiveRecord_%28Rails%29
-[aspect-oriented]: http://en.wikipedia.org/wiki/Aspect_oriented
-[associations]:    http://datamapper.org/doku.php?id=docs:associations
+[aspect-geörienteerde]: http://en.wikipedia.org/wiki/Aspect_oriented
+[associaties]:     http://datamapper.org/doku.php?id=docs:associations
 [DataMapper]:      http://datamapper.org/doku.php
 [hooks]:           http://datamapper.org/doku.php?id=docs:hooks
 [MySQL]:           http://en.wikipedia.org/wiki/MySQL
@@ -200,4 +200,4 @@ Voor meer details, verwijzen we naar de DataMapper's [hooks][] pagina.
 [PostgreSQL]:      http://en.wikipedia.org/wiki/PostgreSQL
 [properties]:      http://datamapper.org/doku.php?id=docs:properties
 [SQLite]:          http://www.sqlite.org/
-[validations]:     http://datamapper.org/doku.php?id=docs:validations
+[validaties]:      http://datamapper.org/doku.php?id=docs:validations
