@@ -44,7 +44,7 @@ db의 새로운 열을 생성할때 이 시퀀스를 사용합니다.
 만약 다음에서 설명드리는 내용보다 깊게 알고싶으시면 [datamapper 문서 finder 부분](http://datamapper.org/doku.php?id=docs:finders)을 참조하시기 바랍니다.
 
 데이터베이스에서 열(들)을 얻으실때는 다음의 시퀀스를 사용하시면 됩니다.
-### 1개의 데이터 얻기
+### 한 개의 데이터 얻기
 #### 프라이머리 키에 의한 방법
 ##### Serial
 
@@ -56,71 +56,78 @@ db의 새로운 열을 생성할때 이 시퀀스를 사용합니다.
 
 ### 속성(들)에 의한 방법
 
-You have to get the first in the db that follows the criteria if you get only one. (see below for getting several)
+DB에서 첫번째 것을 얻기위한 기준을 다음과 같이 줘서 얻을 수 있습니다.
 
     ModelName.first(:attr1 => val1, :attr2 => val2)
-Or just one attribute
+혹은 한개의 속성을 가지고도 할 수 있습니다.
 
     ModelName.first(:attr => val)
-But you don't just have to make the attribute equal something. 
+그렇다고 속성이 어떤것과 같다고 할 필요는 없습니다.
 
     ModelName.first(:attr.gt => val)
-will find get the first <tt>model_name</tt> such that <tt>model_name.attr > val</tt> is true. 
+이것은 model_name.attr > val 이 참인 첫번째 model_name을 찾아 얻어낼 것입니다.
 
-You can find the full list of conditions here:
+조건들에 대한 전체리스트들은 아래 링크에서 보실 수 있습니다:
 
 [http://datamapper.org/doku.php?id=docs:finders#conditions](http://datamapper.org/doku.php?id=docs:finders#conditions)
 
-### Get Many
-Getting many is just the same as getting 1, but you do
+### 여러개의 데이터 얻기 
+여러개의 데이터를 얻는 것은 한개를 얻는 것과 같습니다. 그러나, 아래와 같이 해주셔야 합니다.
 
     ModelName.all(args)
-rather than
+아래 처럼 하시면 안됩니다.
 
     ModelName.first(args)
-For example, 
+예를 들면,
 
     ModelName.all(price.gt => 5)
-will get all ModelNames with prices over 5, just as 
+이렇게 하면 가격이 5보다 큰 모든 ModelNames을 얻게 될 것입니다. 
 
     ModelName.first(price.gt => 5)
-will get the first with its price over 5. 
+그리고 이 예는 가격이 5보다 큰 첫번째 데이터를 얻게 해줄 것입니다.
 
-## Update
-Use this sequence when altering an existing row in the database. 
+## 업데이트
+데이터베이스에 들어있는 row를 바꾸실때는 다음 순서를 따르시면 됩니다.
 
-2 Choices:
-### Change Attributes, Then Update
-#### Change Attributes
-You make some changes to the instance. 
+2가지 방법이 있습니다.:
+### 먼저 속성들을 변경한 후, 업데이트하는 방법
+#### 속성들 변경하기
+인스턴스의 속성들을 변경합니다.
 
     model_name.attr = foo
-#### Update
-Then, you update it in the db.
+#### 업데이트하기
+그리고 db를 업데이트합니다.
 
     model_name.update
-This acts just the same as <tt>model_name.save</tt> (see above), saving the changes to the db and returning <tt>true</tt> if valditions succeed, and returning <tt>false</tt> and making the error messages available in an array by
+
+이것은 model_name.save과 똑같이 행동합니다.(위에서 언급한 부분 참조)
+만약 유효성검증이 성공한다면 변경한 내용들을 db에 저장하고 true 값을 반환합니다.
+그리고 다음의 명령은 배열에 에러메세지들을 넣어주고 false를 반환합니다.
 
      model_name.errors
-### Change Attributes and Update at Once
-If you have a hash of attributes, you can change and update all at once by doing
+### 속성들 변경과 업데이트를 한번에 하기
+만약 속성들이 있는 해시를 가지고 있다면, 다음의 명령을 통해서 변경과 업데이트를 한번에 할 수 있습니다.
 
     model_name.update_attributes(hash)
-This acts just like <tt>save</tt> and <tt>update</tt> as explained above. 
+이것은 위에서 언급했던 저장과 업데이트를 하는 것과 똑같이 행동합니다.
+
 ### Dirtiness
-You can check if an object is "dirty", or has had its attributes changed, by calling
+여러분은 다음의 명령을 실행함으로써 객체가 더러워졌는지("dirty"), 또는 객체의 속성들이 변경되었는지 체크할 수 있습니다.
 
     model_name.dirty?
-which will return <tt>true</tt> if it has changed and <tt>false</tt> if it hasn't. 
+만약 변경이 되었다면 true, 아니라면 false를 반환합니다.
 
-This is especially useful because the method is smart. If the first <tt>ModelName</tt> in the database has <tt>attr1</tt> of 3, then
+메소드가 똑똑해서 아주 쓸만한 명령입니다.
+만약 데이터베이스의 첫번째 ModelName이 속성 attr1의 값이 3인 상황이라면,
 
      foo = ModelName
      foo.attr1 = 3
      puts foo.dirty? #false
-## Destroy
-This is really easy, and there's basically one choice of how to do it. 
+     
+## 삭제하기
+삭제는 매우 쉽습니다. 삭제하는 방법은 한개입니다.
 
      foo = ModelName.get(42)
      foo.destroy
-<tt>destroy</tt> will return <tt>true</tt> if it succeeds in deleting <tt>foo</tt> and <tt>false</tt> if it fails. 
+destroy는 삭제가 성공하면 true를, 실패하면 false를 반환합니다. 
+

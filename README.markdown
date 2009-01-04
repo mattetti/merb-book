@@ -119,6 +119,7 @@ Please follow our editor guidelines, especially:
 * Spanish:     http://github.com/joahking (Joaquin Rivera Padron)
 * Dutch:       http://github.com/pvelder (Peter De Velder)
 * Arabic       http://github.com/khelll (Khaled AlHabache)
+* Korean:     http://github.com/jaigouk (Jai-Gouk Kim)
 * Indonesian   (pending)
 
 ## Legal
