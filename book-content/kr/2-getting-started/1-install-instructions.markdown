@@ -27,9 +27,9 @@ XCode(흔히 디벨로퍼 툴 이라고 부름)을 OS X CD나 [Apple 개발자 �
 
 ### Ruby & RubyGems{: #linux_rubygems}
 
-    $ sudo apt-get ruby ruby1.8-dev rdoc irb libyaml-ruby libzlib-ruby ri libopenssl-ruby \
-      libxml-ruby
-
+    $ sudo apt-get install ruby ruby1.8-dev rdoc irb libyaml-ruby libzlib-ruby ri \
+       libopenssl-ruby libxml-ruby
+       
     $ wget "http://rubyforge.org/frs/download.php/45905/rubygems-1.3.1.tgz"
     $ tar -xvzf rubygems-1.3.1.tgz
     $ rm rubygems-1.3.1.tgz
