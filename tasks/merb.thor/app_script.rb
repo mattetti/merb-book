@@ -13,19 +13,19 @@ if File.directory?(gems_dir)
   Gem.path.replace([File.expand_path(gems_dir)])
   ENV["PATH"] = "#{File.dirname(__FILE__)}:#{ENV["PATH"]}"
   
-  gem_file = File.join(gems_dir, "specifications", "thor-*.gemspec")
+  gem_file = File.join(gems_dir, "specifications", "<%= spec.name %>-*.gemspec")
   
   if local_gem = Dir[gem_file].last
     version = File.basename(local_gem)[/-([\.\d]+)\.gemspec$/, 1]
   end
 end
 
-version ||= ">= 0"
+version ||= "<%= Gem::Requirement.default %>"
 
 if ARGV.first =~ /^_(.*)_$/ and Gem::Version.correct? $1 then
   version = $1
   ARGV.shift
 end
 
-gem 'thor', version
-load 'thor'
+gem '<%= @spec.name %>', version
+load '<%= bin_file_name %>'
