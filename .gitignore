@@ -1,3 +1,10 @@
 .DS_Store
 log/*
 nbproject
+gems/gems/*
+gems/specifications/*
+src/*
+tmp/*
+TAGS
+*~
+.#*

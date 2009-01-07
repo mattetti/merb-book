@@ -1,1 +1,0 @@
-# Bundling your Merb application
