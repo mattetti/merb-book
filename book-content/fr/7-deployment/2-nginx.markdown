@@ -178,23 +178,23 @@ vous devez ajouter ce code à votre configuration ``monit``:
 
     check process merb_app_master
       with pidfile /var/log/engineyard/app/app-production-merb.main.pid
-      start program = "/engineyard/bin/monit_merb_mpc app start_master -c2 -n4000" 
-      stop program = "/engineyard/bin/monit_merb_mpc app stop_master" 
+      start program = "/engineyard/bin/monit_merb_mpc app start_master -c2 -n4000"
+      stop program = "/engineyard/bin/monit_merb_mpc app stop_master"
       #if totalmem is greater than 80.0 MB for 2 cycles then restart       # eating up memory?
       group merb_app
     
     # Worker configuration (one for each worker port required)
     check process merb_app_4000
       with pidfile /var/log/engineyard/app/app-production-merb.4000.pid
-      start program = "/engineyard/bin/monit_merb_mpc app register_worker 4000" 
-      stop program = "/engineyard/bin/monit_merb_mpc app restart_worker 4000" 
+      start program = "/engineyard/bin/monit_merb_mpc app register_worker 4000"
+      stop program = "/engineyard/bin/monit_merb_mpc app restart_worker 4000"
       if totalmem is greater than 80.0 MB for 2 cycles then restart       # eating up memory?
       group merb_app
     
     check process merb_app_4001
       with pidfile /var/log/engineyard/app/app-production-merb.4001.pid
-      start program = "/engineyard/bin/monit_merb_mpc app register_worker 4001" 
-      stop program = "/engineyard/bin/monit_merb_mpc app restart_worker 4001" 
+      start program = "/engineyard/bin/monit_merb_mpc app register_worker 4001"
+      stop program = "/engineyard/bin/monit_merb_mpc app restart_worker 4001"
       if totalmem is greater than 80.0 MB for 2 cycles then restart       # eating up memory?
       group merb_app
       
