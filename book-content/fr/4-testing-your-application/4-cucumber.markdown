@@ -5,7 +5,7 @@
 
 [Cucumber][] est la meilleure méthode pour tester l'intégration de votre
 application Merb.
-Cucumber est un outils qui peu exécuter de la documentation de fonctionnalités écrite
+Cucumber est un outils qui peut exécuter de la documentation de fonctionnalités écrite
 en texte seulement.
 Voici un exemple d'une fonctionnalité typique avec Cucumber:
 

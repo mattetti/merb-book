@@ -25,7 +25,7 @@ il est probable que Ruby soit déjà installé.
 
 
 ## Linux
-Les instructions suivantes sont faite pour une distribution du type Debian ([Ubuntu][], par exemple),
+Les instructions suivantes sont faites pour une distribution de type Debian ([Ubuntu][], par exemple),
 qui utilise le gestionnaire de paquets <tt>apt-get</tt>.
 Si vous utilisez une distribution différente, utilisez le gestionnaire de paquets de cette distribution
 (par exemple, les systèmes [RedHat][] utilisent <tt>yum</tt> comme gestionnaire de paquets).
@@ -78,7 +78,7 @@ des informations d'utilisation. Après, il vous suffit d'installer Merb:
 Cette commande peut nécessiter quelques minutes pour se terminer, elle doit mettre à jour
 le cache des gems, récupérer tous les gems relatifs à Merb et les installer.
 
-_Note_: Si vous voulez utilisez la base de données SQLite (qui vient par défaut), vous devez
+_Note_: Si vous voulez utilisez la base de données SQLite (par défaut), vous devez
 la télécharger et l'installer séparément. Vous aurez plus d'informations sur le site [SQLite][]
 
 
