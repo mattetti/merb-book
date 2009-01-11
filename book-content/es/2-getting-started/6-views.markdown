@@ -1,7 +1,8 @@
-#Views
+# Vistas
 
+* Esto será una tabla de contenidos (este texto será pegado).
+{:toc}
 
+## Ayudantes para Formularios
 
-##Form Helpers
-
-##Date and Time Helpers
+## Ayudantes para Fecha y Tiempo

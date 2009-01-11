@@ -1,29 +1,31 @@
-# Comenzando
+# Comenzando a trabajar
 
 * Esto será una tabla de contenidos (este texto será pegado).
 {:toc}
 
-Necesitaremos instalar Merb para usar la plataforma.
-Claro, antes de que instalemos Merb necesitarás tener instalado un compilador C, Ruby y
-[RubyGems][], y una base de datos (si quieres hacer tus modelos persistentes).
+Se necesita instalar Merb para usar la plataforma.
+De todas maneras, antes de instalar Merb, 
+usted necesitará tener instalado un compilador C, Ruby y [RubyGems][], 
+y una base de datos (si usted desea hacer sus modelos persistentes).
 
 ## OS X
 
 ### Prerequisitos
-Necesitarás instalar XCode del CD OS X o descargarle del
+Necesitará instalar XCode (conocido como las Herramientas de Desarrollo) 
+del DVD del sistema operativo OS X o descargarlo directamente del
 [sitio web para desarrolladores de Apple][].
 
 ### Ruby & RubyGems
-Si tienes OS X 10.5 (Leopard), es muy probable que tengas ya Ruby instalado.
+En el caso que usted tenga instalado en su sistema OS X 10.5 (Leopard), 
+entonces su sistema ya cuenta con Ruby instalado y listo para su uso.
 
 ### Merb
     $ sudo gem install merb
 
-
 ## Linux
-Las siguientes instrucciones son para distribuciones basadas en Debian ([Ubuntu][], por
-ejemplo) que usen el manejador de paquetes <tt>apt-get</tt>.
-Si estás usando una distribución diferente, usa el manejador de paquetes de tu distribución
+Las siguientes instrucciones son para aquellas distribuciones basadas en [Debian][] 
+([Ubuntu][], por ejemplo) que usen el manejador de paquetes <tt>apt-get</tt>.
+Si usted utiliza una distribución diferente, use el manejador de paquetes de su distribución
 (por ejemplo, los sistemas [RedHat][] usan <tt>yum</tt> como su manejador de paquetes).
 
 ### Prerequisitos
@@ -45,41 +47,42 @@ Si estás usando una distribución diferente, usa el manejador de paquetes de tu
     $ sudo ln -s /usr/bin/gem1.8 /usr/bin/gem
     $ sudo gem update --system
 
-
 ### Merb
 
     $ sudo gem install merb
-
 
 ## Windows
 Los usuarios de Windows tienen un par de opciones para instalar Ruby and RubyGems.
 Una manera es descargar los binarios de Ruby, instalarlos, y luego instalar RubyGems.
 
-Una alternativa es usar el [One-Click Ruby Installer][] que viene empaquetado con RubyGems
-(y algunas otras cosas).
-Si usas el One-Click Installer, asegúrate de seleccionar la opción 'Enable RubyGems' en el
-wizard de instalación.
+Una alternativa es usar el [One-Click Ruby Installer][] 
+que viene empaquetado con RubyGems (y algunas otras cosas).
+Si usted utiliza el One-Click Installer, 
+asegúrese de seleccionar la opción 'Enable RubyGems' durante la instalación.
 
-Por defecto te instalará Ruby en el directorio <tt>C:\Ruby</tt>.
-Una vez instalado, has lo siguiente:
+Por defecto, Ruby se instalara en el directorio <tt>C:\Ruby</tt>.
+Una vez instalado, usted debe hacer lo siguiente:
 
 Start --&gt; Programs --&gt; Ruby-&lt;version&gt; --&gt; RubyGems --&gt; RubyGems Package Manager
 
-Esto abrirá un prompt de comando en el directorio <tt>C:\Ruby</tt> y mostrará alguna
-información sobre cómo usar.  Entonces es solo a cuestión de instalar Merb:
+Esto abrirá un prompt de comando en el directorio <tt>C:\Ruby</tt> 
+y mostrará alguna información sobre cómo usarlo. 
+Entonces es solo a cuestión de instalar Merb:
 
     C:\Ruby> gem install merb
 
-Este comando puede demorar unos minutos en ejecutarse, pues debe actualizar la cache de
-las gemas, traer todas las gemas relacionadas con Merb e instalarlas.
+Este comando puede demorar unos minutos en ejecutarse, 
+pues debe actualizar la cache de las gemas, 
+traer todas las gemas relacionadas con Merb e instalarlas.
 
-_Nota_: Si quieres usar una base de datos SQLite (es la que viene por defecto), tienes que
-descargarla e instalarla por separado. Más información puede ser encontrada en el sitio de
-[SQLite][].
+_Nota_: Si desea usar una base de datos SQLite (la cual viene por defecto), 
+usted debe descargarla e instalarla por separado. 
+Más información puede ser encontrada en el sitio de [SQLite][].
 
 [sitio web para desarrolladores de Apple]: http://developer.apple.com/technology/xcode.html
-[RubyGems]:                 http://www.rubygems.org/
-[Ubuntu]:                   http://www.ubuntu.com/
-[RedHat]:                   http://www.redhat.com/
+[Debian]: http://www.debian.org/
+[RubyGems]: http://www.rubygems.org/
+[Ubuntu]: http://www.ubuntu.com/
+[RedHat]: http://www.redhat.com/
 [One-Click Ruby Installer]: http://rubyinstaller.rubyforge.org/wiki/wiki.pl
-[SQLite]:                   http://www.sqlite.org/
+[SQLite]: http://www.sqlite.org/
