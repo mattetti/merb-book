@@ -1,4 +1,8 @@
-#Installation and setup
+#Getting started
+
+##Sequel background
+
+
 
 ##Generating a project with Sequel
 
