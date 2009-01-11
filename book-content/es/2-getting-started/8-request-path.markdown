@@ -8,7 +8,7 @@ Cada acción termina con una respuesta proporcionada por el servidor HTTP.
 En este capítulo, se presentara el flujo de programa a seguir 
 desde la petición del cliente hasta la respuesta otorgada por el servidor.
 
-## Del cliente a nuestra puerta
+## Del cliente a su puerta
 
 La manera de como funciona internamente la Internet están fuera del alcance de este libro.
 Pero, sin embargo, es sumamente útil recordar
