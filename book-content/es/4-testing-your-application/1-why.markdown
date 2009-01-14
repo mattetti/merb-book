@@ -1,21 +1,20 @@
-#¿Por qué hacer tests?
+#¿Por qué hacer pruebas?
 
 * Esto será una tabla de contenidos (este texto será pegado).
 {:toc}
 
-Es importante testear o probar tus aplicaciones para asegurarte que minimizas las posibilidades
-de introducir errores [regression][].
-El framework de pruebas predeterminado de Merb utiliza el framework de pruebas [RSpec][] y una combinación de
-especificaciones de modelos (model specs), de peticiones (request specs) y de integración (integration specs).
+Es sumamente importante probar sus aplicaciones 
+afin de asegurarte que minimizas las posibilidades de errores de [regresion][].
+El framework de pruebas utilizado por Merb es [RSpec][] 
+y una combinación de especificaciones de modelos, de peticiones y de integración.
 
-## Tipos de pruebas (tests)
+## Tipos de pruebas
 
 ### Modelos
 
-### Peticiones (Requests)
+### Peticiones
 
 ### Integración
 
-
-[regression]:         http://en.wikipedia.org/wiki/Software_regression
-[RSpec]:              http://rspec.info/
+[regresion]: http://en.wikipedia.org/wiki/Software_regression
+[RSpec]: http://rspec.info/
