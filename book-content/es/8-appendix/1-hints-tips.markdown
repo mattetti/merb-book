@@ -1,1 +1,4 @@
-# Hints and Tips
+# Ayudas/Consejos
+
+* Esto será una tabla de contenidos (este texto será pegado).
+{:toc}
