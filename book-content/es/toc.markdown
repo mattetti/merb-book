@@ -43,7 +43,7 @@ del contenido de este libro**.
    1. [Migraciones a la base de datos](/es/interacting-with-the-database/dm-migrations)
    1. [Validaciones de los Modelos](/es/interacting-with-the-database/dm-validations)
 4. [Probando la aplicación](/es/testing-your-application)
-   1. [Porqué hacer tests](/es/testing-your-application/why)
+   1. [Por qué hacer tests](/es/testing-your-application/why)
    1. [Probando los modelos](/es/testing-your-application/models)
    1. [Probando las peticiones](/es/testing-your-application/requests)
    1. [Pruebas de Integración con RSpec y Cucumber](/es/testing-your-application/cucumber)
@@ -52,10 +52,10 @@ del contenido de este libro**.
    1. [Mailer](/es/merb-more/mailer)
    1. [Cacheo](/es/merb-more/caching)
    1. [Excepciones](/es/merb-more/exceptions)
-   1. [Slices](/es/merb-more/exceptions)
+   1. [Rodajas](/es/merb-more/exceptions)
 6. [Recetas](/es/recipes)
-   1. [Un Blog simple](/es/recipes/simple-blog)
-   1. [Desarrollando un Blog con un Slice](/es/recipes/blog-slice)
+   1. [Una aplicación de Blog sencilla](/es/recipes/simple-blog)
+   1. [Desarrollando una rodaja para su Blog](/es/recipes/blog-slice)
 7. [Despliege](/es/deployment)
    1. [Passenger](/es/deployment/passenger)
    1. [Nginx](/es/deployment/nginx)
@@ -64,7 +64,7 @@ del contenido de este libro**.
 {: #toc .available-for-translation}
 
 * [Apéndice](/es/appendix)
-  1. [Ayudas/Consejos](/es/appendix/hints-tips)
-  1. [Slices disponibles](/es/appendix/slices)
+  1. [Ayudas y consejos](/es/appendix/hints-tips)
+  1. [Rodajas disponibles](/es/appendix/slices)
   1. [Gemas útiles](/es/appendix/gems)
 {: #appendices}
