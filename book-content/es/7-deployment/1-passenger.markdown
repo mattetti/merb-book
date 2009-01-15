@@ -1,60 +1,93 @@
-#Passenger
+# Passenger
 
 ![Phusion Passenger](/images/phusion_banner.png){: .no-border}
 
-**Reference website:** [http://www.modrails.com/documentation/Users%20guide.html](http://www.modrails.com/documentation/Users%20guide.html){: .reference}
+**Sitio web de referencia:** [documentación sobre Passenger][]{: .reference}
 
+* Esto será una tabla de contenidos (este texto será pegado).
+{:toc}
 
-[Phusion Passenger](http://www.modrails.com/) is an Apache module for deploying [Rack](http://rack.rubyforge.org/) applications. As Merb is built on Rack, you can easily run it on Passenger and [Ruby Enterprise Edition](http://www.rubyenterpriseedition.com/). Ruby Enterprise Edition is a version of Ruby 1.8.6 with improvements to Ruby's garbage collection, which can typically reduce an applications memory footprint by 33%. The following instructions are for Linux.
+[Passenger][], desarrollado por la empresa holandesa [Phusion][],  
+es un modelo de [Apache][] para desplegar aplicaciones [Rack][].
+Como Merb fue desarrollado como un Rack, 
+usted puede ejecutar su aplicación Merb fácilmente 
+en [Passenger][] utilizando [Ruby Edición Empresarial][].
+Este ultimo es una versión del interprete de Ruby versión 1.8.6 
+que incluye mejoras en el sistema de recolección de basura y 
+el cual reduce el uso de memoria de las aplicaciones en un 33%.
 
-##Installing Ruby Enterprise Edition (REE)
-Ruby Enterprise Edition can be installed along side a version of Ruby you currently have installed, as it will be installed into the <tt>/opt</tt> directory.
+A continuación se le presentaran las instrucciones para su instalación, 
+las cuales son solamente para sistemas operativos Linux.
 
-*Note:* You will need to have the development readline libraries installed if you want run Merb interactively.
-### Download REE
+## Instalando Ruby Edicion Empresarial (REE)
+Este interprete puede ser instalado 
+junto a su versión del interprete Ruby 
+que usted tiene ya instalado.
+Esta versión será instalada dentro del directorio ``/opt``.
+
+*Nota:* 
+Usted requerirá tener ya instalada la librería ``readline``
+si desea ejecutar Merb de manera interactiva.
+
+### Bajar REE
+Usted debe ejecutar el siguiente comando en su linea de comandos
 
     $ wget http://rubyforge.org/frs/download.php/41040/ruby-enterprise-1.8.6-20080810.tar.gz
+{:lang=shell html_use_syntax=true}
 
-### Install
+### Instalación
+A continuación se le presentara la secuencia que debe seguir
+a fin de descomprimir el archivo bajado 
 
     $ tar xzvf ruby-enterprise-1.8.6-20080810.tar.gz
     $ cd ruby-enterprise-1.8.6-20080810
-    $ ./insaller
+    $ ./installer
+{:lang=shell html_use_syntax=true}
 
-
-##Installing Passenger
+## Instalando Passenger
+Luego, usted debe ejecutar los siguiente comandos 
+a fin de proceder con la instalación e integración con [Apache][]
 
     $ gem install passenger
     $ passenger-install-apache2-module
+{:lang=shell html_use_syntax=true}
 
-##Configuration
-
-###config.ru
-The following file needs to be placed into your Merb applications root directory:
+## Configuracion
+### El archivo "config.ru"
+Este archivo requiere ser creado 
+dentro del directorio raíz de su aplicación Merb.
 
     # config.ru
     require 'rubygems'
-
-    # Uncomment if your app uses bundled gems.
+	require 'merb-core'
+	
+    # Quitar los comentarios en caso que su aplicación utiliza gemas empaquetadas.
     # gems_dir = File.expand_path(File.join(File.dirname(__FILE__), 'gems'))
     # Gem.clear_paths
     # $BUNDLE = true
     # Gem.path.unshift(gems_dir)
 
-    require 'merb-core'
-
     Merb::Config.setup(:merb_root   => File.expand_path(File.dirname(__FILE__)),
                        :environment => ENV['RACK_ENV'])
-    Merb.environment = "production" #Merb::Config[:environment]
+    Merb.environment = "production" # Merb::Config[:ambiente]
     Merb.root = Merb::Config[:merb_root]
     Merb::BootLoader.run
 
-    # Uncomment if your app is mounted at a suburi.
-    # if prefix = ::Merb::Config[:path_prefix]
-    #   use Merb::Rack::PathPrefix, prefix
+    # Quitar comentarios en el caso que su aplicación sea montada en un sub-URI.
+    # if prefix = ::Merb::Config[:prefijo_camino]
+    #   use Merb::Rack::PathPrefix, prefijo
     # end
 
     run Merb::Rack::Application.new
+{:lang=ruby html_use_syntax=true}
 
+## Tareas para Capistrano
 
-## Capistrano Task
+[Passenger]: http://www.modrails.com/
+[Phusion]: ...
+[Apache]: ...
+[Rack]: http://rack.rubyforge.org/
+[Ruby Edición Empresarial]: http://www.rubyenterpriseedition.com/
+[documentación sobre Passenger]: http://www.modrails.com/documentation/Users%20guide.html
+
+* [REE]: Ruby Edición Empresarial
