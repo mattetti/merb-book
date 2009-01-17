@@ -1,11 +1,7 @@
 class Pages < Application
 
   def index
-    @page_file = find_toc
-    raise NotFound unless @page_file    
-    
-    text = File.open(@page_file).read
-    render Maruku::new(text).to_html
+    table_of_content
   end
   
   def show
@@ -16,10 +12,10 @@ class Pages < Application
     render @page.to_html
   end
   
-  private
-    
-    def find_toc(format="markdown")
-      Dir["#{Merb.root}/book-content/#{language}/toc.#{format}"].entries.first
-    end
+  def table_of_content
+    toc_file = Dir["#{Merb.root}/book-content/#{language}/toc.*"].entries.first
+    text = File.open(toc_file).read
+    render ::Maruku::new(text).to_html
+  end
   
 end

@@ -81,12 +81,12 @@ class Page
   end
   
   private
-    def find_page_file(format="markdown")
+    def find_page_file
       base = "#{Merb.root}/book-content/#{language}/*-#{chapter}"
       if name
-        Dir["#{base}/*-#{name}.#{format}"].entries.first
+        Dir["#{base}/*-#{name}.*"].entries.first
       else
-        Dir["#{base}/toc.#{format}"].entries.first
+        Dir["#{base}/toc.*"].entries.first
       end
     end
     
