@@ -1,4 +1,9 @@
-#Installation and setup
+#Getting started
+
+[Sequel][] is a full-fledged, mature ORM database toolkit that has support for object models.
+It's supported as a drop-in ORM option with Merb using the merb\_sequel plugin.
+Sequel also features an easy-to-use plugin syntax to extend default functionality.
+The [Sequel documentation][] is very thorough, and has some good usage examples.
 
 ##Generating a project with Sequel
 
