@@ -27,5 +27,6 @@ This will generate an app that uses Sequel, rspec, and the rest of what can be e
 By default, `merb-gen sequel-app` will generate a database.yml file that uses sqlite3.
 For more info, check out the [repository][].
 
-
-[repository]:       http://github.com/jackdempsey/merb-sequel-stack/tree
+[Sequel]:                 http://sequel.rubyforge.org
+[Sequel documentation]:   http://sequel.rubyforge.org/documentation.html
+[repository]:             http://github.com/jackdempsey/merb-sequel-stack/tree
