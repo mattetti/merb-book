@@ -566,7 +566,7 @@ For example:
 {:lang=ruby html_use_syntax=true}
 
 Developers coming from Rails will note
-that there is no ``flash` hash in Merb.
+that there is no `flash` hash in Merb.
 Instead, Sessions can be used directly to send messages between pages.
 
 ###Redirecting
