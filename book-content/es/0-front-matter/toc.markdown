@@ -1,4 +1,4 @@
-# front-matter
+# Palabras preliminares
 
 <ul class='toc'>
 	<li><a href='/es/front-matter/foreword'>Prólogo</a></li>

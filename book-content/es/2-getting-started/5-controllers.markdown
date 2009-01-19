@@ -62,11 +62,9 @@ deben ser usados para contener las especificaciones de las pruebas así como los
 Si usted observa a simple vista el controlador generado:
 
     class Pajaros < Application
-
       def index
         render
       end
-
     end
 {:lang=ruby html_use_syntax=true}
 
@@ -171,7 +169,6 @@ Si usted observa a simple vista el archivo generado:
           raise InternalServerError
         end
       end
-
     end # Gatos
 {:lang=ruby html_use_syntax=true}
 

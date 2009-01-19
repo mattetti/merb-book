@@ -1,4 +1,4 @@
-# recipes
+# Recetas
 
 <ul class='toc'>
 	<li><a href='/es/recipes/blog'>Una aplicación de Blog sencilla</a></li>

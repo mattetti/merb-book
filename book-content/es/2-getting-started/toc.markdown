@@ -1,4 +1,4 @@
-# getting-started
+# Comenzando a trabajar
 
 <ul class='toc'>
 	<li><a href='/es/getting-started/instructions'>Comenzando</a>

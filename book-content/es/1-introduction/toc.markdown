@@ -1,4 +1,4 @@
-# Introduction
+# Introducción
 
 <ul class='toc'>
 	<li><a href='/es/introduction/ruby'>El Lenguaje Ruby</a>
@@ -17,7 +17,7 @@
 		<ul style='list-style: none;'>
 			<li><a href='/es/introduction/rspec#introducción'>Introducción</a></li>
 			<li><a href='/es/introduction/rspec#historia'>Historia</a></li>
-			<li><a href='/es/introduction/rspec#desarrollo_dirigido_por_comportamiento_bdd'>Desarrollo Dirigido por Comportamiento (<abbr title='Behavior Driven Development'>BDD</abbr>)</a></li>
+			<li><a href='/es/introduction/rspec#desarrollo_dirigido_por_comportamiento_bdd'>Desarrollo Dirigido por Comportamiento</a></li>
 			<li><a href='/es/introduction/rspec#implementación'>Implementación</a></li>
 		</ul>
 	</li>
