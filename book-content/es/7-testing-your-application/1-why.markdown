@@ -1,4 +1,4 @@
-#¿Por qué hacer pruebas?
+# ¿Por qué hacer pruebas?
 
 * Esto será una tabla de contenidos (este texto será pegado).
 {:toc}
