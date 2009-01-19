@@ -1,3 +1,13 @@
 .DS_Store
 log/*
 nbproject
+!bin/thor
+!bin/common.rb
+bin/*
+gems/gems/*
+gems/specifications/*
+src/*
+tmp/*
+TAGS
+*~
+.#*

@@ -2,11 +2,7 @@
  
 # Specify a specific version of a dependency
 # dependency "RedCloth", "> 3.0"
-
-dependency "maruku", ">= 0.5.9"
-dependency "merb-assets", "~> 1.0"
-dependency "merb_babel", ">= 0.1.0"
-
+require Merb.root / "config" / "dependencies"
 
 #  use_orm :none
 use_test :rspec
