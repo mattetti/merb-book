@@ -5,7 +5,7 @@
 
 CRUD (Create, Read, Update, Destroy) 액션들에 대해서 각각 살펴보도록 하겠습니다.
 
-## Create
+## 생성
 
 만약 다음에서 설명드리는 내용보다 깊게 알고싶으시면 [datamapper 문서 CRUD부분](http://datamapper.org/doku.php?id=docs:crud)를 참조하시기 바랍니다.
 

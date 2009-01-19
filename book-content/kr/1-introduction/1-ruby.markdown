@@ -1,14 +1,16 @@
 # Ruby 언어
 
+![Ruby](/images/ruby-header.gif){: .no-border}
+
+**참고 웹사이트:**
+[http://ruby-lang.org](http://ruby-lang.org){: .reference}
+
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-![Ruby](/images/ruby-header.gif){: .no-border}
-
-**참고 웹사이트:** [http://ruby-lang.org](http://ruby-lang.org){: .reference}
 
 > 내 두뇌와 컴퓨터를 최단거리로 연결해주기 때문에 루비로 코딩하는 것은 즐겁습니다. 
-> 대부분의 다른 다른 언어에서 필요로 하는 모든 종류의 시시한 것들 없이, 루비에서는 간결하고 일반적으로 상당히 우아하게 뭔가를 생각하고 표현할 수 있습니다.
+> 대부분의 다른 다른 언어에서 필요로 하는 모든 종류의 시시한 것들 없이, 루비에서는 간결하고 상당히 우아하게 뭔가를 생각하고 표현할 수 있습니다.
 > - [Dave Thomas, "Programming Ruby" 저자](http://pragdave.pragprog.com/){: .quote-author}
 {: cite=http://www.infoq.com/interviews/ruby-rails-dave-thomas .lead-quote}
 
@@ -37,7 +39,7 @@ Merb가 왜 그렇게 강력하고, 유연하고, 빠른지에 대한 이유를 
 > - Matz
 {: cite=http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html}
 
-* 모든 것은 객체
+* 모든 것이 객체
 * 모든 것이 확장/수정 가능
 * 높은 코드 가독성
 
@@ -125,5 +127,29 @@ RubyConf 2008에서 Matz가 Merb에 대해 다음과 같은 코멘트를 했습�
 
 > Merb는 레일즈의 고정된 방법에 만족하지 않는 사람들에게 밝은 미래를 제시합니다. 
 > 저는 Merb가 유저들에게 더 많은 루비스러운 프로그래밍의 자유를 줄 것으로 생각합니다.
-> - [Matz, 루비언어의 창시자](http://ruby-lang.org/){: .quote-author}
+> - [Matz][]{: .quote-author},
+> [Ruby 프로그래밍 언어][]의 창시자
 {: cite=http://merbist.com/2008/11/09/merb-1-0-released/}
+
+<!-- Links -->
+[Ada]:                  http://en.wikipedia.org/wiki/Ada_%28programming_language%29)
+[Dave Thomas]:          http://pragdave.pragprog.com/
+[dynamic]:              http://en.wikipedia.org/wiki/Dynamic
+[Eiffel]:               http://en.wikipedia.org/wiki/Eiffel_%28programming_language%29
+[functional programming]: http://en.wikipedia.org/wiki/Functional_programming
+[imperative programming]: http://en.wikipedia.org/wiki/Imperative_programming
+[Lisp]:                 http://en.wikipedia.org/wiki/Lisp_%28programming_language%29
+[Matz]:                 http://en.wikipedia.org/wiki/Yukihiro_Matsumoto
+[object-oriented]:      http://en.wikipedia.org/wiki/Object-oriented_programming
+[Official Ruby language website]: http://www.ruby-lang.org/en/about
+[Open Source]:          http://en.wikipedia.org/wiki/Open_Source
+[Perl]:                 http://en.wikipedia.org/wiki/Perl)
+[programming language]: http://en.wikipedia.org/wiki/Programming_language
+[Programming Ruby]:     http://pragprog.com/titles/ruby/programming-ruby
+[reflective]:           http://en.wikipedia.org/wiki/Reflection_%28computer_science%29
+[Ruby 프로그래밍 언어]: http://ruby-lang.org/
+[Ruby on Rails web framework]: http://rubyonrails.org
+[Smalltalk]:            http://en.wikipedia.org/wiki/Smalltalk
+[software architect]:   http://en.wikipedia.org/wiki/Software_architect
+[TIOBE index]:          http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
+[Yukihiro "Matz" Matsumoto-san ( まつもとゆきひろ)]:  http://en.wikipedia.org/wiki/Yukihiro_Matsumoto

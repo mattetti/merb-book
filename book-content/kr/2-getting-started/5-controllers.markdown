@@ -4,9 +4,9 @@
 {:toc}
 
 >컨트롤러는 사용자와 시스템 사이의 링크입니다.
->컨트롤러는 입력을 관련 view를 통해 스크린의 적절한 장소에 배치하는 것을 준비하여, 사용자에게 제공합니다. 
->또한 메뉴, 명령들과 데이터를 주는 방법 등을 제시하여 사용자의 출력을 위한 수단을 제공합니다.<!-- break -->  
->컨트롤러는 그런 사용자 산출을 받고, 적합한 메세지로 번역하여 한개 이상의 view에게 메세지를 전달합니다.<!-- break -->  
+>컨트롤러는 view를 통해서 자신들을 스크린의 적절한 장소에 배치하는 것을 준비한 후, 사용자에게 입력수단을 제공합니다. 
+>메뉴나 다른 명령, 데이터들을 사용하여 사용자에게 출력을 위한 수단을 제공합니다.<!-- break -->  
+>컨트롤러는 그런 사용자 산출을 받고, 적절한 메세지로 번역하여 한개 이상의 view에게 메세지를 전달합니다.<!-- break -->  
 > - [Trygve Reenskaug][]{: .quote-author}, model-view-controller pattern design[^mvc-essay]의 저자.
 
 {: cite=http://heim.ifi.uio.no/~trygver/1979/mvc-2/1979-12-MVC.pdf .lead-quote}
@@ -15,8 +15,8 @@
 
 구체적으로, 컨트롤러는 엔드유저 액션을 어플리케이션 응답에 매핑시키는 책임을 가지고 있습니다.
 
-기술적으로 말해 Merb에서, 컨트롤러는 ``Merb::Controller``에서 상속받은 클래스입니다.
-Merb스택 어플리케이션에서는 ``Application``이라고 불리는 컨트롤러 클래스가 생성됩니다.
+기술적으로 말해, Merb에서 컨트롤러는 ``Merb::Controller``에서 상속받은 클래스입니다.
+Merb스택 어플리케이션에서는 ``Application``이라고 불리는 컨트롤러 클래스가 자동으로생성됩니다.
 생성되는 모든 컨트롤러들은 ``Application``에서 상속을 받습니다. 따라서 ``Application``과 같은 어트리뷰트를 공유합니다.
 
 Merb의 [Router][]은 들어오는 요청의 세부항을 검사하고 ``router.rb``파일에 지정된 규칙과 비교를 합니다.
@@ -60,9 +60,9 @@ Merb의 [Router][]은 들어오는 요청의 세부항을 검사하고 ``router.
 컨트롤러의 맥락에서, 이러한 메소드들을 **컨트롤러 액션** 또는 간단하게 **액션**이라고 부릅니다.
 
 
-``Application`` (``Merb::Controller``의 서브클래스)는 일반적으로 상속하는 클래스입니다. 
+``Application`` (``Merb::Controller``의 서브클래스)는 일반적으로 컨트롤러들이 상속을 받는 클래스입니다. 
 그래서 컨트롤러 사이에서 코드를 공유하기에 편리한 장소입니다.<!-- break -->  
-(_use with care_)
+(_조심해서 사용하시기 바랍니다_)
 
 
 +-- {: .notes}
@@ -90,9 +90,9 @@ Merb의 [Router][]은 들어오는 요청의 세부항을 검사하고 ``router.
 {:lang=shell html_use_syntax=true}
 
 여러분이 새롭게 생성된 컨트롤러 파일(``app/controllers/cats.rb``)을 열어보시면,
-``Cats``라고 새롭게 생성된 클래스가 있는 것을 보시게 될 것입니다.
-예상한대로, ``Application``에서 상속한 클래스입니다.
-하지만, 이번에는 비어있는 ``index``액션 대신에 우리는 7개의 미리 내용들이 정의되어 있는 액션들을 볼 수 있습니다.
+``Cats``라고 새롭게 생성된 클래스가 있는 것을 보실 것입니다.
+예상한대로, ``Application``에서 상속 받은 클래스입니다.
+하지만, 이번에는 비어있는 ``index``액션 대신에 7개의 미리 정의되어 있는 액션들을 볼 수 있습니다.
 
 생성된 파일을 보겠습니다:
 
@@ -447,8 +447,8 @@ Merb에서는 컨트롤러가 스트링을 직접 리턴해도 괜찮습니다.
 만약 같은 모델 클래스가 반복적으로 호출된다면, 그 로그인<!-- (???) -->을 그 클래스의 새로운 메소드로 옮기는 것이 리펙토링하는 좋은 방법일 것입니다.
 두새개 이상의 모델클래스가 컨트롤러에서 필요하게 된다면, 컨트롤러를 모델에 좀더 가깝게 매치시키도록 재작업을 하거나 그러한 관계들을 캡슐화하는 프레젠터 모델을 만드시기 바랍니다.
 
-404 페이지들을 사용하는데 있어, Merb는 ORM에 의해 생성된 많은 익셉션들을 다룰 수 있습니다.
-그렇지만 모델레이어에서 익셉션들을 처리하고 유저에게 문제점에 대해 좀 더 나은 설명을 제공하는 것은 좋은 연습이 될 것입니다.
+404 페이지들을 사용하는데 있어, Merb는 ORM에 의해 생성된 많은 예외들을 다룰 수 있습니다.
+그렇지만 모델레이어에서 예외들을 처리하고 유저에게 문제점에 대해 좀 더 나은 설명을 제공하는 것은 좋은 연습이 될 것입니다.
 
 ###요청에 의한 정보 : ``params``와 ``request``해시{: #information_from_the_request_the_params_and_request_hashes}
 컨트롤러는 요청에의해서 생성된 2가지의 해시에 대해 접근할 수 있습니다.
@@ -467,12 +467,12 @@ Merb에서는 컨트롤러가 스트링을 직접 리턴해도 괜찮습니다.
 
 ###클라이언트에 대한 지속적인 정보 : 세션과 쿠키{: #persistant_information_about_the_client_sessions_and_cookies}
 HTTP는 상태가 없는 프로토콜 입니다. 
-이는 각각의 요청들이 그 자체로서 독자적인 것을 의미합니다. 그리고 호출 사이의 정보를 보관할 방법이 없습니다.
+이는 각각의 요청들이 그 자체로서 독자적이고 호출 간에 정보를 보관할 방법이 없다는 것을 의미합니다.
 웹개발자에게는 지속적인 상태를 시뮬레이션하는 것이 편리합니다. 
-쿠키는 클라이언트를 식별하는데 사용됩니다. 쿠키는 컨트롤러에 있는 쿠키 해시를 통해 사용할 수 있습니다.
+쿠키가 클라이언트를 식별하는데 사용됩니다. 쿠키는 컨트롤러에 있는 쿠키 해시를 통해 사용할 수 있습니다.
 
-하지만 클라이언트를 따라서 지속적인 상태를 주는 것 처럼 만드는 쉽고 보다 유연한 방법이 있습니다.
-``session`` 해시는 같은 클라이언트로부터 들어오는 다양한 요청들간에 지속시킵니다.
+하지만 클라이언트를 따르는 지속적인 상태가 있는 것 처럼 만드는 쉽고 보다 유연한 방법이 있습니다.
+``session`` 해시는 같은 클라이언트로부터 들어오는 다양한 요청들 간의 정보들을 지속시킵니다.
 세션을 유지하는 여러가지 방법들이 있지만, 여기에서 더 설명하지는 않겠습니다. 
 하지만 결과는 같습니다.
 세션에 저장된 객체는 다음에 유저가 요청을 할 때도 세션에 그대로 저장되어 있습니다.
@@ -488,13 +488,11 @@ HTTP는 상태가 없는 프로토콜 입니다.
     class Users < Application
       def login
         if login_was_successful
-          # Make sure that when the user reaches the home page,
-          # we can remember who they were.
+          # 사용자가 홈페이지에 오면 누구인지 기억할 수 있습니다.
           session[:user] = User.current_user
           redirect url(:home)
         else
-          # Provide a message telling the user why they are back
-          # at the login screen.
+          # 사용자에게 왜 뒤로 가게 되는지 로그인 스크린에서 메세지를 제공합니다.
           session[:error_message] = "Could not log you in; please try again."
           redirect url(:login)
         end
@@ -520,11 +518,11 @@ Merb는 이러한 응답을 [redirect][]메소드를 사용하여 만들어줄 �
       def update(id)
         post = Post.get(id)
         if post.update_attributes(params[:post])
-          redirect resource(post) # Show the client the updated post.
+          redirect resource(post) # 클라이언트에게 업데이트된 post를 보여줍니다.
         else
           session[:errors] = post.errors
 
-          # Send the client back to the edit page so they can fix the errors.
+          # 에러를 수정할 수 있도록 클라이언트를 수정 페이지로 보냅니다.
           redirect resource(:edit, post)
         end
       end
@@ -545,13 +543,13 @@ TODO -- How does merb deal with exceptions?
     class Posts < Application
       def update(id)
         unless params[:post]
-          status = 401 # Tell the client we could not understand the request.
+          status = 401 # 클라이언트에게 요청을 이해하지 못했다고 말해줍니다.
           return render("We could not seem to find the content of modified post",
               :layout=>'error')
         end
         post = Post.get(id)
         post.update_attributes(params[:post])
-        redirect resource(post) # Show the client the updated post.
+        redirect resource(post) # 클라이언트에게 업데이트된 post를 보여줍니다.
       end
     end
 {:lang=ruby html_use_syntax=true}

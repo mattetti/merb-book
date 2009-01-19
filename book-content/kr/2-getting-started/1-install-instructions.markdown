@@ -3,12 +3,13 @@
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
-프레임웍을 사용하기 위해서는 Merb를 설치해야 합니다. 그러나, Merb를 설치하기 전에 먼저 C컴파일러, 루비, [루비젬](http://www.rubygems.org/), 그리고 (모델들을 원한다면) 데이터베이스가 설치되어 있어야 합니다.
+프레임웍을 사용하기 위해서는 Merb를 설치해야 합니다. 
+그러나, Merb를 설치하기 전에 먼저 C컴파일러, 루비, [루비젬](http://www.rubygems.org/), 그리고 (모델들을 원한다면) 데이터베이스가 설치되어 있어야 합니다.
 
 ## OS X{: #os_x}
 
 ### 필요 조건{: #osx_prerequisites}
-XCode(흔히 디벨로퍼 툴 이라고 부름)을 OS X CD나 [Apple 개발자 사이트](http://developer.apple.com/technology/xcode.html)에서 다운받아서  설치해야 합니다.
+XCode(흔히 디벨로퍼 툴 이라고 부름)을 OS X DVD나 [Apple 개발자 사이트](http://developer.apple.com/technology/xcode.html)에서 다운받아서  설치해야 합니다.
 
 ### Ruby & RubyGems{: #osx_rubygems}
 만약 OS X 10.5 (Leopard)라면, 대부분 루비가 설치되어 있을 것입니다.

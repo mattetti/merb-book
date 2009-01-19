@@ -43,7 +43,7 @@ ActiveRecord와는 다르게, DataMapper 모델은 (마이그레이션은 지원
 어트리뷰트 정의를 하는 동시에 검증을 정의하거나 명시적으로 ``validates_*``메소드를 사용해서 검증할 수 있습니다.
 다음의 두 예제에는 같은 것입니다:
 
-    # Using "auto-validations", defined with the property.
+    # property에 정의되어 있는 "자동 검증"을 사용.
     class Person
       include DataMapper::Resource
       property :id,   Serial
@@ -51,7 +51,7 @@ ActiveRecord와는 다르게, DataMapper 모델은 (마이그레이션은 지원
       property :age,  Integer, :length   => 1..150
     end
 
-    # Using the "validates_*" methods.
+    # "validates_*" 메소드 사용
     class Person
       include DataMapper::Resource
       property :id,   Serial
@@ -65,11 +65,11 @@ ActiveRecord와는 다르게, DataMapper 모델은 (마이그레이션은 지원
 
 더 많은 정보는 DataMapper의 [validations][] 페이지를 보시기 바랍니다.
 
-## 관계(Associations){: #associations}
+## 연관(Associations){: #associations}
 
 DataMapper는 매우 다재다능한 모델간 관계 정의방법을 가지고 있습니다.
 일대다, 다대다 등을 포함한  모든 관계 타입들이 지원됩니다.
-관계(Associations)는 ``has``와``belongs_to`` 메소드를 사용하여 설정됩니다.
+연관(Associations)은 ``has``와``belongs_to`` 메소드를 사용하여 설정됩니다.
 
 여러분이 블로그 어플리케이션을 작성하고 있다고 가정해 보겠습니다.
 이 어플리케이션은 Article과 Comment 모델을 가지고 있을 것입니다.
@@ -77,13 +77,13 @@ DataMapper는 매우 다재다능한 모델간 관계 정의방법을 가지고 
 
     class Article
       include DataMapper::Resource
-      # Set up properties.
+      #속성들 설정
       has n, :comments
     end
 
     class Comment
       include DataMapper::Resource
-      # Set up properties.
+      #속성들 설정
       belongs_to :article
     end
 {:lang=ruby html_use_syntax=true}
@@ -91,13 +91,13 @@ DataMapper는 매우 다재다능한 모델간 관계 정의방법을 가지고 
 이것은 관계를 나타내는 메소드들을 보여줍니다.
 
     article = Article.first
-    article.comments  # Returns all associated comments.
+    article.comments  # 관련된 모든 코멘트들을 리턴합니다.
     comment = Comment.first
-    comment.article   # Returns the parent Article.
+    comment.article   # 부모 Article을 리턴합니다.
 {:lang=ruby html_use_syntax=true}
 
 Article 모델을 보시면, "마법같은 ``n``" 부분을 유의해서 보시게 될 것입니다.
-이 메소드는 ``무한``에 대한 쇼트컷이고 "has many" 관계를 제공하기 위해 사용됩니다.
+이 메소드는 ``무한``에 대한 간단한 표현이고 "has many" 관계를 제공하기 위해 사용됩니다.
 
 "has one"관계를 설정하는 것은 숫자 ``1``을 ``has``메소드에게 주는 것으로 간단하게 끝납니다.
 
@@ -105,13 +105,13 @@ Article 모델을 보시면, "마법같은 ``n``" 부분을 유의해서 보시�
 
     class Person
       include DataMapper::Resource
-      # setup properties
+      #속성들 설정
       has 1, :coffee_cup
     end
 
     class CoffeeCup
       include DataMapper::Resource
-      # setup properties
+      #속성들 설정
       belongs_to :person
     end
 {:lang=ruby html_use_syntax=true}
@@ -119,9 +119,9 @@ Article 모델을 보시면, "마법같은 ``n``" 부분을 유의해서 보시�
 레일즈의 ``has many`` 관계에서와 같이 이러한 관계들은 헬퍼 메소드들을 제공합니다.
 
     person = Person.first
-    person.coffee_cup  # Returns the person's cup.
+    person.coffee_cup  # person의 커피컵을 리턴합니다.
     cup = CoffeeCup.first
-    cup.person  # Returns the cup's owner.
+    cup.person  # 컵의 주인을 리턴합니다.
 {:lang=ruby html_use_syntax=true}
 
 ``has many through``와 같이 보다 복잡한 예들은 DataMapper의 [associations][] 페이지를 참조하기 바랍니다.
@@ -144,7 +144,7 @@ DataMapper는 [aspect-oriented][] 접근법이나 다른 메소드들 사이에 
       private
 
       def sanitize_homepage
-        # If the homepage already begins with "http://", just return.
+        # 만약에 홈페이지가 이미 "http://"로 시작된다면 그냥 리턴합니다.
         return if homepage =~ /^http[s]?:\/\/\w/
         self.homepage = 'http://' + homepage
       end
