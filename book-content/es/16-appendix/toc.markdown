@@ -1,4 +1,4 @@
-# appendix
+# Apéndice
 
 <ul class='toc'>
 	<li><a href='/es/appendix/tips'>Ayudas y consejos</a></li>

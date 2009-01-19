@@ -1,4 +1,4 @@
-# deployment
+# Despliegue
 
 <ul class='toc'>
 	<li><a href='/es/deployment/passenger'>Passenger</a>
