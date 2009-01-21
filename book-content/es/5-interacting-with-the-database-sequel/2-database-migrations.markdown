@@ -1,53 +1,57 @@
-#Database Migrations
+# Migraciones hacia la base de datos
+Las migraciones en Sequel serán generadas por 
+cualquier tarea del comando ``merb-gen`` que cree un modelo.
 
-Sequel migrations will be generated with any merb-gen task that creates a model.
-
-    $ merb-gen model post
+    $ merb-gen model articulo
     Generating with model generator:
-         [ADDED]  spec/models/post_spec.rb
-         [ADDED]  app/models/post.rb
-         [ADDED]  schema/migrations/001_post_migration.rb
-         
-    $ cat schema/migrations/001_post_migration.rb
+         [ADDED]  spec/models/articulo_spec.rb
+         [ADDED]  app/models/articulo.rb
+         [ADDED]  schema/migrations/001_articulo_migration.rb
+    $ cat schema/migrations/001_articulo_migration.rb
+{:lang=shell html_use_syntax=true}
     
-    # For details on Sequel migrations see 
-    # http://sequel.rubyforge.org/
-
-    class PostMigration < Sequel::Migration
-
+    class ArticuloMigration < Sequel::Migration
       def up
-        create_table :posts do
+        create_table :articulos do
           primary_key :id
         end
       end
 
       def down
-        drop_table :posts
+        drop_table :articulos
       end
-
     end
+{:lang=ruby html_use_syntax=true}
     
-Columns can be added to the table definition using the `#column` method or the column type can be used as the method in the specification.
+Usted puede agregar columnas a la definición de una tabla determinada 
+utilizando el método ``#column`` o también puede definir el tipo de columna 
+como un método en la especificación de la tabla en cuestión.
 
-    class PostMigration < Sequel::Migration
-
+    class ArticuloMigration < Sequel::Migration
       def up
-        create_table :posts do
+        create_table :articulos do
           primary_key :id
-          string      :title
-          text        :body
-          boolean     :published, :default => false
+          string :titulo
+          text :cuerpo
+          boolean :publicado, :default => false
         end
       end
       
       def down
-        drop_table :posts
+        drop_table :articulos
       end
-
     end
-    
-After editing the migration, it can be run with a rake task.
+{:lang=ruby html_use_syntax=true}
+
+Luego de haber modificado la migración, 
+usted debe ejecutar el siguiente comando.    
     
     $ rake sequel:db:migrate
+{:lang=shell html_use_syntax=true}
 
-A VERSION flag can be specified to roll back to particular migration versions.
+Una bandera de versión de la migración puede ser especificada 
+con el fin de volver a una determinada versión de migración.
+
+Para mas información, por favor referirse a la página del [proyecto Sequel][].
+
+[proyecto Sequel]: http://sequel.rubyforge.org/

@@ -1,26 +1,33 @@
-# Instalacion y configuracion
+# Instalación y configuración
 
 ## Generando un proyecto utilizando Sequel
-A fin de crear una aplicacion Merb utilizando Sequel, 
-To create a core app with Sequel, merb-gen takes a `--orm` flag.
+A fin de crear una aplicación Merb utilizando Sequel, 
+usted debe agregar la opción ``--orm`` 
+cuando ejecute el comando ``merb-gen``.
 
-    $ merb-gen core --orm sequel new_app
+    $ merb-gen core --orm sequel nueva_aplicacion
+{:lang=shell html_use_syntax=true}
 
-This will build the desired application, but falls a little short when it comes to bells and whistles.
-    
-To achieve results similar to merb-gen app, the merb-sequel-stack gem can be used.
+Este comando construirá el esqueleto de la aplicación.
+
+A fin de lograr resultados similares a los descriptos anteriormente,
+usted puede utilizar la gema ``merb-sequel-stack``.
 
     $ git clone git://github.com/jackdempsey/merb-sequel-stack.git
     $ cd merb-sequel-stack/
     $ rake install
+{:lang=shell html_use_syntax=true}
     
-merb-gen will now include a sequel-app generator.
-This will generate an app that uses Sequel, rspec, and the rest of what can be expected from `merb-gen app`.
+El comando ``merb-gen`` ahora incluirá el generador ``sequel-app``.
+Este generara una aplicación que utilice Sequel, RSpec y las demás 
+funcionalidades que se esperan del comando ``merb-gen app``.
     
-    $merb-gen sequel-app new_app
+    $merb-gen sequel-app nueva_aplicación
+{:lang=shell html_use_syntax=true}
     
-By default, `merb-gen sequel-app` will generate a database.yml file that uses sqlite3.
-For more info, check out the [repository][].
+Por defecto, el comando ``merb-gen sequel-app`` generará 
+el archivo ``.config/database.yml`` que utilizará el adaptador SQLite3.
 
+Para mas información, por favor referirse a la página del [stack Sequel Merb][].
 
-[repository]:       http://github.com/jackdempsey/merb-sequel-stack/tree
+[stack Sequel Merb]: http://github.com/jackdempsey/merb-sequel-stack/tree

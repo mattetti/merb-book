@@ -1,40 +1,41 @@
-#Model Associations
+# Asociaciones entre modelos
+La clase ``Sequel::Model`` tiene un conjunto simple de métodos de asociación.
+Sequel provee los siguientes métodos para crear asociaciones en la base de datos:
+ 
+ * ``one-to-one`` (uno-a-uno)
+ * ``many-to-one`` (muchos-a-uno)
+ * ``one-to-many`` (uno-a-muchos)
+ * ``many-to-many`` (muchos-a-muchos)
 
-`Sequel::Model` has a very simple set of association methods.
-Sequel provides `many_to_one`, `one_to_many` and `many_to_many` to create database associations.
+A continuación se detallara cada uno de los métodos mencionados.
 
+## Uno a Uno
 
-##One to Many
-
-    class Post < Sequel::Model
-      one_to_many :comments
+    class Usuario < Sequel::Model
+      one_to_many :direcciones, :one_to_one => true
     end
 {:lang=ruby html_use_syntax=true}
 
+## Uno a Muchos
 
-    
-The Post class above now has a set of association methods similar to ActiveRecord's has\_many.    
-
-##Many to One
-
-    class Post < Sequel::Model
-      many_to_one :user
+    class Artículo < Sequel::Model
+      one_to_many :comentarios
     end
 {:lang=ruby html_use_syntax=true}
 
-##Many to Many
+La clase ``Artículo`` ahora tiene un conjunto de métodos de asociación
+similar al método ``has\_many`` proporcionado por ActiveRecord.
+
+## Muchos a uno
+
+    class Artículo < Sequel::Model
+      many_to_one :usuario
+    end
+{:lang=ruby html_use_syntax=true}
+
+## Muchos a Muchos
     
-    class Post < Sequel::Model
+    class Artículo < Sequel::Model
       many_to_many :tags
     end
 {:lang=ruby html_use_syntax=true}
-
-## One to One
-
-    class User < Sequel::Model
-      one_to_many :addresses, :one_to_one => true
-    end
-{:lang=ruby html_use_syntax=true}
-
-
-    
