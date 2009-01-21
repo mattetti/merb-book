@@ -1,87 +1,92 @@
-#Sequel Plugins
+# Extensiones de Sequel
+La clase ``Sequel::Model`` puede ser vista 
+como el mínimo conjunto de funcionalidades para un ORM, 
+pero es realmente fácil de extender sus capacidades.
+Las extensiones son librerías empaquetadas como gemas 
+las cuales pueden agregar funcionalidades necesarias a sus modelos.
+Estas extensiones deberán ser llamadas como ``sequel_nombreextension``.
+Estas son utilizadas en un modelo al declarar ``is :nombreextension``.
+Las extensiones son muy fáciles de usar como de escribir.
 
-Sequel::Model may seem like the minimal set of functionality for an ORM, but it is easy to extend its capabilities.
-Sequel Plugins are libraries packaged as gems which can add useful functionality to your models.
-Plugins are named like `sequel_pluginname`.
-They're used in models by declaring `is :pluginname`.
-Plugins for Sequel are painless to use, and are easy to write.
-
-
-##Useful Plugins
-
+## Extensiones útiles.
 ###sequel\_timestamped
+Como el nombre lo indica, ``sequel\_timestamped`` actualizará
+las columnas ``timestamp`` estándares de su modelo.
 
-As the name would indicate, sequel\_timestamped will update standard timestamp columns in your model.
-
-    class Note < Sequel::Model
+    class Nota < Sequel::Model
       is :timestamped
     end
+{:lang=ruby html_use_syntax=true}
 
-If the model has `created_at` and `updated_at` timestamp columns, they will be updated as expected.
+En el caso que el modelo haya creado 
+las columnas de tiempo ``created_at`` y ``updated_at``, 
+ellas serán actualizadas automáticamente.
 
-Here's the [sequel\_timestamped source][].
+Para más información, por favor referirse a la 
+página de la [extension sequel\_timestamped][].
 
 ###sequel\_notnaughty
-
-The sequel\_notnaughty plugin replaces standard Sequel::Model validation with not-naughty validation.
-Not-naughty is a gem that provides an easily extensible validation framework.
+Esta extensión reemplaza las validaciones estándar de la clase ``Sequel::Model``
+con un conjunto de validaciones sintácticamente no sucias.
+Esta extensión es una gema que provee 
+una plataforma de validaciones fácilmente extensible.
     
-    class User < Sequel::Model
+    class Usuario < Sequel::Model
       is :notnaughty
       
-      #now use the not-naughty syntax for validation
+      # Ahora usted podrá utilizar la sintaxis no sucia para sus validaciones.
       validates do
-        presence_of :login
-        length_of :login, :minimum => 5
+        presence_of :sobrenombre
+        length_of :sobrenombre, :minimum => 5
       end
     end
+{:lang=ruby html_use_syntax=true}
 
-Here's the [sequel\_notnaughty source][], and the [not-naughty source][].
-
+Para más información, por favor referirse a la 
+página de la [extension sequel\_notnaughty][].
 
 ###sequel\_polymorphic
+Esta extensión se encarga de definir las asociaciones polimórficas
+agregando funcionalidades al manejo de asociaciones de Sequel.
 
-Sequel\_polymorphic takes the hard work of setting up polymorphic relationships out of your hands.
-The plugin adds functionality to Sequel's associations to handle these situations.
-
-    class Note < Sequel::Model
+    class Nota < Sequel::Model
       is :polymorphic
-      one_to_many :assets, :as => :attachable
+      one_to_many :activos, :as => :attachable
     end
 
-    class Asset < Sequel::Model
+    class Activo < Sequel::Model
       is :polymorphic
       many_to_one :attachable, :polymorphic => true
     end
+{:lang=ruby html_use_syntax=true}
 
-This will create a transparent polymorphic relationship between the Note and its Assets.
+Esto creara una relación polimórfica transparente 
+entra una nota y sus respectivos activos.
 
-Here's the [sequel\_polymorphic source][].
+Para más información, por favor referirse a la 
+página de la [extension sequel\_polymorphic][].
 
 ###sequel\_taggable
+Esta extensión fue desarrollada por Jack Dempsey 
+mientras se encontraba trabajando con Merb.
+Esta se encarga de agregar simples rótulos a un determinado modelo.
+Por el momento, no existen tareas en la extensión para generar una tabla Rotulo
+aunque si existe una migración, la cual viene incluida en el código fuente de la misma.
 
-Sequel taggable is another plugin developed by Jack Dempsey while working with Merb.
-It just adds simple tagging methods to a model.
-As of right now, there are no tasks with the plugin to generate a Tag table.
-There is, however, a migration included in the plugin source.
-
-    class Article < Sequel::Model
+    class Artículo < Sequel::Model
       is :taggable
     end
     
-    a = Article.create(:title => "My first article")
-    t = Tag.create(:name => "a tag")
-    a.add_tag(t)
+    artículo = Artículo.create(:titulo => "Mi primer articulo")
+    rótulo = Tag.create(:name => "un rótulo")
+    articulo.add_tag(rotulo)
 
-Sequel\_taggable depends on the sequel\_polymophic plugin.
-Here's the [sequel\_taggable source][].
+Esta extensión depende de la extensión ``sequel\_polymophic``.
 
-[sequel_timestamped source]:    http://github.com/bricooke/sequel_timestamped/tree/master
+Para más información, por favor referirse a la 
+página de la [extensión sequel\_taggable][].
 
-[sequel_notnaughty source]:     http://github.com/boof/sequel_notnaughty/tree/master
-
-[not-naughty source]:           http://github.com/boof/not-naughty/tree/master
-
-[sequel_polymorphic source]:    http://github.com/jackdempsey/sequel_polymorphic/tree/master
-
-[sequel_taggable source]: http://github.com/jackdempsey/sequel_taggable/tree/master
+[extensión sequel_timestamped]: http://github.com/bricooke/sequel_timestamped/tree/master
+[extensión sequel_notnaughty]: http://github.com/boof/sequel_notnaughty/tree/master
+[extensión sequel_polymorphic]: http://github.com/jackdempsey/sequel_polymorphic/tree/master
+[extensión sequel_taggable]: http://github.com/jackdempsey/sequel_taggable/tree/master

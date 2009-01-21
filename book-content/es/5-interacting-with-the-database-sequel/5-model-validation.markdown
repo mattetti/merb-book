@@ -1,55 +1,56 @@
-#Model Validation
+# Validaciones de los modelos
+La clase ``Sequel::Model`` provee un conjunto de métodos 
+para validación de entradas por defecto.
+Los métodos de validación estándares disponibles son los siguientes:
 
-`Sequel::Model` provides a set of validation methods by default.
-The available standard validations are:
+ * acceptance\_of (aceptación de)
+ * confirmation\_of (confirmación de )
+ * format\_of (formato de)
+ * length\_of (longitud de)
+ * numericality\_of (numerosidad de)
+ * presence\_of (presencia de)
+ * uniqueness\_of (unicidad de)
 
- - acceptance\_of
- - confirmation\_of
- - format\_of
- - length\_of
- - numericality\_of
- - presence\_of
- - uniqueness\_of
-  
-Validations can be specified in two ways within a class.
+Estas validaciones pueden ser especificadas 
+de dos maneras dentro de una determinada clase.
 
-    class User < Sequel::Model
+    class Usuario < Sequel::Model
     
-      validates_confirmation_of :password
-      validates_length_of :login, :minimum => 5
+      validates_confirmation_of :contraseña
+      validates_length_of :sobrenombre, :minimum => 5
       
-      # or
+      # o de esta manera
       
       validates do
-        confirmation_of :password
-        length_of :login, :minimum => 5
+        confirmation_of :contraseña
+        length_of :sobrenombre, :minimum => 5
       end
     end
 {:lang=ruby html_use_syntax=true}
 
+Por defecto, ``Sequel::Model`` lanzara un error 
+en el caso de fallar en alguna validación de entradas.
+El acceso directo de la clase ``:raise_on_save_failure`` puede ser definido como falso 
+a fin de evitar el lanzamiento de errores en el caso de error en una validación.
+Si ``:raise_on_save_failure`` es falsa, 
+entonces el metodo ``#save`` retornara falso en el caso de errores.
 
+Una diferencia importante entre ``Sequel::Model`` y ``ActiveRecord`` es el método ``#save!``.
+En el caso de Sequel, este método actualizara la entrada sin validarla.
+En el caso de ActiveRecord, este método siempre 
+ejecutara las validaciones y lanzara un error si encuentra fallas en este proceso.
 
-By default, Sequel::Model will raise an error on validation failures.
-The class accessor `:raise_on_save_failure` can be set to false to avoid raising errors on validation failure.
-If `raise_on_save_failure` is false, the `#save` method will return false on failures
-
-An important distinction between Sequel::Model and ActiveRecord is the `#save!` method.
-In Sequel::Model, `#save!` will update the record without validation.
-This is significantly different from ActiveRecord, which will run validations and raise an error on failure.
-
-If validation fails, errors can be accessed on the object with the `#errors` method.
+En el caso de que falle una validación, 
+los errores pueden ser accedidos a través de un objeto con el método ``#errors``.
     
-    User.raise_on_save_faliure = false
-    u = User.new(:login => 3)
-    
-    u.save
+    Usuario.raise_on_save_faliure = false
+    usuario = Usuario.new(:sobrenombre => 3)
+    usuario.save
     => false
-    u.errors.on(:login)
+    usuario.errors.on(:sobrenombre)
     => 'is too short'
 {:lang=ruby html_use_syntax=true}
 
- 
-A full set of documentation for model validations can be found in the [Merb::Sequel documentation][]
+Para mas información, por favor referirse a la pagina de [documentación de los Modelos en Sequel][].
 
-    
-[Merb::Sequel documentation]: http://sequel.rubyforge.org/rdoc/classes/Sequel/Model.html
+[documentación de los Modelos en Sequel]: http://sequel.rubyforge.org/rdoc/classes/Sequel/Model.html
