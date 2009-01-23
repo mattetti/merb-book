@@ -1,6 +1,6 @@
 #Model Validation
 
-Sequel::Model provides a set of validation methods by default.
+`Sequel::Model` provides a set of validation methods by default.
 The available standard validations are:
 
  - acceptance\_of
@@ -25,10 +25,13 @@ Validations can be specified in two ways within a class.
         length_of :login, :minimum => 5
       end
     end
+{:lang=ruby html_use_syntax=true}
+
+
 
 By default, Sequel::Model will raise an error on validation failures.
 The class accessor `:raise_on_save_failure` can be set to false to avoid raising errors on validation failure.
-If `raise_on_save_falure` is false, the `#save` method will return false on failures
+If `raise_on_save_failure` is false, the `#save` method will return false on failures
 
 An important distinction between Sequel::Model and ActiveRecord is the `#save!` method.
 In Sequel::Model, `#save!` will update the record without validation.
@@ -43,7 +46,9 @@ If validation fails, errors can be accessed on the object with the `#errors` met
     => false
     u.errors.on(:login)
     => 'is too short'
-   
+{:lang=ruby html_use_syntax=true}
+
+ 
 A full set of documentation for model validations can be found in the [Merb::Sequel documentation][]
 
     

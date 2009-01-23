@@ -1,5 +1,5 @@
 # dependencies are generated using a strict version, don't forget to edit the dependency versions when upgrading.
-merb_gems_version = "1.0.7.1"
+merb_gems_version = "1.0.8"
 dependency "maruku", ">= 0.5.9"
 dependency "merb_babel", ">= 0.1.2"
 
