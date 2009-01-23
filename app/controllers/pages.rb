@@ -14,6 +14,7 @@ class Pages < Application
   
   def table_of_content
     toc_file = Dir["#{Merb.root}/book-content/#{language}/toc.*"].entries.first
+    raise NotFound unless toc_file
     text = File.open(toc_file).read
     render ::Maruku::new(text).to_html
   end
