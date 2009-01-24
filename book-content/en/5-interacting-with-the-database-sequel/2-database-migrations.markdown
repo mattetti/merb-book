@@ -51,3 +51,9 @@ After editing the migration, it can be run with a rake task.
     $ rake sequel:db:migrate
 
 A VERSION flag can be specified to roll back to particular migration versions.
+
+A database for the test environment will not built automatically.
+To run tests, the test database will need to be migrated as well.
+A MERB\_ENV variable can be passed to the rake task.
+
+    $ rake sequel:db:migrate MERB_ENV=test
