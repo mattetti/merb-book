@@ -22,7 +22,7 @@ module Merb
 
     # Returns links to the previous and next pages.
     def page_nav_links(format = 'markdown')
-      return if params[:action] != 'show' # Don't need navigation for the TOC (index).
+      return if params[:action] != 'show' || @page.nil? # Don't need navigation for the TOC (index).
       links = []
       links << previous_page_url
       # Stick a link to the TOC in the middle of the array.

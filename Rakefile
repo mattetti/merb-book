@@ -51,7 +51,7 @@ task :create_chapter_tocs do
       end
     end
   else
-    chapters = Dir["#{Dir.pwd}/book-content/#{ENV["LANG"]}/*-*"].entries.map{|f| File.basename(f)[/\d-(.*)/, 1]}
+    chapters = Dir["#{Dir.pwd}/book-content/#{ENV["LANG"]}/*-*"].entries.map{|f| File.basename(f)[/\d+-(.*)/, 1]}
     chapters.each do |chapter|
       save_chapter_toc(chapter, ENV["LANG"])
     end
