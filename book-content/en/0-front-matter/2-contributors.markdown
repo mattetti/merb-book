@@ -8,6 +8,7 @@ Thank you all!
 * [Matt     Aimonetti   ](http://merbist.com)
 * [Fabio    Akita       ](http://akitaonrails.com)
 * [Dale     Campbell    ](http://corrupt.save-state.net/)
+* [Jacob    Dunphy      ](http://github.com/jdunphy/)
 * [Matthew  Ford        ](http://github.com/deimos1986)
 * [Mathieu  Fosse       ](http://blog.kawooa.org)
 * [Yehuda   Katz        ](http://yehudakatz.com)
