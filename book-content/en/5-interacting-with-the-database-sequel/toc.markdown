@@ -1,6 +1,5 @@
-# interacting-with-the-database-sequel
 
- <ul class='toc'><li><a href='/en/interacting-with-the-database-sequel/up'>Installation and setup</a><ul style='list-style: none;'><li><a href='/en/interacting-with-the-database-sequel/up#generating_a_project_with_sequel'>Generating a project with Sequel</a></li></ul></li></ul>
+<ul class='toc'><li><a href='/en/interacting-with-the-database-sequel/up'>Installation and setup</a><ul style='list-style: none;'><li><a href='/en/interacting-with-the-database-sequel/up#generating_a_project_with_sequel'>Generating a project with Sequel</a></li></ul></li></ul>
 
 <ul class='toc'><li><a href='/en/interacting-with-the-database-sequel/migrations'>Database Migrations</a></li></ul>
 

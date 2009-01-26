@@ -16,6 +16,7 @@ As the name would indicate, sequel\_timestamped will update standard timestamp c
     class Note < Sequel::Model
       is :timestamped
     end
+{:lang=ruby html_use_syntax=true}
 
 If the model has `created_at` and `updated_at` timestamp columns, they will be updated as expected.
 
@@ -35,6 +36,7 @@ Not-naughty is a gem that provides an easily extensible validation framework.
         length_of :login, :minimum => 5
       end
     end
+{:lang=ruby html_use_syntax=true}
 
 Here's the [sequel\_notnaughty source][], and the [not-naughty source][].
 
@@ -53,6 +55,7 @@ The plugin adds functionality to Sequel's associations to handle these situation
       is :polymorphic
       many_to_one :attachable, :polymorphic => true
     end
+{:lang=ruby html_use_syntax=true}
 
 This will create a transparent polymorphic relationship between the Note and its Assets.
 

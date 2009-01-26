@@ -1,4 +1,9 @@
-#Installation and setup
+#Getting started
+
+[Sequel][] is a full-fledged, mature ORM database toolkit that has support for object models.
+It's supported as a drop-in ORM option with Merb using the merb\_sequel plugin.
+Sequel also features an easy-to-use plugin syntax to extend default functionality.
+The [Sequel documentation][] is very thorough, and has some good usage examples.
 
 ##Generating a project with Sequel
 
@@ -22,5 +27,6 @@ This will generate an app that uses Sequel, rspec, and the rest of what can be e
 By default, `merb-gen sequel-app` will generate a database.yml file that uses sqlite3.
 For more info, check out the [repository][].
 
-
-[repository]:       http://github.com/jackdempsey/merb-sequel-stack/tree
+[Sequel]:                 http://sequel.rubyforge.org
+[Sequel documentation]:   http://sequel.rubyforge.org/documentation.html
+[repository]:             http://github.com/jackdempsey/merb-sequel-stack/tree

@@ -30,6 +30,18 @@ To simplify the following examples, the SQL statements produced by Sequel::Model
     >> Post.order(:created_at.desc).paginate(2, 10).all
       ~ SELECT * FROM `posts` ORDER BY `created_at` DESC LIMIT 10 OFFSET 10
       
+Rewriting filters like these on a regular basis can be a pain.
+Sequel supports subset methods that create easy-to-reuse filters.
+
+    class Post < Sequel::Model
+      subset(:recent, :created_at > Date.today - 3)
+    end
+    
+    # You can then call
+    Post.recent.filter(:user_id => 1).all
+{:lang=ruby html_use_syntax=true}
+      
+      
 ##The Other Three Letters in CRUD
 
 ###Create
