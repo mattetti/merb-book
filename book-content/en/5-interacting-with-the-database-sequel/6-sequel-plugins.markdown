@@ -5,6 +5,8 @@ Sequel Plugins are libraries packaged as gems which can add useful functionality
 Plugins are named like `sequel_pluginname`.
 They're used in models by declaring `is :pluginname`.
 Plugins for Sequel are painless to use, and are easy to write.
+These are just a few examples.
+Jeremy Evans maintains a more [complete list of plugins][].
 
 
 ##Useful Plugins
@@ -78,6 +80,8 @@ There is, however, a migration included in the plugin source.
 
 Sequel\_taggable depends on the sequel\_polymophic plugin.
 Here's the [sequel\_taggable source][].
+
+[complete list of plugins]:   http://sequel.rubyforge.org/plugins.html
 
 [sequel_timestamped source]:    http://github.com/bricooke/sequel_timestamped/tree/master
 
