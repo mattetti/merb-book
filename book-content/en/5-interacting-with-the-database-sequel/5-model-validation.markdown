@@ -48,7 +48,18 @@ If validation fails, errors can be accessed on the object with the `#errors` met
     => 'is too short'
 {:lang=ruby html_use_syntax=true}
 
- 
+By default, Sequel will also not allow unexpected data into a column.
+If the table schema prevents a column from containing a nil value, it can not be set to nil.
+Sequel attempts to typecast entered values to match their column type.
+This can be disabled by setting the class attr\_accesor `raise_on_typecast_failure` to false.
+
+    a => Address.new(:user_id => 1, :city => 'A City')
+    a.user_id = nil
+    Sequel::Error::InvalidValue: nil/NULL is not allowed for the user_id column
+    Address.raise_on_typecast_failure = false
+    a.user_id = nil
+    => nil
+
 A full set of documentation for model validations can be found in the [Merb::Sequel documentation][]
 
     
