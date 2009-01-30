@@ -1,0 +1,12 @@
+
+<ul class='toc'><li><a href='/en/interacting-with-the-database-sequel/up'>Installation and setup</a><ul style='list-style: none;'><li><a href='/en/interacting-with-the-database-sequel/up#generating_a_project_with_sequel'>Generating a project with Sequel</a></li></ul></li></ul>
+
+<ul class='toc'><li><a href='/en/interacting-with-the-database-sequel/migrations'>Database Migrations</a></li></ul>
+
+<ul class='toc'><li><a href='/en/interacting-with-the-database-sequel/manipulation'>Database Retreival and Manipulation</a><ul style='list-style: none;'><li><a href='/en/interacting-with-the-database-sequel/manipulation#finding_records'>Finding records</a></li><li><a href='/en/interacting-with-the-database-sequel/manipulation#the_other_three_letters_in_crud'>The Other Three Letters in CRUD</a><ul style='list-style: none;'><li><a href='/en/interacting-with-the-database-sequel/manipulation#create'>Create</a></li><li><a href='/en/interacting-with-the-database-sequel/manipulation#update'>Update</a></li><li><a href='/en/interacting-with-the-database-sequel/manipulation#delete'>Delete</a></li></ul></li></ul></li></ul>
+
+<ul class='toc'><li><a href='/en/interacting-with-the-database-sequel/associations'>Model Associations</a><ul style='list-style: none;'><li><a href='/en/interacting-with-the-database-sequel/associations#one_to_many'>One to Many</a></li><li><a href='/en/interacting-with-the-database-sequel/associations#many_to_one'>Many to One</a></li><li><a href='/en/interacting-with-the-database-sequel/associations#many_to_many'>Many to Many</a></li><li><a href='/en/interacting-with-the-database-sequel/associations#one_to_one'>One to One</a></li></ul></li></ul>
+
+<ul class='toc'><li><a href='/en/interacting-with-the-database-sequel/validation'>Model Validation</a></li></ul>
+
+<ul class='toc'><li><a href='/en/interacting-with-the-database-sequel/plugins'>Sequel Plugins</a><ul style='list-style: none;'><li><a href='/en/interacting-with-the-database-sequel/plugins#useful_plugins'>Useful Plugins</a><ul style='list-style: none;'><li><a href='/en/interacting-with-the-database-sequel/plugins#sequel_timestamped'>sequel_timestamped</a></li><li><a href='/en/interacting-with-the-database-sequel/plugins#sequel_notnaughty'>sequel_notnaughty</a></li><li><a href='/en/interacting-with-the-database-sequel/plugins#sequel_polymorphic'>sequel_polymorphic</a></li><li><a href='/en/interacting-with-the-database-sequel/plugins#sequel_taggable'>sequel_taggable</a></li></ul></li></ul></li></ul> 

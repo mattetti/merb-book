@@ -1,1 +1,0 @@
-require 'nokogiri/decorators/hpricot'

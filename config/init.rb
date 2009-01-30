@@ -2,11 +2,7 @@
  
 # Specify a specific version of a dependency
 # dependency "RedCloth", "> 3.0"
-
-dependency "maruku", ">= 0.5.9"
-dependency "merb-assets", "~> 1.0"
-dependency "merb_babel", ">= 0.1.0"
-
+require Merb.root / "config" / "dependencies"
 
 #  use_orm :none
 use_test :rspec
@@ -27,7 +23,8 @@ Merb::BootLoader.before_app_loads do
      :default_language    => 'en',
      :available_languages => [
             {:name => "English",    :code => 'en'}, 
-            {:name => "Français",   :code => 'fr'}, 
+            {:name => "Français",   :code => 'fr'},
+            {:name => "한국어",        :code => 'kr'},              
             {:name => "日本語",        :code => 'jp'}, 
             {:name => "Português",  :code => 'pt'},
             {:name => "Deutsch",    :code => 'de'},
