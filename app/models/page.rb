@@ -38,7 +38,7 @@ class Page
     return @next_file unless @next_file.nil?
     n_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number}-*/#{page_number + 1}-*.*"].entries.first
     if n_file.nil?
-      n_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number + 1}-*/**"].entries.first
+      n_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number + 1}-*/toc.*"].entries.first
       # We're on the last page of the last chapter, just return the TOC.
       n_file =  "#{Merb.root}/book-content/#{language}/table-of-contents" if n_file.nil? 
     end
@@ -61,7 +61,8 @@ class Page
     return @previous_file unless @previous_file.nil?
     p_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number}-*/#{page_number - 1}-*.*"].entries.first
     if p_file.nil?
-      p_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number - 1}-*/**"].entries.last
+      p_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number - 1}-*/[0-9]*?*.*"].entries.last
+      p_file = Dir["#{Merb.root}/book-content/#{language}/#{chapter_number - 1}-*/toc.*"].entries.first if p_file.nil?
       # We're on the last page of the last chapter, just return the TOC.
       p_file =  "#{Merb.root}/book-content/#{language}/table-of-contents" if p_file.nil? 
     end
@@ -91,8 +92,8 @@ class Page
     end
     
     def extract_chapter_and_page_number
-      file =~ /book-content\/\w{2}\/(\d{1,})-[a-z-]+\/(\d{1,})-[a-z-]+[.]\w+/
-      @chapter_number, @page_number = $1.to_i, $2.to_i
+      file =~ /book-content\/\w{2}\/(\d{1,})-[a-z-]+\/((\d{1,})-[a-z-]+|toc)[.]\w+/
+      @chapter_number, @page_number = $1.to_i, $3.to_i
     end
     
     def extract_next_chapter_and_page_name
@@ -105,8 +106,8 @@ class Page
     
     # Returns an array with the chapter name and the page name of the file to process
     def extract_chapter_and_page_number_for_file(file_to_process)
-        file_to_process.grep(/book-content\/\w{2}\/\d{1,}-([a-z-]+)\/\d{1,}-([a-z-]+)[.]\w+/)
-        [$1, $2]
+        file_to_process.grep(/book-content\/\w{2}\/\d{1,}-([a-z-]+)\/(\d{1,}-([a-z-]+)|(toc))[.]\w+/)
+        [$1, $3]
     end
   
 end

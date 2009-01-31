@@ -24,10 +24,10 @@ module Merb
     def page_nav_links(format = 'markdown')
       return if params[:action] != 'show' || @page.nil? # Don't need navigation for the TOC (index).
       links = []
-      links << previous_page_url
+      links << previous_page_url unless @page.previous_file.include?('table-of-contents')
       # Stick a link to the TOC in the middle of the array.
       links << link_to(language_text(language, 'Home'), url(:toc, :language => language))
-      links << next_page_url
+      links << next_page_url unless @page.next_file.include?('table-of-contents')
       links.join(' | ')
     end
     
